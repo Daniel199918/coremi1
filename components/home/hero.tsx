@@ -37,8 +37,8 @@ export function Hero() {
 
       <Container className="relative pb-16 pt-40 sm:pb-24">
         <Reveal>
-          <p className="mb-8 flex items-center gap-4 text-xs font-semibold uppercase tracking-[0.3em] text-stone-200">
-            <span aria-hidden="true" className="h-px w-10 bg-accent-600" />
+          <p className="mb-8 flex min-w-0 items-center gap-4 text-[0.65rem] font-semibold uppercase tracking-[0.2em] text-stone-200 sm:text-xs sm:tracking-[0.3em]">
+            <span aria-hidden="true" className="h-px w-10 shrink-0 bg-accent-600" />
             Entreprise générale · {siteConfig.serviceArea}
           </p>
         </Reveal>

@@ -51,6 +51,12 @@ body {
   @apply bg-bone text-ink-900 antialiased;
 }
 
+/* Aucun débordement horizontal, sur aucune page (clip ne casse pas sticky). */
+html,
+body {
+  overflow-x: clip;
+}
+
 ::selection {
   background: var(--color-ink-950);
   color: var(--color-bone);
