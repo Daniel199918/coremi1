@@ -5,6 +5,7 @@ import { Container } from "@/components/ui/container";
 import { SectionHeading } from "@/components/ui/section-heading";
 import { Reveal } from "@/components/motion/reveal";
 import { MaterialsTable } from "@/components/chassis/materials-table";
+import { OpeningSchemas } from "@/components/chassis/opening-schemas";
 import { CtaSection } from "@/components/home/cta-section";
 import { chassisPrestations } from "@/content/chassis";
 
@@ -89,6 +90,24 @@ export default function ChassisPage() {
               </Reveal>
             ))}
           </div>
+        </Container>
+      </section>
+
+      {/* Types d'ouverture — schémas techniques */}
+      <section className="py-20 sm:py-28" aria-labelledby="ouvertures">
+        <Container>
+          <Reveal>
+            <SectionHeading
+              eyebrow="Types d'ouverture"
+              title="Fixe, battant ou oscillo-battant ?"
+              description="Chaque baie a son usage. Nous dessinons le bon type d'ouverture pièce par pièce, comme sur un plan de menuiserie."
+            />
+          </Reveal>
+          <Reveal delay={0.1}>
+            <div className="mt-14">
+              <OpeningSchemas />
+            </div>
+          </Reveal>
         </Container>
       </section>
 

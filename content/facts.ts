@@ -30,14 +30,14 @@ export const engagements = [
 
 export const processSteps = [
   {
-    title: "Premier échange",
+    title: "Rencontre",
     description:
       "Vous nous appelez ou remplissez le formulaire. En quelques minutes, nous cernons votre projet, votre budget et vos délais.",
   },
   {
-    title: "Visite sur place",
+    title: "Analyse technique",
     description:
-      "Nous venons mesurer, observer l'existant et repérer les contraintes techniques que les photos ne montrent pas.",
+      "Nous venons mesurer, observer l'existant et repérer les contraintes que les photos ne montrent pas : accès, stabilité, raccords.",
   },
   {
     title: "Devis poste par poste",
@@ -45,8 +45,18 @@ export const processSteps = [
       "Vous recevez un devis détaillé et lisible. Nous le parcourons ensemble et l'ajustons jusqu'à ce qu'il colle à votre projet.",
   },
   {
-    title: "Chantier & réception",
+    title: "Préparation",
     description:
-      "Les travaux démarrent à la date convenue. Vous suivez l'avancement avec votre interlocuteur jusqu'à la réception.",
+      "Commandes des matériaux et des châssis, planning des corps de métier, protection des lieux. Le chantier démarre prêt.",
+  },
+  {
+    title: "Réalisation",
+    description:
+      "Les travaux avancent au planning convenu. Votre interlocuteur suit le chantier et vous informe chaque semaine.",
+  },
+  {
+    title: "Contrôle & finitions",
+    description:
+      "Nous vérifions chaque poste avec vous, corrigeons ce qui doit l'être et rendons la maison propre. La réception clôt le chantier.",
   },
 ] as const;

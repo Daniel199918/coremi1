@@ -7,6 +7,14 @@ et le projet adhère au [Semantic Versioning](https://semver.org/lang/fr/).
 
 ## [Unreleased]
 
+### Refonte v3 - "Materiaux & Elevations"
+
+- Nouvelle direction artistique : palette minerale (blanc chaud, pierre, terre, graphite, noir mineral) avec accent rouge oxyde facon corten ; annotations techniques en monospace (cotes, cartouches, reperes de plan).
+- Serie d'illustrations architecturales vectorielles sur mesure generees par script (elevation nocturne, coupes de chassis, calepinage, chantier filaire, avant/apres) en remplacement des placeholders generiques.
+- Hero recompose : mise en page asymetrique, typographie monumentale, panneau elevation pleine hauteur, entree animee en CSS pur, indicateur de defilement.
+- Accueil : manifeste editorial avec figure legendee, metiers en rangees immersives agrandies, methode reecrite en "coupe de chantier" a six phases cotees, conclusion visuelle avec cartouche de coordonnees.
+- Page Chassis : schemas techniques des types d'ouverture (fixe, battant, oscillo-battant) dessines selon la convention menuisier.
+
 ### Refonte v2 — direction artistique éditoriale
 
 - Nouvelle direction artistique « minimalisme architectural » : palette blanc cassé / pierre / anthracite (rouge COREMI réservé aux actions), typographie Fraunces (titres serif éditoriaux) + Inter, hairlines façon plans d'architecte, mises en page asymétriques.

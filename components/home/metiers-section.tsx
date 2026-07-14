@@ -7,12 +7,12 @@ import { Reveal } from "@/components/motion/reveal";
 import { metiers } from "@/content/metiers";
 
 /**
- * Les métiers en liste éditoriale : rangées pleines largeur,
- * photo révélée au survol, numérotation de plan.
+ * Les métiers en rangées immersives : numérotation de plan, titres
+ * imposants, vignette d'élévation qui s'agrandit au survol.
  */
 export function MetiersSection() {
   return (
-    <section className="border-y border-ink-950/10 bg-bone-deep py-24 sm:py-32" aria-labelledby="metiers">
+    <section className="border-y border-ink-950/10 bg-bone-deep py-24 sm:py-36" aria-labelledby="metiers">
       <Container>
         <Reveal>
           <SectionHeading
@@ -23,35 +23,35 @@ export function MetiersSection() {
           />
         </Reveal>
 
-        <div className="mt-16 border-t border-ink-950/10">
+        <div className="mt-16 border-t border-ink-950/15">
           {metiers.map((metier, i) => (
-            <Reveal key={metier.href + metier.index} delay={0.05 * i}>
+            <Reveal key={metier.href + metier.index} delay={0.04 * i}>
               <Link
                 href={metier.href}
-                className="group grid items-center gap-6 border-b border-ink-950/10 py-8 transition-colors hover:bg-bone md:grid-cols-[4rem_1fr_2fr_10rem_3rem] md:gap-8"
+                className="group grid items-center gap-x-8 gap-y-4 border-b border-ink-950/15 py-9 transition-colors hover:bg-bone md:grid-cols-[5rem_1.2fr_1fr_9rem]"
               >
-                <span className="font-display text-2xl text-stone-400 transition-colors group-hover:text-accent-600">
+                <span className="annotation text-stone-400 transition-colors group-hover:text-accent-600">
                   {metier.index}
                 </span>
-                <h3 className="font-display text-2xl font-medium text-ink-950 sm:text-3xl">
+                <h3 className="font-display text-3xl font-medium text-ink-950 sm:text-4xl">
                   {metier.title}
                 </h3>
                 <p className="max-w-xl text-sm leading-relaxed text-ink-600">
                   {metier.description}
                 </p>
-                <span className="relative hidden h-20 overflow-hidden md:block">
+                <span className="relative hidden h-24 overflow-hidden border border-ink-950/10 md:block">
                   <Image
                     src={metier.image}
                     alt=""
                     fill
-                    sizes="10rem"
-                    className="object-cover opacity-0 transition-all duration-500 group-hover:scale-105 group-hover:opacity-100"
+                    sizes="9rem"
+                    className="object-cover saturate-[0.85] transition-all duration-500 group-hover:scale-105 group-hover:saturate-100"
+                  />
+                  <ArrowRight
+                    className="absolute bottom-2 right-2 h-4 w-4 text-bone opacity-0 transition-all duration-300 group-hover:translate-x-0.5 group-hover:opacity-100"
+                    aria-hidden="true"
                   />
                 </span>
-                <ArrowRight
-                  className="hidden h-5 w-5 justify-self-end text-ink-950 transition-transform duration-300 group-hover:translate-x-1.5 group-hover:text-accent-600 md:block"
-                  aria-hidden="true"
-                />
               </Link>
             </Reveal>
           ))}
