@@ -29,3 +29,6 @@ npm-debug.log*
 
 # Tests
 /coverage
+
+# Config Claude Code locale (approbations MCP, préférences perso)
+.claude/settings.local.json
