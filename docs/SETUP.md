@@ -48,14 +48,19 @@ npx supabase db reset  # applique migrations + seed.sql
 
 ## 2. Vercel
 
-### Importer le projet
+Le projet Vercel **`coremi1`** existe déjà (équipe `coremi`) et un premier
+déploiement de production est en ligne : https://coremi1.vercel.app
 
-1. https://vercel.com/new → **Import Git Repository** → choisir
-   `Daniel199918/coremi1`.
-2. Framework : **Next.js** (auto-détecté). Ne rien changer d'autre.
-3. Avant de déployer, ajouter les variables d'environnement (section suivante).
+### Connecter le dépôt GitHub (à faire une fois, ~1 minute)
 
-Une fois importé, **chaque push sur `main` déclenche automatiquement un
+Pour activer le déploiement automatique à chaque push :
+
+1. Dashboard Vercel → projet **coremi1** → **Settings → Git**.
+2. **Connect Git Repository** → choisir `Daniel199918/coremi1`.
+3. Ajouter les variables d'environnement (section suivante) si ce n'est
+   pas déjà fait.
+
+Une fois connecté, **chaque push sur `main` déclenche automatiquement un
 déploiement de production**, et chaque pull request génère un déploiement
 de prévisualisation. C'est le comportement par défaut de l'intégration
 Git de Vercel (confirmé par `vercel.json`).
