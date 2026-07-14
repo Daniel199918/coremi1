@@ -1,9 +1,60 @@
 @import "tailwindcss";
 
+/* ============================================================
+   Design system COREMI
+   - navy   : bleu marine profond (fonds, titres, footer)
+   - accent : rouge COREMI (CTA et accents uniquement — avec parcimonie)
+   - neutres: zinc Tailwind
+   ============================================================ */
+@theme {
+  --color-navy-50: #f2f6fb;
+  --color-navy-100: #e2eaf4;
+  --color-navy-200: #c3d3e6;
+  --color-navy-300: #94b0d0;
+  --color-navy-400: #5f87b4;
+  --color-navy-500: #3d6a9a;
+  --color-navy-600: #2d5480;
+  --color-navy-700: #264468;
+  --color-navy-800: #223a57;
+  --color-navy-900: #16273c;
+  --color-navy-950: #0b1626;
+
+  --color-accent-50: #fdf2f2;
+  --color-accent-100: #fbe3e3;
+  --color-accent-200: #f8cccc;
+  --color-accent-300: #f2a8a8;
+  --color-accent-400: #e97575;
+  --color-accent-500: #dd4a4a;
+  --color-accent-600: #d7282f;
+  --color-accent-700: #b01e24;
+  --color-accent-800: #921c21;
+  --color-accent-900: #791d21;
+  --color-accent-950: #420a0c;
+
+  --font-sans: var(--font-inter), ui-sans-serif, system-ui, sans-serif;
+  --font-display: var(--font-archivo), var(--font-inter), ui-sans-serif, system-ui, sans-serif;
+}
+
 :root {
-  color-scheme: light dark;
+  color-scheme: light;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
 }
 
 body {
-  @apply bg-zinc-50 text-zinc-900 antialiased dark:bg-zinc-950 dark:text-zinc-100;
+  @apply bg-white text-navy-950 antialiased;
+}
+
+/* Focus visible cohérent sur tout le site (accessibilité) */
+:focus-visible {
+  outline: 2px solid var(--color-accent-600);
+  outline-offset: 2px;
 }
