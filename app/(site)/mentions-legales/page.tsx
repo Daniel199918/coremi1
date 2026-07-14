@@ -20,9 +20,9 @@ export default function MentionsLegalesPage() {
     <>
       <PageHero title="Mentions légales" />
       <section className="py-16">
-        <Container className="prose-sm max-w-3xl space-y-8 leading-relaxed text-navy-900/80">
+        <Container className="max-w-3xl space-y-8 leading-relaxed text-ink-600">
           <div>
-            <h2 className="font-display text-xl font-bold text-navy-950">Éditeur du site</h2>
+            <h2 className="font-display text-xl font-bold text-ink-950">Éditeur du site</h2>
             <p className="mt-3">
               {siteConfig.legalName}
               <br />
@@ -37,14 +37,14 @@ export default function MentionsLegalesPage() {
             </p>
           </div>
           <div>
-            <h2 className="font-display text-xl font-bold text-navy-950">Hébergement</h2>
+            <h2 className="font-display text-xl font-bold text-ink-950">Hébergement</h2>
             <p className="mt-3">
               Ce site est hébergé par Vercel Inc., 440 N Barranca Ave #4133, Covina, CA 91723,
               États-Unis — vercel.com
             </p>
           </div>
           <div>
-            <h2 className="font-display text-xl font-bold text-navy-950">
+            <h2 className="font-display text-xl font-bold text-ink-950">
               Propriété intellectuelle
             </h2>
             <p className="mt-3">
@@ -54,7 +54,7 @@ export default function MentionsLegalesPage() {
             </p>
           </div>
           <div>
-            <h2 className="font-display text-xl font-bold text-navy-950">Responsabilité</h2>
+            <h2 className="font-display text-xl font-bold text-ink-950">Responsabilité</h2>
             <p className="mt-3">
               Les informations publiées sur ce site sont fournies à titre indicatif et peuvent
               être modifiées à tout moment. Seul un devis signé engage contractuellement{" "}

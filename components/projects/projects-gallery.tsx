@@ -16,7 +16,7 @@ export function ProjectsGallery() {
       <div
         role="group"
         aria-label="Filtrer les réalisations par catégorie"
-        className="flex flex-wrap gap-2"
+        className="flex flex-wrap gap-x-6 gap-y-3 border-b border-ink-950/10 pb-5"
       >
         {projectCategories.map((category) => (
           <button
@@ -25,10 +25,10 @@ export function ProjectsGallery() {
             onClick={() => setFilter(category.value)}
             aria-pressed={filter === category.value}
             className={cn(
-              "rounded-full border px-4 py-2 text-sm font-medium transition-colors",
+              "cursor-pointer pb-1 text-xs font-semibold uppercase tracking-[0.16em] transition-colors",
               filter === category.value
-                ? "border-navy-950 bg-navy-950 text-white"
-                : "border-navy-200 bg-white text-navy-900/80 hover:border-navy-300 hover:bg-navy-50"
+                ? "border-b-2 border-accent-600 text-ink-950"
+                : "text-ink-500 hover:text-ink-950"
             )}
           >
             {category.label}
@@ -36,16 +36,14 @@ export function ProjectsGallery() {
         ))}
       </div>
 
-      <div className="mt-10 grid gap-6 sm:grid-cols-2 lg:grid-cols-3" aria-live="polite">
+      <div className="mt-12 grid gap-x-8 gap-y-14 sm:grid-cols-2 lg:grid-cols-3" aria-live="polite">
         {filtered.map((project) => (
           <ProjectCard key={project.slug} project={project} />
         ))}
       </div>
 
       {filtered.length === 0 && (
-        <p className="mt-10 text-center text-navy-900/60">
-          Aucun projet dans cette catégorie pour le moment.
-        </p>
+        <p className="mt-12 text-ink-500">Aucun projet dans cette catégorie pour le moment.</p>
       )}
     </div>
   );

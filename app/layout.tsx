@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import { Archivo, Inter } from "next/font/google";
+import { Fraunces, Inter } from "next/font/google";
 import { siteConfig } from "@/content/site";
 import "./globals.css";
 
@@ -9,16 +9,17 @@ const inter = Inter({
   display: "swap",
 });
 
-const archivo = Archivo({
+const fraunces = Fraunces({
   subsets: ["latin"],
-  variable: "--font-archivo",
+  variable: "--font-fraunces",
   display: "swap",
+  axes: ["opsz"],
 });
 
 export const metadata: Metadata = {
   metadataBase: new URL(siteConfig.url),
   title: {
-    default: "COREMI — Construction, rénovation et châssis à Bruxelles et en Brabant wallon",
+    default: "COREMI — Entreprise de construction, rénovation et châssis en Belgique",
     template: "%s · COREMI",
   },
   description: siteConfig.description,
@@ -35,7 +36,7 @@ export const metadata: Metadata = {
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
-    <html lang="fr" className={`${inter.variable} ${archivo.variable}`}>
+    <html lang="fr" className={`${inter.variable} ${fraunces.variable}`}>
       <body className="flex min-h-screen flex-col font-sans">{children}</body>
     </html>
   );

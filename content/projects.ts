@@ -1,9 +1,11 @@
 /**
  * ============================================================
- * Réalisations — CONTENUS DE DÉMONSTRATION.
+ * Réalisations — CONTENUS PROVISOIRES clairement identifiés.
  * ⚠️ À remplacer par les vrais projets et photos de COREMI :
  *    1. Déposer les photos dans /public/images/projects/
- *    2. Mettre à jour les entrées ci-dessous (titre, lieu, photo, description)
+ *    2. Mettre à jour les entrées ci-dessous
+ *    Les visuels actuels sont des placeholders générés, marqués
+ *    « photo à remplacer » directement dans l'image.
  * ============================================================
  */
 
@@ -16,7 +18,7 @@ export type ProjectCategory =
   | "facade";
 
 export const projectCategories: { value: ProjectCategory | "tous"; label: string }[] = [
-  { value: "tous", label: "Tous les projets" },
+  { value: "tous", label: "Tous" },
   { value: "extension", label: "Extensions" },
   { value: "renovation", label: "Rénovations" },
   { value: "chassis", label: "Châssis" },
@@ -31,76 +33,96 @@ export type Project = {
   location: string;
   category: ProjectCategory;
   workType: string;
+  materials: string;
   image: string;
   imageAlt: string;
   description: string;
+  /** Paire avant/après optionnelle. */
+  beforeAfter?: {
+    before: string;
+    beforeAlt: string;
+    after: string;
+    afterAlt: string;
+  };
 };
 
 export const projects: Project[] = [
   {
     slug: "extension-moderne-waterloo",
-    title: "Extension moderne d'une habitation",
+    title: "Extension contemporaine sur jardin",
     location: "Waterloo",
     category: "extension",
-    workType: "Gros œuvre · Extension",
+    workType: "Gros œuvre, extension",
+    materials: "Maçonnerie, toiture plate, châssis aluminium",
     image: "/images/projects/extension-moderne.jpg",
-    imageAlt: "Extension moderne avec toiture plate et grandes baies vitrées",
+    imageAlt: "Extension contemporaine à toiture plate ouverte sur le jardin",
     description:
-      "Extension en maçonnerie avec toiture plate, grandes baies vitrées et liaison harmonieuse avec le bâtiment existant.",
+      "Une extension à toiture plate qui double l'espace de vie et ouvre la maison sur le jardin. Raccord propre à l'existant, baies toute hauteur.",
   },
   {
     slug: "renovation-complete-ixelles",
-    title: "Rénovation complète d'une maison de maître",
+    title: "Maison de maître remise à neuf",
     location: "Ixelles",
     category: "renovation",
-    workType: "Rénovation intérieure complète",
+    workType: "Rénovation complète",
+    materials: "Parquet, plafonnage, menuiseries intérieures",
     image: "/images/projects/renovation-complete.jpg",
-    imageAlt: "Séjour rénové avec parquet et moulures restaurées",
+    imageAlt: "Séjour de maison de maître rénové, moulures conservées",
     description:
-      "Remise à neuf complète : réagencement des espaces, nouvelles techniques, finitions soignées dans le respect du caractère d'origine.",
+      "Réagencement complet d'une maison de maître en préservant son caractère : moulures restaurées, techniques neuves, finitions au cordeau.",
   },
   {
     slug: "chassis-aluminium-wavre",
-    title: "Remplacement de châssis en aluminium",
+    title: "Remplacement complet des châssis",
     location: "Wavre",
     category: "chassis",
-    workType: "Châssis aluminium · Double vitrage",
+    workType: "Châssis aluminium, double vitrage",
+    materials: "Aluminium thermolaqué, double vitrage",
     image: "/images/projects/pose-chassis.jpg",
-    imageAlt: "Châssis aluminium noir sur façade enduite blanche",
+    imageAlt: "Châssis aluminium anthracite posés sur façade enduite claire",
     description:
-      "Remplacement complet des châssis par des profilés aluminium à haute performance thermique, finitions intérieures comprises.",
+      "Tous les châssis remplacés par des profilés aluminium fins, teinte anthracite. Pose en quelques jours, finitions intérieures comprises.",
   },
   {
     slug: "porte-entree-uccle",
-    title: "Nouvelle porte d'entrée design",
+    title: "Porte d'entrée sur mesure",
     location: "Uccle",
     category: "porte",
     workType: "Porte d'entrée aluminium",
+    materials: "Aluminium, vitrage sécurisé",
     image: "/images/projects/porte-entree.jpg",
     imageAlt: "Porte d'entrée contemporaine en aluminium anthracite",
     description:
-      "Pose d'une porte d'entrée contemporaine sécurisée, alliant isolation, design épuré et quincaillerie de qualité.",
+      "Une porte d'entrée dessinée pour la façade, sécurisée et isolante. La quincaillerie et les teintes ont été choisies avec les propriétaires.",
   },
   {
     slug: "terrasse-lasne",
-    title: "Aménagement d'une terrasse et des abords",
+    title: "Terrasse et abords redessinés",
     location: "Lasne",
     category: "terrasse",
     workType: "Aménagement extérieur",
+    materials: "Dalles céramiques, bordures acier",
     image: "/images/projects/terrasse.jpg",
-    imageAlt: "Terrasse en pavage céramique avec bordures plantées",
+    imageAlt: "Terrasse en dalles céramiques et bordures plantées",
     description:
-      "Création d'une terrasse en dalles céramiques avec gestion des niveaux, évacuation des eaux et abords plantés.",
+      "Gestion des niveaux, évacuation des eaux, dalles céramiques posées au millimètre. Les abords plantés terminent l'ensemble.",
   },
   {
     slug: "renovation-facade-nivelles",
-    title: "Rénovation de façade",
+    title: "Façade isolée et ré-enduite",
     location: "Nivelles",
     category: "facade",
-    workType: "Façade · Isolation",
+    workType: "Façade, isolation par l'extérieur",
+    materials: "Isolant rigide, enduit minéral",
     image: "/images/projects/renovation-facade.jpg",
     imageAlt: "Façade rénovée avec enduit clair et soubassement en pierre",
     description:
-      "Rénovation complète de la façade avec isolation par l'extérieur, nouvel enduit et remise en valeur du soubassement.",
+      "Isolation par l'extérieur puis nouvel enduit minéral. La maison gagne en confort l'hiver et la façade retrouve une ligne nette.",
+    beforeAfter: {
+      before: "/images/projects/facade-avant.jpg",
+      beforeAlt: "Façade avant travaux, enduit fatigué",
+      after: "/images/projects/facade-apres.jpg",
+      afterAlt: "Façade après travaux, enduit minéral neuf",
+    },
   },
 ];

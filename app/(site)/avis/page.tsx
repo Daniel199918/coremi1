@@ -3,62 +3,74 @@ import { ExternalLink } from "lucide-react";
 import { PageHero } from "@/components/layout/page-hero";
 import { Container } from "@/components/ui/container";
 import { Reveal } from "@/components/motion/reveal";
-import { TestimonialCard } from "@/components/testimonials/testimonial-card";
 import { CtaSection } from "@/components/home/cta-section";
-import { testimonials, testimonialsDisclaimer } from "@/content/testimonials";
 import { siteConfig } from "@/content/site";
 
 export const metadata: Metadata = {
   title: "Avis clients",
   description:
-    "Ce que les clients de COREMI pensent de nos chantiers de construction, rénovation et pose de châssis à Bruxelles et en Brabant wallon.",
+    "Les avis clients de COREMI, entreprise de construction, rénovation et châssis à Bruxelles et en Brabant wallon.",
   alternates: { canonical: "/avis" },
 };
 
+/**
+ * Page volontairement honnête : aucun faux avis. Elle renvoie vers les
+ * avis Google réels et sera enrichie quand COREMI fournira des retours
+ * clients authentiques (avec leur accord).
+ */
 export default function AvisPage() {
   return (
     <>
       <PageHero
+        index="05"
         eyebrow="Avis clients"
-        title="Votre confiance, notre priorité"
-        description="La satisfaction de nos clients guide notre façon de travailler, du premier rendez-vous à la réception du chantier."
+        title="Ce que nos clients disent de nous"
+        description="Nous ne publions aucun avis inventé. Les retours de nos clients se trouvent sur notre fiche Google, écrits par eux, sans filtre."
       />
-      <section className="py-16 sm:py-24">
-        <Container>
+
+      <section className="py-20 sm:py-28">
+        <Container className="grid gap-12 lg:grid-cols-2">
           <Reveal>
-            <p className="mb-8 rounded-lg border border-navy-100 bg-navy-50/60 px-5 py-4 text-sm italic text-navy-900/60">
-              {testimonialsDisclaimer}
-            </p>
-          </Reveal>
-          <div className="grid gap-6 sm:grid-cols-2">
-            {testimonials.map((testimonial, i) => (
-              <Reveal key={testimonial.name} delay={0.05 * i}>
-                <TestimonialCard testimonial={testimonial} />
-              </Reveal>
-            ))}
-          </div>
-          <Reveal delay={0.2}>
-            <div className="mt-12 rounded-xl bg-navy-950 p-8 text-center sm:p-10">
-              <h2 className="font-display text-2xl font-bold text-white">
-                Vous avez travaillé avec COREMI ?
-              </h2>
-              <p className="mx-auto mt-3 max-w-lg text-navy-100/75">
-                Votre retour aide d&apos;autres familles à choisir un partenaire de confiance
-                pour leur projet. Merci de partager votre expérience !
+            <article className="flex h-full flex-col border border-ink-950/10 bg-bone-deep p-10">
+              <h2 className="font-display text-3xl text-ink-950">Lire les avis</h2>
+              <p className="mt-4 flex-1 leading-relaxed text-ink-600">
+                Nos avis clients sont publiés sur Google, où nous ne pouvons ni les
+                trier ni les retoucher. C&apos;est la photo la plus fidèle de notre
+                travail, chantier après chantier.
               </p>
               <a
                 href={siteConfig.social.googleReviews}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="mt-6 inline-flex items-center gap-2 rounded-lg bg-accent-600 px-6 py-3 font-semibold text-white transition-colors hover:bg-accent-700"
+                className="mt-8 inline-flex w-fit items-center gap-3 bg-ink-950 px-7 py-4 text-sm font-semibold uppercase tracking-[0.14em] text-bone transition-colors hover:bg-ink-800"
               >
-                Laisser un avis sur Google
+                Voir nos avis Google
                 <ExternalLink className="h-4 w-4" aria-hidden="true" />
               </a>
-            </div>
+            </article>
+          </Reveal>
+          <Reveal delay={0.08}>
+            <article className="flex h-full flex-col border border-ink-950/10 p-10">
+              <h2 className="font-display text-3xl text-ink-950">Vous avez travaillé avec nous ?</h2>
+              <p className="mt-4 flex-1 leading-relaxed text-ink-600">
+                Deux minutes de votre temps aident une autre famille à choisir son
+                entrepreneur en confiance. Racontez votre chantier tel qu&apos;il
+                s&apos;est passé, c&apos;est tout ce que nous demandons.
+              </p>
+              <a
+                href={siteConfig.social.googleReviews}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="mt-8 inline-flex w-fit items-center gap-3 bg-accent-600 px-7 py-4 text-sm font-semibold uppercase tracking-[0.14em] text-white transition-colors hover:bg-accent-700"
+              >
+                Laisser un avis
+                <ExternalLink className="h-4 w-4" aria-hidden="true" />
+              </a>
+            </article>
           </Reveal>
         </Container>
       </section>
+
       <CtaSection />
     </>
   );

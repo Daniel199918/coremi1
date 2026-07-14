@@ -21,9 +21,9 @@ export default function PolitiqueConfidentialitePage() {
     <>
       <PageHero title="Politique de confidentialité" />
       <section className="py-16">
-        <Container className="max-w-3xl space-y-8 leading-relaxed text-navy-900/80">
+        <Container className="max-w-3xl space-y-8 leading-relaxed text-ink-600">
           <div>
-            <h2 className="font-display text-xl font-bold text-navy-950">
+            <h2 className="font-display text-xl font-bold text-ink-950">
               Responsable du traitement
             </h2>
             <p className="mt-3">
@@ -32,7 +32,7 @@ export default function PolitiqueConfidentialitePage() {
             </p>
           </div>
           <div>
-            <h2 className="font-display text-xl font-bold text-navy-950">
+            <h2 className="font-display text-xl font-bold text-ink-950">
               Données collectées et finalité
             </h2>
             <p className="mt-3">
@@ -44,7 +44,7 @@ export default function PolitiqueConfidentialitePage() {
             </p>
           </div>
           <div>
-            <h2 className="font-display text-xl font-bold text-navy-950">
+            <h2 className="font-display text-xl font-bold text-ink-950">
               Durée de conservation
             </h2>
             <p className="mt-3">
@@ -54,7 +54,7 @@ export default function PolitiqueConfidentialitePage() {
             </p>
           </div>
           <div>
-            <h2 className="font-display text-xl font-bold text-navy-950">Vos droits</h2>
+            <h2 className="font-display text-xl font-bold text-ink-950">Vos droits</h2>
             <p className="mt-3">
               Conformément au RGPD, vous disposez d&apos;un droit d&apos;accès, de
               rectification, d&apos;effacement, de limitation et d&apos;opposition concernant
@@ -65,7 +65,7 @@ export default function PolitiqueConfidentialitePage() {
             </p>
           </div>
           <div>
-            <h2 className="font-display text-xl font-bold text-navy-950">Cookies</h2>
+            <h2 className="font-display text-xl font-bold text-ink-950">Cookies</h2>
             <p className="mt-3">
               Ce site n&apos;utilise pas de cookies publicitaires ni de traçage tiers. Seuls
               des cookies techniques strictement nécessaires au fonctionnement du site

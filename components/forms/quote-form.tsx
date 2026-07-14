@@ -2,7 +2,7 @@
 
 import { useActionState, useId } from "react";
 import Link from "next/link";
-import { CheckCircle2, Loader2, Send } from "lucide-react";
+import { CheckCircle2, Loader2 } from "lucide-react";
 import { submitQuoteRequest } from "@/app/(site)/contact/actions";
 import {
   initialQuoteFormState,
@@ -12,7 +12,7 @@ import {
 import { cn } from "@/utils";
 
 const inputClasses =
-  "w-full rounded-lg border border-navy-200 bg-white px-4 py-3 text-sm text-navy-950 placeholder:text-navy-300 focus:border-navy-400 focus:outline-none focus:ring-2 focus:ring-navy-950/10";
+  "w-full border border-ink-950/20 bg-bone px-4 py-3.5 text-sm text-ink-950 placeholder:text-stone-400 focus:border-ink-950 focus:outline-none";
 
 type FieldProps = {
   label: string;
@@ -28,7 +28,10 @@ function Field({ label, error, required, children }: FieldProps) {
   const errorId = `${id}-error`;
   return (
     <div>
-      <label htmlFor={id} className="mb-1.5 block text-sm font-semibold text-navy-950">
+      <label
+        htmlFor={id}
+        className="mb-2 block text-[0.68rem] font-semibold uppercase tracking-[0.16em] text-ink-700"
+      >
         {label}
         {required && (
           <span className="text-accent-600" aria-hidden="true">
@@ -39,7 +42,7 @@ function Field({ label, error, required, children }: FieldProps) {
       </label>
       {children({ id, describedBy: error ? errorId : undefined })}
       {error && (
-        <p id={errorId} role="alert" className="mt-1.5 text-sm text-accent-700">
+        <p id={errorId} role="alert" className="mt-2 text-sm text-accent-700">
           {error}
         </p>
       )}
@@ -62,26 +65,24 @@ export function QuoteForm() {
     return (
       <div
         role="status"
-        className="flex flex-col items-center rounded-xl border border-green-200 bg-green-50 px-8 py-14 text-center"
+        className="flex flex-col items-center border border-ink-950/10 bg-bone-deep px-8 py-16 text-center"
       >
-        <CheckCircle2 className="h-12 w-12 text-green-600" aria-hidden="true" />
-        <h3 className="mt-5 font-display text-2xl font-bold text-navy-950">
-          Demande envoyée !
-        </h3>
-        <p className="mt-3 max-w-md text-navy-900/70">{state.message}</p>
+        <CheckCircle2 className="h-10 w-10 text-accent-600" aria-hidden="true" />
+        <h3 className="mt-6 font-display text-3xl text-ink-950">Demande envoyée</h3>
+        <p className="mt-4 max-w-md leading-relaxed text-ink-600">{state.message}</p>
       </div>
     );
   }
 
   return (
-    <form action={formAction} noValidate className="space-y-5">
+    <form action={formAction} noValidate className="space-y-6">
       {/* Honeypot anti-spam : invisible pour les humains, rempli par les robots */}
       <div className="absolute -left-[9999px]" aria-hidden="true">
         <label htmlFor="website">Ne pas remplir ce champ</label>
         <input id="website" type="text" name="website" tabIndex={-1} autoComplete="off" />
       </div>
 
-      <div className="grid gap-5 sm:grid-cols-2">
+      <div className="grid gap-6 sm:grid-cols-2">
         <Field label="Prénom" name="firstName" error={errors.firstName} required>
           {({ id, describedBy }) => (
             <input
@@ -139,7 +140,7 @@ export function QuoteForm() {
             />
           )}
         </Field>
-        <Field label="Commune" name="city" error={errors.city} required>
+        <Field label="Commune du projet" name="city" error={errors.city} required>
           {({ id, describedBy }) => (
             <input
               id={id}
@@ -163,7 +164,7 @@ export function QuoteForm() {
               defaultValue=""
               aria-invalid={!!errors.projectType}
               aria-describedby={describedBy}
-              className={cn(inputClasses, errors.projectType && "border-accent-600")}
+              className={cn(inputClasses, "cursor-pointer", errors.projectType && "border-accent-600")}
             >
               <option value="" disabled>
                 Choisissez…
@@ -176,7 +177,7 @@ export function QuoteForm() {
             </select>
           )}
         </Field>
-        <Field label="Budget estimé (facultatif)" name="budget" error={errors.budget}>
+        <Field label="Budget indicatif (facultatif)" name="budget" error={errors.budget}>
           {({ id, describedBy }) => (
             <input
               id={id}
@@ -197,7 +198,7 @@ export function QuoteForm() {
               defaultValue=""
               aria-invalid={!!errors.timeline}
               aria-describedby={describedBy}
-              className={cn(inputClasses, errors.timeline && "border-accent-600")}
+              className={cn(inputClasses, "cursor-pointer", errors.timeline && "border-accent-600")}
             >
               <option value="" disabled>
                 Choisissez…
@@ -227,15 +228,15 @@ export function QuoteForm() {
         )}
       </Field>
 
-      <Field label="Photos (facultatif)" name="photos" error={errors.photos}>
+      <Field label="Photos ou documents (facultatif)" name="photos" error={errors.photos}>
         {({ id }) => (
           <input
             id={id}
             name="photos"
             type="file"
-            accept="image/*"
+            accept="image/*,.pdf"
             multiple
-            className="w-full rounded-lg border border-dashed border-navy-200 bg-navy-50/50 px-4 py-3 text-sm text-navy-900/70 file:mr-4 file:rounded-md file:border-0 file:bg-navy-950 file:px-4 file:py-2 file:text-sm file:font-semibold file:text-white hover:file:bg-navy-800"
+            className="w-full cursor-pointer border border-dashed border-ink-950/25 bg-bone-deep px-4 py-3.5 text-sm text-ink-600 file:mr-4 file:cursor-pointer file:border-0 file:bg-ink-950 file:px-4 file:py-2 file:text-xs file:font-semibold file:uppercase file:tracking-wider file:text-bone hover:file:bg-ink-800"
           />
         )}
       </Field>
@@ -248,12 +249,11 @@ export function QuoteForm() {
           required
           aria-invalid={!!errors.consent}
           aria-describedby={errors.consent ? "consent-error" : undefined}
-          className="mt-1 h-4 w-4 rounded border-navy-300 accent-accent-600"
+          className="mt-1 h-4 w-4 cursor-pointer accent-accent-600"
         />
-        <label htmlFor="consent" className="text-sm text-navy-900/75">
-          J&apos;accepte que mes données soient utilisées pour traiter ma demande,
-          conformément à la{" "}
-          <Link href="/politique-de-confidentialite" className="font-semibold underline">
+        <label htmlFor="consent" className="text-sm leading-relaxed text-ink-600">
+          J&apos;accepte que mes données servent à traiter ma demande, comme décrit dans la{" "}
+          <Link href="/politique-de-confidentialite" className="font-semibold text-ink-950 underline underline-offset-2">
             politique de confidentialité
           </Link>
           . <span className="text-accent-600" aria-hidden="true">*</span>
@@ -266,7 +266,7 @@ export function QuoteForm() {
       )}
 
       {state.status === "error" && state.message && (
-        <p role="alert" className="rounded-lg border border-accent-200 bg-accent-50 px-4 py-3 text-sm text-accent-800">
+        <p role="alert" className="border border-accent-600/40 bg-accent-600/5 px-4 py-3 text-sm text-accent-800">
           {state.message}
         </p>
       )}
@@ -274,7 +274,7 @@ export function QuoteForm() {
       <button
         type="submit"
         disabled={isPending}
-        className="inline-flex w-full items-center justify-center gap-2 rounded-lg bg-accent-600 px-7 py-4 text-base font-semibold text-white transition-colors hover:bg-accent-700 disabled:cursor-not-allowed disabled:opacity-60 sm:w-auto"
+        className="inline-flex w-full cursor-pointer items-center justify-center gap-3 bg-accent-600 px-8 py-4.5 text-sm font-semibold uppercase tracking-[0.14em] text-white transition-colors hover:bg-accent-700 disabled:cursor-not-allowed disabled:opacity-60 sm:w-auto"
       >
         {isPending ? (
           <>
@@ -282,10 +282,7 @@ export function QuoteForm() {
             Envoi en cours…
           </>
         ) : (
-          <>
-            <Send className="h-4 w-4" aria-hidden="true" />
-            Envoyer ma demande de devis
-          </>
+          "Envoyer ma demande de devis"
         )}
       </button>
     </form>

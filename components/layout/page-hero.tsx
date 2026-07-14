@@ -1,38 +1,32 @@
 import { Container } from "@/components/ui/container";
+import { GridLines } from "@/components/ui/grid-lines";
 import { Reveal } from "@/components/motion/reveal";
 
 type PageHeroProps = {
+  index?: string;
   eyebrow?: string;
   title: string;
   description?: string;
 };
 
-/** Bandeau d'introduction des pages intérieures. */
-export function PageHero({ eyebrow, title, description }: PageHeroProps) {
+/** Bandeau d'introduction éditorial des pages intérieures (fond clair). */
+export function PageHero({ index, eyebrow, title, description }: PageHeroProps) {
   return (
-    <section className="relative overflow-hidden bg-navy-950">
-      <div
-        aria-hidden="true"
-        className="pointer-events-none absolute inset-0 opacity-[0.06]"
-        style={{
-          backgroundImage:
-            "repeating-linear-gradient(90deg, transparent 0 119px, white 119px 120px)",
-        }}
-      />
-      <Container className="relative py-16 sm:py-20">
+    <section className="relative overflow-hidden border-b border-ink-950/10 bg-bone-deep">
+      <GridLines />
+      <Container className="relative py-16 sm:py-24">
         <Reveal>
-          {eyebrow && (
-            <p className="mb-3 text-sm font-semibold uppercase tracking-[0.2em] text-accent-500">
+          {(index || eyebrow) && (
+            <p className="mb-6 flex items-baseline gap-4 text-xs font-semibold uppercase tracking-[0.25em] text-ink-500">
+              {index && <span className="text-accent-600">{index}</span>}
               {eyebrow}
             </p>
           )}
-          <h1 className="max-w-3xl font-display text-3xl font-bold tracking-tight text-white sm:text-5xl">
+          <h1 className="max-w-4xl font-display text-4xl font-medium leading-[1.03] tracking-tight text-ink-950 sm:text-6xl">
             {title}
           </h1>
           {description && (
-            <p className="mt-5 max-w-2xl text-lg leading-relaxed text-navy-100/80">
-              {description}
-            </p>
+            <p className="mt-7 max-w-2xl text-lg leading-relaxed text-ink-600">{description}</p>
           )}
         </Reveal>
       </Container>

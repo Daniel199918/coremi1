@@ -1,37 +1,59 @@
 "use client";
 
-import { motion, useReducedMotion } from "framer-motion";
-import type { ReactNode } from "react";
+import { useEffect, useRef, useState } from "react";
+import { cn } from "@/utils";
 
 type RevealProps = {
-  children: ReactNode;
+  children: React.ReactNode;
   /** Délai d'apparition en secondes (pour les cascades). */
   delay?: number;
-  /** Décalage vertical initial en px. */
-  y?: number;
   className?: string;
 };
 
-/**
- * Apparition douce au scroll (une seule fois).
- * Respecte automatiquement `prefers-reduced-motion`.
- */
-export function Reveal({ children, delay = 0, y = 24, className }: RevealProps) {
-  const reduceMotion = useReducedMotion();
+type RevealState = "idle" | "armed" | "shown";
 
-  if (reduceMotion) {
-    return <div className={className}>{children}</div>;
-  }
+/**
+ * Apparition douce au scroll, robuste par construction :
+ * - le HTML serveur est VISIBLE (SEO, lecteurs sans JavaScript) ;
+ * - après montage, seuls les éléments encore hors écran sont masqués
+ *   puis révélés à l'entrée dans le viewport (IntersectionObserver) ;
+ * - `prefers-reduced-motion` désactive tout via CSS (globals.css).
+ */
+export function Reveal({ children, delay = 0, className }: RevealProps) {
+  const ref = useRef<HTMLDivElement>(null);
+  const [state, setState] = useState<RevealState>("idle");
+
+  useEffect(() => {
+    const el = ref.current;
+    if (!el) return;
+    if (window.matchMedia("(prefers-reduced-motion: reduce)").matches) return;
+
+    // Déjà à l'écran au chargement : rester visible, sans animation.
+    const rect = el.getBoundingClientRect();
+    if (rect.top < window.innerHeight * 0.92 && rect.bottom > 0) return;
+
+    setState("armed");
+    const observer = new IntersectionObserver(
+      (entries) => {
+        if (entries[0]?.isIntersecting) {
+          setState("shown");
+          observer.disconnect();
+        }
+      },
+      { rootMargin: "0px 0px -8% 0px" }
+    );
+    observer.observe(el);
+    return () => observer.disconnect();
+  }, []);
 
   return (
-    <motion.div
-      className={className}
-      initial={{ opacity: 0, y }}
-      whileInView={{ opacity: 1, y: 0 }}
-      viewport={{ once: true, margin: "-80px" }}
-      transition={{ duration: 0.55, delay, ease: [0.21, 0.47, 0.32, 0.98] }}
+    <div
+      ref={ref}
+      data-reveal={state}
+      className={cn("reveal", className)}
+      style={delay ? { transitionDelay: `${delay}s` } : undefined}
     >
       {children}
-    </motion.div>
+    </div>
   );
 }

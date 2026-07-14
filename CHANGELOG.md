@@ -7,6 +7,16 @@ et le projet adhère au [Semantic Versioning](https://semver.org/lang/fr/).
 
 ## [Unreleased]
 
+### Refonte v2 — direction artistique éditoriale
+
+- Nouvelle direction artistique « minimalisme architectural » : palette blanc cassé / pierre / anthracite (rouge COREMI réservé aux actions), typographie Fraunces (titres serif éditoriaux) + Inter, hairlines façon plans d'architecte, mises en page asymétriques.
+- Accueil recomposé : hero plein écran, présentation, métiers en liste éditoriale, réalisations asymétriques, engagements vérifiables, méthode en 4 étapes, doubles focus construction/châssis, FAQ, CTA final.
+- Nouvelles pages : `/construction-renovation` et `/chassis` (avec comparateur PVC / aluminium / bois) ; redirections 301 depuis les anciennes URLs `/services/*`.
+- Nouveaux composants : FAQ accessible (`<details>` natif), curseur avant/après accessible, comparateur de matériaux, repères graphiques de plan.
+- Conformité éditoriale : suppression des chiffres non vérifiés (années, projets, %) et des avis de démonstration ; placeholders visibles `[ANNÉES D'EXPÉRIENCE]`, `[CERTIFICATIONS]` ; page Avis honnête renvoyant vers Google.
+- Robustesse : composant Reveal réécrit sans framer-motion (contenu visible sans JavaScript, animation au scroll via IntersectionObserver, `prefers-reduced-motion` respecté) ; dépendance framer-motion retirée.
+- SEO : FAQPage JSON-LD sur l'accueil, sitemap et données structurées mis à jour, textes réécrits pour le SEO local naturel (Bruxelles, Brabant wallon).
+
 ### Ajouté
 
 - Site vitrine COREMI complet (12 pages) : accueil, services + 4 pages détaillées, réalisations avec filtres, à propos, avis, contact/devis, mentions légales, politique de confidentialité.

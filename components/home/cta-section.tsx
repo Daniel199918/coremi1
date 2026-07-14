@@ -1,40 +1,44 @@
-import { ArrowRight, Phone } from "lucide-react";
+import Link from "next/link";
 import { Container } from "@/components/ui/container";
-import { ButtonLink } from "@/components/ui/button-link";
+import { GridLines } from "@/components/ui/grid-lines";
 import { Reveal } from "@/components/motion/reveal";
 import { siteConfig } from "@/content/site";
 
-/** Grande section d'appel à l'action « demande de devis ». */
+/** Appel à l'action final, typographie surdimensionnée. */
 export function CtaSection() {
   return (
-    <section className="relative overflow-hidden bg-navy-950 py-20 sm:py-24" aria-labelledby="cta-title">
-      <div
-        aria-hidden="true"
-        className="pointer-events-none absolute -right-24 -top-24 h-96 w-96 rounded-full bg-accent-600/10 blur-3xl"
-      />
-      <Container className="relative text-center">
+    <section className="relative overflow-hidden bg-ink-950 py-28 sm:py-36" aria-labelledby="cta-final">
+      <GridLines tone="dark" />
+      <Container className="relative">
         <Reveal>
-          <h2 id="cta-title" className="font-display text-3xl font-bold tracking-tight text-white sm:text-5xl">
-            Un projet en tête ? <span className="text-accent-500">Parlons-en.</span>
+          <h2
+            id="cta-final"
+            className="max-w-4xl font-display text-5xl font-medium leading-[1.05] tracking-tight text-bone sm:text-6xl"
+          >
+            Un projet en tête ?
+            <br />
+            <em className="italic text-stone-300">Parlons-en autour d&apos;un plan.</em>
           </h2>
         </Reveal>
         <Reveal delay={0.1}>
-          <p className="mx-auto mt-5 max-w-xl text-lg text-navy-100/80">
-            Présentez-nous votre projet et recevez une première réponse adaptée à vos
-            besoins, sans engagement.
+          <p className="mt-8 max-w-xl text-lg leading-relaxed text-stone-200/85">
+            Décrivez-nous votre projet. Nous revenons vers vous rapidement avec une
+            première réponse claire, puis un devis détaillé si vous souhaitez avancer.
+            Sans engagement.
           </p>
         </Reveal>
         <Reveal delay={0.18}>
-          <div className="mt-9 flex flex-col items-center justify-center gap-3 sm:flex-row">
-            <ButtonLink href="/contact" variant="accent" size="lg">
+          <div className="mt-10 flex flex-col gap-3 sm:flex-row sm:items-center">
+            <Link
+              href="/contact"
+              className="bg-accent-600 px-8 py-4 text-center text-sm font-semibold uppercase tracking-[0.14em] text-white transition-colors hover:bg-accent-700"
+            >
               Demander un devis gratuit
-              <ArrowRight className="h-4 w-4" aria-hidden="true" />
-            </ButtonLink>
+            </Link>
             <a
               href={siteConfig.contact.phoneHref}
-              className="inline-flex items-center gap-2 px-4 py-3 font-semibold text-white transition-colors hover:text-accent-400"
+              className="px-4 py-4 text-center text-sm font-semibold uppercase tracking-[0.14em] text-bone transition-colors hover:text-stone-300"
             >
-              <Phone className="h-4 w-4" aria-hidden="true" />
               {siteConfig.contact.phone}
             </a>
           </div>

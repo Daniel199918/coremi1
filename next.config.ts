@@ -27,6 +27,24 @@ const nextConfig: NextConfig = {
       },
     ];
   },
+  async redirects() {
+    // Anciennes URLs /services/* (v1 du site) vers la nouvelle structure.
+    return [
+      { source: "/services", destination: "/construction-renovation", permanent: true },
+      {
+        source: "/services/construction-gros-oeuvre",
+        destination: "/construction-renovation",
+        permanent: true,
+      },
+      { source: "/services/renovation", destination: "/construction-renovation", permanent: true },
+      { source: "/services/chassis-portes", destination: "/chassis", permanent: true },
+      {
+        source: "/services/amenagement-exterieur",
+        destination: "/construction-renovation",
+        permanent: true,
+      },
+    ];
+  },
 };
 
 export default nextConfig;

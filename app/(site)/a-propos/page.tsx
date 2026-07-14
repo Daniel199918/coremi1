@@ -1,12 +1,12 @@
 import type { Metadata } from "next";
 import Image from "next/image";
-import { ArrowRight, HeartHandshake, Ruler, ShieldCheck, Timer } from "lucide-react";
+import Link from "next/link";
+import { ArrowRight } from "lucide-react";
 import { PageHero } from "@/components/layout/page-hero";
 import { Container } from "@/components/ui/container";
 import { SectionHeading } from "@/components/ui/section-heading";
-import { ButtonLink } from "@/components/ui/button-link";
 import { Reveal } from "@/components/motion/reveal";
-import { StatsSection } from "@/components/home/stats-section";
+import { EngagementsSection } from "@/components/home/engagements-section";
 import { ProcessSection } from "@/components/home/process-section";
 import { CtaSection } from "@/components/home/cta-section";
 import { siteConfig } from "@/content/site";
@@ -14,30 +14,26 @@ import { siteConfig } from "@/content/site";
 export const metadata: Metadata = {
   title: "À propos — l'entreprise COREMI",
   description:
-    "COREMI est une entreprise générale de construction active à Bruxelles et en Brabant wallon : gros œuvre, rénovation et châssis, avec un accompagnement personnalisé et des devis transparents.",
+    "COREMI est une entreprise générale de construction et de châssis active à Bruxelles et en Brabant wallon. Une structure à taille humaine, un interlocuteur unique, des devis transparents.",
   alternates: { canonical: "/a-propos" },
 };
 
 const values = [
   {
-    icon: Ruler,
     title: "La précision",
-    text: "Chaque chantier est préparé avec rigueur : mesures, planning, choix des matériaux. La qualité des finitions fait la différence.",
+    text: "Un chantier réussi se joue au millimètre : dans les mesures, dans le planning, dans le devis. Nous préférons prendre le temps de bien préparer que de rattraper.",
   },
   {
-    icon: ShieldCheck,
-    title: "La transparence",
-    text: "Nos devis sont détaillés poste par poste, sans frais cachés. Vous savez exactement ce que vous payez et pourquoi.",
+    title: "La franchise",
+    text: "Si une idée coûte trop cher pour ce qu'elle apporte, nous vous le disons. Si un délai n'est pas tenable, aussi. Vous décidez avec les vraies informations.",
   },
   {
-    icon: Timer,
-    title: "Le respect des engagements",
-    text: "Un planning annoncé est un planning tenu. Nous communiquons immédiatement en cas d'imprévu, avec des solutions.",
+    title: "Le respect des lieux",
+    text: "Nous travaillons chez vous. Protection des sols, chantier rangé chaque soir, nettoyage final : votre maison reste votre maison, même pendant les travaux.",
   },
   {
-    icon: HeartHandshake,
-    title: "La proximité",
-    text: "Un interlocuteur unique vous accompagne du premier contact à la réception. Vos questions reçoivent des réponses rapides.",
+    title: "La constance",
+    text: "Le même niveau d'exigence pour un vitrage remplacé que pour une extension complète. C'est comme ça qu'on construit une réputation locale.",
   },
 ];
 
@@ -45,94 +41,91 @@ export default function AProposPage() {
   return (
     <>
       <PageHero
+        index="04"
         eyebrow="À propos"
-        title="COREMI, l'exigence du travail bien fait"
-        description={`Entreprise générale de construction et de châssis, COREMI intervient à ${siteConfig.serviceArea} pour des projets de construction, de rénovation et d'amélioration de l'habitat.`}
+        title="Une entreprise à taille humaine, présente sur chaque chantier"
+        description={`COREMI construit, rénove et pose des châssis à ${siteConfig.serviceArea}. Derrière le nom, des artisans qui suivent votre projet du premier café au dernier coup de balai.`}
       />
 
-      <section className="py-16 sm:py-24">
-        <Container className="grid items-center gap-12 lg:grid-cols-2 lg:gap-16">
-          <div>
+      {/* Histoire */}
+      <section className="py-20 sm:py-28">
+        <Container className="grid items-center gap-12 lg:grid-cols-12">
+          <div className="lg:col-span-6">
             <Reveal>
               <SectionHeading
-                eyebrow="Notre histoire"
-                title="Un artisanat devenu entreprise"
-                description="COREMI est née sur les chantiers, d'un constat simple : les clients cherchent un partenaire fiable, qui écoute, conseille honnêtement et livre un travail soigné."
+                eyebrow="L'entreprise"
+                title="Née sur les chantiers, pas dans un bureau"
               />
-            </Reveal>
-            <Reveal delay={0.1}>
-              <div className="mt-6 space-y-4 leading-relaxed text-navy-900/75">
+              <div className="mt-8 space-y-5 leading-relaxed text-ink-600">
                 <p>
-                  Aujourd&apos;hui, notre équipe réunit les métiers du gros œuvre, de la
-                  rénovation et du châssis pour offrir un accompagnement complet : un seul
-                  partenaire, une seule responsabilité, un seul niveau d&apos;exigence.
+                  COREMI vient du terrain. L&apos;entreprise s&apos;est construite chantier
+                  après chantier, sur un constat simple : les clients cherchent quelqu&apos;un
+                  qui écoute, qui chiffre honnêtement et qui livre ce qu&apos;il a promis.
                 </p>
                 <p>
-                  Nous restons volontairement une structure à taille humaine. C&apos;est ce
-                  qui nous permet d&apos;être présents sur chaque chantier, de connaître
-                  chaque client et de garantir le niveau de finition qui fait notre
-                  réputation.
+                  Nous sommes restés volontairement une structure compacte. C&apos;est ce
+                  qui nous permet d&apos;être physiquement présents sur les chantiers, de
+                  connaître chaque client par son prénom et de garantir le niveau de
+                  finition qui fait qu&apos;on nous recommande.
+                </p>
+                <p className="text-sm text-ink-500">
+                  Années d&apos;activité, équipe et agréments : [ANNÉES D&apos;EXPÉRIENCE] et
+                  [CERTIFICATIONS], informations à compléter par COREMI avant publication.
                 </p>
               </div>
             </Reveal>
           </div>
-          <Reveal delay={0.12} y={32}>
-            <div className="relative">
-              <div
-                aria-hidden="true"
-                className="absolute -bottom-4 -right-4 hidden h-full w-full rounded-xl border-2 border-accent-600/60 sm:block"
+          <Reveal delay={0.1} className="lg:col-span-6">
+            <div className="relative aspect-[4/3] overflow-hidden bg-stone-100">
+              <Image
+                src="/images/equipe.jpg"
+                alt="L'équipe COREMI sur chantier. Photo provisoire à remplacer."
+                fill
+                sizes="(max-width: 1024px) 100vw, 50vw"
+                className="object-cover"
               />
-              <div className="relative aspect-[4/3] overflow-hidden rounded-xl">
-                <Image
-                  src="/images/equipe.jpg"
-                  alt="L'équipe COREMI sur chantier — photo à remplacer"
-                  fill
-                  sizes="(max-width: 1024px) 100vw, 50vw"
-                  className="object-cover"
-                />
-              </div>
             </div>
           </Reveal>
         </Container>
       </section>
 
-      <section className="bg-navy-50/50 py-16 sm:py-24" aria-label="Nos valeurs">
+      {/* Valeurs */}
+      <section className="border-y border-ink-950/10 bg-bone-deep py-20 sm:py-28" aria-label="Nos valeurs">
         <Container>
           <Reveal>
-            <SectionHeading
-              eyebrow="Nos valeurs"
-              title="Ce qui guide chacun de nos chantiers"
-              align="center"
-            />
+            <SectionHeading eyebrow="Ce qui nous guide" title="Quatre principes, appliqués partout" />
           </Reveal>
-          <div className="mt-12 grid gap-6 sm:grid-cols-2">
+          <div className="mt-14 grid gap-x-12 gap-y-12 sm:grid-cols-2">
             {values.map((value, i) => (
-              <Reveal key={value.title} delay={0.06 * i}>
-                <div className="flex gap-5 rounded-xl border border-navy-100 bg-white p-7">
-                  <span className="inline-flex h-12 w-12 shrink-0 items-center justify-center rounded-lg bg-navy-950 text-white">
-                    <value.icon className="h-6 w-6" aria-hidden="true" />
-                  </span>
-                  <div>
-                    <h3 className="font-display text-lg font-bold text-navy-950">{value.title}</h3>
-                    <p className="mt-2 text-sm leading-relaxed text-navy-900/70">{value.text}</p>
-                  </div>
-                </div>
+              <Reveal key={value.title} delay={0.05 * i}>
+                <article className="border-t-2 border-ink-950 pt-6">
+                  <h3 className="flex items-baseline gap-4 font-display text-2xl text-ink-950">
+                    <span className="text-sm font-sans font-semibold tracking-widest text-accent-600">
+                      {String(i + 1).padStart(2, "0")}
+                    </span>
+                    {value.title}
+                  </h3>
+                  <p className="mt-4 leading-relaxed text-ink-600">{value.text}</p>
+                </article>
               </Reveal>
             ))}
           </div>
         </Container>
       </section>
 
-      <StatsSection />
       <ProcessSection />
+      <EngagementsSection />
 
-      <section className="py-16 text-center sm:py-20">
-        <Container>
+      <section className="py-16 sm:py-20">
+        <Container className="text-center">
           <Reveal>
-            <ButtonLink href="/realisations" variant="primary" size="lg">
-              Découvrir nos réalisations
-              <ArrowRight className="h-4 w-4" aria-hidden="true" />
-            </ButtonLink>
+            <Link
+              href="/realisations"
+              className="group inline-flex items-center gap-3 border border-ink-950/25 px-8 py-4 text-sm font-semibold uppercase tracking-[0.14em] text-ink-950 transition-colors hover:border-ink-950 hover:bg-ink-950 hover:text-bone"
+            >
+              Voir nos réalisations
+              <ArrowRight className="h-4 w-4 transition-transform group-hover:translate-x-1" aria-hidden="true" />
+            </Link>
           </Reveal>
         </Container>
       </section>

@@ -1,31 +1,29 @@
 import type { MetadataRoute } from "next";
 import { siteConfig } from "@/content/site";
-import { services } from "@/content/services";
 
+/**
+ * Sitemap du site vitrine.
+ * Structure prête pour des pages locales par commune : ajouter plus tard
+ * des routes /zones/<commune> et les lister ici.
+ */
 export default function sitemap(): MetadataRoute.Sitemap {
   const base = siteConfig.url;
   const now = new Date();
 
-  const staticRoutes = [
-    "",
-    "/services",
-    "/realisations",
-    "/a-propos",
-    "/avis",
-    "/contact",
-  ].map((path) => ({
+  const routes: { path: string; priority: number }[] = [
+    { path: "", priority: 1 },
+    { path: "/construction-renovation", priority: 0.9 },
+    { path: "/chassis", priority: 0.9 },
+    { path: "/realisations", priority: 0.8 },
+    { path: "/a-propos", priority: 0.7 },
+    { path: "/avis", priority: 0.6 },
+    { path: "/contact", priority: 0.9 },
+  ];
+
+  return routes.map(({ path, priority }) => ({
     url: `${base}${path}`,
     lastModified: now,
     changeFrequency: "monthly" as const,
-    priority: path === "" ? 1 : 0.8,
+    priority,
   }));
-
-  const serviceRoutes = services.map((service) => ({
-    url: `${base}/services/${service.slug}`,
-    lastModified: now,
-    changeFrequency: "monthly" as const,
-    priority: 0.9,
-  }));
-
-  return [...staticRoutes, ...serviceRoutes];
 }

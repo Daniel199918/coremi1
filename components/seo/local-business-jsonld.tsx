@@ -1,5 +1,4 @@
 import { siteConfig } from "@/content/site";
-import { services } from "@/content/services";
 
 /**
  * Données structurées Schema.org (GeneralContractor) pour le SEO local.
@@ -30,7 +29,14 @@ export function LocalBusinessJsonLd() {
       { "@type": "City", name: "Bruxelles" },
       { "@type": "AdministrativeArea", name: "Brabant wallon" },
     ],
-    knowsAbout: services.map((s) => s.title),
+    knowsAbout: [
+      "Construction et gros œuvre",
+      "Rénovation et transformation",
+      "Extensions",
+      "Châssis PVC et aluminium",
+      "Portes et vitrages",
+      "Aménagements extérieurs",
+    ],
     priceRange: "$$",
     openingHoursSpecification: [
       {

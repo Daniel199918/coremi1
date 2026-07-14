@@ -1,22 +1,4 @@
 import Link from "next/link";
-import { Mail, MapPin, Phone } from "lucide-react";
-
-/* lucide-react ne fournit plus d'icônes de marques : SVG inline (simpleicons). */
-function FacebookIcon({ className }: { className?: string }) {
-  return (
-    <svg viewBox="0 0 24 24" fill="currentColor" className={className} aria-hidden="true">
-      <path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z" />
-    </svg>
-  );
-}
-
-function InstagramIcon({ className }: { className?: string }) {
-  return (
-    <svg viewBox="0 0 24 24" fill="currentColor" className={className} aria-hidden="true">
-      <path d="M12 0C8.74 0 8.333.015 7.053.072 5.775.132 4.905.333 4.14.63c-.789.306-1.459.717-2.126 1.384S.935 3.35.63 4.14C.333 4.905.131 5.775.072 7.053.012 8.333 0 8.74 0 12s.015 3.667.072 4.947c.06 1.277.261 2.148.558 2.913.306.788.717 1.459 1.384 2.126.667.666 1.336 1.079 2.126 1.384.766.296 1.636.499 2.913.558C8.333 23.988 8.74 24 12 24s3.667-.015 4.947-.072c1.277-.06 2.148-.262 2.913-.558.788-.306 1.459-.718 2.126-1.384.666-.667 1.079-1.335 1.384-2.126.296-.765.499-1.636.558-2.913.06-1.28.072-1.687.072-4.947s-.015-3.667-.072-4.947c-.06-1.277-.262-2.149-.558-2.913-.306-.789-.718-1.459-1.384-2.126C21.319 1.347 20.651.935 19.86.63c-.765-.297-1.636-.499-2.913-.558C15.667.012 15.26 0 12 0zm0 2.16c3.203 0 3.585.016 4.85.071 1.17.055 1.805.249 2.227.415.562.217.96.477 1.382.896.419.42.679.819.896 1.381.164.422.36 1.057.413 2.227.057 1.266.07 1.646.07 4.85s-.015 3.585-.074 4.85c-.061 1.17-.256 1.805-.421 2.227-.224.562-.479.96-.899 1.382-.419.419-.824.679-1.38.896-.42.164-1.065.36-2.235.413-1.274.057-1.649.07-4.859.07-3.211 0-3.586-.015-4.859-.074-1.171-.061-1.816-.256-2.236-.421-.569-.224-.96-.479-1.379-.899-.421-.419-.69-.824-.9-1.38-.165-.42-.359-1.065-.42-2.235-.045-1.26-.061-1.649-.061-4.844 0-3.196.016-3.586.061-4.861.061-1.17.255-1.814.42-2.234.21-.57.479-.96.9-1.381.419-.419.81-.689 1.379-.898.42-.166 1.051-.361 2.221-.421 1.275-.045 1.65-.06 4.859-.06l.045.03zm0 3.678a6.162 6.162 0 100 12.324 6.162 6.162 0 100-12.324zM12 16c-2.21 0-4-1.79-4-4s1.79-4 4-4 4 1.79 4 4-1.79 4-4 4zm7.846-10.405a1.441 1.441 0 01-2.88 0 1.44 1.44 0 012.88 0z" />
-    </svg>
-  );
-}
 import { Logo } from "@/components/brand/logo";
 import { Container } from "@/components/ui/container";
 import { footerServiceLinks, navigation, siteConfig } from "@/content/site";
@@ -26,64 +8,64 @@ export function SiteFooter() {
   const { contact } = siteConfig;
 
   return (
-    <footer className="bg-navy-950 text-navy-100">
+    <footer className="bg-ink-950 text-stone-200">
+      {/* Bandeau CTA compact */}
+      <div className="border-b border-bone/10">
+        <Container className="flex flex-col items-start justify-between gap-6 py-14 sm:flex-row sm:items-center">
+          <p className="max-w-md font-display text-3xl leading-tight text-bone">
+            Parlez-nous de votre projet.
+          </p>
+          <Link
+            href="/contact"
+            className="bg-accent-600 px-8 py-4 text-sm font-semibold uppercase tracking-[0.14em] text-white transition-colors hover:bg-accent-700"
+          >
+            Demander un devis gratuit
+          </Link>
+        </Container>
+      </div>
+
       <Container className="grid gap-12 py-16 sm:grid-cols-2 lg:grid-cols-4">
         {/* Marque */}
         <div>
           <Link href="/" aria-label="COREMI — retour à l'accueil">
             <Logo variant="light" />
           </Link>
-          <p className="mt-5 text-sm leading-relaxed text-navy-100/70">
-            Entreprise générale de construction : gros œuvre, rénovation, châssis et
-            aménagements extérieurs à Bruxelles et en Brabant wallon.
+          <p className="mt-6 text-sm leading-relaxed text-stone-300/80">
+            Entreprise générale de construction et de châssis. Gros œuvre, rénovation,
+            extensions et menuiseries extérieures à Bruxelles et en Brabant wallon.
           </p>
-          <div className="mt-5 flex gap-3">
-            <a
-              href={siteConfig.social.facebook}
-              target="_blank"
-              rel="noopener noreferrer"
-              aria-label="COREMI sur Facebook"
-              className="rounded-md border border-white/15 p-2.5 transition-colors hover:bg-white/10"
-            >
-              <FacebookIcon className="h-4 w-4" />
-            </a>
-            <a
-              href={siteConfig.social.instagram}
-              target="_blank"
-              rel="noopener noreferrer"
-              aria-label="COREMI sur Instagram"
-              className="rounded-md border border-white/15 p-2.5 transition-colors hover:bg-white/10"
-            >
-              <InstagramIcon className="h-4 w-4" />
-            </a>
-          </div>
         </div>
 
-        {/* Liens rapides */}
-        <nav aria-label="Liens rapides">
-          <h2 className="font-display text-sm font-bold uppercase tracking-[0.18em] text-white">
-            Liens rapides
+        {/* Navigation */}
+        <nav aria-label="Pages du site">
+          <h2 className="text-xs font-semibold uppercase tracking-[0.25em] text-stone-400">
+            Navigation
           </h2>
-          <ul className="mt-5 space-y-3 text-sm">
+          <ul className="mt-6 space-y-3 text-sm">
             {navigation.map((item) => (
               <li key={item.href}>
-                <Link href={item.href} className="text-navy-100/70 transition-colors hover:text-white">
+                <Link href={item.href} className="text-stone-200/85 transition-colors hover:text-bone">
                   {item.label}
                 </Link>
               </li>
             ))}
+            <li>
+              <Link href="/avis" className="text-stone-200/85 transition-colors hover:text-bone">
+                Avis clients
+              </Link>
+            </li>
           </ul>
         </nav>
 
         {/* Services */}
         <nav aria-label="Nos services">
-          <h2 className="font-display text-sm font-bold uppercase tracking-[0.18em] text-white">
+          <h2 className="text-xs font-semibold uppercase tracking-[0.25em] text-stone-400">
             Services
           </h2>
-          <ul className="mt-5 space-y-3 text-sm">
+          <ul className="mt-6 space-y-3 text-sm">
             {footerServiceLinks.map((item) => (
               <li key={item.href}>
-                <Link href={item.href} className="text-navy-100/70 transition-colors hover:text-white">
+                <Link href={item.href} className="text-stone-200/85 transition-colors hover:text-bone">
                   {item.label}
                 </Link>
               </li>
@@ -93,43 +75,39 @@ export function SiteFooter() {
 
         {/* Contact */}
         <div>
-          <h2 className="font-display text-sm font-bold uppercase tracking-[0.18em] text-white">
+          <h2 className="text-xs font-semibold uppercase tracking-[0.25em] text-stone-400">
             Contact
           </h2>
-          <ul className="mt-5 space-y-3 text-sm text-navy-100/70">
+          <ul className="mt-6 space-y-3 text-sm text-stone-200/85">
             <li>
-              <a href={contact.phoneHref} className="flex items-center gap-2.5 transition-colors hover:text-white">
-                <Phone className="h-4 w-4 shrink-0 text-accent-500" aria-hidden="true" />
+              <a href={contact.phoneHref} className="transition-colors hover:text-bone">
                 {contact.phone}
               </a>
             </li>
             <li>
-              <a href={`mailto:${contact.email}`} className="flex items-center gap-2.5 transition-colors hover:text-white">
-                <Mail className="h-4 w-4 shrink-0 text-accent-500" aria-hidden="true" />
+              <a href={`mailto:${contact.email}`} className="transition-colors hover:text-bone">
                 {contact.email}
               </a>
             </li>
-            <li className="flex items-start gap-2.5">
-              <MapPin className="mt-0.5 h-4 w-4 shrink-0 text-accent-500" aria-hidden="true" />
-              <span>
-                Zone d&apos;intervention :<br />
-                {siteConfig.serviceArea}
-              </span>
+            <li className="pt-2 text-stone-300/70">
+              Zone d&apos;intervention :
+              <br />
+              {siteConfig.serviceArea}
             </li>
           </ul>
         </div>
       </Container>
 
-      <div className="border-t border-white/10">
-        <Container className="flex flex-col items-center justify-between gap-3 py-6 text-xs text-navy-100/50 sm:flex-row">
+      <div className="border-t border-bone/10">
+        <Container className="flex flex-col items-center justify-between gap-3 py-6 text-xs text-stone-400/70 sm:flex-row">
           <p>
-            © {year} {siteConfig.legalName} — Tous droits réservés.
+            © {year} {siteConfig.legalName}. Tous droits réservés.
           </p>
           <nav aria-label="Liens légaux" className="flex gap-6">
-            <Link href="/mentions-legales" className="transition-colors hover:text-white">
+            <Link href="/mentions-legales" className="transition-colors hover:text-bone">
               Mentions légales
             </Link>
-            <Link href="/politique-de-confidentialite" className="transition-colors hover:text-white">
+            <Link href="/politique-de-confidentialite" className="transition-colors hover:text-bone">
               Politique de confidentialité
             </Link>
           </nav>

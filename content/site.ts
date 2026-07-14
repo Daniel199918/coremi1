@@ -12,7 +12,7 @@ export const siteConfig = {
   legalName: "COREMI SPRL", // ⚠️ à confirmer (forme juridique exacte)
   tagline: "Construction & Châssis",
   description:
-    "Entreprise générale de construction en Belgique : construction, rénovation, châssis et portes, extensions et aménagements extérieurs à Bruxelles et en Brabant wallon.",
+    "COREMI construit, rénove et pose des châssis à Bruxelles et en Brabant wallon. Gros œuvre, extensions, rénovations complètes, châssis PVC et aluminium : un seul interlocuteur, un devis détaillé.",
   /** URL canonique du site (surchargée par NEXT_PUBLIC_SITE_URL si définie). */
   url: process.env.NEXT_PUBLIC_SITE_URL ?? "https://coremi1.vercel.app",
 
@@ -28,7 +28,7 @@ export const siteConfig = {
       country: "Belgique",
     },
     hours: [
-      { days: "Lundi – Vendredi", hours: "8h00 – 18h00" }, // ⚠️ à confirmer
+      { days: "Lundi à vendredi", hours: "8 h – 18 h" }, // ⚠️ à confirmer
       { days: "Samedi", hours: "Sur rendez-vous" }, // ⚠️ à confirmer
     ],
   },
@@ -47,16 +47,16 @@ export const siteConfig = {
 
 export const navigation = [
   { label: "Accueil", href: "/" },
-  { label: "Services", href: "/services" },
+  { label: "Construction & Rénovation", href: "/construction-renovation" },
+  { label: "Châssis", href: "/chassis" },
   { label: "Réalisations", href: "/realisations" },
   { label: "À propos", href: "/a-propos" },
-  { label: "Avis", href: "/avis" },
   { label: "Contact", href: "/contact" },
 ] as const;
 
 export const footerServiceLinks = [
-  { label: "Construction & gros œuvre", href: "/services/construction-gros-oeuvre" },
-  { label: "Rénovation", href: "/services/renovation" },
-  { label: "Châssis & portes", href: "/services/chassis-portes" },
-  { label: "Aménagement extérieur", href: "/services/amenagement-exterieur" },
+  { label: "Construction & gros œuvre", href: "/construction-renovation" },
+  { label: "Rénovation & transformation", href: "/construction-renovation#renovation" },
+  { label: "Châssis PVC & aluminium", href: "/chassis" },
+  { label: "Portes & vitrages", href: "/chassis#portes" },
 ] as const;

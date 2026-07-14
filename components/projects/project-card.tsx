@@ -1,31 +1,30 @@
 import Image from "next/image";
-import { MapPin } from "lucide-react";
 import type { Project } from "@/content/projects";
+import { cn } from "@/utils";
 
-/** Carte réalisation avec zoom photo discret au survol. */
-export function ProjectCard({ project }: { project: Project }) {
+/** Carte réalisation éditoriale : grande photo, légende de plan. */
+export function ProjectCard({ project, className }: { project: Project; className?: string }) {
   return (
-    <article className="group overflow-hidden rounded-xl border border-navy-100 bg-white transition-shadow duration-300 hover:shadow-lg hover:shadow-navy-950/10">
-      <div className="relative aspect-[4/3] overflow-hidden">
+    <article className={cn("group", className)}>
+      <div className="relative aspect-[4/3] overflow-hidden bg-stone-100">
         <Image
           src={project.image}
           alt={project.imageAlt}
           fill
           sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
-          className="object-cover transition-transform duration-500 group-hover:scale-[1.04]"
+          className="object-cover transition-transform duration-700 ease-out group-hover:scale-[1.03]"
         />
-        <span className="absolute left-4 top-4 rounded-md bg-navy-950/85 px-3 py-1 text-xs font-semibold text-white backdrop-blur-sm">
-          {project.workType}
-        </span>
       </div>
-      <div className="p-6">
-        <h3 className="font-display text-lg font-bold text-navy-950">{project.title}</h3>
-        <p className="mt-1.5 flex items-center gap-1.5 text-sm text-navy-900/60">
-          <MapPin className="h-3.5 w-3.5 text-accent-600" aria-hidden="true" />
-          {project.location}
-        </p>
-        <p className="mt-3 text-sm leading-relaxed text-navy-900/70">{project.description}</p>
+      <div className="flex items-baseline justify-between gap-4 border-b border-ink-950/10 py-4">
+        <div>
+          <h3 className="font-display text-xl text-ink-950">{project.title}</h3>
+          <p className="mt-1 text-xs font-semibold uppercase tracking-[0.18em] text-ink-500">
+            {project.workType}
+          </p>
+        </div>
+        <p className="shrink-0 text-sm text-ink-500">{project.location}</p>
       </div>
+      <p className="mt-3 text-sm leading-relaxed text-ink-600">{project.description}</p>
     </article>
   );
 }
