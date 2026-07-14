@@ -1,9 +1,151 @@
 @import "tailwindcss";
 
+/* ============================================================
+   Design system COREMI v3 — « Matériaux & Élévations »
+   Minimalisme architectural : blanc chaud, pierre, terre,
+   graphite, noir minéral. Accent rouge oxydé (corten), jamais
+   décoratif : actions et repères uniquement.
+   ============================================================ */
+@theme {
+  --color-bone: #faf7f0;
+  --color-bone-deep: #f2ecdf;
+
+  --color-stone-100: #e9e1d2;
+  --color-stone-200: #d8cdb8;
+  --color-stone-300: #bfb095;
+  --color-stone-400: #9c8c72;
+  --color-stone-500: #7d6f58;
+
+  --color-ink-500: #6f675a;
+  --color-ink-600: #544e43;
+  --color-ink-700: #3d382f;
+  --color-ink-800: #2a2721;
+  --color-ink-900: #1b1915;
+  --color-ink-950: #12100c;
+
+  --color-accent-400: #d3705c;
+  --color-accent-500: #c65540;
+  --color-accent-600: #b23a25;
+  --color-accent-700: #8f2e1d;
+  --color-accent-800: #732518;
+
+  --font-sans: var(--font-inter), ui-sans-serif, system-ui, sans-serif;
+  --font-display: var(--font-fraunces), Georgia, "Times New Roman", serif;
+  --font-mono: ui-monospace, "SF Mono", "Cascadia Mono", "JetBrains Mono", monospace;
+}
+
 :root {
-  color-scheme: light dark;
+  color-scheme: light;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
 }
 
 body {
-  @apply bg-zinc-50 text-zinc-900 antialiased dark:bg-zinc-950 dark:text-zinc-100;
+  @apply bg-bone text-ink-900 antialiased;
+}
+
+/* Aucun débordement horizontal, sur aucune page (clip ne casse pas sticky). */
+html,
+body {
+  overflow-x: clip;
+}
+
+::selection {
+  background: var(--color-accent-600);
+  color: var(--color-bone);
+}
+
+/* Focus visible cohérent (accessibilité clavier) */
+:focus-visible {
+  outline: 2px solid var(--color-accent-600);
+  outline-offset: 3px;
+}
+
+/* Chevron des <details> de la FAQ */
+details summary::-webkit-details-marker {
+  display: none;
+}
+
+/* ------------------------------------------------------------
+   Annotation technique (cotes de plan) : monospace, espacée.
+   ------------------------------------------------------------ */
+.annotation {
+  font-family: var(--font-mono);
+  font-size: 0.62rem;
+  letter-spacing: 0.22em;
+  text-transform: uppercase;
+}
+
+/* ------------------------------------------------------------
+   Entrée du hero au chargement (pas de JS requis).
+   ------------------------------------------------------------ */
+@keyframes rise-in {
+  from {
+    opacity: 0;
+    transform: translateY(26px);
+  }
+  to {
+    opacity: 1;
+    transform: none;
+  }
+}
+
+.rise {
+  animation: rise-in 0.9s cubic-bezier(0.21, 0.47, 0.32, 0.98) both;
+}
+.rise-1 { animation-delay: 0.05s; }
+.rise-2 { animation-delay: 0.18s; }
+.rise-3 { animation-delay: 0.32s; }
+.rise-4 { animation-delay: 0.46s; }
+
+/* Indicateur de défilement */
+@keyframes scroll-cue {
+  0%, 100% { transform: translateY(0); opacity: 1; }
+  50% { transform: translateY(10px); opacity: 0.4; }
+}
+.scroll-cue {
+  animation: scroll-cue 2.2s ease-in-out infinite;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .rise,
+  .scroll-cue {
+    animation: none !important;
+    opacity: 1 !important;
+    transform: none !important;
+  }
+}
+
+/* ------------------------------------------------------------
+   Apparition au scroll (composant Reveal)
+   Visible par défaut ; masqué uniquement côté client pour les
+   éléments hors écran, puis révélé à l'entrée dans le viewport.
+   ------------------------------------------------------------ */
+.reveal[data-reveal="armed"] {
+  opacity: 0;
+  transform: translateY(22px);
+}
+
+.reveal[data-reveal="shown"] {
+  opacity: 1;
+  transform: none;
+  transition:
+    opacity 0.6s ease-out,
+    transform 0.65s cubic-bezier(0.21, 0.47, 0.32, 0.98);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .reveal[data-reveal] {
+    opacity: 1 !important;
+    transform: none !important;
+    transition: none !important;
+  }
 }
