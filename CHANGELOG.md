@@ -7,6 +7,14 @@ et le projet adhère au [Semantic Versioning](https://semver.org/lang/fr/).
 
 ## [Unreleased]
 
+## [0.1.1] - 2026-07-14
+
+### Sécurité
+
+- Révocation de l'exécution des fonctions trigger (`handle_new_user`, `handle_updated_at`) via l'API REST pour les rôles `anon` et `authenticated`.
+- Le listing du bucket `avatars` est restreint au dossier du propriétaire (les URLs publiques des fichiers restent servies normalement).
+- Résultat : zéro avertissement aux advisors de sécurité Supabase.
+
 ## [0.1.0] - 2026-07-14
 
 ### Ajouté
