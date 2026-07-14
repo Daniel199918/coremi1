@@ -1,0 +1,4433 @@
+{
+  "version": 1,
+  "skills": {
+    "auto-research-public": {
+      "source": "growthenginenowoslawski/coldoutboundskills",
+      "sourceType": "github",
+      "skillPath": "skills/auto-research-public/SKILL.md",
+      "computedHash": "066d1d883ac371e8202ebe2beceee7b056e65337f79382426885ddc5d5cd7d9b"
+    },
+    "blitz-list-builder": {
+      "source": "growthenginenowoslawski/coldoutboundskills",
+      "sourceType": "github",
+      "skillPath": "skills/blitz-list-builder/SKILL.md",
+      "computedHash": "cd416b3805a898fa34e8c693ca85b816a0d0684b8c9ceab8ff968c528630548a"
+    },
+    "campaign-copywriting": {
+      "source": "growthenginenowoslawski/coldoutboundskills",
+      "sourceType": "github",
+      "skillPath": "skills/campaign-copywriting/SKILL.md",
+      "computedHash": "a67f909c69ce5078ba17c2bebe0575476fefa5a742499c5d7074bb1c371de303"
+    },
+    "campaign-strategy": {
+      "source": "growthenginenowoslawski/coldoutboundskills",
+      "sourceType": "github",
+      "skillPath": "skills/campaign-strategy/SKILL.md",
+      "computedHash": "be52d73f67333affa3f3e02ee161bfd50582d82f90eab73bd0ca46729932ec5b"
+    },
+    "canvas-design": {
+      "source": "anthropics/skills",
+      "sourceType": "github",
+      "skillPath": "skills/canvas-design/SKILL.md",
+      "computedHash": "3fa7ea60170023ad8268bf9fd734ea75dd404279a2ef8ddf5abaa1102ad8e5f4"
+    },
+    "cold-email-kickoff": {
+      "source": "growthenginenowoslawski/coldoutboundskills",
+      "sourceType": "github",
+      "skillPath": "skills/cold-email-kickoff/SKILL.md",
+      "computedHash": "e3ea39c5933b03b6d0b0bc57920e616fd80c7675b2873cf6255db3d2c8203140"
+    },
+    "cold-email-starter-kit": {
+      "source": "growthenginenowoslawski/coldoutboundskills",
+      "sourceType": "github",
+      "skillPath": "skills/cold-email-starter-kit/SKILL.md",
+      "computedHash": "71e3d95990319fe4ecf792a47507bd262c0cb05e7e42f36900a1284c0d7133ae"
+    },
+    "cold-email-weekly-rhythm": {
+      "source": "growthenginenowoslawski/coldoutboundskills",
+      "sourceType": "github",
+      "skillPath": "skills/cold-email-weekly-rhythm/SKILL.md",
+      "computedHash": "fe9a071f06a3b965a2880f9e8dcca5f63f8d502da0b372d2032859da682604e4"
+    },
+    "competitor-engagers": {
+      "source": "growthenginenowoslawski/coldoutboundskills",
+      "sourceType": "github",
+      "skillPath": "skills/competitor-engagers/SKILL.md",
+      "computedHash": "06c66436272a1ce498f3b181ce14f0fc5d7364f60f4bd51ea0d1904d44ed0e2c"
+    },
+    "content-research-writer": {
+      "source": "ComposioHQ/awesome-claude-skills",
+      "sourceType": "github",
+      "skillPath": "content-research-writer/SKILL.md",
+      "computedHash": "de7e9085e875a651f209c826d1a5e7dd5f2436fb38fe565ef76b54492c1a0c22"
+    },
+    "deliverability-incident-response": {
+      "source": "growthenginenowoslawski/coldoutboundskills",
+      "sourceType": "github",
+      "skillPath": "skills/deliverability-incident-response/SKILL.md",
+      "computedHash": "37902f5ca7ac680abe7a45a3dad2948f72c31db0c9d246d2b4de23f0e339d868"
+    },
+    "deliverability-test-public": {
+      "source": "growthenginenowoslawski/coldoutboundskills",
+      "sourceType": "github",
+      "skillPath": "skills/deliverability-test-public/SKILL.md",
+      "computedHash": "aa07bfb8d38fb83f313729813b58e6bbb679e7899c6152d5e44a795f1d2de7a0"
+    },
+    "disco-like": {
+      "source": "growthenginenowoslawski/coldoutboundskills",
+      "sourceType": "github",
+      "skillPath": "skills/disco-like/SKILL.md",
+      "computedHash": "71bfe4e66eeb83a11165d57eda8c53d51990fd2accc9b4d9ddc84fab760090c5"
+    },
+    "email-deliverability-audit": {
+      "source": "growthenginenowoslawski/coldoutboundskills",
+      "sourceType": "github",
+      "skillPath": "skills/email-deliverability-audit/SKILL.md",
+      "computedHash": "deaae5f557a091d9c3ea497bcdd088b6368299fe378fce2f0f01306b8acb0145"
+    },
+    "experiment-design": {
+      "source": "growthenginenowoslawski/coldoutboundskills",
+      "sourceType": "github",
+      "skillPath": "skills/experiment-design/SKILL.md",
+      "computedHash": "4732322ddfe0d50ae44f17e1d52df8a4bdf7f5e206607d1f70b4339a5d5d2a9c"
+    },
+    "google-maps-list-builder": {
+      "source": "growthenginenowoslawski/coldoutboundskills",
+      "sourceType": "github",
+      "skillPath": "skills/google-maps-list-builder/SKILL.md",
+      "computedHash": "f9333d5d4493aaa6ce211638de37efca055c754f6a62af6bf1f4b835c293c1a6"
+    },
+    "gstack": {
+      "source": "garrytan/gstack",
+      "sourceType": "github",
+      "skillPath": "SKILL.md",
+      "computedHash": "2b96e1db510df169809ba0e7db57ba1d293001b57f7f172f5401e938e85e44fc"
+    },
+    "humanizer": {
+      "source": "blader/humanizer",
+      "sourceType": "github",
+      "skillPath": "SKILL.md",
+      "computedHash": "44201a7ac488b5147fde0a8a63aeb1ffd1501f384d525fd3c482f9599c4903f4"
+    },
+    "icp-onboarding": {
+      "source": "growthenginenowoslawski/coldoutboundskills",
+      "sourceType": "github",
+      "skillPath": "skills/icp-onboarding/SKILL.md",
+      "computedHash": "646b8657b3f0981b4002331c22d370aaf6bd26887df0f9356da473b21d5725b3"
+    },
+    "icp-prompt-builder": {
+      "source": "growthenginenowoslawski/coldoutboundskills",
+      "sourceType": "github",
+      "skillPath": "skills/icp-prompt-builder/SKILL.md",
+      "computedHash": "740427ceeb5ea4e31aba5897c45f41ec16650c6ff7f3aa61bd89d663f3ba132f"
+    },
+    "internal-comms": {
+      "source": "anthropics/skills",
+      "sourceType": "github",
+      "skillPath": "skills/internal-comms/SKILL.md",
+      "computedHash": "0bdc8867452b7ab9ef6167f6b0db2025ce5fb03773d3f85efcef2dfeb9d4976d"
+    },
+    "lead-magnet-brainstorm": {
+      "source": "growthenginenowoslawski/coldoutboundskills",
+      "sourceType": "github",
+      "skillPath": "skills/lead-magnet-brainstorm/SKILL.md",
+      "computedHash": "f8021eae64d948ce3cdd1613564a8f830d0bab31b08ac3459445f07f573409ca"
+    },
+    "list-quality-scorecard": {
+      "source": "growthenginenowoslawski/coldoutboundskills",
+      "sourceType": "github",
+      "skillPath": "skills/list-quality-scorecard/SKILL.md",
+      "computedHash": "8ca25f1905ac0f89b29eeb63ff36398638109e748ee237c4391fa723dc2d151f"
+    },
+    "personalization-subagent-pattern": {
+      "source": "growthenginenowoslawski/coldoutboundskills",
+      "sourceType": "github",
+      "skillPath": "skills/personalization-subagent-pattern/SKILL.md",
+      "computedHash": "c8b96ca7848c2241fc3c3d37f5068686fa738e610348b08810dca5191d010bac"
+    },
+    "positive-reply-scoring": {
+      "source": "growthenginenowoslawski/coldoutboundskills",
+      "sourceType": "github",
+      "skillPath": "skills/positive-reply-scoring/SKILL.md",
+      "computedHash": "b71e72f9579d4e840110058efe01abfa1df84d71aae09a7d836bde012a39f8bf"
+    },
+    "prospeo-full-export": {
+      "source": "growthenginenowoslawski/coldoutboundskills",
+      "sourceType": "github",
+      "skillPath": "skills/prospeo-full-export/SKILL.md",
+      "computedHash": "8f8de7d69f5ca824a5d3f7fab0960fdedd6983ff06a6beb2fa2fa2b45b7a0166"
+    },
+    "prospeo-search-api": {
+      "source": "growthenginenowoslawski/coldoutboundskills",
+      "sourceType": "github",
+      "skillPath": "skills/prospeo-search-api/SKILL.md",
+      "computedHash": "f56a29124805b04b917186fe7350f8704d9572107b3ae9183ed138316f40c4e7"
+    },
+    "sales-11x": {
+      "source": "sales-skills/sales",
+      "sourceType": "github",
+      "skillPath": "skills/sales-11x/SKILL.md",
+      "computedHash": "38208310d215071079e17ca0e75599ef683335e8aab371b22eae5923410eee75"
+    },
+    "sales-6sense": {
+      "source": "sales-skills/sales",
+      "sourceType": "github",
+      "skillPath": "skills/sales-6sense/SKILL.md",
+      "computedHash": "21a561ad11b293af621b994cfe87add1ccc11bd59b95a41e0021a7e3f1d5c400"
+    },
+    "sales-account-map": {
+      "source": "sales-skills/sales",
+      "sourceType": "github",
+      "skillPath": "skills/sales-account-map/SKILL.md",
+      "computedHash": "db310ff8286255aa2ae3d94ac485eb69f3fb4a664d06a2ad4b586e154d793d56"
+    },
+    "sales-acquire": {
+      "source": "sales-skills/sales",
+      "sourceType": "github",
+      "skillPath": "skills/sales-acquire/SKILL.md",
+      "computedHash": "b4f034cbf06d9008edbcc075209d10cf6c850e23586104959edbb6c61f386890"
+    },
+    "sales-activecampaign": {
+      "source": "sales-skills/sales",
+      "sourceType": "github",
+      "skillPath": "skills/sales-activecampaign/SKILL.md",
+      "computedHash": "7d9fbc4ed9a31b85d8ab20e587284e2c9aba8f4b32570962cf4852682dbbf58f"
+    },
+    "sales-adbutler": {
+      "source": "sales-skills/sales",
+      "sourceType": "github",
+      "skillPath": "skills/sales-adbutler/SKILL.md",
+      "computedHash": "c3490d5f8f7944278b34f56ebfbefdf377a007397d2b01ff6b8904f4f2846a4e"
+    },
+    "sales-adglare": {
+      "source": "sales-skills/sales",
+      "sourceType": "github",
+      "skillPath": "skills/sales-adglare/SKILL.md",
+      "computedHash": "be010413d4c5b6edeadf6726dcc7a02aa8c7412157e98b87bd75747def07d9e8"
+    },
+    "sales-adlynews": {
+      "source": "sales-skills/sales",
+      "sourceType": "github",
+      "skillPath": "skills/sales-adlynews/SKILL.md",
+      "computedHash": "d8152947e3ae2e01ceb8a8d3ec5db08f00b3393471966c796f3b65c328255e39"
+    },
+    "sales-admailr": {
+      "source": "sales-skills/sales",
+      "sourceType": "github",
+      "skillPath": "skills/sales-admailr/SKILL.md",
+      "computedHash": "306859b200df540c04ac86e2c30618033bd2a28851d3c2f5a5744b98bfd1650c"
+    },
+    "sales-adplugg": {
+      "source": "sales-skills/sales",
+      "sourceType": "github",
+      "skillPath": "skills/sales-adplugg/SKILL.md",
+      "computedHash": "5253f3ac9ffe392f9f83fe949b835200fa6f348eced2c0a06089223ffefbac2d"
+    },
+    "sales-adroll": {
+      "source": "sales-skills/sales",
+      "sourceType": "github",
+      "skillPath": "skills/sales-adroll/SKILL.md",
+      "computedHash": "729001e878a5c52e11a2305ebcf0a23bd343fbb69cbed35f5be7bf51c55845a4"
+    },
+    "sales-adserver-online": {
+      "source": "sales-skills/sales",
+      "sourceType": "github",
+      "skillPath": "skills/sales-adserver-online/SKILL.md",
+      "computedHash": "09baac76b4696ce05141b730a693241409009a39548ef662db2e031b7d66c28b"
+    },
+    "sales-adslots": {
+      "source": "sales-skills/sales",
+      "sourceType": "github",
+      "skillPath": "skills/sales-adslots/SKILL.md",
+      "computedHash": "a83cb6bf05cbe5c7ac20546a18f846d27f9ea99d7bade9427cc15dedce71ffad"
+    },
+    "sales-adspeed": {
+      "source": "sales-skills/sales",
+      "sourceType": "github",
+      "skillPath": "skills/sales-adspeed/SKILL.md",
+      "computedHash": "0aa0b73da444101f77b9ac6aabb78811ff7ec51de6dc5ba0c28ee53f0f4bc6c3"
+    },
+    "sales-advertserve": {
+      "source": "sales-skills/sales",
+      "sourceType": "github",
+      "skillPath": "skills/sales-advertserve/SKILL.md",
+      "computedHash": "a3c62f16dfc8a55f68e387bb1c00bbde25f85fd109f08203aa4da3f960ff7d99"
+    },
+    "sales-adwake": {
+      "source": "sales-skills/sales",
+      "sourceType": "github",
+      "skillPath": "skills/sales-adwake/SKILL.md",
+      "computedHash": "fa8de77efe3c6e599eae6c7da620a6c00e0835218045c3f439738f2b7c59eb23"
+    },
+    "sales-affiliate-program": {
+      "source": "sales-skills/sales",
+      "sourceType": "github",
+      "skillPath": "skills/sales-affiliate-program/SKILL.md",
+      "computedHash": "4ef042f349fbd6238101ec2ce3c65f7615350809be42376f33b64c449c77fa53"
+    },
+    "sales-afluencer": {
+      "source": "sales-skills/sales",
+      "sourceType": "github",
+      "skillPath": "skills/sales-afluencer/SKILL.md",
+      "computedHash": "42eb876ef2b83afe4234cd23b0a4661dd78e51e6f0aae026a217bc879fdb370d"
+    },
+    "sales-agency-outbound": {
+      "source": "sales-skills/sales",
+      "sourceType": "github",
+      "skillPath": "skills/sales-agency-outbound/SKILL.md",
+      "computedHash": "459b09f2ff2906f4b0cf3af8df4e0130f335771c20818a58c0d1c282af3c2fcb"
+    },
+    "sales-ahrefs": {
+      "source": "sales-skills/sales",
+      "sourceType": "github",
+      "skillPath": "skills/sales-ahrefs/SKILL.md",
+      "computedHash": "97d6f9dfab122f226658264f2b16f65b9747e8fecd97af694f7fe48b26684b30"
+    },
+    "sales-ai-visibility": {
+      "source": "sales-skills/sales",
+      "sourceType": "github",
+      "skillPath": "skills/sales-ai-visibility/SKILL.md",
+      "computedHash": "04c80e3d3f6f62d1e6de807dc707ca5c3c9ea82c0170283cf4be42b17ab7f8a7"
+    },
+    "sales-aicofounder": {
+      "source": "sales-skills/sales",
+      "sourceType": "github",
+      "skillPath": "skills/sales-aicofounder/SKILL.md",
+      "computedHash": "5467d21774983f9ffddcfc72e7f2fc3ff04fe80dc72e3b25e5686ae30420d382"
+    },
+    "sales-airmail": {
+      "source": "sales-skills/sales",
+      "sourceType": "github",
+      "skillPath": "skills/sales-airmail/SKILL.md",
+      "computedHash": "2288a14706b7f659e797fc8a87cfaf819e30cff42d797943ab80f0df2a19549a"
+    },
+    "sales-aisdr": {
+      "source": "sales-skills/sales",
+      "sourceType": "github",
+      "skillPath": "skills/sales-aisdr/SKILL.md",
+      "computedHash": "09e76a607aef061a5f4424ae6e8b3e30bfb976ff75bbb16fad8f97e16e5476c2"
+    },
+    "sales-alfred": {
+      "source": "sales-skills/sales",
+      "sourceType": "github",
+      "skillPath": "skills/sales-alfred/SKILL.md",
+      "computedHash": "8509ca3bebcb8b04e38fd294a8d1c778dab3f578f2e01a07e5d98915da5ec691"
+    },
+    "sales-allego": {
+      "source": "sales-skills/sales",
+      "sourceType": "github",
+      "skillPath": "skills/sales-allego/SKILL.md",
+      "computedHash": "0943070fda8eb18b3d1eda6f240ad185dde68b74ed769f3c2e404660c9fcdb2f"
+    },
+    "sales-altern": {
+      "source": "sales-skills/sales",
+      "sourceType": "github",
+      "skillPath": "skills/sales-altern/SKILL.md",
+      "computedHash": "dfbef427f4fd955af29fa01fa74804ed6a081069485b7cf134d70809ca66e4f3"
+    },
+    "sales-amical": {
+      "source": "sales-skills/sales",
+      "sourceType": "github",
+      "skillPath": "skills/sales-amical/SKILL.md",
+      "computedHash": "e2242b567e34bfb16b8259b9ee10f8a3f4efc19b54af713ce2d63da92c315be6"
+    },
+    "sales-amplemarket": {
+      "source": "sales-skills/sales",
+      "sourceType": "github",
+      "skillPath": "skills/sales-amplemarket/SKILL.md",
+      "computedHash": "f1eb6e35e6d5e5b021c895a3f723587504cff24fb9185d3ccdd44dd3e0256408"
+    },
+    "sales-anymailfinder": {
+      "source": "sales-skills/sales",
+      "sourceType": "github",
+      "skillPath": "skills/sales-anymailfinder/SKILL.md",
+      "computedHash": "b24b7323cab89802c42e0904fb7bb94f95d23b4e75c7723e274c42b7ed3107a7"
+    },
+    "sales-apollo": {
+      "source": "sales-skills/sales",
+      "sourceType": "github",
+      "skillPath": "skills/sales-apollo/SKILL.md",
+      "computedHash": "0a0e30b5e0991b94b15887d5090299c8fc241adf2ce8501be595f6ad411a388e"
+    },
+    "sales-apollo-sequences": {
+      "source": "sales-skills/sales",
+      "sourceType": "github",
+      "skillPath": "skills/sales-apollo-sequences/SKILL.md",
+      "computedHash": "e72edf693f5cba49811f22fa91ea9568923e139840e0c67316325b6537d62fd2"
+    },
+    "sales-arrfounder": {
+      "source": "sales-skills/sales",
+      "sourceType": "github",
+      "skillPath": "skills/sales-arrfounder/SKILL.md",
+      "computedHash": "8bc901d8b0676f916dd3b79656af311227c574528dfc5ce88b7f8a11394c660d"
+    },
+    "sales-aspire": {
+      "source": "sales-skills/sales",
+      "sourceType": "github",
+      "skillPath": "skills/sales-aspire/SKILL.md",
+      "computedHash": "95e477b98f7e2c54bd9a5dab3379a92603befcbb1019e7761fd7ec2999c1ad4a"
+    },
+    "sales-attention": {
+      "source": "sales-skills/sales",
+      "sourceType": "github",
+      "skillPath": "skills/sales-attention/SKILL.md",
+      "computedHash": "831b29bd63f2983f9b6364e3f6cebef03d0fb9a887a494d955736a97676f0eae"
+    },
+    "sales-attio": {
+      "source": "sales-skills/sales",
+      "sourceType": "github",
+      "skillPath": "skills/sales-attio/SKILL.md",
+      "computedHash": "a5362be046f1354806caff8e4c86d1755a94be8ad3ca4d42908b0b292aa209d2"
+    },
+    "sales-audience-growth": {
+      "source": "sales-skills/sales",
+      "sourceType": "github",
+      "skillPath": "skills/sales-audience-growth/SKILL.md",
+      "computedHash": "de807152d3a570a460dda2a39f6dc6b28475848aa0e7ef1ddcb3216172a77602"
+    },
+    "sales-audionotes": {
+      "source": "sales-skills/sales",
+      "sourceType": "github",
+      "skillPath": "skills/sales-audionotes/SKILL.md",
+      "computedHash": "aa7632bb4b5dfb0b8a83d80578902910b48dd6aa0580e0e07b5073731fd09456"
+    },
+    "sales-audiopen": {
+      "source": "sales-skills/sales",
+      "sourceType": "github",
+      "skillPath": "skills/sales-audiopen/SKILL.md",
+      "computedHash": "2cec90e0583ac66693f57bbef05f0dda49a4b0005faf6784e3a891bcc5ab98d9"
+    },
+    "sales-aviso": {
+      "source": "sales-skills/sales",
+      "sourceType": "github",
+      "skillPath": "skills/sales-aviso/SKILL.md",
+      "computedHash": "b7072e7f7c6e014b3158393bac491c40f37c0164ecd06bc20028cc18276b5f7a"
+    },
+    "sales-avoma": {
+      "source": "sales-skills/sales",
+      "sourceType": "github",
+      "skillPath": "skills/sales-avoma/SKILL.md",
+      "computedHash": "da6738fc16f25566c72ccd651724c6be67d6d112d857b919f4be20e10d676d47"
+    },
+    "sales-awario": {
+      "source": "sales-skills/sales",
+      "sourceType": "github",
+      "skillPath": "skills/sales-awario/SKILL.md",
+      "computedHash": "93f04b2a8ff1caf42305301e9387832a3aa8eae1476ddf6ee5f02bd44d67499c"
+    },
+    "sales-awesomeindie": {
+      "source": "sales-skills/sales",
+      "sourceType": "github",
+      "skillPath": "skills/sales-awesomeindie/SKILL.md",
+      "computedHash": "39b04d993995b06c23805df6e606d45f1ec7c7a4fe0910035808356854f9f8ca"
+    },
+    "sales-b2b-advertising": {
+      "source": "sales-skills/sales",
+      "sourceType": "github",
+      "skillPath": "skills/sales-b2b-advertising/SKILL.md",
+      "computedHash": "62f84182119226c7021de7746333694c29c5124abddc8f89e8829485cbbb2f84"
+    },
+    "sales-backtrack": {
+      "source": "sales-skills/sales",
+      "sourceType": "github",
+      "skillPath": "skills/sales-backtrack/SKILL.md",
+      "computedHash": "e77d1b9cf3016a3dc16ad73d042d2432a1c998c75a0efcb797545090e5087b19"
+    },
+    "sales-bagisto": {
+      "source": "sales-skills/sales",
+      "sourceType": "github",
+      "skillPath": "skills/sales-bagisto/SKILL.md",
+      "computedHash": "43c5a506148e7555d413717e6351d4797a68a8f5eec65d0fefa37f749a994c9b"
+    },
+    "sales-balto": {
+      "source": "sales-skills/sales",
+      "sourceType": "github",
+      "skillPath": "skills/sales-balto/SKILL.md",
+      "computedHash": "46d67dd266a420e755eef14352be63f5eb93cf9b06431b1e8394b8a09e6881f0"
+    },
+    "sales-bazzly": {
+      "source": "sales-skills/sales",
+      "sourceType": "github",
+      "skillPath": "skills/sales-bazzly/SKILL.md",
+      "computedHash": "06d58df978abc395525a9a1ad7612bce0772a1ae4757e1742acc8d3ccd3cfd5c"
+    },
+    "sales-beaver-builder": {
+      "source": "sales-skills/sales",
+      "sourceType": "github",
+      "skillPath": "skills/sales-beaver-builder/SKILL.md",
+      "computedHash": "15d6cbc7b59c816bcf62bbd180deb4ac023a0b2df8f36958ebb186a60a902a9b"
+    },
+    "sales-beehiiv": {
+      "source": "sales-skills/sales",
+      "sourceType": "github",
+      "skillPath": "skills/sales-beehiiv/SKILL.md",
+      "computedHash": "3ff82cb18753564e0eacc051b402ebfaa2f230a217602e455ea56bc5da0b22ef"
+    },
+    "sales-betalist": {
+      "source": "sales-skills/sales",
+      "sourceType": "github",
+      "skillPath": "skills/sales-betalist/SKILL.md",
+      "computedHash": "7caa8184c027b430e763887c8438b99d524bb49db1f8b47f521f3868901790e5"
+    },
+    "sales-bigcommerce": {
+      "source": "sales-skills/sales",
+      "sourceType": "github",
+      "skillPath": "skills/sales-bigcommerce/SKILL.md",
+      "computedHash": "6a2b376457cb68067183e00921de606a6f58247a6cea106389e155af49930839"
+    },
+    "sales-birdeye": {
+      "source": "sales-skills/sales",
+      "sourceType": "github",
+      "skillPath": "skills/sales-birdeye/SKILL.md",
+      "computedHash": "9a82b0246aff556141e118b779b75121fc7ae09d3774f575d42bec6d6f46e6a0"
+    },
+    "sales-bitrix24": {
+      "source": "sales-skills/sales",
+      "sourceType": "github",
+      "skillPath": "skills/sales-bitrix24/SKILL.md",
+      "computedHash": "a29430f4b131f808d3066ce66203a7847f27a9ec2f7828ca9e11fc74605129f7"
+    },
+    "sales-bizplanaipro": {
+      "source": "sales-skills/sales",
+      "sourceType": "github",
+      "skillPath": "skills/sales-bizplanaipro/SKILL.md",
+      "computedHash": "675e1d1c1bf6edc3257f9fd805019ab8240ff119e7f43e174c4112a120408d70"
+    },
+    "sales-bizplanner": {
+      "source": "sales-skills/sales",
+      "sourceType": "github",
+      "skillPath": "skills/sales-bizplanner/SKILL.md",
+      "computedHash": "6c8eed9f57dc3bfd1d18532adc305f7c8e093241e890416fd7c4034af7aef594"
+    },
+    "sales-bizplanr": {
+      "source": "sales-skills/sales",
+      "sourceType": "github",
+      "skillPath": "skills/sales-bizplanr/SKILL.md",
+      "computedHash": "7035e10993658624619bcb94f86e6636075a55dd721a26225ee73febe8a34196"
+    },
+    "sales-bliro": {
+      "source": "sales-skills/sales",
+      "sourceType": "github",
+      "skillPath": "skills/sales-bliro/SKILL.md",
+      "computedHash": "f72baacdc2f595aee5ff3457ace24f02d7be7630dba6ba55c47a42ad5de0a98f"
+    },
+    "sales-blueconic": {
+      "source": "sales-skills/sales",
+      "sourceType": "github",
+      "skillPath": "skills/sales-blueconic/SKILL.md",
+      "computedHash": "b7100c5a0af5db9c64cc59e4174f2b8e0805320dfcd30787f3c711defabfbca5"
+    },
+    "sales-bluedot": {
+      "source": "sales-skills/sales",
+      "sourceType": "github",
+      "skillPath": "skills/sales-bluedot/SKILL.md",
+      "computedHash": "ffcab1e2b57d40eb3106b4a21b7004f132b105697491e3c4b5d5ec2217da9332"
+    },
+    "sales-bluemail": {
+      "source": "sales-skills/sales",
+      "sourceType": "github",
+      "skillPath": "skills/sales-bluemail/SKILL.md",
+      "computedHash": "b3c08339af9c67c46eb88cfc276ae54aad3414ec9e41dfb89906fc2c7dd8a19c"
+    },
+    "sales-boomi": {
+      "source": "sales-skills/sales",
+      "sourceType": "github",
+      "skillPath": "skills/sales-boomi/SKILL.md",
+      "computedHash": "3d0eed46fef5f00b347b212d957a7ffdd1999173f001da582e7a982df843f339"
+    },
+    "sales-brand24": {
+      "source": "sales-skills/sales",
+      "sourceType": "github",
+      "skillPath": "skills/sales-brand24/SKILL.md",
+      "computedHash": "e489b5906da93dfe0abe8c389fb7b22fdff3792d338edd10c008137b66568ffa"
+    },
+    "sales-brandjet": {
+      "source": "sales-skills/sales",
+      "sourceType": "github",
+      "skillPath": "skills/sales-brandjet/SKILL.md",
+      "computedHash": "d082a8ea0b680e5c02331ca897f9afe2518d0e1c9b31790dc3a2dd4f7e9dbc9a"
+    },
+    "sales-brandmentions": {
+      "source": "sales-skills/sales",
+      "sourceType": "github",
+      "skillPath": "skills/sales-brandmentions/SKILL.md",
+      "computedHash": "adcb1db98bc2fdd4f19c8f2c5367371f8e7433c4bbdc9d4eb14884ee66b95198"
+    },
+    "sales-brandwatch": {
+      "source": "sales-skills/sales",
+      "sourceType": "github",
+      "skillPath": "skills/sales-brandwatch/SKILL.md",
+      "computedHash": "ac7f64902581b95b601e87c12f491a3f7b19b37d52c8f0e143215427d63f046d"
+    },
+    "sales-braze": {
+      "source": "sales-skills/sales",
+      "sourceType": "github",
+      "skillPath": "skills/sales-braze/SKILL.md",
+      "computedHash": "5e95ddb61e55c41d8d5f55ad797c890c39c46217acec3bf94f6c7a1fa78c085c"
+    },
+    "sales-breakdance": {
+      "source": "sales-skills/sales",
+      "sourceType": "github",
+      "skillPath": "skills/sales-breakdance/SKILL.md",
+      "computedHash": "4b8a3ebc4a6aab377454ab502104f5a02afa588a5946cd15a5fe4d5ab9938914"
+    },
+    "sales-brevo": {
+      "source": "sales-skills/sales",
+      "sourceType": "github",
+      "skillPath": "skills/sales-brevo/SKILL.md",
+      "computedHash": "fae7f51d06a63ef4d484660110ab84e0217abe79b23b8ae33a1c9e654a10339d"
+    },
+    "sales-broadstreet": {
+      "source": "sales-skills/sales",
+      "sourceType": "github",
+      "skillPath": "skills/sales-broadstreet/SKILL.md",
+      "computedHash": "51132ef755cca8cd3b1a6e322c18e7990ee0b4d71b79de10f24571d99b343378"
+    },
+    "sales-bubbles": {
+      "source": "sales-skills/sales",
+      "sourceType": "github",
+      "skillPath": "skills/sales-bubbles/SKILL.md",
+      "computedHash": "335115e1a1b4c8ef1197246b1073a5eb7cee62fe83528e71a171017b7a7c81e8"
+    },
+    "sales-buffer": {
+      "source": "sales-skills/sales",
+      "sourceType": "github",
+      "skillPath": "skills/sales-buffer/SKILL.md",
+      "computedHash": "64fa8a125231c9f3647f0c08b5e5ea312c92c528ee659e54d379db054ccf0567"
+    },
+    "sales-builderall": {
+      "source": "sales-skills/sales",
+      "sourceType": "github",
+      "skillPath": "skills/sales-builderall/SKILL.md",
+      "computedHash": "9c619d15ebbafa14ebc3ec308dbccbc472b1da74de10682b34e2c0e7bbc1f971"
+    },
+    "sales-buildornot": {
+      "source": "sales-skills/sales",
+      "sourceType": "github",
+      "skillPath": "skills/sales-buildornot/SKILL.md",
+      "computedHash": "738fc2cfad14c67e2713da53a777a76e8619efddd29bcb5c3e0679985b7acdab"
+    },
+    "sales-buska": {
+      "source": "sales-skills/sales",
+      "sourceType": "github",
+      "skillPath": "skills/sales-buska/SKILL.md",
+      "computedHash": "05ece8061f9e72ec79c29cbe177acdb886e306798b7fdbb88418ecc414e2995c"
+    },
+    "sales-buttondown": {
+      "source": "sales-skills/sales",
+      "sourceType": "github",
+      "skillPath": "skills/sales-buttondown/SKILL.md",
+      "computedHash": "e32c4a1f50f183eab22e866a3c83a71729672ffb97fd25bc36838136eb39ad4f"
+    },
+    "sales-buysellads": {
+      "source": "sales-skills/sales",
+      "sourceType": "github",
+      "skillPath": "skills/sales-buysellads/SKILL.md",
+      "computedHash": "94339fc27e329b5e978d7a7f72e105423a27fb537aa2fb61cad575801d249e0d"
+    },
+    "sales-buzzabout": {
+      "source": "sales-skills/sales",
+      "sourceType": "github",
+      "skillPath": "skills/sales-buzzabout/SKILL.md",
+      "computedHash": "b37f11a006e9fec062adf3295e43c8901b287cb2da83cce708ee2d793f7d3bc3"
+    },
+    "sales-buzzsumo": {
+      "source": "sales-skills/sales",
+      "sourceType": "github",
+      "skillPath": "skills/sales-buzzsumo/SKILL.md",
+      "computedHash": "f10728ec7ba788bf3c3f1b5eac60f1074bb4996bb0deabe86692bb03a25e7867"
+    },
+    "sales-cadence": {
+      "source": "sales-skills/sales",
+      "sourceType": "github",
+      "skillPath": "skills/sales-cadence/SKILL.md",
+      "computedHash": "02c0f1eb48d87d26d6d0ea036f5543d550a22db61ece7896d9559a7420ff3faa"
+    },
+    "sales-calabrio": {
+      "source": "sales-skills/sales",
+      "sourceType": "github",
+      "skillPath": "skills/sales-calabrio/SKILL.md",
+      "computedHash": "b1e4f59ce08326faa1339fe9c4bce85eaf16fd98b083c0c6b77e387e0c0aa1fd"
+    },
+    "sales-calcom": {
+      "source": "sales-skills/sales",
+      "sourceType": "github",
+      "skillPath": "skills/sales-calcom/SKILL.md",
+      "computedHash": "c50e8179c2d4e413a81f9d95e279c7e8691eb01ba2a53041d4f1ae051562bab8"
+    },
+    "sales-calendly": {
+      "source": "sales-skills/sales",
+      "sourceType": "github",
+      "skillPath": "skills/sales-calendly/SKILL.md",
+      "computedHash": "5abab39273057d8b77e456abf0e1df269c09b98e681ac0a021a92a12fe57ff31"
+    },
+    "sales-call-review": {
+      "source": "sales-skills/sales",
+      "sourceType": "github",
+      "skillPath": "skills/sales-call-review/SKILL.md",
+      "computedHash": "53235482629121d906fdc2912a4db0e7d00730f97fca25bcc381d98889a2a1ee"
+    },
+    "sales-callminer": {
+      "source": "sales-skills/sales",
+      "sourceType": "github",
+      "skillPath": "skills/sales-callminer/SKILL.md",
+      "computedHash": "ebfe55adfdeb1e4b23d6380d1a355cd3e641ebae95560e24682a551572d60a5d"
+    },
+    "sales-cartflows": {
+      "source": "sales-skills/sales",
+      "sourceType": "github",
+      "skillPath": "skills/sales-cartflows/SKILL.md",
+      "computedHash": "86f190f945cd0486a224e171774efbd1741b2a8b12a17561a717210dbf60895e"
+    },
+    "sales-catchintent": {
+      "source": "sales-skills/sales",
+      "sourceType": "github",
+      "skillPath": "skills/sales-catchintent/SKILL.md",
+      "computedHash": "f9116809ad7add14958ae23c1737afd0591b149dce23ce6f85c9296fc393150b"
+    },
+    "sales-ccaas-selection": {
+      "source": "sales-skills/sales",
+      "sourceType": "github",
+      "skillPath": "skills/sales-ccaas-selection/SKILL.md",
+      "computedHash": "98c3a236bc72e39afa0973121322dca91a85247061703eb5d0d5d57466ae6755"
+    },
+    "sales-cdp": {
+      "source": "sales-skills/sales",
+      "sourceType": "github",
+      "skillPath": "skills/sales-cdp/SKILL.md",
+      "computedHash": "b3b9ade09300f3366d85d20aa7a43c4a21a0fb231db53fba13b7e97d2a4d5189"
+    },
+    "sales-celigo": {
+      "source": "sales-skills/sales",
+      "sourceType": "github",
+      "skillPath": "skills/sales-celigo/SKILL.md",
+      "computedHash": "4800abecdc8931150b361c4b9b73c09e55a02875743b74f25e1b96ef66a92301"
+    },
+    "sales-chameleon": {
+      "source": "sales-skills/sales",
+      "sourceType": "github",
+      "skillPath": "skills/sales-chameleon/SKILL.md",
+      "computedHash": "c2f6e38457e112ca26513a7ef7c81ef4c0e72ed04be401ba4b928cb3ac9e735c"
+    },
+    "sales-char": {
+      "source": "sales-skills/sales",
+      "sourceType": "github",
+      "skillPath": "skills/sales-char/SKILL.md",
+      "computedHash": "96f18e0b6fdce6993e7b7ba270e01f97c604def140837a0d903d20a8b0ac80f5"
+    },
+    "sales-chargebee": {
+      "source": "sales-skills/sales",
+      "sourceType": "github",
+      "skillPath": "skills/sales-chargebee/SKILL.md",
+      "computedHash": "b717677250707572c45ac424f8bcf5fe71bcc9805154b37219068d2f340ee762"
+    },
+    "sales-chatbot": {
+      "source": "sales-skills/sales",
+      "sourceType": "github",
+      "skillPath": "skills/sales-chatbot/SKILL.md",
+      "computedHash": "e70f42de598205184edf9bbc0e853c8011f7b57ae70760d5caf4b862fc82506f"
+    },
+    "sales-checkout": {
+      "source": "sales-skills/sales",
+      "sourceType": "github",
+      "skillPath": "skills/sales-checkout/SKILL.md",
+      "computedHash": "bff4ddeafdf2e3fd81a7da32da0badbe5d35ac80bc13ca77be48f9b8c40a9103"
+    },
+    "sales-checkoutpage": {
+      "source": "sales-skills/sales",
+      "sourceType": "github",
+      "skillPath": "skills/sales-checkoutpage/SKILL.md",
+      "computedHash": "2ff8fc3bbd8de84760f045b04847862e2d414461f791c71c5161e4a95f9b1839"
+    },
+    "sales-churnzero": {
+      "source": "sales-skills/sales",
+      "sourceType": "github",
+      "skillPath": "skills/sales-churnzero/SKILL.md",
+      "computedHash": "c784760de8661ce0eb7d0b7f286215450d6d944ce4d9d934e45704e6f6e0ee4e"
+    },
+    "sales-circleback": {
+      "source": "sales-skills/sales",
+      "sourceType": "github",
+      "skillPath": "skills/sales-circleback/SKILL.md",
+      "computedHash": "bdbec746a6ae4673d66cfc3f16665fcbc4cbcba12eaafe2fa0ef6a69d7e81736"
+    },
+    "sales-cirrus-insight": {
+      "source": "sales-skills/sales",
+      "sourceType": "github",
+      "skillPath": "skills/sales-cirrus-insight/SKILL.md",
+      "computedHash": "cddf7eab346cff0c75df343f82035159797b876f2cdbc6769aa6d4e97b4314db"
+    },
+    "sales-claap": {
+      "source": "sales-skills/sales",
+      "sourceType": "github",
+      "skillPath": "skills/sales-claap/SKILL.md",
+      "computedHash": "8bca2d44af663eaa5eb71091d28da05e03bc798b89b05bbcb387b89dfb09ef38"
+    },
+    "sales-clari-copilot": {
+      "source": "sales-skills/sales",
+      "sourceType": "github",
+      "skillPath": "skills/sales-clari-copilot/SKILL.md",
+      "computedHash": "3f4e8bd3b172e36111cf34aa01b2d6b9fcec254d2ed1830174491277c497c7b5"
+    },
+    "sales-clay": {
+      "source": "sales-skills/sales",
+      "sourceType": "github",
+      "skillPath": "skills/sales-clay/SKILL.md",
+      "computedHash": "4222064f0843276247904e90e26bc403f4506b5eb64600b6fef9b2cb794db697"
+    },
+    "sales-clean-email": {
+      "source": "sales-skills/sales",
+      "sourceType": "github",
+      "skillPath": "skills/sales-clean-email/SKILL.md",
+      "computedHash": "f452c2c95f80da835d287bad1dea45bb28624ef46fcd9c123cc27704de395124"
+    },
+    "sales-clearbit": {
+      "source": "sales-skills/sales",
+      "sourceType": "github",
+      "skillPath": "skills/sales-clearbit/SKILL.md",
+      "computedHash": "118b66c1c3bb8571f11c3e96453144290162465304882a7d5d5b26dbc89b8176"
+    },
+    "sales-clearcue": {
+      "source": "sales-skills/sales",
+      "sourceType": "github",
+      "skillPath": "skills/sales-clearcue/SKILL.md",
+      "computedHash": "64f38de79a5d74a549cccfc4df36f402fcb178c8ff4abeb7a1455a6a14d0c6a9"
+    },
+    "sales-cleftnotes": {
+      "source": "sales-skills/sales",
+      "sourceType": "github",
+      "skillPath": "skills/sales-cleftnotes/SKILL.md",
+      "computedHash": "16bc7cff7a909df9c23a9ddc9d828f1a385e661cfd09bc0488f16d215043d02b"
+    },
+    "sales-clickfunnels": {
+      "source": "sales-skills/sales",
+      "sourceType": "github",
+      "skillPath": "skills/sales-clickfunnels/SKILL.md",
+      "computedHash": "47d915c2e928c770bdadb7e3d2dc44fcc9793622472cc1eb87c1ecfd368d362c"
+    },
+    "sales-closum": {
+      "source": "sales-skills/sales",
+      "sourceType": "github",
+      "skillPath": "skills/sales-closum/SKILL.md",
+      "computedHash": "0740c421ef0727cbfef4786d9e8fadc7cbb62d69daeb72b09b8a1d400e877913"
+    },
+    "sales-cloutboost": {
+      "source": "sales-skills/sales",
+      "sourceType": "github",
+      "skillPath": "skills/sales-cloutboost/SKILL.md",
+      "computedHash": "bed8df246262b21b0043f2222c6055793ca67b11a184567ef71b7e72bedbcaee"
+    },
+    "sales-cluely": {
+      "source": "sales-skills/sales",
+      "sourceType": "github",
+      "skillPath": "skills/sales-cluely/SKILL.md",
+      "computedHash": "fe8ae7012eb80b5415e67b885cac3e634ec87f079c14e4b00b9b09793eae450c"
+    },
+    "sales-coaching": {
+      "source": "sales-skills/sales",
+      "sourceType": "github",
+      "skillPath": "skills/sales-coaching/SKILL.md",
+      "computedHash": "49034f920b7f18b23dd8dbd73801c72f6e560278bdf5a59c354ab8055ee1867e"
+    },
+    "sales-coconote": {
+      "source": "sales-skills/sales",
+      "sourceType": "github",
+      "skillPath": "skills/sales-coconote/SKILL.md",
+      "computedHash": "bad96e743966329ef5337ab6d757beaa70b1aa8f35c208c8c4b6c21517450ab4"
+    },
+    "sales-cognism": {
+      "source": "sales-skills/sales",
+      "sourceType": "github",
+      "skillPath": "skills/sales-cognism/SKILL.md",
+      "computedHash": "d5d6517943f6edfcceaed22cd117f32451e9f091f05f143d77705a24611413d3"
+    },
+    "sales-colibri": {
+      "source": "sales-skills/sales",
+      "sourceType": "github",
+      "skillPath": "skills/sales-colibri/SKILL.md",
+      "computedHash": "535bc64669eefd0753221ae68ae8a0f5ea0ca93ac0df5fdae9b39e1d9f9af838"
+    },
+    "sales-collabmatch": {
+      "source": "sales-skills/sales",
+      "sourceType": "github",
+      "skillPath": "skills/sales-collabmatch/SKILL.md",
+      "computedHash": "fe5e969cb332812054498e83062a15b83cf79eabe8617d0717447155130fe7b8"
+    },
+    "sales-collabstr": {
+      "source": "sales-skills/sales",
+      "sourceType": "github",
+      "skillPath": "skills/sales-collabstr/SKILL.md",
+      "computedHash": "a6075462c64dcb33269946477cdfe8602d01db8b0b71714e2ed86f5593218818"
+    },
+    "sales-commentions": {
+      "source": "sales-skills/sales",
+      "sourceType": "github",
+      "skillPath": "skills/sales-commentions/SKILL.md",
+      "computedHash": "5f3c31a7412bb579020dad9aad6883e4ac95201aad9d48bf4a1c1c74c6a0807a"
+    },
+    "sales-communitytracker": {
+      "source": "sales-skills/sales",
+      "sourceType": "github",
+      "skillPath": "skills/sales-communitytracker/SKILL.md",
+      "computedHash": "6610b9e171e581dd11f186ef4a3c01b4096c368577516e3547074bb4e17f0b48"
+    },
+    "sales-compete": {
+      "source": "sales-skills/sales",
+      "sourceType": "github",
+      "skillPath": "skills/sales-compete/SKILL.md",
+      "computedHash": "f1d223187aa738236c46b3b782bbc26374ab82b8c0830bbee3c99bc82d74f3b2"
+    },
+    "sales-constantcontact": {
+      "source": "sales-skills/sales",
+      "sourceType": "github",
+      "skillPath": "skills/sales-constantcontact/SKILL.md",
+      "computedHash": "4995fa5af353f0d007a73850e0d81010c6417b3a93f0c9bde7abf301aac75110"
+    },
+    "sales-content": {
+      "source": "sales-skills/sales",
+      "sourceType": "github",
+      "skillPath": "skills/sales-content/SKILL.md",
+      "computedHash": "b27b7f264563ebd52494fca4a2e0e6d6cda67871dae23eccd46c7fcd0eba073b"
+    },
+    "sales-contentstack": {
+      "source": "sales-skills/sales",
+      "sourceType": "github",
+      "skillPath": "skills/sales-contentstack/SKILL.md",
+      "computedHash": "85554879639adf749a5be02be5a9a0b38e5ab5c86b3b48a727b9066301eb3441"
+    },
+    "sales-convertri": {
+      "source": "sales-skills/sales",
+      "sourceType": "github",
+      "skillPath": "skills/sales-convertri/SKILL.md",
+      "computedHash": "5039b442836e443ab157262d9471571cc5f7b72b1355b9e59874a1592737f0f3"
+    },
+    "sales-convin": {
+      "source": "sales-skills/sales",
+      "sourceType": "github",
+      "skillPath": "skills/sales-convin/SKILL.md",
+      "computedHash": "9e38f69c6aaeaa148971bffb372dfdff598c10bb764b0490d464d527801f3504"
+    },
+    "sales-craft": {
+      "source": "sales-skills/sales",
+      "sourceType": "github",
+      "skillPath": "skills/sales-craft/SKILL.md",
+      "computedHash": "4b179d1c557103369e3a7a5c80f0053b2d88904c52d2ff779274caa310ae625c"
+    },
+    "sales-creatorco": {
+      "source": "sales-skills/sales",
+      "sourceType": "github",
+      "skillPath": "skills/sales-creatorco/SKILL.md",
+      "computedHash": "90625cc44dd536211aaa8d7caaa244403381b382482bcf19aba724ed57803c88"
+    },
+    "sales-creatoriq": {
+      "source": "sales-skills/sales",
+      "sourceType": "github",
+      "skillPath": "skills/sales-creatoriq/SKILL.md",
+      "computedHash": "42fa278d8d0a0503a16fa19d9993b2dae91f15d490a56a4b6933fc5de1f2f450"
+    },
+    "sales-cresta": {
+      "source": "sales-skills/sales",
+      "sourceType": "github",
+      "skillPath": "skills/sales-cresta/SKILL.md",
+      "computedHash": "66a3ddb43aac402945f405dd6d578d5f0d5212a2aba479cc01f5ee06117e5542"
+    },
+    "sales-crm-selection": {
+      "source": "sales-skills/sales",
+      "sourceType": "github",
+      "skillPath": "skills/sales-crm-selection/SKILL.md",
+      "computedHash": "22a9699a63b6c7c61c3d5ba44f2413bfd3cb1d15ddd13f0c3754d6394b0d92e3"
+    },
+    "sales-crowdreply": {
+      "source": "sales-skills/sales",
+      "sourceType": "github",
+      "skillPath": "skills/sales-crowdreply/SKILL.md",
+      "computedHash": "86cf30921064f56bde6789fcdd400a890256f70d4268f86417a3a528edd0167c"
+    },
+    "sales-ctrlaltcc": {
+      "source": "sales-skills/sales",
+      "sourceType": "github",
+      "skillPath": "skills/sales-ctrlaltcc/SKILL.md",
+      "computedHash": "5468f58594c51e5dcba521cedbea8e4c6e965ab96e37064fdc5d829fb25e9d43"
+    },
+    "sales-customcat": {
+      "source": "sales-skills/sales",
+      "sourceType": "github",
+      "skillPath": "skills/sales-customcat/SKILL.md",
+      "computedHash": "d294b5aa1f7a9ad106e51c1cffe318caf24f9795b1d8030e8e05b43ebd6d4d12"
+    },
+    "sales-customer-feedback": {
+      "source": "sales-skills/sales",
+      "sourceType": "github",
+      "skillPath": "skills/sales-customer-feedback/SKILL.md",
+      "computedHash": "72f570f0e87db8bd378ca7a27b342cb2091ef5f06ed9491630343125fbe4ab17"
+    },
+    "sales-customer-reviews": {
+      "source": "sales-skills/sales",
+      "sourceType": "github",
+      "skillPath": "skills/sales-customer-reviews/SKILL.md",
+      "computedHash": "d4c689991ea5b2e9588e7287c014d18bc2ffd56a1014b2484c01674ee1d242c3"
+    },
+    "sales-customer-success": {
+      "source": "sales-skills/sales",
+      "sourceType": "github",
+      "skillPath": "skills/sales-customer-success/SKILL.md",
+      "computedHash": "db29d4b3b115695e12b2fbdfe0c34d09f2bc3c4c6dd81a579a2105bcd2bc5503"
+    },
+    "sales-customerio": {
+      "source": "sales-skills/sales",
+      "sourceType": "github",
+      "skillPath": "skills/sales-customerio/SKILL.md",
+      "computedHash": "8a7f24fee793df867cace835e181f6d026d8299cac4b92f0311a6e90202a902e"
+    },
+    "sales-customersai": {
+      "source": "sales-skills/sales",
+      "sourceType": "github",
+      "skillPath": "skills/sales-customersai/SKILL.md",
+      "computedHash": "f069698590924d695d88221b2f435eb3e2ca7c486c89fe33e42a945f40430099"
+    },
+    "sales-data-hygiene": {
+      "source": "sales-skills/sales",
+      "sourceType": "github",
+      "skillPath": "skills/sales-data-hygiene/SKILL.md",
+      "computedHash": "bae5a24db3ad5cf2aef90940b048435cbd441463e637ca58e3b2191df4a3307c"
+    },
+    "sales-deal-inspect": {
+      "source": "sales-skills/sales",
+      "sourceType": "github",
+      "skillPath": "skills/sales-deal-inspect/SKILL.md",
+      "computedHash": "d4049061480596c02bf6b70a50aabcc38abda5f7f4cb8e9ec84598d0dc67caf9"
+    },
+    "sales-deal-room": {
+      "source": "sales-skills/sales",
+      "sourceType": "github",
+      "skillPath": "skills/sales-deal-room/SKILL.md",
+      "computedHash": "6ac81dfd1759833f3c642b3d9d3105aad84b6770d2bd946d9c3189086dc039b3"
+    },
+    "sales-deliverability": {
+      "source": "sales-skills/sales",
+      "sourceType": "github",
+      "skillPath": "skills/sales-deliverability/SKILL.md",
+      "computedHash": "1420fbf13e82fc747fcbe7e6733ea3813df51ee25d07399af4d66125ed60cdd6"
+    },
+    "sales-demodesk": {
+      "source": "sales-skills/sales",
+      "sourceType": "github",
+      "skillPath": "skills/sales-demodesk/SKILL.md",
+      "computedHash": "d9c028f4a9c1858267c6c17ed4582bd1aef436484db6b96f6933a265da661fa8"
+    },
+    "sales-devhunt": {
+      "source": "sales-skills/sales",
+      "sourceType": "github",
+      "skillPath": "skills/sales-devhunt/SKILL.md",
+      "computedHash": "af6feee64ccf70cd4846d1dd514685cc8eddc3b3b836377c161d04e534c3017f"
+    },
+    "sales-devi": {
+      "source": "sales-skills/sales",
+      "sourceType": "github",
+      "skillPath": "skills/sales-devi/SKILL.md",
+      "computedHash": "8e7c350841e120ea467834bf4373840435613418402dfc9c6c148da8c32f1081"
+    },
+    "sales-devta": {
+      "source": "sales-skills/sales",
+      "sourceType": "github",
+      "skillPath": "skills/sales-devta/SKILL.md",
+      "computedHash": "334d02bf487a419c4e2d0bcb2e0bc3de763645233fd7855594689fc78b3a85e7"
+    },
+    "sales-dialpad": {
+      "source": "sales-skills/sales",
+      "sourceType": "github",
+      "skillPath": "skills/sales-dialpad/SKILL.md",
+      "computedHash": "a22d892dc4118d9acb1ad1746bbded2d85ef195b218a477ad56f57b4469dc25f"
+    },
+    "sales-dicte": {
+      "source": "sales-skills/sales",
+      "sourceType": "github",
+      "skillPath": "skills/sales-dicte/SKILL.md",
+      "computedHash": "a269931f4798768be040319eb9f616d90fb8de0e53feba50bd61370db345d614"
+    },
+    "sales-digital-products": {
+      "source": "sales-skills/sales",
+      "sourceType": "github",
+      "skillPath": "skills/sales-digital-products/SKILL.md",
+      "computedHash": "b60676c8dc1c85c917a9005a4184fec7af6181c7e1a142543ae35fa8f4e6633f"
+    },
+    "sales-dimeadozen": {
+      "source": "sales-skills/sales",
+      "sourceType": "github",
+      "skillPath": "skills/sales-dimeadozen/SKILL.md",
+      "computedHash": "d8a5c6af8115e6ffa885c3aa727c0cfc8bc5763cde3024586b6fd722dacfbf5a"
+    },
+    "sales-directory-submission": {
+      "source": "sales-skills/sales",
+      "sourceType": "github",
+      "skillPath": "skills/sales-directory-submission/SKILL.md",
+      "computedHash": "d8ff7140dba00093d4cda64e3969bd39bb23e2c300b67d130b39bdededc0649b"
+    },
+    "sales-do": {
+      "source": "sales-skills/sales",
+      "sourceType": "github",
+      "skillPath": "skills/sales-do/SKILL.md",
+      "computedHash": "77d675e6382b056501047c368e638aff6bc21001baa92dec6573ee2da7dddc4b"
+    },
+    "sales-dodo-payments": {
+      "source": "sales-skills/sales",
+      "sourceType": "github",
+      "skillPath": "skills/sales-dodo-payments/SKILL.md",
+      "computedHash": "552070290bf76abc60d2bfe64f1ed754efb51672425c6f2903cf9d5632e49ec3"
+    },
+    "sales-drupal-commerce": {
+      "source": "sales-skills/sales",
+      "sourceType": "github",
+      "skillPath": "skills/sales-drupal-commerce/SKILL.md",
+      "computedHash": "94521afa46047cfff25d7d0f2cdfd1cdd59ff0a67a2df312507fad1122ea094f"
+    },
+    "sales-dume": {
+      "source": "sales-skills/sales",
+      "sourceType": "github",
+      "skillPath": "skills/sales-dume/SKILL.md",
+      "computedHash": "e6ae096e73d283053a9bc0986f22145641be9f3c6871bb708ee14f3575a19cdd"
+    },
+    "sales-ecomswap": {
+      "source": "sales-skills/sales",
+      "sourceType": "github",
+      "skillPath": "skills/sales-ecomswap/SKILL.md",
+      "computedHash": "38f564f37a96a59292123d71b49e9123932d151d1d776801a8181673a2493843"
+    },
+    "sales-ecwid": {
+      "source": "sales-skills/sales",
+      "sourceType": "github",
+      "skillPath": "skills/sales-ecwid/SKILL.md",
+      "computedHash": "223d202a31bdf0706bdfde1fec8ff9557fd12025987a138a2ea1282ec463bd49"
+    },
+    "sales-em-client": {
+      "source": "sales-skills/sales",
+      "sourceType": "github",
+      "skillPath": "skills/sales-em-client/SKILL.md",
+      "computedHash": "b5146d5846f0c6b5337f6ebae9c8f364fcb4ce54c2db751be7f62fb6680d8ed8"
+    },
+    "sales-email-marketing": {
+      "source": "sales-skills/sales",
+      "sourceType": "github",
+      "skillPath": "skills/sales-email-marketing/SKILL.md",
+      "computedHash": "c794e3df4030a19dd846395b8aba1c62c9429e52be8a1ee079c907bea661bfbc"
+    },
+    "sales-email-tracking": {
+      "source": "sales-skills/sales",
+      "sourceType": "github",
+      "skillPath": "skills/sales-email-tracking/SKILL.md",
+      "computedHash": "a97cd4bd6e1f18a51cc3492daf8c919821e82b60cbaf51b5706f81d072252522"
+    },
+    "sales-employee-advocacy": {
+      "source": "sales-skills/sales",
+      "sourceType": "github",
+      "skillPath": "skills/sales-employee-advocacy/SKILL.md",
+      "computedHash": "b96bd7559951249bbcb4de5668141c5d10657e8a0fb9d2e207f22b6af49240df"
+    },
+    "sales-engagebay": {
+      "source": "sales-skills/sales",
+      "sourceType": "github",
+      "skillPath": "skills/sales-engagebay/SKILL.md",
+      "computedHash": "a60c0670fbc101737ff574cb2eb347ae3f7ed05c638282bb9da49db377a91fad"
+    },
+    "sales-enrich": {
+      "source": "sales-skills/sales",
+      "sourceType": "github",
+      "skillPath": "skills/sales-enrich/SKILL.md",
+      "computedHash": "66af9911117c9b33bc3352500cbb66a4085077f4da0d04b4c6dd33a7be8a98a1"
+    },
+    "sales-enrichso": {
+      "source": "sales-skills/sales",
+      "sourceType": "github",
+      "skillPath": "skills/sales-enrichso/SKILL.md",
+      "computedHash": "79efcdac6ff41ea997e93a8d0337518fc7b8673a20e8b5c636563fe034abd0f5"
+    },
+    "sales-enthu": {
+      "source": "sales-skills/sales",
+      "sourceType": "github",
+      "skillPath": "skills/sales-enthu/SKILL.md",
+      "computedHash": "5f933997ac67d5f7c5089a64c2d2b69925dd86ccdc98e950a0e81374b9628509"
+    },
+    "sales-epom": {
+      "source": "sales-skills/sales",
+      "sourceType": "github",
+      "skillPath": "skills/sales-epom/SKILL.md",
+      "computedHash": "4a66d5eacd22bfcd078d979c2cbacd24e7b52bf5d1dc0e2cfbb820e277ae1e71"
+    },
+    "sales-evershop": {
+      "source": "sales-skills/sales",
+      "sourceType": "github",
+      "skillPath": "skills/sales-evershop/SKILL.md",
+      "computedHash": "55b790fd69fca23c2310de8bb2be304bd2789c9b250a2265b6df6e5bf81428f9"
+    },
+    "sales-execvision": {
+      "source": "sales-skills/sales",
+      "sourceType": "github",
+      "skillPath": "skills/sales-execvision/SKILL.md",
+      "computedHash": "c5e9376ffc88b9be8acdc40f85cd97b17aa39584d0dc890b3de09b9b4db09e78"
+    },
+    "sales-f5bot": {
+      "source": "sales-skills/sales",
+      "sourceType": "github",
+      "skillPath": "skills/sales-f5bot/SKILL.md",
+      "computedHash": "a7e3dc650daf7e8adbc837f61c4d1ea53942060daecaacedfec9a89f0c3ab682"
+    },
+    "sales-famesters": {
+      "source": "sales-skills/sales",
+      "sourceType": "github",
+      "skillPath": "skills/sales-famesters/SKILL.md",
+      "computedHash": "f57ab8fbd6de38c7d5a8de5b2463561708197cd5ca9a3c484b3ab3bae422424c"
+    },
+    "sales-fansrevenue": {
+      "source": "sales-skills/sales",
+      "sourceType": "github",
+      "skillPath": "skills/sales-fansrevenue/SKILL.md",
+      "computedHash": "acdd4902b83220437a1afdb8ff79d00fd54070e96deebf0f43278479b0604173"
+    },
+    "sales-fastmail": {
+      "source": "sales-skills/sales",
+      "sourceType": "github",
+      "skillPath": "skills/sales-fastmail/SKILL.md",
+      "computedHash": "fb8ef2f42857b3fed79b89a24ee16927b74e576c0d938a7b9a890c4d4123a07f"
+    },
+    "sales-fastspring": {
+      "source": "sales-skills/sales",
+      "sourceType": "github",
+      "skillPath": "skills/sales-fastspring/SKILL.md",
+      "computedHash": "4d6ce03762f2ce7f4b2696470a5fad8f5f911fb909f161b8fc945c3a97f6905f"
+    },
+    "sales-fathom": {
+      "source": "sales-skills/sales",
+      "sourceType": "github",
+      "skillPath": "skills/sales-fathom/SKILL.md",
+      "computedHash": "36235214f00046a640f73123ec1e39128a8665128b2b12a4514bc73ecf5eb0a7"
+    },
+    "sales-fazier": {
+      "source": "sales-skills/sales",
+      "sourceType": "github",
+      "skillPath": "skills/sales-fazier/SKILL.md",
+      "computedHash": "c7a174c66f807b7b5bdee102c124478ef65aa4f2674a4fbe945ab01b7bc8b12f"
+    },
+    "sales-featureos": {
+      "source": "sales-skills/sales",
+      "sourceType": "github",
+      "skillPath": "skills/sales-featureos/SKILL.md",
+      "computedHash": "a250e6060100b20bce70900c7950bd48c2e33e5efda54b2cf44980ae8b8992e1"
+    },
+    "sales-feedbear": {
+      "source": "sales-skills/sales",
+      "sourceType": "github",
+      "skillPath": "skills/sales-feedbear/SKILL.md",
+      "computedHash": "bfa8d489d4e77adafc0958e2a6fb37da9bbd8b2870b1ef24f4514a3a660d8892"
+    },
+    "sales-fellow": {
+      "source": "sales-skills/sales",
+      "sourceType": "github",
+      "skillPath": "skills/sales-fellow/SKILL.md",
+      "computedHash": "a3f0a75c03f50b64d77159afb3a5aa23168fd4a821dfba0dc506c2a79a4d2a59"
+    },
+    "sales-field-sales": {
+      "source": "sales-skills/sales",
+      "sourceType": "github",
+      "skillPath": "skills/sales-field-sales/SKILL.md",
+      "computedHash": "270b48469e08b21a44ad9fa96f93c9a0a16f432d4541e80b09d4579c7614def2"
+    },
+    "sales-fireflies": {
+      "source": "sales-skills/sales",
+      "sourceType": "github",
+      "skillPath": "skills/sales-fireflies/SKILL.md",
+      "computedHash": "552d5d8af582254bfbc3923d8bfd86ca80ebe003f43c4d065fed851342e184e7"
+    },
+    "sales-firsto": {
+      "source": "sales-skills/sales",
+      "sourceType": "github",
+      "skillPath": "skills/sales-firsto/SKILL.md",
+      "computedHash": "bd20c82954aa782eeaa536fff903aa0ea8bf8ef787d54dbe7e1d797f91e99a73"
+    },
+    "sales-flippa": {
+      "source": "sales-skills/sales",
+      "sourceType": "github",
+      "skillPath": "skills/sales-flippa/SKILL.md",
+      "computedHash": "0c6ecbbdf3bad32beefd5596897c63625f7146f536afe51fd137b3d2c617abe9"
+    },
+    "sales-forecast": {
+      "source": "sales-skills/sales",
+      "sourceType": "github",
+      "skillPath": "skills/sales-forecast/SKILL.md",
+      "computedHash": "59883127ead932fffe61d62480c19f68d7b1bef42b47e937161e48056ac12794"
+    },
+    "sales-forumscout": {
+      "source": "sales-skills/sales",
+      "sourceType": "github",
+      "skillPath": "skills/sales-forumscout/SKILL.md",
+      "computedHash": "2ad15db86f6cbf3adc32b1b988e7a0e17b4395936a525771a2dfaabe7e16119a"
+    },
+    "sales-founderpal": {
+      "source": "sales-skills/sales",
+      "sourceType": "github",
+      "skillPath": "skills/sales-founderpal/SKILL.md",
+      "computedHash": "ec9814851b8f7e482b7fd76365e91099c508c5b1ed13275b2f3a441852b21c03"
+    },
+    "sales-fourfour": {
+      "source": "sales-skills/sales",
+      "sourceType": "github",
+      "skillPath": "skills/sales-fourfour/SKILL.md",
+      "computedHash": "cb8ffba0686f1ccf4373e66c12a388217cb47e0a3b82a039921e42fe622f14f4"
+    },
+    "sales-foxy": {
+      "source": "sales-skills/sales",
+      "sourceType": "github",
+      "skillPath": "skills/sales-foxy/SKILL.md",
+      "computedHash": "bd994a945aa55937f8560dd134fb5dae1d804ab794054aecd8a87f7c0265fc9c"
+    },
+    "sales-framer": {
+      "source": "sales-skills/sales",
+      "sourceType": "github",
+      "skillPath": "skills/sales-framer/SKILL.md",
+      "computedHash": "7ef361abd7969adab70ff7c595d090a72c249228d5dafcb9f96bbb0e89550f8d"
+    },
+    "sales-frederick": {
+      "source": "sales-skills/sales",
+      "sourceType": "github",
+      "skillPath": "skills/sales-frederick/SKILL.md",
+      "computedHash": "584665976ddb53e49618f7ec4dbb9eee51eb3c051cd230d87ada90cef92a642c"
+    },
+    "sales-freshlearn": {
+      "source": "sales-skills/sales",
+      "sourceType": "github",
+      "skillPath": "skills/sales-freshlearn/SKILL.md",
+      "computedHash": "6a9d8196f676ff03411da977d4fb9d300346c03e7589a90e1eaff38b0e828041"
+    },
+    "sales-frill": {
+      "source": "sales-skills/sales",
+      "sourceType": "github",
+      "skillPath": "skills/sales-frill/SKILL.md",
+      "computedHash": "4422ec530b10d213871e10014488893f1e58de026b6061545e4e3a6e54d19a44"
+    },
+    "sales-front": {
+      "source": "sales-skills/sales",
+      "sourceType": "github",
+      "skillPath": "skills/sales-front/SKILL.md",
+      "computedHash": "291f9410d9e062f65f6b21c1ea30df920aba9858c90601ea323e6598283b58ab"
+    },
+    "sales-funnel": {
+      "source": "sales-skills/sales",
+      "sourceType": "github",
+      "skillPath": "skills/sales-funnel/SKILL.md",
+      "computedHash": "b9efd8bf7a6459a8b510bdb877fe36c39a28f3bcde1e41d3ed293b7e23349cac"
+    },
+    "sales-funnelkit": {
+      "source": "sales-skills/sales",
+      "sourceType": "github",
+      "skillPath": "skills/sales-funnelkit/SKILL.md",
+      "computedHash": "28907aa8056d7458cf5fbed51dcbe3d535c869b62685b246a6561695f6a396f7"
+    },
+    "sales-futurepedia": {
+      "source": "sales-skills/sales",
+      "sourceType": "github",
+      "skillPath": "skills/sales-futurepedia/SKILL.md",
+      "computedHash": "8a0409004abdfc3736ffe22c256bf231a1e515d599a25ace510180aac3a5aeb5"
+    },
+    "sales-fyxer": {
+      "source": "sales-skills/sales",
+      "sourceType": "github",
+      "skillPath": "skills/sales-fyxer/SKILL.md",
+      "computedHash": "58295d184ddd5f52b2a74018e09674c6f3dbb284ed5c69c45488647e9b6ce33c"
+    },
+    "sales-g2": {
+      "source": "sales-skills/sales",
+      "sourceType": "github",
+      "skillPath": "skills/sales-g2/SKILL.md",
+      "computedHash": "86360c0a2410550e8e75d2a0afb691ed06efc09ae0247519dd28713bd3f1ae57"
+    },
+    "sales-gainsight": {
+      "source": "sales-skills/sales",
+      "sourceType": "github",
+      "skillPath": "skills/sales-gainsight/SKILL.md",
+      "computedHash": "bd56356efe45d7d10e5e369a2e9da5378117438302fbd3401c8fb429fa8690f4"
+    },
+    "sales-gaming-marketing": {
+      "source": "sales-skills/sales",
+      "sourceType": "github",
+      "skillPath": "skills/sales-gaming-marketing/SKILL.md",
+      "computedHash": "5167295e66f090dfbdeda66e7fe7947ddcd8af08972bfc136c021f434edff7e2"
+    },
+    "sales-generateblocks": {
+      "source": "sales-skills/sales",
+      "sourceType": "github",
+      "skillPath": "skills/sales-generateblocks/SKILL.md",
+      "computedHash": "37daec86d9a39cc25c8e98312512d1ab40c8abba66218ec2d511b5e286c3197e"
+    },
+    "sales-genesys": {
+      "source": "sales-skills/sales",
+      "sourceType": "github",
+      "skillPath": "skills/sales-genesys/SKILL.md",
+      "computedHash": "59adde43c89312ce6ceceb6de80dd78609c06e96f1e33e3ef51d9716d9d5357f"
+    },
+    "sales-getaccept": {
+      "source": "sales-skills/sales",
+      "sourceType": "github",
+      "skillPath": "skills/sales-getaccept/SKILL.md",
+      "computedHash": "93cf499453f4c7e3cdc0e6eb66fec3e246b53f98cf1b04e1186cbd46c9016635"
+    },
+    "sales-getmorebacklinks": {
+      "source": "sales-skills/sales",
+      "sourceType": "github",
+      "skillPath": "skills/sales-getmorebacklinks/SKILL.md",
+      "computedHash": "dd11266b3cda62a9c5d90bcc5ef157425c93e54d2553550a62219f051b51e0e3"
+    },
+    "sales-getprospect": {
+      "source": "sales-skills/sales",
+      "sourceType": "github",
+      "skillPath": "skills/sales-getprospect/SKILL.md",
+      "computedHash": "abe30434ba28781e448916e826e58460841feafa4d55fd5add3cb993dd0ca56c"
+    },
+    "sales-getresponse": {
+      "source": "sales-skills/sales",
+      "sourceType": "github",
+      "skillPath": "skills/sales-getresponse/SKILL.md",
+      "computedHash": "58596a2b7866f2b89ecfff057f9d6061d6e9aec3b1bf7a2c0cbc9a535007deea"
+    },
+    "sales-getwaitlist": {
+      "source": "sales-skills/sales",
+      "sourceType": "github",
+      "skillPath": "skills/sales-getwaitlist/SKILL.md",
+      "computedHash": "7d3c5c0bdad3ae28f15ca06e5b6e01d4b82ed6341e6698303cb43701c479a90e"
+    },
+    "sales-ghost": {
+      "source": "sales-skills/sales",
+      "sourceType": "github",
+      "skillPath": "skills/sales-ghost/SKILL.md",
+      "computedHash": "7ccf9a674d697e60677d562fe80d0f97b14fabcb0a8c337d0f6575128a0dc741"
+    },
+    "sales-gmelius": {
+      "source": "sales-skills/sales",
+      "sourceType": "github",
+      "skillPath": "skills/sales-gmelius/SKILL.md",
+      "computedHash": "2de93cf0dcdf66d71d7c5c4e092683baf272f166fa1c37bbc5fadeba04fd3e73"
+    },
+    "sales-gohighlevel": {
+      "source": "sales-skills/sales",
+      "sourceType": "github",
+      "skillPath": "skills/sales-gohighlevel/SKILL.md",
+      "computedHash": "f99cc0ca213bb48d564c93a376821a7cc6825444de0ed006d216dcc9e4a17db6"
+    },
+    "sales-gong": {
+      "source": "sales-skills/sales",
+      "sourceType": "github",
+      "skillPath": "skills/sales-gong/SKILL.md",
+      "computedHash": "c9870f68445fef2e0afb9f796bf0e3be7de434f68ca15dc894b8f9779d157603"
+    },
+    "sales-grain": {
+      "source": "sales-skills/sales",
+      "sourceType": "github",
+      "skillPath": "skills/sales-grain/SKILL.md",
+      "computedHash": "2fa523000807913b10276c77986cd98fecb7a68d2f80474ff8735a0259ca3dd7"
+    },
+    "sales-granola": {
+      "source": "sales-skills/sales",
+      "sourceType": "github",
+      "skillPath": "skills/sales-granola/SKILL.md",
+      "computedHash": "b49b488b0103740b3c5f06a43f01a1403d9aa5d5b4f8f3db6399b9dfe18ae0f9"
+    },
+    "sales-graphy": {
+      "source": "sales-skills/sales",
+      "sourceType": "github",
+      "skillPath": "skills/sales-graphy/SKILL.md",
+      "computedHash": "1b6e312fee92a33df313bbe005fed5bd7483513fada8738ec40439499c151347"
+    },
+    "sales-greenshift": {
+      "source": "sales-skills/sales",
+      "sourceType": "github",
+      "skillPath": "skills/sales-greenshift/SKILL.md",
+      "computedHash": "e38b45cad72cfe78b7eea5a2e38e26bc78c9c66402328714cfa3c5a01170476f"
+    },
+    "sales-grin": {
+      "source": "sales-skills/sales",
+      "sourceType": "github",
+      "skillPath": "skills/sales-grin/SKILL.md",
+      "computedHash": "10294ffe145b94a50d183b5cfbd47d995d372dcef2a21fef5ce7c24cfca2c6a4"
+    },
+    "sales-groove": {
+      "source": "sales-skills/sales",
+      "sourceType": "github",
+      "skillPath": "skills/sales-groove/SKILL.md",
+      "computedHash": "a01d0d18380d56a94f8bf54aebe1ef829a9de3607c8b9524da4a4a76f2821c05"
+    },
+    "sales-groupapp": {
+      "source": "sales-skills/sales",
+      "sourceType": "github",
+      "skillPath": "skills/sales-groupapp/SKILL.md",
+      "computedHash": "4ecbeae53415679e4908187cc8f8489c84007ac872f2b18d2ba6db2a61cb03a1"
+    },
+    "sales-gumroad": {
+      "source": "sales-skills/sales",
+      "sourceType": "github",
+      "skillPath": "skills/sales-gumroad/SKILL.md",
+      "computedHash": "126fc82aa03f8a2f5eeb0bf199e5ee193215f1cbcd48f7a11912047d7b468b0a"
+    },
+    "sales-gutenkit": {
+      "source": "sales-skills/sales",
+      "sourceType": "github",
+      "skillPath": "skills/sales-gutenkit/SKILL.md",
+      "computedHash": "75d4630819663df1201166af4d2aa23b484dd7b26c759d4e7c459cb971050ade"
+    },
+    "sales-gutenverse": {
+      "source": "sales-skills/sales",
+      "sourceType": "github",
+      "skillPath": "skills/sales-gutenverse/SKILL.md",
+      "computedHash": "2cea368aa78c05284091010eb3e7c4fa282223646ea5742f8702d1ec4b5c0f09"
+    },
+    "sales-handy": {
+      "source": "sales-skills/sales",
+      "sourceType": "github",
+      "skillPath": "skills/sales-handy/SKILL.md",
+      "computedHash": "77a4acb24ca7724b45b083a1ffc9f6dc0527997c0e3afd5276bf9f83679b2a0e"
+    },
+    "sales-happyscribe": {
+      "source": "sales-skills/sales",
+      "sourceType": "github",
+      "skillPath": "skills/sales-happyscribe/SKILL.md",
+      "computedHash": "1a0058581fd697d6910d9730b0b3dc07941e852f96ebf92436805ec98ad10710"
+    },
+    "sales-hecto": {
+      "source": "sales-skills/sales",
+      "sourceType": "github",
+      "skillPath": "skills/sales-hecto/SKILL.md",
+      "computedHash": "18c05caa4c342d88faa438ac48dda0a384a64a200aa9b7d48b7d0b4f67293a77"
+    },
+    "sales-hedy": {
+      "source": "sales-skills/sales",
+      "sourceType": "github",
+      "skillPath": "skills/sales-hedy/SKILL.md",
+      "computedHash": "9274da782f14211bfe03a80bddd2fbc5064525b785df049f8e0252e1ddfe41ca"
+    },
+    "sales-heepsy": {
+      "source": "sales-skills/sales",
+      "sourceType": "github",
+      "skillPath": "skills/sales-heepsy/SKILL.md",
+      "computedHash": "133ea29827b4d4902183b6bca3705a9444f7a247663ce416c1de87d2d5d09a24"
+    },
+    "sales-helpdesk-selection": {
+      "source": "sales-skills/sales",
+      "sourceType": "github",
+      "skillPath": "skills/sales-helpdesk-selection/SKILL.md",
+      "computedHash": "9dca0c14f3f9be2edd1ae990ef958ca120dd0a088f18477d9fc5785c073efe80"
+    },
+    "sales-hey": {
+      "source": "sales-skills/sales",
+      "sourceType": "github",
+      "skillPath": "skills/sales-hey/SKILL.md",
+      "computedHash": "b61364369a744f97d305351193a9e194647712088e5fb1c456f60de586584290"
+    },
+    "sales-hi-ai": {
+      "source": "sales-skills/sales",
+      "sourceType": "github",
+      "skillPath": "skills/sales-hi-ai/SKILL.md",
+      "computedHash": "ded54d710a91e321e047479ea56439a62ac67e18e23228284a1060cae523ba35"
+    },
+    "sales-hiver": {
+      "source": "sales-skills/sales",
+      "sourceType": "github",
+      "skillPath": "skills/sales-hiver/SKILL.md",
+      "computedHash": "ba900b69019c5c63a5cd1881f0906f34ce98bddf6c65cb3735bd3cb1b3cf2445"
+    },
+    "sales-houseofmarketers": {
+      "source": "sales-skills/sales",
+      "sourceType": "github",
+      "skillPath": "skills/sales-houseofmarketers/SKILL.md",
+      "computedHash": "ec5881618ac8ccd944cc8c4885971bdc908b8af830dad8c724e6db8f59e699d8"
+    },
+    "sales-hubspot": {
+      "source": "sales-skills/sales",
+      "sourceType": "github",
+      "skillPath": "skills/sales-hubspot/SKILL.md",
+      "computedHash": "59aeed16360ef325840ed1fef0030d978a7ed178f54156789277ccaf3baefe02"
+    },
+    "sales-hunter": {
+      "source": "sales-skills/sales",
+      "sourceType": "github",
+      "skillPath": "skills/sales-hunter/SKILL.md",
+      "computedHash": "eb5067d76f400bca1fd77c2661671867dcc8b7d926871accb7ce394fb03d5c06"
+    },
+    "sales-huzzler": {
+      "source": "sales-skills/sales",
+      "sourceType": "github",
+      "skillPath": "skills/sales-huzzler/SKILL.md",
+      "computedHash": "2b6dd66aa414d9d156aababeb3d995d81c9a8fbc34fdda4801adcbdc5ac495ab"
+    },
+    "sales-hynote": {
+      "source": "sales-skills/sales",
+      "sourceType": "github",
+      "skillPath": "skills/sales-hynote/SKILL.md",
+      "computedHash": "d587a1f5d5d5d746af6a58e3b29465e498039eff77910485d32821061102a5a8"
+    },
+    "sales-hypeauditor": {
+      "source": "sales-skills/sales",
+      "sourceType": "github",
+      "skillPath": "skills/sales-hypeauditor/SKILL.md",
+      "computedHash": "4e6c1956de105c835fed5d1293403bb385b89180753cb210e06aa285b8d8343d"
+    },
+    "sales-hypefy": {
+      "source": "sales-skills/sales",
+      "sourceType": "github",
+      "skillPath": "skills/sales-hypefy/SKILL.md",
+      "computedHash": "e17e0c9c7377f025cc1094a80dc565bf445c6b5950307e2927005280108e543f"
+    },
+    "sales-idea-validation": {
+      "source": "sales-skills/sales",
+      "sourceType": "github",
+      "skillPath": "skills/sales-idea-validation/SKILL.md",
+      "computedHash": "2a76e3c31bef4ae08dcb22494a803e0e080099400ddc2d3ced93bd1c0a32d1be"
+    },
+    "sales-ideagrape": {
+      "source": "sales-skills/sales",
+      "sourceType": "github",
+      "skillPath": "skills/sales-ideagrape/SKILL.md",
+      "computedHash": "cd1beaa0d818d94bac0707e4655f858fef37935be6d5ffbce09c7c1f9c04b0b1"
+    },
+    "sales-ideaproof": {
+      "source": "sales-skills/sales",
+      "sourceType": "github",
+      "skillPath": "skills/sales-ideaproof/SKILL.md",
+      "computedHash": "111fb9237b17294cbfbfed62b574f2bf2b8ed7e6a9a734e583fe54bf7a28ea8a"
+    },
+    "sales-ideatwister": {
+      "source": "sales-skills/sales",
+      "sourceType": "github",
+      "skillPath": "skills/sales-ideatwister/SKILL.md",
+      "computedHash": "aad34968b3f2d1f166137a182f9cc333ee542125d0ef74fb13a94d38e2c4ad64"
+    },
+    "sales-in-app-messaging": {
+      "source": "sales-skills/sales",
+      "sourceType": "github",
+      "skillPath": "skills/sales-in-app-messaging/SKILL.md",
+      "computedHash": "ed5acd955aee2175c69288ccf565b86d80f0effd1f3231efd8f8af7331bad3a6"
+    },
+    "sales-inbeat": {
+      "source": "sales-skills/sales",
+      "sourceType": "github",
+      "skillPath": "skills/sales-inbeat/SKILL.md",
+      "computedHash": "6aa9de5959abaf2264fa412ee710f87a668495f9901362d9b8e8154c7bf4ba6a"
+    },
+    "sales-inbox-zero": {
+      "source": "sales-skills/sales",
+      "sourceType": "github",
+      "skillPath": "skills/sales-inbox-zero/SKILL.md",
+      "computedHash": "0503fb7a909d71e22b2e89c61dc14e1982c6f0487721af0039be4d159d8cfb42"
+    },
+    "sales-inboxreads": {
+      "source": "sales-skills/sales",
+      "sourceType": "github",
+      "skillPath": "skills/sales-inboxreads/SKILL.md",
+      "computedHash": "4b7d3cfccafc7020302ccd086955c16ae33a71afe15981ae893d0be05104152a"
+    },
+    "sales-indiehackers": {
+      "source": "sales-skills/sales",
+      "sourceType": "github",
+      "skillPath": "skills/sales-indiehackers/SKILL.md",
+      "computedHash": "511cff1ce086d777dfbbac89ffb246ab605653ee19df8092aa6e08013dcb5e8c"
+    },
+    "sales-infludata": {
+      "source": "sales-skills/sales",
+      "sourceType": "github",
+      "skillPath": "skills/sales-infludata/SKILL.md",
+      "computedHash": "6257f180d8cef6fe6f5a38b2a02849ef4512289268c80d7eb7ecee8568b79ac7"
+    },
+    "sales-influencer-hero": {
+      "source": "sales-skills/sales",
+      "sourceType": "github",
+      "skillPath": "skills/sales-influencer-hero/SKILL.md",
+      "computedHash": "18ff90c4d794ef040f0e9f2e850f42ab355a4fd47a8fd404ed3e13d32e04be2e"
+    },
+    "sales-influencer-marketing": {
+      "source": "sales-skills/sales",
+      "sourceType": "github",
+      "skillPath": "skills/sales-influencer-marketing/SKILL.md",
+      "computedHash": "b7dbdcfa8e7076f3e35dbc60e5caab644d48ddb27898f3a4cbb96931f090d7fd"
+    },
+    "sales-influencity": {
+      "source": "sales-skills/sales",
+      "sourceType": "github",
+      "skillPath": "skills/sales-influencity/SKILL.md",
+      "computedHash": "798e335f1f55315d2d090bdd2d25286e10badaf525326b0f1ab62330a59c9d7d"
+    },
+    "sales-informatica": {
+      "source": "sales-skills/sales",
+      "sourceType": "github",
+      "skillPath": "skills/sales-informatica/SKILL.md",
+      "computedHash": "ff104237c4f86acc86919df6a6b401d407d936538f57208a3d3465353d9e3a0f"
+    },
+    "sales-informly": {
+      "source": "sales-skills/sales",
+      "sourceType": "github",
+      "skillPath": "skills/sales-informly/SKILL.md",
+      "computedHash": "3f49cb6f428e595146ed1cf91b744b6045c85dcbb5c7fb718a74b2f32b484255"
+    },
+    "sales-insightly": {
+      "source": "sales-skills/sales",
+      "sourceType": "github",
+      "skillPath": "skills/sales-insightly/SKILL.md",
+      "computedHash": "f9ef0a2314010e203bbb782eed68e26ceef4d12206881e5be3522cffdfdda4af"
+    },
+    "sales-instajet": {
+      "source": "sales-skills/sales",
+      "sourceType": "github",
+      "skillPath": "skills/sales-instajet/SKILL.md",
+      "computedHash": "ce9f5c98bed6c034496d41192eb5bc3f877706b2178b3cf4d26f3037c3a036d9"
+    },
+    "sales-instantly": {
+      "source": "sales-skills/sales",
+      "sourceType": "github",
+      "skillPath": "skills/sales-instantly/SKILL.md",
+      "computedHash": "78eb24fa2baecc210df70309c2bc58dcb1ae63f0400cf6bd4f501925636d327c"
+    },
+    "sales-instantpersonas": {
+      "source": "sales-skills/sales",
+      "sourceType": "github",
+      "skillPath": "skills/sales-instantpersonas/SKILL.md",
+      "computedHash": "4affc99157f74392f43c86986d4d32c461d62175f59b57ea85eef7361eee4c15"
+    },
+    "sales-instapage": {
+      "source": "sales-skills/sales",
+      "sourceType": "github",
+      "skillPath": "skills/sales-instapage/SKILL.md",
+      "computedHash": "ac079751302d4db52966b9f95422cd2d7778851ea5e82eb3c7e7fadd2a893f93"
+    },
+    "sales-integration": {
+      "source": "sales-skills/sales",
+      "sourceType": "github",
+      "skillPath": "skills/sales-integration/SKILL.md",
+      "computedHash": "a51bda17198716e060ec740ea9ebb3f8bdd5af6da9fbcb38796056a2e0e8115b"
+    },
+    "sales-intent": {
+      "source": "sales-skills/sales",
+      "sourceType": "github",
+      "skillPath": "skills/sales-intent/SKILL.md",
+      "computedHash": "3a229c342bf5f9125891135a657ac804c883909260b3f75930ede00df89c9748"
+    },
+    "sales-interprefy": {
+      "source": "sales-skills/sales",
+      "sourceType": "github",
+      "skillPath": "skills/sales-interprefy/SKILL.md",
+      "computedHash": "3160ee66b462b44d0308a9f9ee9dedece4a1d1006790a12b8f12072d14118394"
+    },
+    "sales-iris-clarity": {
+      "source": "sales-skills/sales",
+      "sourceType": "github",
+      "skillPath": "skills/sales-iris-clarity/SKILL.md",
+      "computedHash": "c60c1965759d2197112fe9579781a0054b29c6a5c5a00e1d0dcf07d205a267b9"
+    },
+    "sales-iterable": {
+      "source": "sales-skills/sales",
+      "sourceType": "github",
+      "skillPath": "skills/sales-iterable/SKILL.md",
+      "computedHash": "a28cafd0909d8ebd1890b60960d67def5f5267a60e5592dd7dd36ff29e75edd7"
+    },
+    "sales-jamie": {
+      "source": "sales-skills/sales",
+      "sourceType": "github",
+      "skillPath": "skills/sales-jamie/SKILL.md",
+      "computedHash": "eca54cd724acb952600976494ccad3356e987a5071c4b776205fb7261a2d0211"
+    },
+    "sales-jamy": {
+      "source": "sales-skills/sales",
+      "sourceType": "github",
+      "skillPath": "skills/sales-jamy/SKILL.md",
+      "computedHash": "bea9771cb9c38726c323f851556195eae323b20c0c9a94d15fba315dae7ac4fa"
+    },
+    "sales-jeeng": {
+      "source": "sales-skills/sales",
+      "sourceType": "github",
+      "skillPath": "skills/sales-jeeng/SKILL.md",
+      "computedHash": "866de140faa7426a5efc7d1688a7703df971dc825472f86b774d128f7f5bf930"
+    },
+    "sales-jiminny": {
+      "source": "sales-skills/sales",
+      "sourceType": "github",
+      "skillPath": "skills/sales-jiminny/SKILL.md",
+      "computedHash": "739a5348e78be1c77890370b201cb8cf16bb1a0e77591a22bcc67c4f28794b68"
+    },
+    "sales-jitterbit": {
+      "source": "sales-skills/sales",
+      "sourceType": "github",
+      "skillPath": "skills/sales-jitterbit/SKILL.md",
+      "computedHash": "ecbf9cb0e3e8028fb8ba3240597a73c32fbbe17235292dae0973ec4f52d5cea6"
+    },
+    "sales-jotform": {
+      "source": "sales-skills/sales",
+      "sourceType": "github",
+      "skillPath": "skills/sales-jotform/SKILL.md",
+      "computedHash": "afcbcf2e8789abb3b9833718256733ca76ca3c316e0071783f45f7c09824064b"
+    },
+    "sales-jotme": {
+      "source": "sales-skills/sales",
+      "sourceType": "github",
+      "skillPath": "skills/sales-jotme/SKILL.md",
+      "computedHash": "89d9398d6f2f5c0feb34f3d61148d4da8e513faad7b4ee3cb094da341279697d"
+    },
+    "sales-juma": {
+      "source": "sales-skills/sales",
+      "sourceType": "github",
+      "skillPath": "skills/sales-juma/SKILL.md",
+      "computedHash": "684bfc2df4dfd17e80c418a63b49d25189723954bf4784e134f3c1d9f9737aaf"
+    },
+    "sales-justgotfound": {
+      "source": "sales-skills/sales",
+      "sourceType": "github",
+      "skillPath": "skills/sales-justgotfound/SKILL.md",
+      "computedHash": "f5776298497555e6332875d4514d29eafd152dc6bfa64d5320aa8664749f7aec"
+    },
+    "sales-kadence": {
+      "source": "sales-skills/sales",
+      "sourceType": "github",
+      "skillPath": "skills/sales-kadence/SKILL.md",
+      "computedHash": "4d2b6f8dce10cde769f85b55fba3c072fdb1c174ac06ddcedabf012bc99a472f"
+    },
+    "sales-karax": {
+      "source": "sales-skills/sales",
+      "sourceType": "github",
+      "skillPath": "skills/sales-karax/SKILL.md",
+      "computedHash": "1a11fd9c8fd831fca372a010df2fced44818a155716dad056cf64613ec18d77f"
+    },
+    "sales-kartra": {
+      "source": "sales-skills/sales",
+      "sourceType": "github",
+      "skillPath": "skills/sales-kartra/SKILL.md",
+      "computedHash": "8d9844f27247197fbc7f1940b4a6f525b94f074d6123bf3bfd97a973734b02f5"
+    },
+    "sales-keap": {
+      "source": "sales-skills/sales",
+      "sourceType": "github",
+      "skillPath": "skills/sales-keap/SKILL.md",
+      "computedHash": "57bf68f380499def6ca33d9edeb8b746978887b04af3dd8834ab45a4ed11f51d"
+    },
+    "sales-kevel": {
+      "source": "sales-skills/sales",
+      "sourceType": "github",
+      "skillPath": "skills/sales-kevel/SKILL.md",
+      "computedHash": "9bd8454bf6dc8c330f075d132dd0b3b04c7080d97b7ce00cad8e41d0d22c3fac"
+    },
+    "sales-keymentions": {
+      "source": "sales-skills/sales",
+      "sourceType": "github",
+      "skillPath": "skills/sales-keymentions/SKILL.md",
+      "computedHash": "34049cd067e9989f699ed53fe3c72847943dd7c3334ddbb06402bceb29c96c38"
+    },
+    "sales-kickofflabs": {
+      "source": "sales-skills/sales",
+      "sourceType": "github",
+      "skillPath": "skills/sales-kickofflabs/SKILL.md",
+      "computedHash": "ddf91829e92e8e17769e03868082eb9a61da436c679158f5eae63a78cd14f3f4"
+    },
+    "sales-kit": {
+      "source": "sales-skills/sales",
+      "sourceType": "github",
+      "skillPath": "skills/sales-kit/SKILL.md",
+      "computedHash": "b1c1f63b61224897d549d9f2931f64aa28d9b7087e621cad3568d4ba012398f9"
+    },
+    "sales-klaviyo": {
+      "source": "sales-skills/sales",
+      "sourceType": "github",
+      "skillPath": "skills/sales-klaviyo/SKILL.md",
+      "computedHash": "e4f846bffa1ffe636cc93e1425527882a60c02583395c3b0a55e2e21a4f0318c"
+    },
+    "sales-konnectinsights": {
+      "source": "sales-skills/sales",
+      "sourceType": "github",
+      "skillPath": "skills/sales-konnectinsights/SKILL.md",
+      "computedHash": "c233d7d9a3ba081874e9b6af41f8c6d6865092ba6f52a1617b3897f49a9cc2f4"
+    },
+    "sales-krisp": {
+      "source": "sales-skills/sales",
+      "sourceType": "github",
+      "skillPath": "skills/sales-krisp/SKILL.md",
+      "computedHash": "55706a0116dd9a771ce247db37bff36808e0fdca18da4cd45b313abe1339d17e"
+    },
+    "sales-kudo": {
+      "source": "sales-skills/sales",
+      "sourceType": "github",
+      "skillPath": "skills/sales-kudo/SKILL.md",
+      "computedHash": "72b8ef63cb87e43550865ec34b72159b7697f1e18c03aab28cd049ac8fa4ec96"
+    },
+    "sales-kwatch": {
+      "source": "sales-skills/sales",
+      "sourceType": "github",
+      "skillPath": "skills/sales-kwatch/SKILL.md",
+      "computedHash": "da1830220c19f5c7698d957d43e3401b8c0ebbae8812a7f9ca55896ba782cbe6"
+    },
+    "sales-lagrowthmachine": {
+      "source": "sales-skills/sales",
+      "sourceType": "github",
+      "skillPath": "skills/sales-lagrowthmachine/SKILL.md",
+      "computedHash": "674752ea778a09912966587aba15a909a5557a5cf1e6074b3994118fe350f40b"
+    },
+    "sales-landingi": {
+      "source": "sales-skills/sales",
+      "sourceType": "github",
+      "skillPath": "skills/sales-landingi/SKILL.md",
+      "computedHash": "cbafa110aa591977853fed0fd7c4f9e1f9ea999a6714883a2627a3f3098126bc"
+    },
+    "sales-langfinity": {
+      "source": "sales-skills/sales",
+      "sourceType": "github",
+      "skillPath": "skills/sales-langfinity/SKILL.md",
+      "computedHash": "4ac9264eed20e443bec9a53095ca0cc768d95b1a01a8182857408d9218d8820b"
+    },
+    "sales-laserfocus": {
+      "source": "sales-skills/sales",
+      "sourceType": "github",
+      "skillPath": "skills/sales-laserfocus/SKILL.md",
+      "computedHash": "9589ede45b76f7bb4be39fa0623ee62fd543e710288d7ebd7c95ffd180265079"
+    },
+    "sales-later": {
+      "source": "sales-skills/sales",
+      "sourceType": "github",
+      "skillPath": "skills/sales-later/SKILL.md",
+      "computedHash": "f76cf37d581d04656b8d828d4c8d7b397d5789fa0051f8c63d98e89df53c895b"
+    },
+    "sales-launch-directory": {
+      "source": "sales-skills/sales",
+      "sourceType": "github",
+      "skillPath": "skills/sales-launch-directory/SKILL.md",
+      "computedHash": "9398570617366a1b8e91dbe52d4caad3472689ea202606c6f330b386f8caac09"
+    },
+    "sales-launchcaster": {
+      "source": "sales-skills/sales",
+      "sourceType": "github",
+      "skillPath": "skills/sales-launchcaster/SKILL.md",
+      "computedHash": "6bbafaea4567798e95167cb488178dcbc45d75c8f5c8f1ce9f7c983ed88e2d7e"
+    },
+    "sales-launchday": {
+      "source": "sales-skills/sales",
+      "sourceType": "github",
+      "skillPath": "skills/sales-launchday/SKILL.md",
+      "computedHash": "ad660114ccdbfdead465dfe4261c79913c20806c8415a7f9f8d339c6123da7e2"
+    },
+    "sales-launchingnext": {
+      "source": "sales-skills/sales",
+      "sourceType": "github",
+      "skillPath": "skills/sales-launchingnext/SKILL.md",
+      "computedHash": "b28b2571a361f9a44e8bd765a1af9a18c9a001d632dfe08237d9490f479d46f0"
+    },
+    "sales-launchlist": {
+      "source": "sales-skills/sales",
+      "sourceType": "github",
+      "skillPath": "skills/sales-launchlist/SKILL.md",
+      "computedHash": "fe3185c2d94e51eac209908a033a155ca3ddc3cabe5fe877a7a00009f64293b8"
+    },
+    "sales-launchvibe": {
+      "source": "sales-skills/sales",
+      "sourceType": "github",
+      "skillPath": "skills/sales-launchvibe/SKILL.md",
+      "computedHash": "15041690029748bd0acb3fc7f54cc82722346975579fb2d4a05d87e6a919f268"
+    },
+    "sales-laxis": {
+      "source": "sales-skills/sales",
+      "sourceType": "github",
+      "skillPath": "skills/sales-laxis/SKILL.md",
+      "computedHash": "3c85327efe0b69336f5ab5c328d0bf050929261c1aa3a1829d93a4202d9d6530"
+    },
+    "sales-lead-routing": {
+      "source": "sales-skills/sales",
+      "sourceType": "github",
+      "skillPath": "skills/sales-lead-routing/SKILL.md",
+      "computedHash": "6e6b145d78e17fb80d1c8a6487feedfefc34e8080fdb67e8a93c64c2c8111e44"
+    },
+    "sales-lead-score": {
+      "source": "sales-skills/sales",
+      "sourceType": "github",
+      "skillPath": "skills/sales-lead-score/SKILL.md",
+      "computedHash": "33d5d478a2301657df7a16501f49d69233855d7ba29b842c1ae4fe931b766a7b"
+    },
+    "sales-leadiq": {
+      "source": "sales-skills/sales",
+      "sourceType": "github",
+      "skillPath": "skills/sales-leadiq/SKILL.md",
+      "computedHash": "b504a1625a3fa1909786877d2c887945b19ea427f20bc055e8ffbf92921150ae"
+    },
+    "sales-leadlee": {
+      "source": "sales-skills/sales",
+      "sourceType": "github",
+      "skillPath": "skills/sales-leadlee/SKILL.md",
+      "computedHash": "8c08d92edcd4462289635fa65ddc51253ca5535609dd8d951043314dbab5f35f"
+    },
+    "sales-leadmagic": {
+      "source": "sales-skills/sales",
+      "sourceType": "github",
+      "skillPath": "skills/sales-leadmagic/SKILL.md",
+      "computedHash": "4ce4d4c888b3057ab085701ac3776645f00ab1dbf288c13774ad9dbcdb34e728"
+    },
+    "sales-leadmore": {
+      "source": "sales-skills/sales",
+      "sourceType": "github",
+      "skillPath": "skills/sales-leadmore/SKILL.md",
+      "computedHash": "51fa6a1bbde8a5923af609f9e854d65bb099993570e348eabb517caee6bf079e"
+    },
+    "sales-leado": {
+      "source": "sales-skills/sales",
+      "sourceType": "github",
+      "skillPath": "skills/sales-leado/SKILL.md",
+      "computedHash": "e9b51c78dfa7c6b69330ec765d74da6f37a48aa03ad161d0a1601f3fdcce5823"
+    },
+    "sales-leadpages": {
+      "source": "sales-skills/sales",
+      "sourceType": "github",
+      "skillPath": "skills/sales-leadpages/SKILL.md",
+      "computedHash": "78cd2d8045b53b6ab3890fc0e80fd09039d9d431ea18a07fe1a2829a4e07b4f7"
+    },
+    "sales-leadverse": {
+      "source": "sales-skills/sales",
+      "sourceType": "github",
+      "skillPath": "skills/sales-leadverse/SKILL.md",
+      "computedHash": "322720e9cd185f9ba492b635c5af725a6c6aebb4f7e3d87c88a9f4f25bccc17f"
+    },
+    "sales-leedlime": {
+      "source": "sales-skills/sales",
+      "sourceType": "github",
+      "skillPath": "skills/sales-leedlime/SKILL.md",
+      "computedHash": "dc699a764524b62b817d6d36c9770068f148b2df99e980f32e54c3c8b062211d"
+    },
+    "sales-lemlist": {
+      "source": "sales-skills/sales",
+      "sourceType": "github",
+      "skillPath": "skills/sales-lemlist/SKILL.md",
+      "computedHash": "4a59fd709e9d5264cbc0b47b0d2e200ae49430a7e805d5d35d4444dc9081439a"
+    },
+    "sales-lemonsqueezy": {
+      "source": "sales-skills/sales",
+      "sourceType": "github",
+      "skillPath": "skills/sales-lemonsqueezy/SKILL.md",
+      "computedHash": "f53bdde97da251f1247ff45a40d2bd3919c1a0027abff2ee71bd3109e4c3dbab"
+    },
+    "sales-lettergrowth": {
+      "source": "sales-skills/sales",
+      "sourceType": "github",
+      "skillPath": "skills/sales-lettergrowth/SKILL.md",
+      "computedHash": "3c088d8f394c9838ef3c7df61720c7df5e6030f7b881d7ebb038bb567aab1daa"
+    },
+    "sales-letterly": {
+      "source": "sales-skills/sales",
+      "sourceType": "github",
+      "skillPath": "skills/sales-letterly/SKILL.md",
+      "computedHash": "006d02bc02d01e110d6e642e8f2d61d17fa9ff445f59ff5a4105fe108f860320"
+    },
+    "sales-level-ai": {
+      "source": "sales-skills/sales",
+      "sourceType": "github",
+      "skillPath": "skills/sales-level-ai/SKILL.md",
+      "computedHash": "6407596a33be11815db08e8980ec98098496c9449dd380a0db000d420ff786b8"
+    },
+    "sales-lindy": {
+      "source": "sales-skills/sales",
+      "sourceType": "github",
+      "skillPath": "skills/sales-lindy/SKILL.md",
+      "computedHash": "e2292b432331e52205f6562ac9e4d0b1e1fc04b8f918b79706464cf1397a0379"
+    },
+    "sales-linkedhelper": {
+      "source": "sales-skills/sales",
+      "sourceType": "github",
+      "skillPath": "skills/sales-linkedhelper/SKILL.md",
+      "computedHash": "aff75b475345d7fd4b9b39b5f955e8749d1bf814d53a814dc3c3224c66c75158"
+    },
+    "sales-listingbott": {
+      "source": "sales-skills/sales",
+      "sourceType": "github",
+      "skillPath": "skills/sales-listingbott/SKILL.md",
+      "computedHash": "697933459083f82756a6c2cba48ceedf6aff1c324502f1ed22b36befb27d68cb"
+    },
+    "sales-listmonk": {
+      "source": "sales-skills/sales",
+      "sourceType": "github",
+      "skillPath": "skills/sales-listmonk/SKILL.md",
+      "computedHash": "4ccc70a2f8b109dc5b5580debcde4f013f9f9eca0b03e0c72f8a3cc0b77df268"
+    },
+    "sales-litcommerce": {
+      "source": "sales-skills/sales",
+      "sourceType": "github",
+      "skillPath": "skills/sales-litcommerce/SKILL.md",
+      "computedHash": "4b16df63b82b1fa3411dcf6de6f5c113f63e961bae2b3312e9a68949e52d83ea"
+    },
+    "sales-litextension": {
+      "source": "sales-skills/sales",
+      "sourceType": "github",
+      "skillPath": "skills/sales-litextension/SKILL.md",
+      "computedHash": "c1d56b7f68fadeecba02564e42794c8648b0d59cd72d8765c434012da64bbf44"
+    },
+    "sales-live-chat": {
+      "source": "sales-skills/sales",
+      "sourceType": "github",
+      "skillPath": "skills/sales-live-chat/SKILL.md",
+      "computedHash": "01db50d9e9da91c20a7c862e1770d94d7cd85391aed542cf1b48b4424159348a"
+    },
+    "sales-liznr": {
+      "source": "sales-skills/sales",
+      "sourceType": "github",
+      "skillPath": "skills/sales-liznr/SKILL.md",
+      "computedHash": "8160355644aadcb6634bb3182a95d6f3d38d90a7ba0b6175c2297a15f3bcf7ec"
+    },
+    "sales-lobstr": {
+      "source": "sales-skills/sales",
+      "sourceType": "github",
+      "skillPath": "skills/sales-lobstr/SKILL.md",
+      "computedHash": "c7299a36ff125ea104dd834a66d052cff6862c5120618f7cc964ffea718f34ed"
+    },
+    "sales-loyalty": {
+      "source": "sales-skills/sales",
+      "sourceType": "github",
+      "skillPath": "skills/sales-loyalty/SKILL.md",
+      "computedHash": "bf6259999badd1c3714ab6cc8fc73e6bc8ce937787f823d1f739b58e2b2d1c76"
+    },
+    "sales-loyaltylion": {
+      "source": "sales-skills/sales",
+      "sourceType": "github",
+      "skillPath": "skills/sales-loyaltylion/SKILL.md",
+      "computedHash": "6d3ce973e66d24d6a08e7245d359ccbc27d6ee37a29fe7c864acdb593c27b6b4"
+    },
+    "sales-ltk": {
+      "source": "sales-skills/sales",
+      "sourceType": "github",
+      "skillPath": "skills/sales-ltk/SKILL.md",
+      "computedHash": "19385afd5cd023264c76e6d639a24468038d8ce580c588346f6c3fc8eae63082"
+    },
+    "sales-maestroqa": {
+      "source": "sales-skills/sales",
+      "sourceType": "github",
+      "skillPath": "skills/sales-maestroqa/SKILL.md",
+      "computedHash": "12a40ae9abc1a1606b94d395206fec8db1927b8a0f3c671df576563620983f6b"
+    },
+    "sales-mailchimp": {
+      "source": "sales-skills/sales",
+      "sourceType": "github",
+      "skillPath": "skills/sales-mailchimp/SKILL.md",
+      "computedHash": "60dd13d602396de590858be6a76b6b8f988030ac96f68732fcaff20b6901e11d"
+    },
+    "sales-mailerlite": {
+      "source": "sales-skills/sales",
+      "sourceType": "github",
+      "skillPath": "skills/sales-mailerlite/SKILL.md",
+      "computedHash": "329e7de42dde1e88613430ff3fd642510073df128a1a44bb364207dad854b635"
+    },
+    "sales-mailgun": {
+      "source": "sales-skills/sales",
+      "sourceType": "github",
+      "skillPath": "skills/sales-mailgun/SKILL.md",
+      "computedHash": "2da82dad4d03e18c50365c14912709896f6e852254be875ce954818ca7eb81eb"
+    },
+    "sales-mailman": {
+      "source": "sales-skills/sales",
+      "sourceType": "github",
+      "skillPath": "skills/sales-mailman/SKILL.md",
+      "computedHash": "9100d6c79d4dec11d173969d66c641dc7888ad5bd802c9294245552a373acce0"
+    },
+    "sales-mailmo": {
+      "source": "sales-skills/sales",
+      "sourceType": "github",
+      "skillPath": "skills/sales-mailmo/SKILL.md",
+      "computedHash": "3bf3363e497595e456f6d68188c30ce588c1fbe093b21961e46b39fd0017829f"
+    },
+    "sales-mailshake": {
+      "source": "sales-skills/sales",
+      "sourceType": "github",
+      "skillPath": "skills/sales-mailshake/SKILL.md",
+      "computedHash": "f043a6d4497ec7d041168f8e7f19a6dc60829a2127f8c41677b02a37eff52e24"
+    },
+    "sales-marketing-mary": {
+      "source": "sales-skills/sales",
+      "sourceType": "github",
+      "skillPath": "skills/sales-marketing-mary/SKILL.md",
+      "computedHash": "e77bbcf81fd73b58d702295d5aaa1ca0aeae214074ceeec1279af62569fcafbb"
+    },
+    "sales-marketplace-payouts": {
+      "source": "sales-skills/sales",
+      "sourceType": "github",
+      "skillPath": "skills/sales-marketplace-payouts/SKILL.md",
+      "computedHash": "a224a235052b88912a9186f5be419e8164692e599c6341b736e3ec98ea587f14"
+    },
+    "sales-maximizer": {
+      "source": "sales-skills/sales",
+      "sourceType": "github",
+      "skillPath": "skills/sales-maximizer/SKILL.md",
+      "computedHash": "5a170bdb4c97f643ea92ab8665ca49dc64e8a48160e703c542982e43f28204fd"
+    },
+    "sales-maxiq": {
+      "source": "sales-skills/sales",
+      "sourceType": "github",
+      "skillPath": "skills/sales-maxiq/SKILL.md",
+      "computedHash": "e49f6ef5878744e6d9068572117bd3f5e8b3ef03ad01ac537a16bdc528efa804"
+    },
+    "sales-mbox-meet": {
+      "source": "sales-skills/sales",
+      "sourceType": "github",
+      "skillPath": "skills/sales-mbox-meet/SKILL.md",
+      "computedHash": "198a726e0fafdaa2f25cbe52ee139bc7db9b54d9bb8bcd459a21364f0746bb83"
+    },
+    "sales-medallia": {
+      "source": "sales-skills/sales",
+      "sourceType": "github",
+      "skillPath": "skills/sales-medallia/SKILL.md",
+      "computedHash": "1ad8c45299d47ffdfaf12a8ceb623799ad20806d77aca739a5aff39fc2aa72e3"
+    },
+    "sales-media-relations": {
+      "source": "sales-skills/sales",
+      "sourceType": "github",
+      "skillPath": "skills/sales-media-relations/SKILL.md",
+      "computedHash": "77a716ed8f0d4db5972144b9fa6678e132880157657385d0b7148ae1a4d7574b"
+    },
+    "sales-medusa": {
+      "source": "sales-skills/sales",
+      "sourceType": "github",
+      "skillPath": "skills/sales-medusa/SKILL.md",
+      "computedHash": "457bafafa352d0f1ce92ce4c67c7cdee76eccff05715c4efa3bf0e2b0dba169a"
+    },
+    "sales-meetgeek": {
+      "source": "sales-skills/sales",
+      "sourceType": "github",
+      "skillPath": "skills/sales-meetgeek/SKILL.md",
+      "computedHash": "62e3b680bc411ab1fbccbe8fc917aef30593e83be17e88a1e3f6b25d79ede587"
+    },
+    "sales-meetily": {
+      "source": "sales-skills/sales",
+      "sourceType": "github",
+      "skillPath": "skills/sales-meetily/SKILL.md",
+      "computedHash": "7169829fb240bf71016e34314cdd704cd7c46682aa6f6f13caf0a597e18bd048"
+    },
+    "sales-meeting-ai": {
+      "source": "sales-skills/sales",
+      "sourceType": "github",
+      "skillPath": "skills/sales-meeting-ai/SKILL.md",
+      "computedHash": "66c7ffdb5a3dec3f8a645a65c400976c96e64ad1139c9ddf6e6e5da116f2b04d"
+    },
+    "sales-meeting-scheduler": {
+      "source": "sales-skills/sales",
+      "sourceType": "github",
+      "skillPath": "skills/sales-meeting-scheduler/SKILL.md",
+      "computedHash": "37212d6ebf90d1c81d96bb83aba1b30df23539ccc53f5bae149e00f53a07fc0f"
+    },
+    "sales-megahit": {
+      "source": "sales-skills/sales",
+      "sourceType": "github",
+      "skillPath": "skills/sales-megahit/SKILL.md",
+      "computedHash": "b9f0692c1f5b2bbd189d3f12dc40a3ef80e977776dd507aaeae6f6401455f319"
+    },
+    "sales-meltwater": {
+      "source": "sales-skills/sales",
+      "sourceType": "github",
+      "skillPath": "skills/sales-meltwater/SKILL.md",
+      "computedHash": "158dcf9cdc71cb985f2389555c1b346d8370ab48d2ec49bed57a6e6afda910c7"
+    },
+    "sales-memberful": {
+      "source": "sales-skills/sales",
+      "sourceType": "github",
+      "skillPath": "skills/sales-memberful/SKILL.md",
+      "computedHash": "928a35437bd45a7d4b480041867cfe2926458a7563dc556adc23f8ca6fe37fd4"
+    },
+    "sales-membership": {
+      "source": "sales-skills/sales",
+      "sourceType": "github",
+      "skillPath": "skills/sales-membership/SKILL.md",
+      "computedHash": "4e837f9489ab40ddfe9ce02c845d4775c9dd069b8218999787b07c4611694384"
+    },
+    "sales-memberstack": {
+      "source": "sales-skills/sales",
+      "sourceType": "github",
+      "skillPath": "skills/sales-memberstack/SKILL.md",
+      "computedHash": "3de6a3042b07cc7d4d1734bff561fcc909dd2170d8cbcf4688e3fe85685df4c7"
+    },
+    "sales-membervault": {
+      "source": "sales-skills/sales",
+      "sourceType": "github",
+      "skillPath": "skills/sales-membervault/SKILL.md",
+      "computedHash": "cd78503a90fa29b30a03224841e6951dfe4091c829c012efb3aeb373835f22d6"
+    },
+    "sales-memoro": {
+      "source": "sales-skills/sales",
+      "sourceType": "github",
+      "skillPath": "skills/sales-memoro/SKILL.md",
+      "computedHash": "8c6c5d5823a443711de15cd27686993242181c51109fee5fa55b121f282913ca"
+    },
+    "sales-mention": {
+      "source": "sales-skills/sales",
+      "sourceType": "github",
+      "skillPath": "skills/sales-mention/SKILL.md",
+      "computedHash": "82d3053df92abbc7df058da563fd2624d6b783e62542926063d0375fe7f1d1ec"
+    },
+    "sales-mentionclick": {
+      "source": "sales-skills/sales",
+      "sourceType": "github",
+      "skillPath": "skills/sales-mentionclick/SKILL.md",
+      "computedHash": "dcdb0f35c8044b8ead51b83a8ff4cded5e157f42d5d2a6d39d2b99a3e1cf4055"
+    },
+    "sales-mentiondrop": {
+      "source": "sales-skills/sales",
+      "sourceType": "github",
+      "skillPath": "skills/sales-mentiondrop/SKILL.md",
+      "computedHash": "aabda7bbfdc1edb293c88c6a3e7174393f5ed60af3c4b6cacde890b6db41a98f"
+    },
+    "sales-mentionlytics": {
+      "source": "sales-skills/sales",
+      "sourceType": "github",
+      "skillPath": "skills/sales-mentionlytics/SKILL.md",
+      "computedHash": "4ad258646acd7fa3eb55305aec75eea61e2f975da2f377140012d35201481837"
+    },
+    "sales-merchant-of-record": {
+      "source": "sales-skills/sales",
+      "sourceType": "github",
+      "skillPath": "skills/sales-merchant-of-record/SKILL.md",
+      "computedHash": "fd8aee17808f4e9172f886c5040385fba96ce9258d159807515dbf4634323135"
+    },
+    "sales-microlaunch": {
+      "source": "sales-skills/sales",
+      "sourceType": "github",
+      "skillPath": "skills/sales-microlaunch/SKILL.md",
+      "computedHash": "b4460e6119aac3d0efe7e8e830027a97aed5b280c9a951088d6e36061e789805"
+    },
+    "sales-mimestream": {
+      "source": "sales-skills/sales",
+      "sourceType": "github",
+      "skillPath": "skills/sales-mimestream/SKILL.md",
+      "computedHash": "cf4f3077e4f45d565498e9762227e3de809614f3902ed69de9abaf3c77d22c69"
+    },
+    "sales-minelead": {
+      "source": "sales-skills/sales",
+      "sourceType": "github",
+      "skillPath": "skills/sales-minelead/SKILL.md",
+      "computedHash": "088c3e44ce1897d4eebcbdf1599e64df5906f25774f30e2c7e034ed31be390a8"
+    },
+    "sales-minuteslink": {
+      "source": "sales-skills/sales",
+      "sourceType": "github",
+      "skillPath": "skills/sales-minuteslink/SKILL.md",
+      "computedHash": "7bf6a30e14945df20a437afbef9d1529f0df6f4204dbec2a4874b2003bbb679c"
+    },
+    "sales-missive": {
+      "source": "sales-skills/sales",
+      "sourceType": "github",
+      "skillPath": "skills/sales-missive/SKILL.md",
+      "computedHash": "f0d843b5f9380827cea4979ffd8ebd739d0bbf05da44c6d02682982044a1a024"
+    },
+    "sales-mixmax": {
+      "source": "sales-skills/sales",
+      "sourceType": "github",
+      "skillPath": "skills/sales-mixmax/SKILL.md",
+      "computedHash": "d88f51367037fb89e0eadf8b747f90371d6b495f77f8ade5f9e49204ec3f79e5"
+    },
+    "sales-modash": {
+      "source": "sales-skills/sales",
+      "sourceType": "github",
+      "skillPath": "skills/sales-modash/SKILL.md",
+      "computedHash": "b2bbcfab09ab8ee48f8e410ef50dba562aab7e9452265b30924f5aba723f488d"
+    },
+    "sales-modjo": {
+      "source": "sales-skills/sales",
+      "sourceType": "github",
+      "skillPath": "skills/sales-modjo/SKILL.md",
+      "computedHash": "7ad4537dbbdda37475904150b9332ff93d9102dd11ed8814f02adbd85093e77c"
+    },
+    "sales-momentum": {
+      "source": "sales-skills/sales",
+      "sourceType": "github",
+      "skillPath": "skills/sales-momentum/SKILL.md",
+      "computedHash": "850033ca50222b0c398940d8bdd661a7e828d360992fc7931d43788fe542ddde"
+    },
+    "sales-monday-notetaker": {
+      "source": "sales-skills/sales",
+      "sourceType": "github",
+      "skillPath": "skills/sales-monday-notetaker/SKILL.md",
+      "computedHash": "aeed803d66e49915653a08e6181045e3c8e1e6ea74c8ebc1b90b6b86eff14996"
+    },
+    "sales-moosend": {
+      "source": "sales-skills/sales",
+      "sourceType": "github",
+      "skillPath": "skills/sales-moosend/SKILL.md",
+      "computedHash": "8d18028e1508a14d2961a99608094ca02cacd6c67f83b0a9abc8f17381dd190a"
+    },
+    "sales-motion": {
+      "source": "sales-skills/sales",
+      "sourceType": "github",
+      "skillPath": "skills/sales-motion/SKILL.md",
+      "computedHash": "3aa1efb1be91615905dcd340225db20afa45d6e20e384be1f21e677523f232ac"
+    },
+    "sales-mparticle": {
+      "source": "sales-skills/sales",
+      "sourceType": "github",
+      "skillPath": "skills/sales-mparticle/SKILL.md",
+      "computedHash": "18aa5feb4b85a1fe755c00f2b6bcbf1323dfb4096bcb0603403f82873d7750a6"
+    },
+    "sales-mulesoft": {
+      "source": "sales-skills/sales",
+      "sourceType": "github",
+      "skillPath": "skills/sales-mulesoft/SKILL.md",
+      "computedHash": "b32bedb6dd5e5e7c7d91501c70950b8f5fe510a2c73d89af6a99a57d331f526d"
+    },
+    "sales-multichannel-selling": {
+      "source": "sales-skills/sales",
+      "sourceType": "github",
+      "skillPath": "skills/sales-multichannel-selling/SKILL.md",
+      "computedHash": "7761b6553de101525df7890103cc2780b3494ae4a8a51a3ed461a8a76bd41517"
+    },
+    "sales-mutualgro": {
+      "source": "sales-skills/sales",
+      "sourceType": "github",
+      "skillPath": "skills/sales-mutualgro/SKILL.md",
+      "computedHash": "e2efe48ed7194c36ec4a35468df4608fb82bd5a09558fdf31020da98c1cd1ce0"
+    },
+    "sales-neoreach": {
+      "source": "sales-skills/sales",
+      "sourceType": "github",
+      "skillPath": "skills/sales-neoreach/SKILL.md",
+      "computedHash": "c2068fee01006f5d01fbd1bad74d651fcdcfdc53ec3af8f3ddf8f502fc0d2c6c"
+    },
+    "sales-newmail": {
+      "source": "sales-skills/sales",
+      "sourceType": "github",
+      "skillPath": "skills/sales-newmail/SKILL.md",
+      "computedHash": "e88268b3920046864bfbe60d22ce6f78f01cd6281d58d79b32498d33f889ca92"
+    },
+    "sales-newsletter": {
+      "source": "sales-skills/sales",
+      "sourceType": "github",
+      "skillPath": "skills/sales-newsletter/SKILL.md",
+      "computedHash": "571e6e99880b09a8a3b24a2cef9daac0e66ebc973270e620877087425b021fb4"
+    },
+    "sales-nexter": {
+      "source": "sales-skills/sales",
+      "sourceType": "github",
+      "skillPath": "skills/sales-nexter/SKILL.md",
+      "computedHash": "9e7003bd4c7bf3d1180142e41ee9767e6b72c38658632b8ef0b7238eb5875d24"
+    },
+    "sales-nice-cxone": {
+      "source": "sales-skills/sales",
+      "sourceType": "github",
+      "skillPath": "skills/sales-nice-cxone/SKILL.md",
+      "computedHash": "947190ebb13955674a297d7280aadf2a15d8e4e5346d6e4d7ba22d8b58879f41"
+    },
+    "sales-noisely": {
+      "source": "sales-skills/sales",
+      "sourceType": "github",
+      "skillPath": "skills/sales-noisely/SKILL.md",
+      "computedHash": "d4a2f667a16fa721880cee88acd9716a5b0303efd467c3fe11c5e060b324c1d7"
+    },
+    "sales-nooks": {
+      "source": "sales-skills/sales",
+      "sourceType": "github",
+      "skillPath": "skills/sales-nooks/SKILL.md",
+      "computedHash": "8b8a3d4be5678d5b4ffea299cae3a6ac41353f37a57f6ff85fa48c3bca699136"
+    },
+    "sales-noota": {
+      "source": "sales-skills/sales",
+      "sourceType": "github",
+      "skillPath": "skills/sales-noota/SKILL.md",
+      "computedHash": "5237259c51d276afc5f74b6689c2785f02ce29632b6192cfec83bb95cd3860f4"
+    },
+    "sales-note-taker": {
+      "source": "sales-skills/sales",
+      "sourceType": "github",
+      "skillPath": "skills/sales-note-taker/SKILL.md",
+      "computedHash": "b0a0a57d579ea4ea3f40407cd75be731bf08c27c485ab16bbd804137eea78189"
+    },
+    "sales-noted": {
+      "source": "sales-skills/sales",
+      "sourceType": "github",
+      "skillPath": "skills/sales-noted/SKILL.md",
+      "computedHash": "2c1f1b7ba3228499028b1626ba4b772abd69319a72ed37e857bb36af7ed26e87"
+    },
+    "sales-notewave": {
+      "source": "sales-skills/sales",
+      "sourceType": "github",
+      "skillPath": "skills/sales-notewave/SKILL.md",
+      "computedHash": "e06f0bfe354b262f711e0b27022c3f20db151d4fb5cda4dfa58099537377044a"
+    },
+    "sales-notta": {
+      "source": "sales-skills/sales",
+      "sourceType": "github",
+      "skillPath": "skills/sales-notta/SKILL.md",
+      "computedHash": "3ecd6ce2b1190a17f0d543668475a4abb36830130a2932406f1efb09b9b2fa79"
+    },
+    "sales-noty": {
+      "source": "sales-skills/sales",
+      "sourceType": "github",
+      "skillPath": "skills/sales-noty/SKILL.md",
+      "computedHash": "50bd7867e3106c053bb43842ab0876c19337afebb7d95979b0b2fd7e109d2c19"
+    },
+    "sales-observe-ai": {
+      "source": "sales-skills/sales",
+      "sourceType": "github",
+      "skillPath": "skills/sales-observe-ai/SKILL.md",
+      "computedHash": "5849cafb79b05efad9876871f1fb732385026116467ea0cd3c855127f6955564"
+    },
+    "sales-octolens": {
+      "source": "sales-skills/sales",
+      "sourceType": "github",
+      "skillPath": "skills/sales-octolens/SKILL.md",
+      "computedHash": "fa54c05cfb14fb2cb966f03104564b8bf5ef9912dd7d602bb8d308f45d3bf308"
+    },
+    "sales-ohmynewst": {
+      "source": "sales-skills/sales",
+      "sourceType": "github",
+      "skillPath": "skills/sales-ohmynewst/SKILL.md",
+      "computedHash": "b70897c483c1ed65357dbd3ee2aa1e0341437e1c79b5d7c81aadcbe3e1c1f4a9"
+    },
+    "sales-oliv": {
+      "source": "sales-skills/sales",
+      "sourceType": "github",
+      "skillPath": "skills/sales-oliv/SKILL.md",
+      "computedHash": "15d7a98105d90861727c32dd7afd83ffac3bee95d8be99a4932ddb95491d272d"
+    },
+    "sales-omi": {
+      "source": "sales-skills/sales",
+      "sourceType": "github",
+      "skillPath": "skills/sales-omi/SKILL.md",
+      "computedHash": "d6c1c597342bd029ee8b075f77af6296a2966b5bbab6f7e147892eaa76e86d93"
+    },
+    "sales-omnisend": {
+      "source": "sales-skills/sales",
+      "sourceType": "github",
+      "skillPath": "skills/sales-omnisend/SKILL.md",
+      "computedHash": "c6e65f31c5d3c5e2dafc58accb5ebd0ac82925b6730d1d262c78b1e0ebb874b9"
+    },
+    "sales-online-reputation": {
+      "source": "sales-skills/sales",
+      "sourceType": "github",
+      "skillPath": "skills/sales-online-reputation/SKILL.md",
+      "computedHash": "6f887478c5c059616e1278031230b6cb1e14db01aec59f95c2a0e33619655c9e"
+    },
+    "sales-ontraport": {
+      "source": "sales-skills/sales",
+      "sourceType": "github",
+      "skillPath": "skills/sales-ontraport/SKILL.md",
+      "computedHash": "e1bf815d1399444226acfdab973c6af1cbb66ccd6dc0da49accc6ebff70827d7"
+    },
+    "sales-opencordai": {
+      "source": "sales-skills/sales",
+      "sourceType": "github",
+      "skillPath": "skills/sales-opencordai/SKILL.md",
+      "computedHash": "d968f574d379a820d2385ef6edd155d7cce56f32f62b709d55f0c7b8657056ce"
+    },
+    "sales-openhunts": {
+      "source": "sales-skills/sales",
+      "sourceType": "github",
+      "skillPath": "skills/sales-openhunts/SKILL.md",
+      "computedHash": "d059df6e2280fffe69a297de6e003a9f4ecb1d7845d1c493cbed471d56e0136a"
+    },
+    "sales-openinfluence": {
+      "source": "sales-skills/sales",
+      "sourceType": "github",
+      "skillPath": "skills/sales-openinfluence/SKILL.md",
+      "computedHash": "797d7d57d1b14b447179db9924b87fb9bc7279cd7f5395a4760171dbad7f68b3"
+    },
+    "sales-openlaunch": {
+      "source": "sales-skills/sales",
+      "sourceType": "github",
+      "skillPath": "skills/sales-openlaunch/SKILL.md",
+      "computedHash": "7cb499223c011e824478727e6c97ebc58a71d04ecd7fd20d0d668e5118464df2"
+    },
+    "sales-openrates": {
+      "source": "sales-skills/sales",
+      "sourceType": "github",
+      "skillPath": "skills/sales-openrates/SKILL.md",
+      "computedHash": "bb2d559a79e0457b36fcd970af217d1f90bae8b5c0b2a979590d3d02e89bc4f3"
+    },
+    "sales-openwebninja": {
+      "source": "sales-skills/sales",
+      "sourceType": "github",
+      "skillPath": "skills/sales-openwebninja/SKILL.md",
+      "computedHash": "e6de638460081b37f978606c05cb37c0949fe5ad5b758d4f426aaeeb95db3132"
+    },
+    "sales-opportunai": {
+      "source": "sales-skills/sales",
+      "sourceType": "github",
+      "skillPath": "skills/sales-opportunai/SKILL.md",
+      "computedHash": "f8b120c3baaf9501c1a8f4be783f9f7d5daef6425ebc1fb7bd172bdb6fd446a6"
+    },
+    "sales-orum": {
+      "source": "sales-skills/sales",
+      "sourceType": "github",
+      "skillPath": "skills/sales-orum/SKILL.md",
+      "computedHash": "a3729e69f69d31668840269e60091943d86fdc91985976a35c01c66c3dcefe5d"
+    },
+    "sales-otter": {
+      "source": "sales-skills/sales",
+      "sourceType": "github",
+      "skillPath": "skills/sales-otter/SKILL.md",
+      "computedHash": "30f17e806a0c33ad7fff6f2662f9da8e351bcbbbb11d1154f786842ba815cfe0"
+    },
+    "sales-outdoo": {
+      "source": "sales-skills/sales",
+      "sourceType": "github",
+      "skillPath": "skills/sales-outdoo/SKILL.md",
+      "computedHash": "0b1650869ae86a6ab636ba63d55c7fa3c0bc716935da6ae56d51337a8f2e5aee"
+    },
+    "sales-outreach-io": {
+      "source": "sales-skills/sales",
+      "sourceType": "github",
+      "skillPath": "skills/sales-outreach-io/SKILL.md",
+      "computedHash": "d5b6f5a824916cdf49e778ef878aebf7a98d1c61e16f4c47af025a76eafae34c"
+    },
+    "sales-outscraper": {
+      "source": "sales-skills/sales",
+      "sourceType": "github",
+      "skillPath": "skills/sales-outscraper/SKILL.md",
+      "computedHash": "377f5124bde43da72c58a82ed47e8c5337b371ae24a7c7066823f0d911c274e4"
+    },
+    "sales-paddle": {
+      "source": "sales-skills/sales",
+      "sourceType": "github",
+      "skillPath": "skills/sales-paddle/SKILL.md",
+      "computedHash": "374799a9b61004dd7f9e678f1581e0f467e30f2c09f9f0faa4082461bc1cd88b"
+    },
+    "sales-painonsocial": {
+      "source": "sales-skills/sales",
+      "sourceType": "github",
+      "skillPath": "skills/sales-painonsocial/SKILL.md",
+      "computedHash": "c30383a6b9f537f2a1af0a70ddbd5272c7a78302084ed5bb2ef041f1495cd9df"
+    },
+    "sales-parsestream": {
+      "source": "sales-skills/sales",
+      "sourceType": "github",
+      "skillPath": "skills/sales-parsestream/SKILL.md",
+      "computedHash": "b990f4512cf2bebbfd31e208a1caf6624ec6ea0e0b376fea32bcb9746125569d"
+    },
+    "sales-passendo": {
+      "source": "sales-skills/sales",
+      "sourceType": "github",
+      "skillPath": "skills/sales-passendo/SKILL.md",
+      "computedHash": "c7f7a2deb297681d1d8e0af835db7fd7da4ca99475af370c36a718d645e2f755"
+    },
+    "sales-passionfroot": {
+      "source": "sales-skills/sales",
+      "sourceType": "github",
+      "skillPath": "skills/sales-passionfroot/SKILL.md",
+      "computedHash": "7d6226b97b04c3b87e84a20a953135ad7147e96e6f0f4834d2820ad61c0c16cf"
+    },
+    "sales-paved": {
+      "source": "sales-skills/sales",
+      "sourceType": "github",
+      "skillPath": "skills/sales-paved/SKILL.md",
+      "computedHash": "e264a08c153c8a5e10c6f0d047296a2f905d79918da534a58491de382fae51aa"
+    },
+    "sales-payhip": {
+      "source": "sales-skills/sales",
+      "sourceType": "github",
+      "skillPath": "skills/sales-payhip/SKILL.md",
+      "computedHash": "c0087f2e6ccb46060df802c7a8e5e32e80575488278c3ed58ae64173210829b4"
+    },
+    "sales-peerlist": {
+      "source": "sales-skills/sales",
+      "sourceType": "github",
+      "skillPath": "skills/sales-peerlist/SKILL.md",
+      "computedHash": "a254441bd1700e2531b67efe7bd1926df5b27e08f6ea80fa0811d40e4ae0c913"
+    },
+    "sales-pendo": {
+      "source": "sales-skills/sales",
+      "sourceType": "github",
+      "skillPath": "skills/sales-pendo/SKILL.md",
+      "computedHash": "864ea4a043bd3b7d23c9824dadc5ceceb205f6cec97a5962feb0426ed4076663"
+    },
+    "sales-people-ai": {
+      "source": "sales-skills/sales",
+      "sourceType": "github",
+      "skillPath": "skills/sales-people-ai/SKILL.md",
+      "computedHash": "a4de7ffa4deca92465c1f8aabde7fdde92dad75e2a83055d57e40903b1083f21"
+    },
+    "sales-performcb": {
+      "source": "sales-skills/sales",
+      "sourceType": "github",
+      "skillPath": "skills/sales-performcb/SKILL.md",
+      "computedHash": "821e578f8a997ebb71b429b90d74ab747fe1a425c5689900dd113d6debb49650"
+    },
+    "sales-personadeck": {
+      "source": "sales-skills/sales",
+      "sourceType": "github",
+      "skillPath": "skills/sales-personadeck/SKILL.md",
+      "computedHash": "88e08d28eabde104569b677e845b2660f13c55014f66ac84e43c49719e5fefc9"
+    },
+    "sales-personagen": {
+      "source": "sales-skills/sales",
+      "sourceType": "github",
+      "skillPath": "skills/sales-personagen/SKILL.md",
+      "computedHash": "9288bed83e71206d90757a2a2046edcd6109a626daa8f909fb860e15820470ea"
+    },
+    "sales-phantombuster": {
+      "source": "sales-skills/sales",
+      "sourceType": "github",
+      "skillPath": "skills/sales-phantombuster/SKILL.md",
+      "computedHash": "efa06af508405a1f440823a0e6c34476aa91b0631e3cb5956f063afb1ecbeb59"
+    },
+    "sales-pipedrive": {
+      "source": "sales-skills/sales",
+      "sourceType": "github",
+      "skillPath": "skills/sales-pipedrive/SKILL.md",
+      "computedHash": "689382c51bd758123e29d5afe78229495aca7de3f58830ac6ea37c6c8171a586"
+    },
+    "sales-pitchwall": {
+      "source": "sales-skills/sales",
+      "sourceType": "github",
+      "skillPath": "skills/sales-pitchwall/SKILL.md",
+      "computedHash": "1bae0b72acc300b6b5a8b473ad82db429225f014b15a91201d2e663d2b413185"
+    },
+    "sales-planhat": {
+      "source": "sales-skills/sales",
+      "sourceType": "github",
+      "skillPath": "skills/sales-planhat/SKILL.md",
+      "computedHash": "afda825e936da66e3ee65479feab2347713392ef7717a89b1e6d70dc073f4b14"
+    },
+    "sales-plannit": {
+      "source": "sales-skills/sales",
+      "sourceType": "github",
+      "skillPath": "skills/sales-plannit/SKILL.md",
+      "computedHash": "78e65e77a4639924036fa6821cbc1baa2d1b54cba3832502199cfab7faba53bf"
+    },
+    "sales-plansnack": {
+      "source": "sales-skills/sales",
+      "sourceType": "github",
+      "skillPath": "skills/sales-plansnack/SKILL.md",
+      "computedHash": "65c132d02048a02c96f3e659db4c693d89437c3d34b0af1ba2a38640e41a1e47"
+    },
+    "sales-plaud": {
+      "source": "sales-skills/sales",
+      "sourceType": "github",
+      "skillPath": "skills/sales-plaud/SKILL.md",
+      "computedHash": "23ec991b2fed720d8c88c142533e8554cc3aac40b3771b1501dea213d57fd726"
+    },
+    "sales-playvox": {
+      "source": "sales-skills/sales",
+      "sourceType": "github",
+      "skillPath": "skills/sales-playvox/SKILL.md",
+      "computedHash": "845b1dfb2f1108e6a9f23b49af100b6b9c75c0e6a35f2442015dc78ac6826857"
+    },
+    "sales-pluggo": {
+      "source": "sales-skills/sales",
+      "sourceType": "github",
+      "skillPath": "skills/sales-pluggo/SKILL.md",
+      "computedHash": "da436220e41f324ff5eed85568c20a1b86ef0b6358efed2f5f20d4154ade368e"
+    },
+    "sales-plutoba": {
+      "source": "sales-skills/sales",
+      "sourceType": "github",
+      "skillPath": "skills/sales-plutoba/SKILL.md",
+      "computedHash": "33aa2255282c62eebf3af1fa3238d36e80c681db111cc994dd3f6ec3264926fd"
+    },
+    "sales-podia": {
+      "source": "sales-skills/sales",
+      "sourceType": "github",
+      "skillPath": "skills/sales-podia/SKILL.md",
+      "computedHash": "a8b333c7f44006a2e507842189d8120e9c87e399ad158b0a9a16c020fbe980e2"
+    },
+    "sales-postapex": {
+      "source": "sales-skills/sales",
+      "sourceType": "github",
+      "skillPath": "skills/sales-postapex/SKILL.md",
+      "computedHash": "be0c85664da3951cdb504049cb56c8869236ca52dd2f6ce5200907b8f6847ba2"
+    },
+    "sales-postmark": {
+      "source": "sales-skills/sales",
+      "sourceType": "github",
+      "skillPath": "skills/sales-postmark/SKILL.md",
+      "computedHash": "34753f82e80efac3634b6560de69f7390a40d23701e07d81b61099712fadeed5"
+    },
+    "sales-prems": {
+      "source": "sales-skills/sales",
+      "sourceType": "github",
+      "skillPath": "skills/sales-prems/SKILL.md",
+      "computedHash": "c83ad6ede339d729b4db30ae96721df9ab2dff60d3b91dd5c7d80568e395f675"
+    },
+    "sales-preshiplist": {
+      "source": "sales-skills/sales",
+      "sourceType": "github",
+      "skillPath": "skills/sales-preshiplist/SKILL.md",
+      "computedHash": "3b150e7bd2493ed25a0fdd24d8211ed8f1b20c87d163836e79361ff9da7e18bc"
+    },
+    "sales-prestashop": {
+      "source": "sales-skills/sales",
+      "sourceType": "github",
+      "skillPath": "skills/sales-prestashop/SKILL.md",
+      "computedHash": "b59f7a9efdc1410b2ff42d7857134a8276b3f266a97ef34f6c9547944d4ed992"
+    },
+    "sales-preuve": {
+      "source": "sales-skills/sales",
+      "sourceType": "github",
+      "skillPath": "skills/sales-preuve/SKILL.md",
+      "computedHash": "50528a3edeb46f298e73ce1b4f7e102e06f9623ae31879383f1835732c679cfe"
+    },
+    "sales-print-on-demand": {
+      "source": "sales-skills/sales",
+      "sourceType": "github",
+      "skillPath": "skills/sales-print-on-demand/SKILL.md",
+      "computedHash": "cd8b9ede0796f00981da2be031e6a07ef2f90d6042ae8aeb5cce3513594a58e9"
+    },
+    "sales-printful": {
+      "source": "sales-skills/sales",
+      "sourceType": "github",
+      "skillPath": "skills/sales-printful/SKILL.md",
+      "computedHash": "3f476e2e5222dcceeae2b26bf9e17c398492c1692f354ba7066df42786921d79"
+    },
+    "sales-printify": {
+      "source": "sales-skills/sales",
+      "sourceType": "github",
+      "skillPath": "skills/sales-printify/SKILL.md",
+      "computedHash": "f07db9732360a352492828881748a707114fae2c487d13b6809c2f1055b65552"
+    },
+    "sales-productburst": {
+      "source": "sales-skills/sales",
+      "sourceType": "github",
+      "skillPath": "skills/sales-productburst/SKILL.md",
+      "computedHash": "56afaa0e1e533c6f30eff79b81bb7ec6b3226ef769fc68ea8f680f6eb8b7906f"
+    },
+    "sales-producthunt": {
+      "source": "sales-skills/sales",
+      "sourceType": "github",
+      "skillPath": "skills/sales-producthunt/SKILL.md",
+      "computedHash": "fa9efaf6aaa3034c5c1f49c2e8d0e1881d80314e4a22fc9021d667b36ffd84eb"
+    },
+    "sales-productlane": {
+      "source": "sales-skills/sales",
+      "sourceType": "github",
+      "skillPath": "skills/sales-productlane/SKILL.md",
+      "computedHash": "753775dc6b881711d2396c3d7e16600712505963969d33cdc6470e8ad2129ec2"
+    },
+    "sales-prometai": {
+      "source": "sales-skills/sales",
+      "sourceType": "github",
+      "skillPath": "skills/sales-prometai/SKILL.md",
+      "computedHash": "d0ffe9e28b4648127b242b028ae946075a4ebdadea14d2d70c5c408ea031221b"
+    },
+    "sales-proposal-analytics": {
+      "source": "sales-skills/sales",
+      "sourceType": "github",
+      "skillPath": "skills/sales-proposal-analytics/SKILL.md",
+      "computedHash": "4ca9647546e3b9cd4ecfbaadcc2ea515905c60f4c7704601ad32bf1505b163f3"
+    },
+    "sales-proposal-page": {
+      "source": "sales-skills/sales",
+      "sourceType": "github",
+      "skillPath": "skills/sales-proposal-page/SKILL.md",
+      "computedHash": "a06b179ae9ec772783c70c2f9f80927f9bb2191eb9decfd7c67bc12965a3c47f"
+    },
+    "sales-proposal-template": {
+      "source": "sales-skills/sales",
+      "sourceType": "github",
+      "skillPath": "skills/sales-proposal-template/SKILL.md",
+      "computedHash": "37fe20c67b6a03348f311e0e5a2e34348eb1c4f5c247100d2591179b20d7ae97"
+    },
+    "sales-proshort": {
+      "source": "sales-skills/sales",
+      "sourceType": "github",
+      "skillPath": "skills/sales-proshort/SKILL.md",
+      "computedHash": "733cc01fe6664905b7aabab6483abcb5ec77a6054920604a705c355ba16327e9"
+    },
+    "sales-prospect-list": {
+      "source": "sales-skills/sales",
+      "sourceType": "github",
+      "skillPath": "skills/sales-prospect-list/SKILL.md",
+      "computedHash": "cb120d6bf4d6cb5d0033e5c1ae5647a32bd9d6faeebea7b1382811dda1d073a9"
+    },
+    "sales-prospeo": {
+      "source": "sales-skills/sales",
+      "sourceType": "github",
+      "skillPath": "skills/sales-prospeo/SKILL.md",
+      "computedHash": "b7f971982d6fe01cae1930e1c31a49375f5e6a8a3b74f4de333a2d412ba25a9a"
+    },
+    "sales-prospy": {
+      "source": "sales-skills/sales",
+      "sourceType": "github",
+      "skillPath": "skills/sales-prospy/SKILL.md",
+      "computedHash": "d0aa80b0a302c15f6f1fee51096a6adabcfff69b4623b6713e1cb79a654b27e4"
+    },
+    "sales-proton-mail": {
+      "source": "sales-skills/sales",
+      "sourceType": "github",
+      "skillPath": "skills/sales-proton-mail/SKILL.md",
+      "computedHash": "a81a5d7ad1cca5411c161caa7d78622a82a96158d825d1070a38addccdffa6f3"
+    },
+    "sales-push-notification": {
+      "source": "sales-skills/sales",
+      "sourceType": "github",
+      "skillPath": "skills/sales-push-notification/SKILL.md",
+      "computedHash": "b3f94e92c26dee0485ade889400e9ee3fc8bad3e89fd7ed1b76103b3e435a65c"
+    },
+    "sales-qeval": {
+      "source": "sales-skills/sales",
+      "sourceType": "github",
+      "skillPath": "skills/sales-qeval/SKILL.md",
+      "computedHash": "f09179ca00ffad21126cc1437b675cad91a3e5e151b2c87db5fe1b9cca209473"
+    },
+    "sales-qualified": {
+      "source": "sales-skills/sales",
+      "sourceType": "github",
+      "skillPath": "skills/sales-qualified/SKILL.md",
+      "computedHash": "f6900b0b74d9ac39aed03f5ff81d979e55af7f43b482611096565f19e0fe6d13"
+    },
+    "sales-qualtrics": {
+      "source": "sales-skills/sales",
+      "sourceType": "github",
+      "skillPath": "skills/sales-qualtrics/SKILL.md",
+      "computedHash": "4fac4e6e298c18c1c92a356321d90f1ff6bacca3559c8a3578312e17fc216088"
+    },
+    "sales-quickhunt": {
+      "source": "sales-skills/sales",
+      "sourceType": "github",
+      "skillPath": "skills/sales-quickhunt/SKILL.md",
+      "computedHash": "97880a0303d60a6c0371bed18670f97ebfc34ac82a5da4f6fcbc72a219c5dca0"
+    },
+    "sales-qwilr-automation": {
+      "source": "sales-skills/sales",
+      "sourceType": "github",
+      "skillPath": "skills/sales-qwilr-automation/SKILL.md",
+      "computedHash": "b3d043e0ad509a819e5c622604e1007a6258573bd995fbb8872eef77b4d535a0"
+    },
+    "sales-rafflepress": {
+      "source": "sales-skills/sales",
+      "sourceType": "github",
+      "skillPath": "skills/sales-rafflepress/SKILL.md",
+      "computedHash": "a187685431dfc45bd34a9b99b9d2ee23658074e8b0b69285baabf869281496fa"
+    },
+    "sales-rafiki": {
+      "source": "sales-skills/sales",
+      "sourceType": "github",
+      "skillPath": "skills/sales-rafiki/SKILL.md",
+      "computedHash": "aebf7703aad21b5f8996880a771300c3c10e324992b11847389763561ae9821c"
+    },
+    "sales-rapidr": {
+      "source": "sales-skills/sales",
+      "sourceType": "github",
+      "skillPath": "skills/sales-rapidr/SKILL.md",
+      "computedHash": "d434a1aab476f772c2c40564b94393855ff5facc24f3973dfcf2ba4c363b3d61"
+    },
+    "sales-rb2b": {
+      "source": "sales-skills/sales",
+      "sourceType": "github",
+      "skillPath": "skills/sales-rb2b/SKILL.md",
+      "computedHash": "a3d5db88d66d8613516a84f4c92a5da5144520d0386ab934ebecd1630838972a"
+    },
+    "sales-read-ai": {
+      "source": "sales-skills/sales",
+      "sourceType": "github",
+      "skillPath": "skills/sales-read-ai/SKILL.md",
+      "computedHash": "76197333fddbd6c7b1f14658ddb54e6fecd826fd6b3cc847bc02c48088dae39b"
+    },
+    "sales-readysetlaunch": {
+      "source": "sales-skills/sales",
+      "sourceType": "github",
+      "skillPath": "skills/sales-readysetlaunch/SKILL.md",
+      "computedHash": "aef94a97906f5eb22697f874b1adb1dba0a5bbf9c81f5a343f54a379f7ff4ba8"
+    },
+    "sales-reason8": {
+      "source": "sales-skills/sales",
+      "sourceType": "github",
+      "skillPath": "skills/sales-reason8/SKILL.md",
+      "computedHash": "4ddd4fec4bfb06261d89710fc738678021d05ce67a6017cb5b710e2724a33af2"
+    },
+    "sales-rebeccai": {
+      "source": "sales-skills/sales",
+      "sourceType": "github",
+      "skillPath": "skills/sales-rebeccai/SKILL.md",
+      "computedHash": "4e3bbd3f74f29aae49fbd2f27cd6fabe0168001cb76a6deb1d55cd074d414c07"
+    },
+    "sales-reclaim": {
+      "source": "sales-skills/sales",
+      "sourceType": "github",
+      "skillPath": "skills/sales-reclaim/SKILL.md",
+      "computedHash": "2e179182f82c416f28deb0f59391dde0a4ac4a5dbae502e45e5a988832304cef"
+    },
+    "sales-reddgrow": {
+      "source": "sales-skills/sales",
+      "sourceType": "github",
+      "skillPath": "skills/sales-reddgrow/SKILL.md",
+      "computedHash": "f5008b9891fa026e1530fde005484cc64c6f230efaeb6607ec069ee28aa05bb3"
+    },
+    "sales-reddily": {
+      "source": "sales-skills/sales",
+      "sourceType": "github",
+      "skillPath": "skills/sales-reddily/SKILL.md",
+      "computedHash": "2868c1894cddbffd6c6ee0baacba6ed310a379a45b91c349bd781b761e301d26"
+    },
+    "sales-reddinbox": {
+      "source": "sales-skills/sales",
+      "sourceType": "github",
+      "skillPath": "skills/sales-reddinbox/SKILL.md",
+      "computedHash": "869554b9de98c7f656852acefb75e73aded9b34362452187f5fa3bc7b89162c1"
+    },
+    "sales-reddit-ads": {
+      "source": "sales-skills/sales",
+      "sourceType": "github",
+      "skillPath": "skills/sales-reddit-ads/SKILL.md",
+      "computedHash": "586a75c3a400cbecfbd57a21c97adb9d47b3e0274ce0c50d8c9ab4bbf8e24273"
+    },
+    "sales-redditmentions": {
+      "source": "sales-skills/sales",
+      "sourceType": "github",
+      "skillPath": "skills/sales-redditmentions/SKILL.md",
+      "computedHash": "7cfcf2af93f46b3a6d024c5cefea6cd0c23ab2341816e3010908b80b052a89bc"
+    },
+    "sales-redreach": {
+      "source": "sales-skills/sales",
+      "sourceType": "github",
+      "skillPath": "skills/sales-redreach/SKILL.md",
+      "computedHash": "6cf8d272cb86e7b72287fe9e7770b0bee127bcc601fa796cb3a1fa4fba8b21dc"
+    },
+    "sales-redship": {
+      "source": "sales-skills/sales",
+      "sourceType": "github",
+      "skillPath": "skills/sales-redship/SKILL.md",
+      "computedHash": "32026170d001c22410490f7d23f513d5fc3fbb4689c5dba61761cda59485cf1a"
+    },
+    "sales-referlist": {
+      "source": "sales-skills/sales",
+      "sourceType": "github",
+      "skillPath": "skills/sales-referlist/SKILL.md",
+      "computedHash": "c23fa67c01ad6a50af29ab515c32ee4d3a01e3d543dc9dad6f7f8c535e9a15ab"
+    },
+    "sales-referral-factory": {
+      "source": "sales-skills/sales",
+      "sourceType": "github",
+      "skillPath": "skills/sales-referral-factory/SKILL.md",
+      "computedHash": "7c86fd0c7f582a735139aed9faeea5427d39f473443e485d5d643fa2690037e1"
+    },
+    "sales-referralhero": {
+      "source": "sales-skills/sales",
+      "sourceType": "github",
+      "skillPath": "skills/sales-referralhero/SKILL.md",
+      "computedHash": "8a5fb9e553e17000a7768f35777e03f138d9616330bcbede9af7380a20a4fe4f"
+    },
+    "sales-referralkit": {
+      "source": "sales-skills/sales",
+      "sourceType": "github",
+      "skillPath": "skills/sales-referralkit/SKILL.md",
+      "computedHash": "d6c89da727673b7cd6eaa62f1a36615b9255f1437250cf0c8bdcbbdfb88b5aea"
+    },
+    "sales-refind": {
+      "source": "sales-skills/sales",
+      "sourceType": "github",
+      "skillPath": "skills/sales-refind/SKILL.md",
+      "computedHash": "c7fa0fb7ba606b35558953c26d93a5f0dc6fe4a09e6433104238914004b8d27d"
+    },
+    "sales-reletter": {
+      "source": "sales-skills/sales",
+      "sourceType": "github",
+      "skillPath": "skills/sales-reletter/SKILL.md",
+      "computedHash": "76dd74d4d6f1b319a9f5d00f55319640ccb9054b778c53f1ca8976cd9e624b88"
+    },
+    "sales-remerge": {
+      "source": "sales-skills/sales",
+      "sourceType": "github",
+      "skillPath": "skills/sales-remerge/SKILL.md",
+      "computedHash": "c0c11367efe890413ddc907be0786f28e76e060618f1da649f7584509d5a942a"
+    },
+    "sales-replierai": {
+      "source": "sales-skills/sales",
+      "sourceType": "github",
+      "skillPath": "skills/sales-replierai/SKILL.md",
+      "computedHash": "318938cbdc1e91a555c3f57f9d6dfb344b9b82cbc477c03cee3df25aaab9c9c9"
+    },
+    "sales-reply": {
+      "source": "sales-skills/sales",
+      "sourceType": "github",
+      "skillPath": "skills/sales-reply/SKILL.md",
+      "computedHash": "84bc31480b39877340dcd80aa8f5f2fa630b6ccc85554fcb9b4e8706a8ea615f"
+    },
+    "sales-replyagent": {
+      "source": "sales-skills/sales",
+      "sourceType": "github",
+      "skillPath": "skills/sales-replyagent/SKILL.md",
+      "computedHash": "3e4e26b2c6d77061011b0d0ba0dc61390f664032cb2ef63ff0d12d40c2e60067"
+    },
+    "sales-replydaddy": {
+      "source": "sales-skills/sales",
+      "sourceType": "github",
+      "skillPath": "skills/sales-replydaddy/SKILL.md",
+      "computedHash": "8f5dbaa7a08959e92f455c8db4331b7565a1e1755c2508450801f25a891cf0ac"
+    },
+    "sales-replyguy": {
+      "source": "sales-skills/sales",
+      "sourceType": "github",
+      "skillPath": "skills/sales-replyguy/SKILL.md",
+      "computedHash": "52a498ff4ea880acf6f25ffc391bd456797929060a619c776382fa044d3955e2"
+    },
+    "sales-replymer": {
+      "source": "sales-skills/sales",
+      "sourceType": "github",
+      "skillPath": "skills/sales-replymer/SKILL.md",
+      "computedHash": "d466bbf26be06f2b0eb88844092a24b483cce599ce4331e1227d4abd969edfd1"
+    },
+    "sales-reppit": {
+      "source": "sales-skills/sales",
+      "sourceType": "github",
+      "skillPath": "skills/sales-reppit/SKILL.md",
+      "computedHash": "444e20c4141560c714dc53596c851fd4e53b6f16964e9d45442ede698eba6976"
+    },
+    "sales-request-skill": {
+      "source": "sales-skills/sales",
+      "sourceType": "github",
+      "skillPath": "skills/sales-request-skill/SKILL.md",
+      "computedHash": "cf9dcdc5fe898de8f95340dc11c2db5bc815c83f57842611d6c44426e0168dcb"
+    },
+    "sales-resourcefyi": {
+      "source": "sales-skills/sales",
+      "sourceType": "github",
+      "skillPath": "skills/sales-resourcefyi/SKILL.md",
+      "computedHash": "d86304f785f8fbbe889f9c32886ffeb991d6ea227bb23ffe38a38b957cc4a672"
+    },
+    "sales-retargeting": {
+      "source": "sales-skills/sales",
+      "sourceType": "github",
+      "skillPath": "skills/sales-retargeting/SKILL.md",
+      "computedHash": "c7a35f855a888703540f78d210e0ce8870c609f6e86aa276b2cf0375d3a871ef"
+    },
+    "sales-retention": {
+      "source": "sales-skills/sales",
+      "sourceType": "github",
+      "skillPath": "skills/sales-retention/SKILL.md",
+      "computedHash": "3e4b4db9f551c0d719ead51dd489a88ca0763e54667bc3f6cc1f4754c8a289c9"
+    },
+    "sales-revenue-io": {
+      "source": "sales-skills/sales",
+      "sourceType": "github",
+      "skillPath": "skills/sales-revenue-io/SKILL.md",
+      "computedHash": "4f5562fdceded2f414240e80d9945421ad99230fb425f0cf9d4bc094086e08aa"
+    },
+    "sales-revive": {
+      "source": "sales-skills/sales",
+      "sourceType": "github",
+      "skillPath": "skills/sales-revive/SKILL.md",
+      "computedHash": "71319ff9138126fa3d8b5200d31c5dd317c9c4d384a333235005665ab3fd8a43"
+    },
+    "sales-rilla": {
+      "source": "sales-skills/sales",
+      "sourceType": "github",
+      "skillPath": "skills/sales-rilla/SKILL.md",
+      "computedHash": "d58942dc5938a48baad8bd69d76030aa5a616dbb4f3431ed8f6ee033ff9d02da"
+    },
+    "sales-rimo": {
+      "source": "sales-skills/sales",
+      "sourceType": "github",
+      "skillPath": "skills/sales-rimo/SKILL.md",
+      "computedHash": "14056a1404e883a5458c95a7815c34d64b311e7fe70ce476dc6aff554be8ada1"
+    },
+    "sales-rudderstack": {
+      "source": "sales-skills/sales",
+      "sourceType": "github",
+      "skillPath": "skills/sales-rudderstack/SKILL.md",
+      "computedHash": "37eb2cde851571d792cc05c4e2b5c778f2ecd030dae3f41ac2c08ede3c82ae00"
+    },
+    "sales-ruzuku": {
+      "source": "sales-skills/sales",
+      "sourceType": "github",
+      "skillPath": "skills/sales-ruzuku/SKILL.md",
+      "computedHash": "bc9c7f8e563554c9169413857b7f616a220b82bf361a5ed542cf77950ea32f30"
+    },
+    "sales-saashunt": {
+      "source": "sales-skills/sales",
+      "sourceType": "github",
+      "skillPath": "skills/sales-saashunt/SKILL.md",
+      "computedHash": "aa335d9089f7d254ba0775feb61b9fbeb4d754ccb5385307d1547af53bd26e06"
+    },
+    "sales-safetymails": {
+      "source": "sales-skills/sales",
+      "sourceType": "github",
+      "skillPath": "skills/sales-safetymails/SKILL.md",
+      "computedHash": "106e8c9f8947e4025aaf38c3ff5607434b8d1e444fcb278d4a2d302cd01ee602"
+    },
+    "sales-saleor": {
+      "source": "sales-skills/sales",
+      "sourceType": "github",
+      "skillPath": "skills/sales-saleor/SKILL.md",
+      "computedHash": "7d7aa1823e80a4c4aa8ee1c8ddd90ee51e02df62472053799cc6f9548f3b150c"
+    },
+    "sales-salesask": {
+      "source": "sales-skills/sales",
+      "sourceType": "github",
+      "skillPath": "skills/sales-salesask/SKILL.md",
+      "computedHash": "3d12c6904b9159cdc47df40d6fc0d41d8c3226c93e03482c62f6724c9b4359fa"
+    },
+    "sales-salesforce": {
+      "source": "sales-skills/sales",
+      "sourceType": "github",
+      "skillPath": "skills/sales-salesforce/SKILL.md",
+      "computedHash": "c44b7d34bef442af7cfdc1a39387660d957ad7bb65a10a49caf468e28e0627fc"
+    },
+    "sales-salesken": {
+      "source": "sales-skills/sales",
+      "sourceType": "github",
+      "skillPath": "skills/sales-salesken/SKILL.md",
+      "computedHash": "a7f9cd23e495fdf6f45399a9034f2aa3dd6f065226142476bddebce0f73040e3"
+    },
+    "sales-salesloft": {
+      "source": "sales-skills/sales",
+      "sourceType": "github",
+      "skillPath": "skills/sales-salesloft/SKILL.md",
+      "computedHash": "15bb7da96c3c23f94b75d7c577471591202778ae3e640c669d56b3f16702eff2"
+    },
+    "sales-salesmate": {
+      "source": "sales-skills/sales",
+      "sourceType": "github",
+      "skillPath": "skills/sales-salesmate/SKILL.md",
+      "computedHash": "3974ce625e83be83f116ad79f1e985f95681b3fbb7575ae52157654516275409"
+    },
+    "sales-salesroom": {
+      "source": "sales-skills/sales",
+      "sourceType": "github",
+      "skillPath": "skills/sales-salesroom/SKILL.md",
+      "computedHash": "c1db92b389244a17e03382c09925cfd453e4e91b81f19776175d0f5aeabfcb39"
+    },
+    "sales-sally": {
+      "source": "sales-skills/sales",
+      "sourceType": "github",
+      "skillPath": "skills/sales-sally/SKILL.md",
+      "computedHash": "bde36acb610e35afe2a970eac4804de825c6dd749e36762c74d7af4377f583d6"
+    },
+    "sales-samcart": {
+      "source": "sales-skills/sales",
+      "sourceType": "github",
+      "skillPath": "skills/sales-samcart/SKILL.md",
+      "computedHash": "195bd047c5e31d1a5ba5fd62648d2740e8caf78ce9de722bd40b30958484e1f7"
+    },
+    "sales-sanebox": {
+      "source": "sales-skills/sales",
+      "sourceType": "github",
+      "skillPath": "skills/sales-sanebox/SKILL.md",
+      "computedHash": "bb699cfccc08616b15e00427408a9ea8a2f223ce7a463f59602ccd4f4a66f98e"
+    },
+    "sales-saner": {
+      "source": "sales-skills/sales",
+      "sourceType": "github",
+      "skillPath": "skills/sales-saner/SKILL.md",
+      "computedHash": "1aa492c331cf1f00707d871a5e72346c0456d319bac358d3952b9e1a5fc5ebd5"
+    },
+    "sales-savvycal": {
+      "source": "sales-skills/sales",
+      "sourceType": "github",
+      "skillPath": "skills/sales-savvycal/SKILL.md",
+      "computedHash": "9a98d6b7a7ed01f7a83e61ecef2717d3fd294ec1a559f9385d3660d8db8e83e7"
+    },
+    "sales-scratchpad": {
+      "source": "sales-skills/sales",
+      "sourceType": "github",
+      "skillPath": "skills/sales-scratchpad/SKILL.md",
+      "computedHash": "e57c6473996a976bd97f45d3ba86a6757c67408f3e188e252b81a498d86a71b7"
+    },
+    "sales-scribbl": {
+      "source": "sales-skills/sales",
+      "sourceType": "github",
+      "skillPath": "skills/sales-scribbl/SKILL.md",
+      "computedHash": "44e7ec4a4a376c4291c2b417f3d247df3df30070afbd26b471657c79616cee17"
+    },
+    "sales-seamless": {
+      "source": "sales-skills/sales",
+      "sourceType": "github",
+      "skillPath": "skills/sales-seamless/SKILL.md",
+      "computedHash": "bf9e0f0330feec309e20f7a452536a59277d799aa06a186973c0a668ecab9980"
+    },
+    "sales-secondbody": {
+      "source": "sales-skills/sales",
+      "sourceType": "github",
+      "skillPath": "skills/sales-secondbody/SKILL.md",
+      "computedHash": "ffffa9cec0e942f250d0d6571a2d87eb2708a33415ea0380729564980dd319f4"
+    },
+    "sales-seedprod": {
+      "source": "sales-skills/sales",
+      "sourceType": "github",
+      "skillPath": "skills/sales-seedprod/SKILL.md",
+      "computedHash": "0e4f38bb562c062bf9e46aeae7b0c809df1864d5bf757929af6ebd18eaf51856"
+    },
+    "sales-seismic": {
+      "source": "sales-skills/sales",
+      "sourceType": "github",
+      "skillPath": "skills/sales-seismic/SKILL.md",
+      "computedHash": "2609c892190c18c3b6d381c4e175ebef4e25b5d63747850da204404e778af93f"
+    },
+    "sales-sellfy": {
+      "source": "sales-skills/sales",
+      "sourceType": "github",
+      "skillPath": "skills/sales-sellfy/SKILL.md",
+      "computedHash": "0cbfb21c258729e4e0219ee750d905644068ff7a103ca45a74c386a9a36b074b"
+    },
+    "sales-sembly": {
+      "source": "sales-skills/sales",
+      "sourceType": "github",
+      "skillPath": "skills/sales-sembly/SKILL.md",
+      "computedHash": "d60916c0d7919b48499a9e4c63593e791a0364e8271ecfd7a5fc6332971c7f7a"
+    },
+    "sales-semrush": {
+      "source": "sales-skills/sales",
+      "sourceType": "github",
+      "skillPath": "skills/sales-semrush/SKILL.md",
+      "computedHash": "6d03419f8f22cc4c4f183e0e200d7699198be805315e47edeffa706f7fa92d67"
+    },
+    "sales-sender": {
+      "source": "sales-skills/sales",
+      "sourceType": "github",
+      "skillPath": "skills/sales-sender/SKILL.md",
+      "computedHash": "5a6659b654bab4fbdf9b541c28dbf4a81d9246115518cd8c67018caf313e30d9"
+    },
+    "sales-sendgrid": {
+      "source": "sales-skills/sales",
+      "sourceType": "github",
+      "skillPath": "skills/sales-sendgrid/SKILL.md",
+      "computedHash": "ed43fc7bc600c04c11de3594941407c128d2d7fa3e8c4d4622e9db584b179fe0"
+    },
+    "sales-sendowl": {
+      "source": "sales-skills/sales",
+      "sourceType": "github",
+      "skillPath": "skills/sales-sendowl/SKILL.md",
+      "computedHash": "dd6f5968888edc89c200e871f810a006bad554fa5848799be57922d160b6f61a"
+    },
+    "sales-sendpulse": {
+      "source": "sales-skills/sales",
+      "sourceType": "github",
+      "skillPath": "skills/sales-sendpulse/SKILL.md",
+      "computedHash": "8233218f4ab9aad7128044be042d5751fda07d787cd5eb9b5b3c3baa435f3abe"
+    },
+    "sales-sendr": {
+      "source": "sales-skills/sales",
+      "sourceType": "github",
+      "skillPath": "skills/sales-sendr/SKILL.md",
+      "computedHash": "8431bfa0a476115b895a18616eee4544ac9177d6579b47f62b7707f5a140488e"
+    },
+    "sales-seo": {
+      "source": "sales-skills/sales",
+      "sourceType": "github",
+      "skillPath": "skills/sales-seo/SKILL.md",
+      "computedHash": "a756951a489cd9ae6e0448d459cd0afdef717719d15fed9d5b557307147cad0c"
+    },
+    "sales-serplock": {
+      "source": "sales-skills/sales",
+      "sourceType": "github",
+      "skillPath": "skills/sales-serplock/SKILL.md",
+      "computedHash": "47a3476e30e717b33ffd418c7a8bf43de7f0d9ff530da1dbf5c90883ab811ee3"
+    },
+    "sales-shadow": {
+      "source": "sales-skills/sales",
+      "sourceType": "github",
+      "skillPath": "skills/sales-shadow/SKILL.md",
+      "computedHash": "a0f41932943bcdd641098db5413dad2b857c1f276cfbfe12dbe1ceaca7092bcd"
+    },
+    "sales-shopify": {
+      "source": "sales-skills/sales",
+      "sourceType": "github",
+      "skillPath": "skills/sales-shopify/SKILL.md",
+      "computedHash": "11fd25c6538cbf73d09526a49506ac1068e4e5673230a2c6b88790e3d731e4a0"
+    },
+    "sales-shopware": {
+      "source": "sales-skills/sales",
+      "sourceType": "github",
+      "skillPath": "skills/sales-shopware/SKILL.md",
+      "computedHash": "0e078ea2fe8516bfed1dc06adc8f48fdba15f0f55ff3607d152a77a29a3025d5"
+    },
+    "sales-shortstack": {
+      "source": "sales-skills/sales",
+      "sourceType": "github",
+      "skillPath": "skills/sales-shortstack/SKILL.md",
+      "computedHash": "f7a2fe062c42649d71f9e82b973aff408817aa43362394d69e7ea262ef20ba45"
+    },
+    "sales-shortwave": {
+      "source": "sales-skills/sales",
+      "sourceType": "github",
+      "skillPath": "skills/sales-shortwave/SKILL.md",
+      "computedHash": "401d1c15aabba1df455f52f8ab186a0c6d758c33670636855c9a14eafb87b455"
+    },
+    "sales-side-project-valuation": {
+      "source": "sales-skills/sales",
+      "sourceType": "github",
+      "skillPath": "skills/sales-side-project-valuation/SKILL.md",
+      "computedHash": "2ea3df4f787f2c115ccd3c9d708fde9af2ab5b5741ea0bbca74c62cca4e81fcf"
+    },
+    "sales-sideprojectors": {
+      "source": "sales-skills/sales",
+      "sourceType": "github",
+      "skillPath": "skills/sales-sideprojectors/SKILL.md",
+      "computedHash": "22aba5b9453560302a41615946efc7df0d5483d6479569310c87103480a6c7d2"
+    },
+    "sales-simular": {
+      "source": "sales-skills/sales",
+      "sourceType": "github",
+      "skillPath": "skills/sales-simular/SKILL.md",
+      "computedHash": "b64a8a771dd5e6972cdff47e08523d2e15b85b4b64acbeadc84982ed799b3239"
+    },
+    "sales-siro": {
+      "source": "sales-skills/sales",
+      "sourceType": "github",
+      "skillPath": "skills/sales-siro/SKILL.md",
+      "computedHash": "5d6c6a43cd2aebb57be190ce3c46100723087386659377d1b6e7edfefc3719a3"
+    },
+    "sales-skeepers": {
+      "source": "sales-skills/sales",
+      "sourceType": "github",
+      "skillPath": "skills/sales-skeepers/SKILL.md",
+      "computedHash": "31e3abcc4c3938e93525b510250b7e242c3a8ba74caace0baca949615c7c7918"
+    },
+    "sales-skrapp": {
+      "source": "sales-skills/sales",
+      "sourceType": "github",
+      "skillPath": "skills/sales-skrapp/SKILL.md",
+      "computedHash": "d63d2fa7f5c71518afbffbe672a330f632d54f4c10a15da9c2f58756bca3aaad"
+    },
+    "sales-sleekplan": {
+      "source": "sales-skills/sales",
+      "sourceType": "github",
+      "skillPath": "skills/sales-sleekplan/SKILL.md",
+      "computedHash": "0365c7d985f223c8aeae3d21058362b29769e9e0c22ce8b89da722ec086a9a03"
+    },
+    "sales-smartlead": {
+      "source": "sales-skills/sales",
+      "sourceType": "github",
+      "skillPath": "skills/sales-smartlead/SKILL.md",
+      "computedHash": "949a21627c4e18adc7411381eeaf7252098af6e4f3c512fbe60d39f43e6c6935"
+    },
+    "sales-sms-marketing": {
+      "source": "sales-skills/sales",
+      "sourceType": "github",
+      "skillPath": "skills/sales-sms-marketing/SKILL.md",
+      "computedHash": "7194e8ad50f6776763e5175edc41891493e1cf404d095c9866449abe84096873"
+    },
+    "sales-snaplogic": {
+      "source": "sales-skills/sales",
+      "sourceType": "github",
+      "skillPath": "skills/sales-snaplogic/SKILL.md",
+      "computedHash": "0e5402a0575d125cdf0357f46d6bf31a6e4b91d7de789c8b1d5442da94c16539"
+    },
+    "sales-snipcart": {
+      "source": "sales-skills/sales",
+      "sourceType": "github",
+      "skillPath": "skills/sales-snipcart/SKILL.md",
+      "computedHash": "218b20fd8bda55d3dcda2284f8890556d1b2fe8b196849bdbc0a16ef1f04aeb0"
+    },
+    "sales-snitchfeed": {
+      "source": "sales-skills/sales",
+      "sourceType": "github",
+      "skillPath": "skills/sales-snitchfeed/SKILL.md",
+      "computedHash": "564b3a8cd1c82f7229ef7595644e89c20f2cdb80cefc32eb97f1d2739d010062"
+    },
+    "sales-snov": {
+      "source": "sales-skills/sales",
+      "sourceType": "github",
+      "skillPath": "skills/sales-snov/SKILL.md",
+      "computedHash": "1646aed223ef94a3214c4ca63108144f5422f3cce05d6f1fe7d34e52b3986517"
+    },
+    "sales-social-listening": {
+      "source": "sales-skills/sales",
+      "sourceType": "github",
+      "skillPath": "skills/sales-social-listening/SKILL.md",
+      "computedHash": "14dc1877a755e24b5f3342349998a061df9ce4958296a8f204b97d3404be65d7"
+    },
+    "sales-social-media-management": {
+      "source": "sales-skills/sales",
+      "sourceType": "github",
+      "skillPath": "skills/sales-social-media-management/SKILL.md",
+      "computedHash": "9bd7ea41b36a934ff3ffb352177db6a96c6a06c165fe487990afb4e766521c77"
+    },
+    "sales-socialhose": {
+      "source": "sales-skills/sales",
+      "sourceType": "github",
+      "skillPath": "skills/sales-socialhose/SKILL.md",
+      "computedHash": "96de02936e22f439f6a023d9020cf4cfd4275b3176970bc8eacacbbbb6f86205"
+    },
+    "sales-socialpresence": {
+      "source": "sales-skills/sales",
+      "sourceType": "github",
+      "skillPath": "skills/sales-socialpresence/SKILL.md",
+      "computedHash": "9532cacbdf8400a81926af5a98646c406720babf0a00c7e1f00d37d51af91206"
+    },
+    "sales-soclistener": {
+      "source": "sales-skills/sales",
+      "sourceType": "github",
+      "skillPath": "skills/sales-soclistener/SKILL.md",
+      "computedHash": "415308bb549c3d2776f17b650634c3ce88ff2ca362a1bc57e63bb19e297cfd3d"
+    },
+    "sales-solidroad": {
+      "source": "sales-skills/sales",
+      "sourceType": "github",
+      "skillPath": "skills/sales-solidroad/SKILL.md",
+      "computedHash": "e5ba67864edbf338479ed80425fb1f762a1f8851c93eba7da11bb0cd3c03c7cb"
+    },
+    "sales-sololaunch": {
+      "source": "sales-skills/sales",
+      "sourceType": "github",
+      "skillPath": "skills/sales-sololaunch/SKILL.md",
+      "computedHash": "f7da7959f915545324808758be2a35aed59c8406abc0d88b9734fbdcefd60b3a"
+    },
+    "sales-solopush": {
+      "source": "sales-skills/sales",
+      "sourceType": "github",
+      "skillPath": "skills/sales-solopush/SKILL.md",
+      "computedHash": "4635fdee4d9d020830a604d53fc3c22f525f864edc92d178f092ecbe83391514"
+    },
+    "sales-sonix": {
+      "source": "sales-skills/sales",
+      "sourceType": "github",
+      "skillPath": "skills/sales-sonix/SKILL.md",
+      "computedHash": "e42800de939e0997c4875411accf7a7e8e4ddf0f0f325a462cd024d715dd7bc5"
+    },
+    "sales-sonnet": {
+      "source": "sales-skills/sales",
+      "sourceType": "github",
+      "skillPath": "skills/sales-sonnet/SKILL.md",
+      "computedHash": "4d913b6b15d5bdff71ddef56e0e01ff348f7251212ed94ef3f70ba1e1569fdfa"
+    },
+    "sales-sozai": {
+      "source": "sales-skills/sales",
+      "sourceType": "github",
+      "skillPath": "skills/sales-sozai/SKILL.md",
+      "computedHash": "6b28160ccf0ae42324182000f926f5c8919bc7ddc7c32f245e8e8418555dc41a"
+    },
+    "sales-spark-mail": {
+      "source": "sales-skills/sales",
+      "sourceType": "github",
+      "skillPath": "skills/sales-spark-mail/SKILL.md",
+      "computedHash": "8661d07fc7df97835aad74a4beaa68009f178c9dd7917789ae37a476f18104a8"
+    },
+    "sales-sparkloop": {
+      "source": "sales-skills/sales",
+      "sourceType": "github",
+      "skillPath": "skills/sales-sparkloop/SKILL.md",
+      "computedHash": "af262aaf9a02892a762524a0fa6fdf96f1a6ba211f8e8da3137859a14dd42e64"
+    },
+    "sales-sparktoro": {
+      "source": "sales-skills/sales",
+      "sourceType": "github",
+      "skillPath": "skills/sales-sparktoro/SKILL.md",
+      "computedHash": "efc21a9fe8ec2852e199f6e29ba74c01af9051e05b80008b7814a280abaebd66"
+    },
+    "sales-speakwise": {
+      "source": "sales-skills/sales",
+      "sourceType": "github",
+      "skillPath": "skills/sales-speakwise/SKILL.md",
+      "computedHash": "f804cb75ae4dc78e3a279d15f9f827f91f311c956c48ef22cec33a0b8736b819"
+    },
+    "sales-spectra": {
+      "source": "sales-skills/sales",
+      "sourceType": "github",
+      "skillPath": "skills/sales-spectra/SKILL.md",
+      "computedHash": "e58c4313804f59135f33ead58484be539c3d65ff72ca0c3eb2ac0f14166ddce0"
+    },
+    "sales-sponsorgap": {
+      "source": "sales-skills/sales",
+      "sourceType": "github",
+      "skillPath": "skills/sales-sponsorgap/SKILL.md",
+      "computedHash": "b51eeeea336f028987b060b93f8af6a0ef8e31158c050821758514ea79dab930"
+    },
+    "sales-sponsorleads": {
+      "source": "sales-skills/sales",
+      "sourceType": "github",
+      "skillPath": "skills/sales-sponsorleads/SKILL.md",
+      "computedHash": "7b2f7f66bf222165e18fc847f9a5bc92965b278cd59327c5bde79351c2ebf6b6"
+    },
+    "sales-sponsorthis": {
+      "source": "sales-skills/sales",
+      "sourceType": "github",
+      "skillPath": "skills/sales-sponsorthis/SKILL.md",
+      "computedHash": "c6aca947e7576c602d501ad9f5954c1c9aca74ace253e8ae488c315e68f4e40d"
+    },
+    "sales-sponsy": {
+      "source": "sales-skills/sales",
+      "sourceType": "github",
+      "skillPath": "skills/sales-sponsy/SKILL.md",
+      "computedHash": "97503bb7e87e90aa3dbaeeb9b67861b44763c8dfe7a530e971452ec947c53888"
+    },
+    "sales-spree": {
+      "source": "sales-skills/sales",
+      "sourceType": "github",
+      "skillPath": "skills/sales-spree/SKILL.md",
+      "computedHash": "17986c6a7b81714062817f59e2d0b7fc51b494298e85c1d3e7237c32c3694afd"
+    },
+    "sales-sproutsocial": {
+      "source": "sales-skills/sales",
+      "sourceType": "github",
+      "skillPath": "skills/sales-sproutsocial/SKILL.md",
+      "computedHash": "1e4538cdd8fb97d7aa732891e41ca67032cde0ac60d69cc730eed894cac70a33"
+    },
+    "sales-square-online": {
+      "source": "sales-skills/sales",
+      "sourceType": "github",
+      "skillPath": "skills/sales-square-online/SKILL.md",
+      "computedHash": "adabd48f0f8315db4fc1ce73b4947f46d54971641f5dfec87da3a583c683f367"
+    },
+    "sales-squarespace": {
+      "source": "sales-skills/sales",
+      "sourceType": "github",
+      "skillPath": "skills/sales-squarespace/SKILL.md",
+      "computedHash": "e1b297265e08bd20cb812a9f686c66fab1b42614a3eddd7b1b24e6705dc5d006"
+    },
+    "sales-stackable": {
+      "source": "sales-skills/sales",
+      "sourceType": "github",
+      "skillPath": "skills/sales-stackable/SKILL.md",
+      "computedHash": "c1d419391a2939c5ad54afdad57f0fa55024e6364eb0f977b972cd273dea09e5"
+    },
+    "sales-startupage": {
+      "source": "sales-skills/sales",
+      "sourceType": "github",
+      "skillPath": "skills/sales-startupage/SKILL.md",
+      "computedHash": "e5df9f7b6e81d771a4cb097699fdc101d8866c1acc56e27a1779d0fe00a04f79"
+    },
+    "sales-startupbase": {
+      "source": "sales-skills/sales",
+      "sourceType": "github",
+      "skillPath": "skills/sales-startupbase/SKILL.md",
+      "computedHash": "d9f2e6064f3e308ba1e8e91ed1b3ed663c6e95843ac8175ab9ecdcf045cbe699"
+    },
+    "sales-startupstash": {
+      "source": "sales-skills/sales",
+      "sourceType": "github",
+      "skillPath": "skills/sales-startupstash/SKILL.md",
+      "computedHash": "e53f9ae243920bcbbc28d43c14920bcb197f50af6d7b3f70fd29ab1a0e409008"
+    },
+    "sales-store-migration": {
+      "source": "sales-skills/sales",
+      "sourceType": "github",
+      "skillPath": "skills/sales-store-migration/SKILL.md",
+      "computedHash": "c541acd38cccb68d6f9dbc0ff644ec72b6b4035397f80fd3e43761d8f60bea27"
+    },
+    "sales-subredditsignals": {
+      "source": "sales-skills/sales",
+      "sourceType": "github",
+      "skillPath": "skills/sales-subredditsignals/SKILL.md",
+      "computedHash": "b9ec2b3cc78c6b23991a26fbd69338cad2705dc04d8cab0c6d6adf1652410d47"
+    },
+    "sales-subscription-billing": {
+      "source": "sales-skills/sales",
+      "sourceType": "github",
+      "skillPath": "skills/sales-subscription-billing/SKILL.md",
+      "computedHash": "bf96c1d8001be6888e4f929ab9f849b0e1779d09fcdfbf386cf68eeaf47d1144"
+    },
+    "sales-substack": {
+      "source": "sales-skills/sales",
+      "sourceType": "github",
+      "skillPath": "skills/sales-substack/SKILL.md",
+      "computedHash": "cb9fc4a1720b30a005e4172b81a4ddcc69a2ed347d64be98570483eda1f5782d"
+    },
+    "sales-subtle": {
+      "source": "sales-skills/sales",
+      "sourceType": "github",
+      "skillPath": "skills/sales-subtle/SKILL.md",
+      "computedHash": "aca944e615c6b750b289847bbde87dcbcddd3563753be37282cefd760ed79a44"
+    },
+    "sales-superb-addons": {
+      "source": "sales-skills/sales",
+      "sourceType": "github",
+      "skillPath": "skills/sales-superb-addons/SKILL.md",
+      "computedHash": "5b0ce901c8b9876252ff2092f3075f8c3e024f76ec1ec3acce270ff7889d727f"
+    },
+    "sales-superhuman": {
+      "source": "sales-skills/sales",
+      "sourceType": "github",
+      "skillPath": "skills/sales-superhuman/SKILL.md",
+      "computedHash": "9df8990a626985d98d8b18cca1b9fc256ba57b794531faa6fac488d51d4c9992"
+    },
+    "sales-superlaunch": {
+      "source": "sales-skills/sales",
+      "sourceType": "github",
+      "skillPath": "skills/sales-superlaunch/SKILL.md",
+      "computedHash": "6259c6918a4016e8755ebac1727bef00ef10dca865b72d976aa683575e3ab58c"
+    },
+    "sales-supernormal": {
+      "source": "sales-skills/sales",
+      "sourceType": "github",
+      "skillPath": "skills/sales-supernormal/SKILL.md",
+      "computedHash": "1d9a641f731544637b1887dcda99ca681476d13c37aa55f3eb94e77020ef5495"
+    },
+    "sales-superpowered": {
+      "source": "sales-skills/sales",
+      "sourceType": "github",
+      "skillPath": "skills/sales-superpowered/SKILL.md",
+      "computedHash": "2c2da8b0aeeebfb7298183e9ec7e14e8644f0a1ec3d9d588f6c569efeb4e78d5"
+    },
+    "sales-surfe": {
+      "source": "sales-skills/sales",
+      "sourceType": "github",
+      "skillPath": "skills/sales-surfe/SKILL.md",
+      "computedHash": "690e2ac650a451c68a784882c8d78ccf0638afc3d9c25f8a51348028a1c94031"
+    },
+    "sales-surveymonkey": {
+      "source": "sales-skills/sales",
+      "sourceType": "github",
+      "skillPath": "skills/sales-surveymonkey/SKILL.md",
+      "computedHash": "e642434a087968d8882a8e7a6ae1dfdb68b8956d654e42f55aec6c9ce63174a4"
+    },
+    "sales-swai": {
+      "source": "sales-skills/sales",
+      "sourceType": "github",
+      "skillPath": "skills/sales-swai/SKILL.md",
+      "computedHash": "d45bb2bca9f3ad8115d5f983f5cd277cec7cfe8e08b3c69c2fab31c3a69e3178"
+    },
+    "sales-swan": {
+      "source": "sales-skills/sales",
+      "sourceType": "github",
+      "skillPath": "skills/sales-swan/SKILL.md",
+      "computedHash": "9da735c7f56748fbbc1184e30d37109c843c5adfe3f0b0866124ee76d02192b9"
+    },
+    "sales-sweepwidget": {
+      "source": "sales-skills/sales",
+      "sourceType": "github",
+      "skillPath": "skills/sales-sweepwidget/SKILL.md",
+      "computedHash": "9c6bee7b6ce54e7d8ed0b848b598138b4d8d79482c558dfc7fe8d5e7b251b2fc"
+    },
+    "sales-swell": {
+      "source": "sales-skills/sales",
+      "sourceType": "github",
+      "skillPath": "skills/sales-swell/SKILL.md",
+      "computedHash": "6097d15700ec86331e75362be43e3ffa72f6d70e65dc146543929696ab7ed443"
+    },
+    "sales-sybill": {
+      "source": "sales-skills/sales",
+      "sourceType": "github",
+      "skillPath": "skills/sales-sybill/SKILL.md",
+      "computedHash": "893113d1a5ad2ec2ad3951d297cd578e81949a54803ed14df879e3b131c2941f"
+    },
+    "sales-syften": {
+      "source": "sales-skills/sales",
+      "sourceType": "github",
+      "skillPath": "skills/sales-syften/SKILL.md",
+      "computedHash": "12ae7a71f232154e12fef72de15543d2621540c0be8a17be2cb4faf7e2c8f924"
+    },
+    "sales-syncgtm": {
+      "source": "sales-skills/sales",
+      "sourceType": "github",
+      "skillPath": "skills/sales-syncgtm/SKILL.md",
+      "computedHash": "7006429e19df5d8c2af2fc0850df85ed2a760942ef29dc8142e655b7eaf4be5d"
+    },
+    "sales-systemeio": {
+      "source": "sales-skills/sales",
+      "sourceType": "github",
+      "skillPath": "skills/sales-systemeio/SKILL.md",
+      "computedHash": "066b7ced369b984b31b595967ad2b9df7179a9c563583b32d16d6a5e5a0ea9ac"
+    },
+    "sales-tableau": {
+      "source": "sales-skills/sales",
+      "sourceType": "github",
+      "skillPath": "skills/sales-tableau/SKILL.md",
+      "computedHash": "7b91ef1a16758d1fefabe0a8bd8916321983e7eb3e7c9145f0cbb3801d597218"
+    },
+    "sales-tactiq": {
+      "source": "sales-skills/sales",
+      "sourceType": "github",
+      "skillPath": "skills/sales-tactiq/SKILL.md",
+      "computedHash": "77b8cdf8eff8a8d4ae84dbed71926c001baeb34c8c3e16d825d1c67b360569a1"
+    },
+    "sales-tagshop": {
+      "source": "sales-skills/sales",
+      "sourceType": "github",
+      "skillPath": "skills/sales-tagshop/SKILL.md",
+      "computedHash": "ad47028ebac2dac26af6176172a1c57252273adb959cfc2fe167aa277d431c5d"
+    },
+    "sales-talkdesk": {
+      "source": "sales-skills/sales",
+      "sourceType": "github",
+      "skillPath": "skills/sales-talkdesk/SKILL.md",
+      "computedHash": "7652a47360d08abec5615d84c128fd905ea2ecf495baccf5ffaa9fae5c7955f5"
+    },
+    "sales-talknotes": {
+      "source": "sales-skills/sales",
+      "sourceType": "github",
+      "skillPath": "skills/sales-talknotes/SKILL.md",
+      "computedHash": "81b1e0cbfb618bfb6493d38683b7995757452798dcb056af49318c42f74d2fdf"
+    },
+    "sales-talkwalker": {
+      "source": "sales-skills/sales",
+      "sourceType": "github",
+      "skillPath": "skills/sales-talkwalker/SKILL.md",
+      "computedHash": "d06ec3aba4ac37a152c35f9049554c7b28a1e21d6635c21b3fa6facb97c54c60"
+    },
+    "sales-talo": {
+      "source": "sales-skills/sales",
+      "sourceType": "github",
+      "skillPath": "skills/sales-talo/SKILL.md",
+      "computedHash": "532b73165d603eb40839d642e4c155fc9738b2012564b92a4b460f2f7d659c4a"
+    },
+    "sales-teachery": {
+      "source": "sales-skills/sales",
+      "sourceType": "github",
+      "skillPath": "skills/sales-teachery/SKILL.md",
+      "computedHash": "3c280059defb383ccb66efbc7f77b4c60cb1f9c8a21cdc148cb52f9d02113608"
+    },
+    "sales-tealium": {
+      "source": "sales-skills/sales",
+      "sourceType": "github",
+      "skillPath": "skills/sales-tealium/SKILL.md",
+      "computedHash": "8c9816f91775c7ebe31ca372abe2157ad96ad793809e648c8964cad7ecfce65b"
+    },
+    "sales-temi": {
+      "source": "sales-skills/sales",
+      "sourceType": "github",
+      "skillPath": "skills/sales-temi/SKILL.md",
+      "computedHash": "da3fe43c9e2f0f068173a76ee9098b7b5b5cf282e636abd1f253681c9d3d1ab7"
+    },
+    "sales-texau": {
+      "source": "sales-skills/sales",
+      "sourceType": "github",
+      "skillPath": "skills/sales-texau/SKILL.md",
+      "computedHash": "d555569818d3740d3c8dd03542ba3b276d1d5d7685d2c7b30f87b1085aedad7e"
+    },
+    "sales-theresanaiforthat": {
+      "source": "sales-skills/sales",
+      "sourceType": "github",
+      "skillPath": "skills/sales-theresanaiforthat/SKILL.md",
+      "computedHash": "cc9d7c1c3c2d6bfc9ff95b5455db61f9884d3e1b9676bfd01f9dbb08fb6625dc"
+    },
+    "sales-third-party": {
+      "source": "sales-skills/sales",
+      "sourceType": "github",
+      "skillPath": "skills/sales-third-party/SKILL.md",
+      "computedHash": "9d53e047e6da3038835a0b04478f2882cee0ea10503e4fc795e01b8bc411bfc2"
+    },
+    "sales-threadlytics": {
+      "source": "sales-skills/sales",
+      "sourceType": "github",
+      "skillPath": "skills/sales-threadlytics/SKILL.md",
+      "computedHash": "8354ad2d512a8483f402e7bb90373e87c28628ba2d551dac068babe6e74c8870"
+    },
+    "sales-threadradar": {
+      "source": "sales-skills/sales",
+      "sourceType": "github",
+      "skillPath": "skills/sales-threadradar/SKILL.md",
+      "computedHash": "b0ad65545e190a5fef2ad015b89360fb492cc9bfe6cade09cbb7bd76aa43ac67"
+    },
+    "sales-thrivecart": {
+      "source": "sales-skills/sales",
+      "sourceType": "github",
+      "skillPath": "skills/sales-thrivecart/SKILL.md",
+      "computedHash": "805ba61ba4a2254e90156f1dfe2ecdfdee66717644ddc256912dbc8292b0847c"
+    },
+    "sales-tibco": {
+      "source": "sales-skills/sales",
+      "sourceType": "github",
+      "skillPath": "skills/sales-tibco/SKILL.md",
+      "computedHash": "1a1f44ed8de170770bd1e85f42c1c7e3cbc9617f372a1e1c772b0a71ef856b1b"
+    },
+    "sales-tiktok-marketing": {
+      "source": "sales-skills/sales",
+      "sourceType": "github",
+      "skillPath": "skills/sales-tiktok-marketing/SKILL.md",
+      "computedHash": "0fc275b1abc145a56e6791d7fb86902baee0872a95dafda27860829ec4349d28"
+    },
+    "sales-tinylaunch": {
+      "source": "sales-skills/sales",
+      "sourceType": "github",
+      "skillPath": "skills/sales-tinylaunch/SKILL.md",
+      "computedHash": "333a3a9647d3580b80feb1cfdb268714d18c65dc8402a99c4a82ee6bd42ed3a9"
+    },
+    "sales-tinystartups": {
+      "source": "sales-skills/sales",
+      "sourceType": "github",
+      "skillPath": "skills/sales-tinystartups/SKILL.md",
+      "computedHash": "528111b2c26ba242d859a0a5cd3ce54e0e3f0b28a33111fb8cd505756afad119"
+    },
+    "sales-tldv": {
+      "source": "sales-skills/sales",
+      "sourceType": "github",
+      "skillPath": "skills/sales-tldv/SKILL.md",
+      "computedHash": "ada970c8a5fb5b21d233efb0d6acfcbe8d91a9b3d58ee23396c349c44eb28988"
+    },
+    "sales-tomba": {
+      "source": "sales-skills/sales",
+      "sourceType": "github",
+      "skillPath": "skills/sales-tomba/SKILL.md",
+      "computedHash": "9f94eb72a4bed1eb4974ec4ea4ebddd3e0d9725bd8d1f70e7bca9d9e3e63b7d7"
+    },
+    "sales-toolify": {
+      "source": "sales-skills/sales",
+      "sourceType": "github",
+      "skillPath": "skills/sales-toolify/SKILL.md",
+      "computedHash": "12ddfc2ba42c79b57047854986f773be9b727be768d468067676fef428b645fd"
+    },
+    "sales-topai": {
+      "source": "sales-skills/sales",
+      "sourceType": "github",
+      "skillPath": "skills/sales-topai/SKILL.md",
+      "computedHash": "eb5748dd84c72de3fb1988be90d4a4cfeb4f04486fd62e96b2eeb8a49c1953ce"
+    },
+    "sales-totango": {
+      "source": "sales-skills/sales",
+      "sourceType": "github",
+      "skillPath": "skills/sales-totango/SKILL.md",
+      "computedHash": "70e0fd42349cec67dba962236755831b4d868fc93af9569d4582577a323f5b38"
+    },
+    "sales-transactional-email": {
+      "source": "sales-skills/sales",
+      "sourceType": "github",
+      "skillPath": "skills/sales-transactional-email/SKILL.md",
+      "computedHash": "91cda19dc12395ba31e3eaed3f3dac3fa80bf2614444f24bff85576c347286f7"
+    },
+    "sales-transcribeme": {
+      "source": "sales-skills/sales",
+      "sourceType": "github",
+      "skillPath": "skills/sales-transcribeme/SKILL.md",
+      "computedHash": "f6eec4c1ec9ade34d242b42e7a2663f9a639e68845e236ee8201160f2b1f7d58"
+    },
+    "sales-transkriptor": {
+      "source": "sales-skills/sales",
+      "sourceType": "github",
+      "skillPath": "skills/sales-transkriptor/SKILL.md",
+      "computedHash": "d8a25bb8fd120a9ad158eff5df1024072ddf080392b7def641b9a21243887e5e"
+    },
+    "sales-transync-ai": {
+      "source": "sales-skills/sales",
+      "sourceType": "github",
+      "skillPath": "skills/sales-transync-ai/SKILL.md",
+      "computedHash": "1f1767d211f3de7022cdd7aae75b54e5c5892698bba4a6db594bb4b25ec26300"
+    },
+    "sales-tray": {
+      "source": "sales-skills/sales",
+      "sourceType": "github",
+      "skillPath": "skills/sales-tray/SKILL.md",
+      "computedHash": "89193bf004821ee22178507fbfca468a5d6f38789d4d4c115d988a090b6358a4"
+    },
+    "sales-treasuredata": {
+      "source": "sales-skills/sales",
+      "sourceType": "github",
+      "skillPath": "skills/sales-treasuredata/SKILL.md",
+      "computedHash": "698a7245c54353f5fafd846cbbe806d18e292f3c6c787b797dfdee26119e436d"
+    },
+    "sales-trellus": {
+      "source": "sales-skills/sales",
+      "sourceType": "github",
+      "skillPath": "skills/sales-trellus/SKILL.md",
+      "computedHash": "4da9c52f9216389dd0f70b815db7446ff7ac1841bce02f98c88de7be1a864110"
+    },
+    "sales-trendhero": {
+      "source": "sales-skills/sales",
+      "sourceType": "github",
+      "skillPath": "skills/sales-trendhero/SKILL.md",
+      "computedHash": "8b3f1c10bad7ed9801bb53f806bcbe26077ccc7d83673b8a259a0dcb9abf7b38"
+    },
+    "sales-trendseeker": {
+      "source": "sales-skills/sales",
+      "sourceType": "github",
+      "skillPath": "skills/sales-trendseeker/SKILL.md",
+      "computedHash": "233f65b93dc40ff4f19245eb45635cf977e6965d058aa1852312a7353ca64c46"
+    },
+    "sales-trigify": {
+      "source": "sales-skills/sales",
+      "sourceType": "github",
+      "skillPath": "skills/sales-trigify/SKILL.md",
+      "computedHash": "c278cd8e3a9f58aeed826aed967e2607449770e493da4760f551c689ab4a4ba4"
+    },
+    "sales-trustmrr": {
+      "source": "sales-skills/sales",
+      "sourceType": "github",
+      "skillPath": "skills/sales-trustmrr/SKILL.md",
+      "computedHash": "1ddba3a88b40f96f15c7610e03eb991347f28870acac3639a3cf29dfac96edc8"
+    },
+    "sales-trustpilot": {
+      "source": "sales-skills/sales",
+      "sourceType": "github",
+      "skillPath": "skills/sales-trustpilot/SKILL.md",
+      "computedHash": "238d9c41294967a432b00b924b020d4dd283d8695f4c0bc7b8ba747aa4875889"
+    },
+    "sales-tuemilio": {
+      "source": "sales-skills/sales",
+      "sourceType": "github",
+      "skillPath": "skills/sales-tuemilio/SKILL.md",
+      "computedHash": "9a6ad963bba9cb6d5a981d5c5e81936d8408b36b8e427a5748aea5866dc7db88"
+    },
+    "sales-two-sided-marketplace": {
+      "source": "sales-skills/sales",
+      "sourceType": "github",
+      "skillPath": "skills/sales-two-sided-marketplace/SKILL.md",
+      "computedHash": "a0e4fc88ba961b09a93a38dc86fec2151781b1300b2de1f6f22fa71a5a0a1c97"
+    },
+    "sales-tydal": {
+      "source": "sales-skills/sales",
+      "sourceType": "github",
+      "skillPath": "skills/sales-tydal/SKILL.md",
+      "computedHash": "9fe3c5be5a5909b3ebee226ed504aa6fac374670d2ed13a8e0e0f2d6ebba0185"
+    },
+    "sales-typeform": {
+      "source": "sales-skills/sales",
+      "sourceType": "github",
+      "skillPath": "skills/sales-typeform/SKILL.md",
+      "computedHash": "8b1f07c3c40c6253d09477023927d1e55db700d7a577ff1aaacccd95ea603c8d"
+    },
+    "sales-unbounce": {
+      "source": "sales-skills/sales",
+      "sourceType": "github",
+      "skillPath": "skills/sales-unbounce/SKILL.md",
+      "computedHash": "18be1941e86429867be8e0549000d379b2e0d6c20fc16f875d9e8355e4668c3a"
+    },
+    "sales-unboxd": {
+      "source": "sales-skills/sales",
+      "sourceType": "github",
+      "skillPath": "skills/sales-unboxd/SKILL.md",
+      "computedHash": "82de4b235820e2c894d09c319420bfee19c45fe9e3d493417b0540f13b9f3cd6"
+    },
+    "sales-uneed": {
+      "source": "sales-skills/sales",
+      "sourceType": "github",
+      "skillPath": "skills/sales-uneed/SKILL.md",
+      "computedHash": "ea754557584bb6b8107c261f9989bfb3a7c3c0af580b6954fee95112fa3ba53b"
+    },
+    "sales-uniphore": {
+      "source": "sales-skills/sales",
+      "sourceType": "github",
+      "skillPath": "skills/sales-uniphore/SKILL.md",
+      "computedHash": "d1a1f81b183201de130aa27abd6102c6bf045c02d2b4e49ef680af538046d508"
+    },
+    "sales-unrollme": {
+      "source": "sales-skills/sales",
+      "sourceType": "github",
+      "skillPath": "skills/sales-unrollme/SKILL.md",
+      "computedHash": "a5d263df07c04bf30c06794983b1093c2dad9920d32ef0167f655e3fc52126ab"
+    },
+    "sales-upfluence": {
+      "source": "sales-skills/sales",
+      "sourceType": "github",
+      "skillPath": "skills/sales-upfluence/SKILL.md",
+      "computedHash": "3a4e055908ddd93cf69d0314cd7706add201fbf53e6c8d3f0b38678ec6cc8aca"
+    },
+    "sales-upmetrics": {
+      "source": "sales-skills/sales",
+      "sourceType": "github",
+      "skillPath": "skills/sales-upmetrics/SKILL.md",
+      "computedHash": "e48e36b19344fce9ea5b992f6b4d8e30c63d82f614f06a043958e0587eead26e"
+    },
+    "sales-upviral": {
+      "source": "sales-skills/sales",
+      "sourceType": "github",
+      "skillPath": "skills/sales-upviral/SKILL.md",
+      "computedHash": "2ec64c534d18a68a3f0723719b49f51cab6f5b547653ccd11e090e2fdbb0423f"
+    },
+    "sales-userback": {
+      "source": "sales-skills/sales",
+      "sourceType": "github",
+      "skillPath": "skills/sales-userback/SKILL.md",
+      "computedHash": "b55f1c1a4335448f5d69268e617fd7267b366546c17f0011b91666ddb7fa9393"
+    },
+    "sales-userjot": {
+      "source": "sales-skills/sales",
+      "sourceType": "github",
+      "skillPath": "skills/sales-userjot/SKILL.md",
+      "computedHash": "eaff2b7563990edc8b96a7dbefbbd8422719ed188eae6de716a63fbb362b5a12"
+    },
+    "sales-validator-ai": {
+      "source": "sales-skills/sales",
+      "sourceType": "github",
+      "skillPath": "skills/sales-validator-ai/SKILL.md",
+      "computedHash": "6fa6dde0a4d1a3b731d3fb06a9f68517388bf0850dc4ae017ca629ef7130ce13"
+    },
+    "sales-veloxy": {
+      "source": "sales-skills/sales",
+      "sourceType": "github",
+      "skillPath": "skills/sales-veloxy/SKILL.md",
+      "computedHash": "b60d640475f6698ead360ee8fd0995f17ce652edf572f3fcfcb5c088f56082ab"
+    },
+    "sales-venturekit": {
+      "source": "sales-skills/sales",
+      "sourceType": "github",
+      "skillPath": "skills/sales-venturekit/SKILL.md",
+      "computedHash": "02ffe2699b03698f3b59ed9236dde09284910cb8e3ea194d9b2bb9fd45d7dec9"
+    },
+    "sales-venturevault": {
+      "source": "sales-skills/sales",
+      "sourceType": "github",
+      "skillPath": "skills/sales-venturevault/SKILL.md",
+      "computedHash": "98145f2278cb43887ec3a02946fb8270eafcfd1719d94f633bdd45de3fa6d670"
+    },
+    "sales-venturusai": {
+      "source": "sales-skills/sales",
+      "sourceType": "github",
+      "skillPath": "skills/sales-venturusai/SKILL.md",
+      "computedHash": "fdaa7d943e5223eb44c567fa52ee6fc17992890ebbda0e2325788228f5361c55"
+    },
+    "sales-verbit": {
+      "source": "sales-skills/sales",
+      "sourceType": "github",
+      "skillPath": "skills/sales-verbit/SKILL.md",
+      "computedHash": "e0cb2610439323b4fdc3cd868aa74b4bd9a212136ab31d4eb7201743dd77da72"
+    },
+    "sales-verint": {
+      "source": "sales-skills/sales",
+      "sourceType": "github",
+      "skillPath": "skills/sales-verint/SKILL.md",
+      "computedHash": "0cdd76297558d42568f4ce8a461264ba8e00a3ca1e1c2d286075fa413b5a4270"
+    },
+    "sales-vimcal": {
+      "source": "sales-skills/sales",
+      "sourceType": "github",
+      "skillPath": "skills/sales-vimcal/SKILL.md",
+      "computedHash": "6cb815e4fd175cca7c15cacce64ff07b9c6b8bda3415d45bd868ed6e9c704754"
+    },
+    "sales-viral-loops": {
+      "source": "sales-skills/sales",
+      "sourceType": "github",
+      "skillPath": "skills/sales-viral-loops/SKILL.md",
+      "computedHash": "ae6a06016e8be00adad4e81ef3537e9721b040c4d74cd83859ab254a0102fb1c"
+    },
+    "sales-viralnation": {
+      "source": "sales-skills/sales",
+      "sourceType": "github",
+      "skillPath": "skills/sales-viralnation/SKILL.md",
+      "computedHash": "d371def565e97ef185a55e0898ddd599e5e774cad242b30f6f9268fa13478789"
+    },
+    "sales-vistasocial": {
+      "source": "sales-skills/sales",
+      "sourceType": "github",
+      "skillPath": "skills/sales-vistasocial/SKILL.md",
+      "computedHash": "1ef08468acf6ec7002344a7016833a04b48f9fb7328541c1465d0bf10b94eb15"
+    },
+    "sales-vitally": {
+      "source": "sales-skills/sales",
+      "sourceType": "github",
+      "skillPath": "skills/sales-vitally/SKILL.md",
+      "computedHash": "83f1103c8b00b3e3665e5b7dc2314cd34e5002078cc45346fbe09cfe3420dbe7"
+    },
+    "sales-voicenotes": {
+      "source": "sales-skills/sales",
+      "sourceType": "github",
+      "skillPath": "skills/sales-voicenotes/SKILL.md",
+      "computedHash": "b304d3f56a8f9ed48668129e60d6281bc364385c2b730f1127024ee0aa00b083"
+    },
+    "sales-voicetonotes": {
+      "source": "sales-skills/sales",
+      "sourceType": "github",
+      "skillPath": "skills/sales-voicetonotes/SKILL.md",
+      "computedHash": "212a67cf92cf318224d70d7bec5251239cab99c9972d2aed4b99a8659b7d87fc"
+    },
+    "sales-vwo": {
+      "source": "sales-skills/sales",
+      "sourceType": "github",
+      "skillPath": "skills/sales-vwo/SKILL.md",
+      "computedHash": "60a7212b2c7613d59a3135f1475211885fa80cb49213f2d3c96b1e9ed4858765"
+    },
+    "sales-waalaxy": {
+      "source": "sales-skills/sales",
+      "sourceType": "github",
+      "skillPath": "skills/sales-waalaxy/SKILL.md",
+      "computedHash": "b6d65b579a4d29a797a99949a25552049809d8e82c31ca7f54396c26fbd73566"
+    },
+    "sales-waitlister": {
+      "source": "sales-skills/sales",
+      "sourceType": "github",
+      "skillPath": "skills/sales-waitlister/SKILL.md",
+      "computedHash": "abbf90124e4981295777e369113a95027085aa0e506d41dbc6d8abe96b9732d8"
+    },
+    "sales-waitlistly": {
+      "source": "sales-skills/sales",
+      "sourceType": "github",
+      "skillPath": "skills/sales-waitlistly/SKILL.md",
+      "computedHash": "415dedf65aaad55cb0779410c29a3c911bb39c146c311e584f3de8297a900584"
+    },
+    "sales-wave": {
+      "source": "sales-skills/sales",
+      "sourceType": "github",
+      "skillPath": "skills/sales-wave/SKILL.md",
+      "computedHash": "b9dccf3b5a6202080b6a85bcb331605cd971c63f29fe1af65ef4822f27237482"
+    },
+    "sales-webinar": {
+      "source": "sales-skills/sales",
+      "sourceType": "github",
+      "skillPath": "skills/sales-webinar/SKILL.md",
+      "computedHash": "06e19048c5d9b1b412af5ebf4470bdde2be1495ae5dcfae0f9794ea8943bebfc"
+    },
+    "sales-weflow": {
+      "source": "sales-skills/sales",
+      "sourceType": "github",
+      "skillPath": "skills/sales-weflow/SKILL.md",
+      "computedHash": "6ce7f7e80424e0b13e0497e1fcbb2c65f83b2d6da2f72907e347991ae692ba17"
+    },
+    "sales-whatfix": {
+      "source": "sales-skills/sales",
+      "sourceType": "github",
+      "skillPath": "skills/sales-whatfix/SKILL.md",
+      "computedHash": "e93ddb89af44838476dac24f5bcfa39385eb8b4d56a699fb55e86eb5da2b13bc"
+    },
+    "sales-whosponsorsstuff": {
+      "source": "sales-skills/sales",
+      "sourceType": "github",
+      "skillPath": "skills/sales-whosponsorsstuff/SKILL.md",
+      "computedHash": "84154b16270f2077eda6c90c8e1af677fa90c0197918fbb5afbac7e00a792a1a"
+    },
+    "sales-winn": {
+      "source": "sales-skills/sales",
+      "sourceType": "github",
+      "skillPath": "skills/sales-winn/SKILL.md",
+      "computedHash": "514de9f0c2dc1e72a365aefd5b258d43969035611c765fd426f859d3e57e5a69"
+    },
+    "sales-wix": {
+      "source": "sales-skills/sales",
+      "sourceType": "github",
+      "skillPath": "skills/sales-wix/SKILL.md",
+      "computedHash": "9ab2ac8a78a929e88a031afa6d7da0b3e195d51ce8f584cb2eca2e96da05961c"
+    },
+    "sales-woocommerce": {
+      "source": "sales-skills/sales",
+      "sourceType": "github",
+      "skillPath": "skills/sales-woocommerce/SKILL.md",
+      "computedHash": "332c581150ac6a80aa21a69f27c78ad6e614e932d502647bbb5fc1d7f704eae4"
+    },
+    "sales-woodpecker": {
+      "source": "sales-skills/sales",
+      "sourceType": "github",
+      "skillPath": "skills/sales-woodpecker/SKILL.md",
+      "computedHash": "7879fe09b4658436467033a5ce38907f31c6b94b26ffb85d310af4e348d1fded"
+    },
+    "sales-workato": {
+      "source": "sales-skills/sales",
+      "sourceType": "github",
+      "skillPath": "skills/sales-workato/SKILL.md",
+      "computedHash": "f549d0bc92d8b42176dd1f2b3bcaee1674f954818bc31c066fac49af8ab8e401"
+    },
+    "sales-worthbuild": {
+      "source": "sales-skills/sales",
+      "sourceType": "github",
+      "skillPath": "skills/sales-worthbuild/SKILL.md",
+      "computedHash": "04852e0675a8f8102983020a38173557f21dad6c671166e20edc0beceb8ccf01"
+    },
+    "sales-wpfunnels": {
+      "source": "sales-skills/sales",
+      "sourceType": "github",
+      "skillPath": "skills/sales-wpfunnels/SKILL.md",
+      "computedHash": "f194cfcb9d9e2a1e2a183cc4ebb7995ca6a1e4bd25c357bb17eeaa9f42ce59df"
+    },
+    "sales-wudpecker": {
+      "source": "sales-skills/sales",
+      "sourceType": "github",
+      "skillPath": "skills/sales-wudpecker/SKILL.md",
+      "computedHash": "2dfffbc3d9effa7e012e01b5bb45bbcffa0fad7607c368182407b3d1f467324a"
+    },
+    "sales-xperiencify": {
+      "source": "sales-skills/sales",
+      "sourceType": "github",
+      "skillPath": "skills/sales-xperiencify/SKILL.md",
+      "computedHash": "d061c1ae4b63c064a2baecefe2034557968fe418275f8b75da6b3b2fefd89610"
+    },
+    "sales-xpoz": {
+      "source": "sales-skills/sales",
+      "sourceType": "github",
+      "skillPath": "skills/sales-xpoz/SKILL.md",
+      "computedHash": "540a32d08cbf41e5679c54177f35d84797c363d9874650a1e85813235aa1398c"
+    },
+    "sales-yesware": {
+      "source": "sales-skills/sales",
+      "sourceType": "github",
+      "skillPath": "skills/sales-yesware/SKILL.md",
+      "computedHash": "53e28edd09f677ababe09790ecc0c570817c505941b0f1afdb50a7c6e0f3b8e3"
+    },
+    "sales-yoast": {
+      "source": "sales-skills/sales",
+      "sourceType": "github",
+      "skillPath": "skills/sales-yoast/SKILL.md",
+      "computedHash": "2e2380b74a5ddf5bc5a800950398277218c4e6d38e8863ae2e9fafef339d97d5"
+    },
+    "sales-youscan": {
+      "source": "sales-skills/sales",
+      "sourceType": "github",
+      "skillPath": "skills/sales-youscan/SKILL.md",
+      "computedHash": "c62ef69fbdb2fa8fd656eb2164ab5d415a618443b86b106e6a31c60b0f431a3a"
+    },
+    "sales-zendesk": {
+      "source": "sales-skills/sales",
+      "sourceType": "github",
+      "skillPath": "skills/sales-zendesk/SKILL.md",
+      "computedHash": "f75f715b79d65038121619999a78bee5eafaf75fab6205c65966cbda45898957"
+    },
+    "sales-zenler": {
+      "source": "sales-skills/sales",
+      "sourceType": "github",
+      "skillPath": "skills/sales-zenler/SKILL.md",
+      "computedHash": "0b27dfb36fa74d1ee211b909d883ec5c4971452cd7eeba166fc5a4b537f9de0d"
+    },
+    "sales-zerobounce": {
+      "source": "sales-skills/sales",
+      "sourceType": "github",
+      "skillPath": "skills/sales-zerobounce/SKILL.md",
+      "computedHash": "7375eb36a60d515eddaaf917694f92e8fed2792cb63e810eb903d03ac5aa1eae"
+    },
+    "sales-zoomd": {
+      "source": "sales-skills/sales",
+      "sourceType": "github",
+      "skillPath": "skills/sales-zoomd/SKILL.md",
+      "computedHash": "2772a6cb355208a6cd7a4475ea503a0870a7965d2dc74a3f15a023e7221369a8"
+    },
+    "sales-zoominfo": {
+      "source": "sales-skills/sales",
+      "sourceType": "github",
+      "skillPath": "skills/sales-zoominfo/SKILL.md",
+      "computedHash": "300ef4fb36ed7b0dbd5980f730ffacacbd42e240898766286dd732ab13771eed"
+    },
+    "seo": {
+      "source": "AgriciDaniel/claude-seo",
+      "sourceType": "github",
+      "skillPath": "skills/seo/SKILL.md",
+      "computedHash": "05cd2abb96d38e1d7f760d78f611156ce8600875fbac663a68c5377f676f3352"
+    },
+    "seo-audit": {
+      "source": "AgriciDaniel/claude-seo",
+      "sourceType": "github",
+      "skillPath": "skills/seo-audit/SKILL.md",
+      "computedHash": "873ea22d3d2bfd4ec7b382579196af927f70abd7392872d9cc7fe1a2da760476"
+    },
+    "seo-backlinks": {
+      "source": "AgriciDaniel/claude-seo",
+      "sourceType": "github",
+      "skillPath": "skills/seo-backlinks/SKILL.md",
+      "computedHash": "ad83eabd29603c4c2d7a341ff83e9cfc8e3e93f6755a8c4d532d3c7b1bc0d79d"
+    },
+    "seo-cluster": {
+      "source": "AgriciDaniel/claude-seo",
+      "sourceType": "github",
+      "skillPath": "skills/seo-cluster/SKILL.md",
+      "computedHash": "fe52750d437d23b4f8c7468d6a39c40f5e460de9a6ffe3488e87a1ab7d17f92a"
+    },
+    "seo-competitor-pages": {
+      "source": "AgriciDaniel/claude-seo",
+      "sourceType": "github",
+      "skillPath": "skills/seo-competitor-pages/SKILL.md",
+      "computedHash": "2ae4f6329b3e960156c25cd7f6a9b1815ab8d7f8443ea093a749f838ee299908"
+    },
+    "seo-content": {
+      "source": "AgriciDaniel/claude-seo",
+      "sourceType": "github",
+      "skillPath": "skills/seo-content/SKILL.md",
+      "computedHash": "79972886e220c64f3c1bab8596569f4fdf0910c886ef18dd358a1a4b9e4f7e6a"
+    },
+    "seo-content-brief": {
+      "source": "AgriciDaniel/claude-seo",
+      "sourceType": "github",
+      "skillPath": "skills/seo-content-brief/SKILL.md",
+      "computedHash": "ec868f75722d774e29a002ebbe90e413793d71c2bb03f68316fe019075adb441"
+    },
+    "seo-dataforseo": {
+      "source": "AgriciDaniel/claude-seo",
+      "sourceType": "github",
+      "skillPath": "skills/seo-dataforseo/SKILL.md",
+      "computedHash": "5316ee62c63eb66e2b8baaac966c74688a0fbb7a8eff57cb7a89264092798f09"
+    },
+    "seo-drift": {
+      "source": "AgriciDaniel/claude-seo",
+      "sourceType": "github",
+      "skillPath": "skills/seo-drift/SKILL.md",
+      "computedHash": "a031b7ff82fbbf4506a5d4decf8019d266d221c9a319981f4b6db4f5bb0a1ddf"
+    },
+    "seo-ecommerce": {
+      "source": "AgriciDaniel/claude-seo",
+      "sourceType": "github",
+      "skillPath": "skills/seo-ecommerce/SKILL.md",
+      "computedHash": "2b5d4240c7275f99acb8ba23ed1a3bb39e59cc36bc0c856be0f7efbb5b5fdad1"
+    },
+    "seo-flow": {
+      "source": "AgriciDaniel/claude-seo",
+      "sourceType": "github",
+      "skillPath": "skills/seo-flow/SKILL.md",
+      "computedHash": "c7d88a8877a8faf4f8251af1dca685d31e46f725d3a396351873d9ab453aecba"
+    },
+    "seo-geo": {
+      "source": "AgriciDaniel/claude-seo",
+      "sourceType": "github",
+      "skillPath": "skills/seo-geo/SKILL.md",
+      "computedHash": "33f7f9c404e23e97452f005b95e6331adbbd6fc81489d92c430a34e3333339a0"
+    },
+    "seo-google": {
+      "source": "AgriciDaniel/claude-seo",
+      "sourceType": "github",
+      "skillPath": "skills/seo-google/SKILL.md",
+      "computedHash": "0fb0f39b1b9680ef932d45fef9421cc76eded46e83c18566a729207b73a7de20"
+    },
+    "seo-hreflang": {
+      "source": "AgriciDaniel/claude-seo",
+      "sourceType": "github",
+      "skillPath": "skills/seo-hreflang/SKILL.md",
+      "computedHash": "2a72f4a8bf4a501895394214d785097d071c567567af8f686eb1c7d375cdc49b"
+    },
+    "seo-image-gen": {
+      "source": "AgriciDaniel/claude-seo",
+      "sourceType": "github",
+      "skillPath": "skills/seo-image-gen/SKILL.md",
+      "computedHash": "f8394c956f310f772c127eb5cd487934faaff2a97f3e776014877ef4da51b37b"
+    },
+    "seo-images": {
+      "source": "AgriciDaniel/claude-seo",
+      "sourceType": "github",
+      "skillPath": "skills/seo-images/SKILL.md",
+      "computedHash": "367cfd8919b052a685c0350f184793902f1c26e9a79b121665573621207f0e1a"
+    },
+    "seo-local": {
+      "source": "AgriciDaniel/claude-seo",
+      "sourceType": "github",
+      "skillPath": "skills/seo-local/SKILL.md",
+      "computedHash": "4a787211762fd6bda6b297927921111385ccf2f6565ea2f7404c894189e7e359"
+    },
+    "seo-maps": {
+      "source": "AgriciDaniel/claude-seo",
+      "sourceType": "github",
+      "skillPath": "skills/seo-maps/SKILL.md",
+      "computedHash": "3f13bdb445575f3e5dbd0262d0026bf2990f18016abaa1442a1bbf9cc834d25f"
+    },
+    "seo-page": {
+      "source": "AgriciDaniel/claude-seo",
+      "sourceType": "github",
+      "skillPath": "skills/seo-page/SKILL.md",
+      "computedHash": "3ca952dd69b162ef74ce6e45d5d785f8b8ccd9c5271bb4444eaacfec49d9bc14"
+    },
+    "seo-plan": {
+      "source": "AgriciDaniel/claude-seo",
+      "sourceType": "github",
+      "skillPath": "skills/seo-plan/SKILL.md",
+      "computedHash": "b728dfd6876063e9ae53a1f82428a2bf6bb6dd0474f1d47947252e61c238e92a"
+    },
+    "seo-programmatic": {
+      "source": "AgriciDaniel/claude-seo",
+      "sourceType": "github",
+      "skillPath": "skills/seo-programmatic/SKILL.md",
+      "computedHash": "ce44bfe2db386d2ed65adbdbdc094a4591199b5f2ffbca522ffe4b1c4e45da7a"
+    },
+    "seo-schema": {
+      "source": "AgriciDaniel/claude-seo",
+      "sourceType": "github",
+      "skillPath": "skills/seo-schema/SKILL.md",
+      "computedHash": "33807bf0b4858be0f15c10681f5d5085a2822d7b3bf1874b68c76d195fda6bc4"
+    },
+    "seo-sitemap": {
+      "source": "AgriciDaniel/claude-seo",
+      "sourceType": "github",
+      "skillPath": "skills/seo-sitemap/SKILL.md",
+      "computedHash": "35e4f80376b962c86b53299a0df16da35a56a78324d45a984de4362b903e70a6"
+    },
+    "seo-sxo": {
+      "source": "AgriciDaniel/claude-seo",
+      "sourceType": "github",
+      "skillPath": "skills/seo-sxo/SKILL.md",
+      "computedHash": "ed26cbb212d594211f5ae6d6e2d1c6a12786e3aaab381b73fea1b504ce3edca8"
+    },
+    "seo-technical": {
+      "source": "AgriciDaniel/claude-seo",
+      "sourceType": "github",
+      "skillPath": "skills/seo-technical/SKILL.md",
+      "computedHash": "f08bf59abb82c3ba880261634bfe58fb50aaa542dfbd549de45e41f257168c44"
+    },
+    "smartlead-api": {
+      "source": "growthenginenowoslawski/coldoutboundskills",
+      "sourceType": "github",
+      "skillPath": "skills/smartlead-api/SKILL.md",
+      "computedHash": "51df3cc14eb01fc7f17784a3794f6e2f26f9b6ef7cd0df24e5dbd289f4b3e683"
+    },
+    "smartlead-campaign-upload-public": {
+      "source": "growthenginenowoslawski/coldoutboundskills",
+      "sourceType": "github",
+      "skillPath": "skills/smartlead-campaign-upload-public/SKILL.md",
+      "computedHash": "bb5668283597de46ac7dc6f03a33c00ec21ade38dd4e0965bf60d34761a86698"
+    },
+    "smartlead-inbox-manager": {
+      "source": "growthenginenowoslawski/coldoutboundskills",
+      "sourceType": "github",
+      "skillPath": "skills/smartlead-inbox-manager/SKILL.md",
+      "computedHash": "2f4d15b250db8c258776610571bd15cc9ae75012c7c2bdeee1d0af901dc4438f"
+    },
+    "smartlead-spintax": {
+      "source": "growthenginenowoslawski/coldoutboundskills",
+      "sourceType": "github",
+      "skillPath": "skills/smartlead-spintax/SKILL.md",
+      "computedHash": "4981559f44fc6b9bcf0300bcd84069d2005cc385a1b3710b3967950b12c87b19"
+    },
+    "spam-word-checker": {
+      "source": "growthenginenowoslawski/coldoutboundskills",
+      "sourceType": "github",
+      "skillPath": "skills/spam-word-checker/SKILL.md",
+      "computedHash": "2679477d5a01812da2d98762fd395ff350b96118e1fb0c247bb5451584df3d2c"
+    },
+    "stop-slop": {
+      "source": "hardikpandya/stop-slop",
+      "sourceType": "github",
+      "skillPath": "SKILL.md",
+      "computedHash": "c6fceb8905653a3732fb4d25ba2e87b220d7624b6829f16ac1d4a2f0c4be392e"
+    }
+  }
+}
