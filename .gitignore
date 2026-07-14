@@ -1,0 +1,31 @@
+# Dépendances
+/node_modules
+
+# Next.js
+/.next/
+/out/
+next-env.d.ts
+
+# Production
+/build
+
+# Variables d'environnement — ne JAMAIS commiter de secrets
+.env
+.env.local
+.env.*.local
+
+# Vercel
+.vercel
+
+# Supabase (fichiers locaux générés par le CLI)
+supabase/.branches
+supabase/.temp
+
+# Divers
+.DS_Store
+*.pem
+npm-debug.log*
+*.tsbuildinfo
+
+# Tests
+/coverage
