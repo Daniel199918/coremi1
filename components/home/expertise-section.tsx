@@ -31,7 +31,7 @@ export function ExpertiseSection() {
           <div className="lg:col-span-5">
             <Reveal delay={0.1}>
               <p className="mb-5 flex items-baseline gap-4 text-xs font-semibold uppercase tracking-[0.25em] text-ink-500">
-                <span className="text-accent-600">06</span> Construction &amp; rénovation
+                <span className="text-accent-600">07</span> Construction &amp; rénovation
               </p>
               <h2 className="font-display text-4xl font-medium leading-tight text-ink-950">
                 La structure d&apos;abord. Elle porte tout le reste.
@@ -58,7 +58,7 @@ export function ExpertiseSection() {
           <div className="order-2 lg:order-1 lg:col-span-5">
             <Reveal delay={0.1}>
               <p className="mb-5 flex items-baseline gap-4 text-xs font-semibold uppercase tracking-[0.25em] text-ink-500">
-                <span className="text-accent-600">07</span> Châssis &amp; portes
+                <span className="text-accent-600">08</span> Châssis &amp; portes
               </p>
               <h2 className="font-display text-4xl font-medium leading-tight text-ink-950">
                 Des châssis posés comme il faut, pas seulement vendus.

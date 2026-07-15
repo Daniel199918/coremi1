@@ -28,6 +28,38 @@ export const engagements = [
   },
 ] as const;
 
+/**
+ * Modalités pratiques — réassurance commerciale honnête, sans chiffre
+ * inventé. La TVA à 6 % et les primes régionales sont des dispositifs
+ * belges réels ; l'éligibilité dépend du projet, d'où le conditionnel.
+ */
+export const modalites = [
+  {
+    kicker: "Devis",
+    title: "Détaillé, gratuit, sans engagement",
+    description:
+      "Visite sur place, puis un devis chiffré poste par poste. Il ne vous coûte rien et ne vous engage à rien : vous signez seulement s'il vous convient.",
+  },
+  {
+    kicker: "Paiement",
+    title: "Échelonné, jamais d'avance à découvert",
+    description:
+      "Aucun acompte avant le début des travaux, sauf pour la commande des châssis. Vous payez par tranches, selon l'avancement, et le solde à la réception.",
+  },
+  {
+    kicker: "Suivi",
+    title: "Un interlocuteur unique, joignable",
+    description:
+      "La même personne suit votre chantier du premier appel à la réception. Un point régulier par téléphone ou WhatsApp, sans standard ni dossier qui se perd.",
+  },
+  {
+    kicker: "Aides",
+    title: "TVA réduite et primes, on vous oriente",
+    description:
+      "Pour une habitation de plus de dix ans, la rénovation peut relever de la TVA à 6 % sous conditions. Nous vous orientons vers les primes régionales (Renolution à Bruxelles, Prime Habitation en Wallonie) selon votre projet.",
+  },
+] as const;
+
 export const processSteps = [
   {
     title: "Rencontre",

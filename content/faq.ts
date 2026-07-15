@@ -34,6 +34,16 @@ export const faq: FaqItem[] = [
   {
     question: "Comment se passe le paiement ?",
     answer:
-      "Par tranches, selon l'avancement du chantier, comme prévu au devis. Aucun paiement intégral ne vous sera demandé avant travaux.",
+      "Par tranches, selon l'avancement du chantier, comme prévu au devis. Aucun acompte ne vous est demandé avant le début des travaux, sauf pour la commande des châssis. Le solde est dû à la réception.",
+  },
+  {
+    question: "Puis-je bénéficier de la TVA à 6 % ou de primes ?",
+    answer:
+      "Pour une habitation de plus de dix ans, la rénovation peut relever de la TVA à 6 % sous conditions. Des primes régionales existent aussi (Renolution à Bruxelles, Prime Habitation en Wallonie). Nous vous orientons vers les dispositifs adaptés à votre projet ; l'éligibilité dépend de votre situation.",
+  },
+  {
+    question: "Comment suis-je tenu au courant de l'avancement ?",
+    answer:
+      "Votre interlocuteur unique fait le point avec vous régulièrement, par téléphone ou WhatsApp selon ce qui vous arrange. Vous avez un contact direct, sans passer par un standard.",
   },
 ];

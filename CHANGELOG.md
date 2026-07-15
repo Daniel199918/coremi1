@@ -7,6 +7,12 @@ et le projet adhère au [Semantic Versioning](https://semver.org/lang/fr/).
 
 ## [Unreleased]
 
+### v8 — clarté commerciale (analyse STM Construct adaptée)
+
+- Nouvelle section d'accueil « Clair, du devis au paiement » : réassurance commerciale en tableau éditorial numéroté (devis gratuit sans engagement ; paiement échelonné, aucun acompte avant travaux sauf châssis, solde à la réception ; interlocuteur unique joignable ; TVA 6 % et primes régionales avec orientation honnête). Accès WhatsApp direct et CTA « analyse gratuite ».
+- FAQ enrichie : paiement précisé, question TVA 6 %/primes (Renolution, Prime Habitation), suivi de chantier par téléphone/WhatsApp.
+- Positionnement inspiré de la clarté commerciale des entreprises générales belges (STM Construct), transposé dans la direction artistique COREMI, sans chiffre inventé ni promesse invérifiable. Sections de l'accueil renumérotées.
+
 ### Corrigé
 
 - Logo détouré sur fond transparent : les fichiers du logo avaient un fond plein (blanc pour la version claire, noir pour la sombre) qui laissait apparaître une boîte visible sur le header et le pied de page. Les logos sont désormais des PNG à canal alpha (arrière-plan retiré, dessin inchangé), affichés sans `mix-blend-mode` : plus aucune boîte, quelle que soit la surface. Anciens fichiers `logo-coremi-fond-*.webp` supprimés.
