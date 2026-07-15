@@ -7,6 +7,10 @@ et le projet adhère au [Semantic Versioning](https://semver.org/lang/fr/).
 
 ## [Unreleased]
 
+### Corrigé
+
+- Logo détouré sur fond transparent : les fichiers du logo avaient un fond plein (blanc pour la version claire, noir pour la sombre) qui laissait apparaître une boîte visible sur le header et le pied de page. Les logos sont désormais des PNG à canal alpha (arrière-plan retiré, dessin inchangé), affichés sans `mix-blend-mode` : plus aucune boîte, quelle que soit la surface. Anciens fichiers `logo-coremi-fond-*.webp` supprimés.
+
 ### v7 — « La maison se construit » (scène 3D axonométrique au scroll)
 
 - Nouvelle pièce maîtresse de l'accueil : une coupe axonométrique de maison — stylisée d'après la villa réelle (toit à pergola, deux niveaux vitrés, châssis noirs) — qui s'assemble phase par phase quand on défile : terrain, fondations, dalle, gros œuvre (murs qui montent), toiture et pergola, châssis et vitrages (cadres soulignés en rouge de marque), puis finitions, terrasse et cotes. Section épinglée sur ~4 écrans, légendes de phase synchronisées, rail de progression.
