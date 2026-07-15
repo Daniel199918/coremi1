@@ -7,6 +7,11 @@ et le projet adhère au [Semantic Versioning](https://semver.org/lang/fr/).
 
 ## [Unreleased]
 
+### Domaine
+
+- Domaine de production défini sur `https://www.coremi.be` (URL canonique par défaut). Le sitemap, `robots.txt`, `metadataBase`, les balises Open Graph et les données Schema.org utilisent désormais le domaine officiel. Surchargeable via `NEXT_PUBLIC_SITE_URL`.
+
+
 ### v8 — clarté commerciale (analyse STM Construct adaptée)
 
 - Nouvelle section d'accueil « Clair, du devis au paiement » : réassurance commerciale en tableau éditorial numéroté (devis gratuit sans engagement ; paiement échelonné, aucun acompte avant travaux sauf châssis, solde à la réception ; interlocuteur unique joignable ; TVA 6 % et primes régionales avec orientation honnête). Accès WhatsApp direct et CTA « analyse gratuite ».
