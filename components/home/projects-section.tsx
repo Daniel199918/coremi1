@@ -42,7 +42,7 @@ export function ProjectsSection() {
         <div className="mt-16 grid gap-10 lg:grid-cols-12 lg:gap-8">
           {/* Grand format */}
           <Reveal className="lg:col-span-7">
-            <Link href={`/realisations#${villa.slug}`} className="group block">
+            <Link href={`/realisations#${villa.slug}`} data-cursor="Voir" className="group block">
               <Tilt max={5}>
                 <div className="relative aspect-[4/3] overflow-hidden bg-stone-100">
                   <Image
@@ -69,7 +69,7 @@ export function ProjectsSection() {
           <div className="flex flex-col gap-10 lg:col-span-5 lg:mt-24">
             {[second, third].map((project, i) => (
               <Reveal key={project.slug} delay={0.08 + i * 0.06}>
-                <Link href={`/realisations#${project.slug}`} className="group block">
+                <Link href={`/realisations#${project.slug}`} data-cursor="Voir" className="group block">
                   <Tilt max={6}>
                     <div className="relative aspect-[3/2] overflow-hidden bg-stone-100">
                       <Image
