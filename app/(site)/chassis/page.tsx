@@ -65,8 +65,8 @@ export default function ChassisPage() {
             />
             <div className="relative mt-10 hidden aspect-[4/3] overflow-hidden bg-stone-100 lg:block">
               <Image
-                src="/images/chassis-detail.jpg"
-                alt="Détail de pose d'un châssis aluminium. Photo provisoire à remplacer."
+                src="/images/realisations/entree-chassis-noirs.jpg"
+                alt="Menuiseries en aluminium noir posées par COREMI : entrée vitrée toute hauteur et porte de garage sectionnelle noire."
                 fill
                 sizes="40vw"
                 className="object-cover"

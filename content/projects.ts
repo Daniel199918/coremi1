@@ -1,128 +1,87 @@
 /**
  * ============================================================
- * Réalisations — CONTENUS PROVISOIRES clairement identifiés.
- * ⚠️ À remplacer par les vrais projets et photos de COREMI :
- *    1. Déposer les photos dans /public/images/projects/
- *    2. Mettre à jour les entrées ci-dessous
- *    Les visuels actuels sont des placeholders générés, marqués
- *    « photo à remplacer » directement dans l'image.
+ * Réalisations — photos réelles de chantiers COREMI.
+ * ⚠️ Les informations entre crochets ([COMMUNE], [ANNÉE]) sont
+ *    des placeholders à confirmer par COREMI. Les descriptions
+ *    ne mentionnent que ce qui est visible sur les photos.
  * ============================================================
  */
 
-export type ProjectCategory =
-  | "extension"
-  | "renovation"
-  | "chassis"
-  | "porte"
-  | "terrasse"
-  | "facade";
-
-export const projectCategories: { value: ProjectCategory | "tous"; label: string }[] = [
-  { value: "tous", label: "Tous" },
-  { value: "extension", label: "Extensions" },
-  { value: "renovation", label: "Rénovations" },
-  { value: "chassis", label: "Châssis" },
-  { value: "porte", label: "Portes" },
-  { value: "terrasse", label: "Terrasses" },
-  { value: "facade", label: "Façades" },
-];
+export type ProjectImage = {
+  src: string;
+  alt: string;
+};
 
 export type Project = {
   slug: string;
+  index: string;
   title: string;
+  /** ⚠️ Placeholder tant que la commune n'est pas confirmée. */
   location: string;
-  category: ProjectCategory;
-  workType: string;
-  materials: string;
-  image: string;
-  imageAlt: string;
+  /** ⚠️ Placeholder tant que l'année n'est pas confirmée. */
+  year: string;
+  /** Matériaux et éléments observables sur les photos. */
+  observed: string;
   description: string;
-  /** Paire avant/après optionnelle. */
-  beforeAfter?: {
-    before: string;
-    beforeAlt: string;
-    after: string;
-    afterAlt: string;
-  };
+  cover: ProjectImage;
+  /** Photos complémentaires du même chantier. */
+  images: ProjectImage[];
 };
 
 export const projects: Project[] = [
   {
-    slug: "extension-moderne-waterloo",
-    title: "Extension contemporaine sur jardin",
-    location: "Waterloo",
-    category: "extension",
-    workType: "Gros œuvre, extension",
-    materials: "Maçonnerie, toiture plate, châssis aluminium",
-    image: "/images/projects/extension-moderne.jpg",
-    imageAlt: "Extension contemporaine à toiture plate ouverte sur le jardin",
+    slug: "villa-contemporaine",
+    index: "01",
+    title: "Villa contemporaine, verre et volumes blancs",
+    location: "[COMMUNE]",
+    year: "[ANNÉE]",
+    observed:
+      "Enduit blanc · menuiseries aluminium · garde-corps en verre · dalles béton · lames composites",
     description:
-      "Une extension à toiture plate qui double l'espace de vie et ouvre la maison sur le jardin. Raccord propre à l'existant, baies toute hauteur.",
-  },
-  {
-    slug: "renovation-complete-ixelles",
-    title: "Maison de maître remise à neuf",
-    location: "Ixelles",
-    category: "renovation",
-    workType: "Rénovation complète",
-    materials: "Parquet, plafonnage, menuiseries intérieures",
-    image: "/images/projects/renovation-complete.jpg",
-    imageAlt: "Séjour de maison de maître rénové, moulures conservées",
-    description:
-      "Réagencement complet d'une maison de maître en préservant son caractère : moulures restaurées, techniques neuves, finitions au cordeau.",
-  },
-  {
-    slug: "chassis-aluminium-wavre",
-    title: "Remplacement complet des châssis",
-    location: "Wavre",
-    category: "chassis",
-    workType: "Châssis aluminium, double vitrage",
-    materials: "Aluminium thermolaqué, double vitrage",
-    image: "/images/projects/pose-chassis.jpg",
-    imageAlt: "Châssis aluminium anthracite posés sur façade enduite claire",
-    description:
-      "Tous les châssis remplacés par des profilés aluminium fins, teinte anthracite. Pose en quelques jours, finitions intérieures comprises.",
-  },
-  {
-    slug: "porte-entree-uccle",
-    title: "Porte d'entrée sur mesure",
-    location: "Uccle",
-    category: "porte",
-    workType: "Porte d'entrée aluminium",
-    materials: "Aluminium, vitrage sécurisé",
-    image: "/images/projects/porte-entree.jpg",
-    imageAlt: "Porte d'entrée contemporaine en aluminium anthracite",
-    description:
-      "Une porte d'entrée dessinée pour la façade, sécurisée et isolante. La quincaillerie et les teintes ont été choisies avec les propriétaires.",
-  },
-  {
-    slug: "terrasse-lasne",
-    title: "Terrasse et abords redessinés",
-    location: "Lasne",
-    category: "terrasse",
-    workType: "Aménagement extérieur",
-    materials: "Dalles céramiques, bordures acier",
-    image: "/images/projects/terrasse.jpg",
-    imageAlt: "Terrasse en dalles céramiques et bordures plantées",
-    description:
-      "Gestion des niveaux, évacuation des eaux, dalles céramiques posées au millimètre. Les abords plantés terminent l'ensemble.",
-  },
-  {
-    slug: "renovation-facade-nivelles",
-    title: "Façade isolée et ré-enduite",
-    location: "Nivelles",
-    category: "facade",
-    workType: "Façade, isolation par l'extérieur",
-    materials: "Isolant rigide, enduit minéral",
-    image: "/images/projects/renovation-facade.jpg",
-    imageAlt: "Façade rénovée avec enduit clair et soubassement en pierre",
-    description:
-      "Isolation par l'extérieur puis nouvel enduit minéral. La maison gagne en confort l'hiver et la façade retrouve une ligne nette.",
-    beforeAfter: {
-      before: "/images/projects/facade-avant.jpg",
-      beforeAlt: "Façade avant travaux, enduit fatigué",
-      after: "/images/projects/facade-apres.jpg",
-      afterAlt: "Façade après travaux, enduit minéral neuf",
+      "Deux niveaux entièrement vitrés sous une pergola de toiture, garde-corps en verre et enduit blanc. L'allée en dalles de béton posées sur gravier noir mène à une entrée vitrée double hauteur ; à l'arrière, une terrasse en lames composites prolonge le séjour de plain-pied vers le jardin.",
+    cover: {
+      src: "/images/realisations/villa-jardin-panorama.jpg",
+      alt: "Villa contemporaine COREMI côté jardin : deux niveaux vitrés toute hauteur, pergola de toiture et garde-corps en verre.",
     },
+    images: [
+      {
+        src: "/images/realisations/villa-allee-entree.jpg",
+        alt: "Allée d'accès de la villa : dalles de béton sur gravier noir entre deux haies de lierre, entrée vitrée double hauteur.",
+      },
+      {
+        src: "/images/realisations/villa-terrasse-angle.jpg",
+        alt: "Angle de la villa : rez-de-chaussée vitré toute hauteur et terrasse en lames composites grises.",
+      },
+    ],
+  },
+  {
+    slug: "maison-bardage-anthracite",
+    index: "02",
+    title: "Maison au bardage anthracite",
+    location: "[COMMUNE]",
+    year: "[ANNÉE]",
+    observed: "Bardage anthracite à joints horizontaux · enduit blanc · châssis noirs · gabions",
+    description:
+      "Un volume supérieur bardé de panneaux anthracite à joints horizontaux posé sur un socle enduit blanc. Châssis noirs affleurants, murs de soutènement en gabions et haie de lierre côté rue.",
+    cover: {
+      src: "/images/realisations/maison-bardage-anthracite.jpg",
+      alt: "Maison COREMI vue depuis la rue : étage bardé de panneaux anthracite sur socle enduit blanc, châssis noirs.",
+    },
+    images: [],
+  },
+  {
+    slug: "entree-menuiseries-noires",
+    index: "03",
+    title: "Entrée et menuiseries noires",
+    location: "[COMMUNE]",
+    year: "[ANNÉE]",
+    observed: "Menuiseries aluminium noires · pierre bleue · gabions · enduit blanc",
+    description:
+      "Entrée vitrée toute hauteur et porte de garage sectionnelle noire alignées sous un même bandeau. Numérotation sur totem béton, emmarchement en pierre bleue et mur de gabions en retour.",
+    cover: {
+      src: "/images/realisations/entree-chassis-noirs.jpg",
+      alt: "Entrée d'une maison COREMI : châssis et porte de garage en aluminium noir sur façade enduite blanche, numéro 27 sur totem béton.",
+    },
+    images: [],
   },
 ];

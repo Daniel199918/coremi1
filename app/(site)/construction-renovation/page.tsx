@@ -60,8 +60,8 @@ export default function ConstructionRenovationPage() {
           <Reveal className="lg:col-span-6">
             <div className="relative aspect-[4/3] overflow-hidden bg-stone-100">
               <Image
-                src="/images/chantier.jpg"
-                alt="Chantier de gros œuvre en cours. Photo provisoire à remplacer."
+                src="/images/realisations/villa-terrasse-angle.jpg"
+                alt="Villa réalisée par COREMI : rez-de-chaussée vitré toute hauteur ouvert sur une terrasse en lames composites."
                 fill
                 sizes="(max-width: 1024px) 100vw, 50vw"
                 className="object-cover"

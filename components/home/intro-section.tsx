@@ -46,17 +46,17 @@ export function IntroSection() {
 
         <Reveal delay={0.12} className="lg:col-span-4 lg:mt-24">
           <figure className="relative">
-            <div className="relative aspect-[4/3] overflow-hidden">
+            <div className="relative aspect-[3/4] overflow-hidden">
               <Image
-                src="/images/chantier.jpg"
-                alt="Dessin technique d'un chantier de gros œuvre avec grue, style plan d'architecte."
+                src="/images/realisations/villa-allee-entree.jpg"
+                alt="Allée d'accès d'une villa réalisée par COREMI : dalles de béton posées sur gravier noir entre deux haies, entrée vitrée en perspective."
                 fill
                 sizes="(max-width: 1024px) 100vw, 32vw"
-                className="object-cover"
+                className="object-cover object-[62%_center]"
               />
             </div>
             <figcaption className="annotation mt-3 flex justify-between text-ink-500">
-              <span>Fig. 01 — chantier en cours</span>
+              <span>Fig. 01 — réalisation COREMI</span>
               <span className="text-accent-600">BXL · BW</span>
             </figcaption>
           </figure>
