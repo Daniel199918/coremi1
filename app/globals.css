@@ -241,21 +241,93 @@ details summary::-webkit-details-marker {
 }
 
 /* ------------------------------------------------------------
+   Profondeur 3D v5 — parallaxe de pointeur, cartes inclinables,
+   dolly du hero au défilement. Transform/opacity uniquement,
+   inactif au tactile et en mouvement réduit.
+   ------------------------------------------------------------ */
+
+/* Parallaxe de pointeur (PointerScene expose --px / --py) :
+   l'image dérive à contre-sens du curseur, le texte l'accompagne. */
+@media (hover: hover) and (prefers-reduced-motion: no-preference) {
+  .parallax-far {
+    transform: translate3d(calc(var(--px, 0) * -14px), calc(var(--py, 0) * -10px), 0)
+      scale(1.045);
+    transition: transform 0.45s var(--ease-out-soft);
+    will-change: transform;
+  }
+  .parallax-near {
+    transform: translate3d(calc(var(--px, 0) * 9px), calc(var(--py, 0) * 6px), 0);
+    transition: transform 0.45s var(--ease-out-soft);
+    will-change: transform;
+  }
+}
+
+/* Cartes 3D (composant Tilt) : perspective réelle + reflet pointeur */
+.tilt-scene {
+  perspective: 1100px;
+}
+.tilt-card {
+  position: relative;
+  transform: rotateX(calc(var(--rx, 0) * 1deg)) rotateY(calc(var(--ry, 0) * 1deg));
+  transform-style: preserve-3d;
+  transition: transform 0.5s var(--ease-out-soft);
+  will-change: transform;
+}
+.tilt-glare::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  z-index: 1;
+  pointer-events: none;
+  background: radial-gradient(
+    460px circle at var(--gx, 50%) var(--gy, 50%),
+    rgb(255 255 255 / 0.16),
+    transparent 62%
+  );
+  opacity: 0;
+  transition: opacity 0.4s ease;
+}
+.tilt-scene:hover .tilt-glare::after {
+  opacity: 1;
+}
+
+/* Dolly du hero : la photo se pose (léger zoom arrière) pendant le
+   premier écran de défilement — caméra qui recule, en CSS pur. */
+@supports (animation-timeline: scroll()) {
+  @media (prefers-reduced-motion: no-preference) {
+    .hero-settle img {
+      animation: hero-settle linear both;
+      animation-timeline: scroll();
+      animation-range: 0 90vh;
+    }
+    @keyframes hero-settle {
+      from {
+        scale: 1.1;
+      }
+      to {
+        scale: 1;
+      }
+    }
+  }
+}
+
+/* ------------------------------------------------------------
    Apparition au scroll (composant Reveal)
    Visible par défaut ; masqué uniquement côté client pour les
    éléments hors écran, puis révélé à l'entrée dans le viewport.
    ------------------------------------------------------------ */
 .reveal[data-reveal="armed"] {
   opacity: 0;
-  transform: translateY(22px);
+  transform: perspective(1100px) translateY(26px) rotateX(5deg);
+  transform-origin: 50% 100%;
 }
 
 .reveal[data-reveal="shown"] {
   opacity: 1;
-  transform: none;
+  transform: perspective(1100px) translateY(0) rotateX(0);
   transition:
     opacity 0.6s ease-out,
-    transform 0.65s cubic-bezier(0.21, 0.47, 0.32, 0.98);
+    transform 0.75s cubic-bezier(0.21, 0.47, 0.32, 0.98);
 }
 
 @media (prefers-reduced-motion: reduce) {

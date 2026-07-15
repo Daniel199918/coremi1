@@ -1,5 +1,6 @@
 import Image from "next/image";
 import { Reveal } from "@/components/motion/reveal";
+import { Tilt } from "@/components/motion/tilt";
 import { projects, type Project } from "@/content/projects";
 
 /** Cartouche de fiche projet, style légende de plan. */
@@ -53,15 +54,17 @@ export function ProjectsGallery() {
         </Reveal>
 
         <Reveal delay={0.08}>
-          <div className="img-drift frame relative mt-10 aspect-[2/1] overflow-hidden bg-stone-100">
-            <Image
-              src={villa.cover.src}
-              alt={villa.cover.alt}
-              fill
-              sizes="(max-width: 1280px) 100vw, 1200px"
-              className="object-cover"
-            />
-          </div>
+          <Tilt max={3} className="mt-10">
+            <div className="img-drift frame relative aspect-[2/1] overflow-hidden bg-stone-100">
+              <Image
+                src={villa.cover.src}
+                alt={villa.cover.alt}
+                fill
+                sizes="(max-width: 1280px) 100vw, 1200px"
+                className="object-cover"
+              />
+            </div>
+          </Tilt>
           <p className="annotation mt-3 text-ink-500">
             Élévation jardin — baies toute hauteur sur deux niveaux
           </p>
@@ -70,15 +73,17 @@ export function ProjectsGallery() {
         <div className="mt-10 grid gap-10 lg:grid-cols-12">
           {villa.images.map((image, i) => (
             <Reveal key={image.src} delay={0.06 * (i + 1)} className="lg:col-span-4">
-              <div className="img-drift relative aspect-[3/4] overflow-hidden bg-stone-100">
-                <Image
-                  src={image.src}
-                  alt={image.alt}
-                  fill
-                  sizes="(max-width: 1024px) 100vw, 32vw"
-                  className="object-cover"
-                />
-              </div>
+              <Tilt max={6}>
+                <div className="img-drift relative aspect-[3/4] overflow-hidden bg-stone-100">
+                  <Image
+                    src={image.src}
+                    alt={image.alt}
+                    fill
+                    sizes="(max-width: 1024px) 100vw, 32vw"
+                    className="object-cover"
+                  />
+                </div>
+              </Tilt>
               <p className="annotation mt-3 text-ink-500">
                 {i === 0 ? "Allée d'accès — dalles béton sur gravier" : "Angle sud — terrasse composite"}
               </p>
@@ -101,15 +106,17 @@ export function ProjectsGallery() {
       >
         <div className="grid items-start gap-10 lg:grid-cols-12">
           <Reveal className="lg:col-span-7">
-            <div className="img-drift relative aspect-[3/2] overflow-hidden bg-stone-100">
-              <Image
-                src={anthracite.cover.src}
-                alt={anthracite.cover.alt}
-                fill
-                sizes="(max-width: 1024px) 100vw, 58vw"
-                className="object-cover"
-              />
-            </div>
+            <Tilt max={5}>
+              <div className="img-drift relative aspect-[3/2] overflow-hidden bg-stone-100">
+                <Image
+                  src={anthracite.cover.src}
+                  alt={anthracite.cover.alt}
+                  fill
+                  sizes="(max-width: 1024px) 100vw, 58vw"
+                  className="object-cover"
+                />
+              </div>
+            </Tilt>
             <p className="annotation mt-3 text-ink-500">Vue depuis la rue</p>
           </Reveal>
           <div className="lg:col-span-5">
@@ -159,15 +166,17 @@ export function ProjectsGallery() {
             </Reveal>
           </div>
           <Reveal className="order-1 lg:order-2 lg:col-span-7">
-            <div className="img-drift relative aspect-[4/3] overflow-hidden bg-stone-100 lg:aspect-[3/2]">
-              <Image
-                src={entree.cover.src}
-                alt={entree.cover.alt}
-                fill
-                sizes="(max-width: 1024px) 100vw, 58vw"
-                className="object-cover"
-              />
-            </div>
+            <Tilt max={5}>
+              <div className="img-drift relative aspect-[4/3] overflow-hidden bg-stone-100 lg:aspect-[3/2]">
+                <Image
+                  src={entree.cover.src}
+                  alt={entree.cover.alt}
+                  fill
+                  sizes="(max-width: 1024px) 100vw, 58vw"
+                  className="object-cover"
+                />
+              </div>
+            </Tilt>
             <p className="annotation mt-3 text-ink-500">Entrée et porte de garage alignées</p>
           </Reveal>
         </div>

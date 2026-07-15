@@ -3,6 +3,7 @@ import Link from "next/link";
 import { ArrowRight } from "lucide-react";
 import { Container } from "@/components/ui/container";
 import { Reveal } from "@/components/motion/reveal";
+import { Tilt } from "@/components/motion/tilt";
 
 /**
  * Double focus éditorial : construction/rénovation d'un côté,
@@ -15,15 +16,17 @@ export function ExpertiseSection() {
         {/* Construction & rénovation */}
         <div className="grid items-center gap-10 lg:grid-cols-12">
           <Reveal className="lg:col-span-7">
-            <div className="img-drift relative aspect-[4/3] overflow-hidden bg-stone-100">
-              <Image
-                src="/images/realisations/maison-bardage-anthracite.jpg"
-                alt="Maison réalisée par COREMI : volume supérieur bardé anthracite sur socle enduit blanc, châssis noirs."
-                fill
-                sizes="(max-width: 1024px) 100vw, 58vw"
-                className="object-cover"
-              />
-            </div>
+            <Tilt max={4}>
+              <div className="img-drift relative aspect-[4/3] overflow-hidden bg-stone-100">
+                <Image
+                  src="/images/realisations/maison-bardage-anthracite.jpg"
+                  alt="Maison réalisée par COREMI : volume supérieur bardé anthracite sur socle enduit blanc, châssis noirs."
+                  fill
+                  sizes="(max-width: 1024px) 100vw, 58vw"
+                  className="object-cover"
+                />
+              </div>
+            </Tilt>
           </Reveal>
           <div className="lg:col-span-5">
             <Reveal delay={0.1}>
@@ -75,15 +78,17 @@ export function ExpertiseSection() {
             </Reveal>
           </div>
           <Reveal className="order-1 lg:order-2 lg:col-span-7">
-            <div className="img-drift relative aspect-[4/3] overflow-hidden bg-stone-100">
-              <Image
-                src="/images/realisations/entree-chassis-noirs.jpg"
-                alt="Menuiseries en aluminium noir posées par COREMI : entrée vitrée toute hauteur et porte de garage sectionnelle."
-                fill
-                sizes="(max-width: 1024px) 100vw, 58vw"
-                className="object-cover"
-              />
-            </div>
+            <Tilt max={4}>
+              <div className="img-drift relative aspect-[4/3] overflow-hidden bg-stone-100">
+                <Image
+                  src="/images/realisations/entree-chassis-noirs.jpg"
+                  alt="Menuiseries en aluminium noir posées par COREMI : entrée vitrée toute hauteur et porte de garage sectionnelle."
+                  fill
+                  sizes="(max-width: 1024px) 100vw, 58vw"
+                  className="object-cover"
+                />
+              </div>
+            </Tilt>
           </Reveal>
         </div>
       </Container>
