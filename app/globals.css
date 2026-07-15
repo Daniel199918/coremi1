@@ -36,6 +36,13 @@
 
 :root {
   color-scheme: light;
+
+  /* Rythme de mouvement unifié (toutes les transitions du site) */
+  --ease-out-soft: cubic-bezier(0.21, 0.47, 0.32, 0.98);
+  --ease-out-expo: cubic-bezier(0.16, 1, 0.3, 1);
+  --dur-tap: 150ms;
+  --dur-ui: 300ms;
+  --dur-scene: 650ms;
 }
 
 html {
@@ -50,6 +57,32 @@ html {
 
 body {
   @apply bg-bone text-ink-900 antialiased;
+  caret-color: var(--color-accent-600);
+  accent-color: var(--color-accent-600);
+}
+
+/* Finitions typographiques : titres équilibrés, paragraphes sans orphelines */
+h1,
+h2,
+h3 {
+  text-wrap: balance;
+}
+p {
+  text-wrap: pretty;
+}
+
+/* Barre de défilement discrète, assortie à la palette minérale */
+html {
+  scrollbar-width: thin;
+  scrollbar-color: var(--color-stone-300) transparent;
+}
+::-webkit-scrollbar {
+  width: 10px;
+}
+::-webkit-scrollbar-thumb {
+  background: var(--color-stone-300);
+  border: 3px solid var(--color-bone);
+  border-radius: 5px;
 }
 
 /* Aucun débordement horizontal, sur aucune page (clip ne casse pas sticky). */
@@ -121,6 +154,89 @@ details summary::-webkit-details-marker {
     animation: none !important;
     opacity: 1 !important;
     transform: none !important;
+  }
+}
+
+/* ------------------------------------------------------------
+   Couche « craft » v4.5 — matière, mouvement, micro-interactions
+   ------------------------------------------------------------ */
+
+/* Grain photographique : matière argentique sur les scènes sombres.
+   Bruit SVG inline (aucune requête réseau), fondu en incrustation. */
+.grain {
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  opacity: 0.07;
+  mix-blend-mode: overlay;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='160' height='160'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='2' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
+  background-size: 160px 160px;
+}
+
+/* Cadre d'architecte : hairline claire en retrait dans les photos,
+   comme un passe-partout de planche de présentation. */
+.frame {
+  position: relative;
+}
+.frame::after {
+  content: "";
+  position: absolute;
+  inset: 0.875rem;
+  border: 1px solid rgb(250 247 240 / 0.4);
+  pointer-events: none;
+}
+
+/* Micro-interaction des boutons : soulèvement au survol,
+   appui franc au clic. Transform uniquement (aucun reflow). */
+.btn-press {
+  transition:
+    transform var(--dur-tap) var(--ease-out-soft),
+    background-color var(--dur-ui) ease,
+    border-color var(--dur-ui) ease,
+    color var(--dur-ui) ease;
+  will-change: transform;
+}
+.btn-press:hover {
+  transform: translateY(-1px);
+}
+.btn-press:active {
+  transform: translateY(0) scale(0.985);
+  transition-duration: 80ms;
+}
+
+/* Dérive parallaxe des photos au défilement — CSS pur, moderne :
+   uniquement si le navigateur supporte les scroll-driven animations,
+   jamais en mouvement réduit. L'image déborde légèrement (scale)
+   puis glisse dans son cadre pendant la traversée du viewport. */
+@supports (animation-timeline: view()) {
+  @media (prefers-reduced-motion: no-preference) {
+    .img-drift {
+      overflow: clip;
+    }
+    .img-drift > img {
+      scale: 1.08;
+      animation: img-drift-y linear both;
+      animation-timeline: view();
+      animation-range: entry 0% exit 100%;
+      will-change: transform;
+    }
+    @keyframes img-drift-y {
+      from {
+        transform: translateY(-3.5%);
+      }
+      to {
+        transform: translateY(3.5%);
+      }
+    }
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .btn-press,
+  .btn-press:hover,
+  .btn-press:active {
+    transform: none;
+    transition: none;
   }
 }
 

@@ -17,7 +17,7 @@ export function SiteFooter() {
           </p>
           <Link
             href="/contact"
-            className="bg-accent-600 px-8 py-4 text-sm font-semibold uppercase tracking-[0.14em] text-white transition-colors hover:bg-accent-700"
+            className="btn-press bg-accent-600 px-8 py-4 text-sm font-semibold uppercase tracking-[0.14em] text-white hover:bg-accent-700"
           >
             Demander un devis gratuit
           </Link>

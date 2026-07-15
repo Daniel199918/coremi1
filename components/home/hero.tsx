@@ -37,6 +37,7 @@ export function Hero() {
           aria-hidden="true"
           className="absolute inset-y-0 left-0 hidden w-1/2 bg-gradient-to-r from-ink-950/55 to-transparent lg:block"
         />
+        <span aria-hidden="true" className="grain" />
       </div>
 
       {/* Composition typographique ancrée en bas */}
@@ -46,7 +47,7 @@ export function Hero() {
           Entreprise générale · Bruxelles &amp; Brabant wallon
         </p>
 
-        <h1 className="rise rise-2 mt-7 max-w-4xl font-display text-[clamp(2.7rem,6.4vw,6.2rem)] font-medium leading-[1.02] tracking-tight text-bone">
+        <h1 className="rise rise-2 mt-7 max-w-4xl font-display text-[clamp(2.7rem,6.4vw,6.2rem)] font-medium leading-[1.02] tracking-tight text-bone [text-shadow:0_2px_28px_rgb(18_16_12/0.45)]">
           Bâtir juste, du gros œuvre
           <br className="hidden sm:block" /> au{" "}
           <em className="italic text-stone-200">dernier châssis.</em>
@@ -60,13 +61,13 @@ export function Hero() {
         <div className="rise rise-4 mt-9 flex flex-col gap-3 sm:flex-row sm:items-center">
           <Link
             href="/contact"
-            className="bg-accent-600 px-8 py-4 text-center text-sm font-semibold uppercase tracking-[0.14em] text-white transition-colors hover:bg-accent-500"
+            className="btn-press bg-accent-600 px-8 py-4 text-center text-sm font-semibold uppercase tracking-[0.14em] text-white hover:bg-accent-500"
           >
             Demander un devis
           </Link>
           <Link
             href="/realisations"
-            className="border border-bone/40 px-8 py-4 text-center text-sm font-semibold uppercase tracking-[0.14em] text-bone transition-colors hover:border-bone hover:bg-bone hover:text-ink-950"
+            className="btn-press border border-bone/40 px-8 py-4 text-center text-sm font-semibold uppercase tracking-[0.14em] text-bone hover:border-bone hover:bg-bone hover:text-ink-950"
           >
             Nos réalisations
           </Link>

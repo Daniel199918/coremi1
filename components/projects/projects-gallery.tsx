@@ -53,7 +53,7 @@ export function ProjectsGallery() {
         </Reveal>
 
         <Reveal delay={0.08}>
-          <div className="relative mt-10 aspect-[2/1] overflow-hidden bg-stone-100">
+          <div className="img-drift frame relative mt-10 aspect-[2/1] overflow-hidden bg-stone-100">
             <Image
               src={villa.cover.src}
               alt={villa.cover.alt}
@@ -70,7 +70,7 @@ export function ProjectsGallery() {
         <div className="mt-10 grid gap-10 lg:grid-cols-12">
           {villa.images.map((image, i) => (
             <Reveal key={image.src} delay={0.06 * (i + 1)} className="lg:col-span-4">
-              <div className="relative aspect-[3/4] overflow-hidden bg-stone-100">
+              <div className="img-drift relative aspect-[3/4] overflow-hidden bg-stone-100">
                 <Image
                   src={image.src}
                   alt={image.alt}
@@ -101,7 +101,7 @@ export function ProjectsGallery() {
       >
         <div className="grid items-start gap-10 lg:grid-cols-12">
           <Reveal className="lg:col-span-7">
-            <div className="relative aspect-[3/2] overflow-hidden bg-stone-100">
+            <div className="img-drift relative aspect-[3/2] overflow-hidden bg-stone-100">
               <Image
                 src={anthracite.cover.src}
                 alt={anthracite.cover.alt}
@@ -159,7 +159,7 @@ export function ProjectsGallery() {
             </Reveal>
           </div>
           <Reveal className="order-1 lg:order-2 lg:col-span-7">
-            <div className="relative aspect-[4/3] overflow-hidden bg-stone-100 lg:aspect-[3/2]">
+            <div className="img-drift relative aspect-[4/3] overflow-hidden bg-stone-100 lg:aspect-[3/2]">
               <Image
                 src={entree.cover.src}
                 alt={entree.cover.alt}

@@ -25,6 +25,7 @@ export function CtaSection() {
           className="object-cover"
         />
         <span className="absolute inset-0 bg-gradient-to-r from-ink-950 via-ink-950/85 to-ink-950/50" />
+        <span className="grain" />
       </div>
 
       <Container className="relative grid gap-14 py-28 sm:py-36 lg:grid-cols-12">
@@ -51,7 +52,7 @@ export function CtaSection() {
             </p>
             <Link
               href="/contact"
-              className="mt-10 inline-block bg-accent-600 px-9 py-5 text-sm font-semibold uppercase tracking-[0.14em] text-white transition-colors hover:bg-accent-500"
+              className="btn-press mt-10 inline-block bg-accent-600 px-9 py-5 text-sm font-semibold uppercase tracking-[0.14em] text-white hover:bg-accent-500"
             >
               Demander un devis gratuit
             </Link>

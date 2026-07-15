@@ -274,7 +274,7 @@ export function QuoteForm() {
       <button
         type="submit"
         disabled={isPending}
-        className="inline-flex w-full cursor-pointer items-center justify-center gap-3 bg-accent-600 px-8 py-4.5 text-sm font-semibold uppercase tracking-[0.14em] text-white transition-colors hover:bg-accent-700 disabled:cursor-not-allowed disabled:opacity-60 sm:w-auto"
+        className="btn-press inline-flex w-full cursor-pointer items-center justify-center gap-3 bg-accent-600 px-8 py-4.5 text-sm font-semibold uppercase tracking-[0.14em] text-white hover:bg-accent-700 disabled:cursor-not-allowed disabled:opacity-60 sm:w-auto"
       >
         {isPending ? (
           <>
