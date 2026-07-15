@@ -383,21 +383,216 @@ details summary::-webkit-details-marker {
   }
 }
 
-/* Dolly du hero : la photo se pose (léger zoom arrière) pendant le
-   premier écran de défilement — caméra qui recule, en CSS pur. */
-@supports (animation-timeline: scroll()) {
+/* ------------------------------------------------------------
+   Visite du chantier (hero v6) — séquence épinglée au défilement.
+   L'écran reste fixe pendant ~2,6 écrans de scroll : la vue passe
+   du jardin à l'allée puis à la terrasse, avec zoom continu et
+   légendes synchronisées. Scroll-driven animations CSS pures.
+   Repli par défaut : hero statique (vues 02/03 et rail masqués).
+   ------------------------------------------------------------ */
+.scrolly-b,
+.scrolly-c,
+.scrolly-cap,
+.scrolly-rail {
+  display: none;
+}
+.scrolly-cap {
+  pointer-events: none;
+}
+
+@supports (animation-timeline: view()) {
   @media (prefers-reduced-motion: no-preference) {
-    .hero-settle img {
-      animation: hero-settle linear both;
-      animation-timeline: scroll();
-      animation-range: 0 90vh;
+    .scrolly {
+      height: 280svh;
+      view-timeline-name: --visite;
+      view-timeline-axis: block;
     }
-    @keyframes hero-settle {
+    /* La scène se cale sous le header sticky (65px mobile, 69px desktop) */
+    .scrolly-stage {
+      position: sticky;
+      top: 65px;
+      height: calc(100svh - 65px);
+      min-height: 0;
+    }
+    @media (min-width: 768px) {
+      .scrolly-stage {
+        top: 69px;
+        height: calc(100svh - 69px);
+      }
+    }
+    .scrolly-a,
+    .scrolly-b,
+    .scrolly-c,
+    .scrolly-cap,
+    .scrolly-copy,
+    .scrolly-rail-fill {
+      animation-timing-function: linear;
+      animation-fill-mode: both;
+      animation-timeline: --visite;
+      animation-range: contain 0% contain 100%;
+    }
+    .scrolly-b,
+    .scrolly-c {
+      display: block;
+    }
+    .scrolly-cap {
+      display: block;
+    }
+    .scrolly-rail {
+      display: block;
+      position: absolute;
+      right: 1.4rem;
+      top: 22%;
+      bottom: 22%;
+      z-index: 10;
+      width: 2px;
+      background: rgb(250 249 247 / 0.18);
+    }
+    .scrolly-rail-fill {
+      display: block;
+      width: 100%;
+      height: 100%;
+      background: var(--color-accent-500);
+      transform-origin: top;
+      animation-name: scrolly-rail;
+    }
+
+    .scrolly-a {
+      animation-name: scrolly-a;
+    }
+    .scrolly-b {
+      animation-name: scrolly-b;
+    }
+    .scrolly-c {
+      animation-name: scrolly-c;
+    }
+    .scrolly-copy {
+      animation-name: scrolly-copy;
+    }
+    .scrolly-cap-b {
+      animation-name: scrolly-cap-b;
+    }
+    .scrolly-cap-c {
+      animation-name: scrolly-cap-c;
+    }
+
+    /* Vue 01 : on s'approche de la maison, puis fondu vers l'allée */
+    @keyframes scrolly-a {
+      0% {
+        opacity: 1;
+        scale: 1;
+      }
+      28% {
+        opacity: 1;
+      }
+      44% {
+        opacity: 0;
+        scale: 1.09;
+      }
+      100% {
+        opacity: 0;
+        scale: 1.09;
+      }
+    }
+    /* Vue 02 : on avance dans l'allée (zoom continu pendant tout le segment) */
+    @keyframes scrolly-b {
+      0%,
+      28% {
+        opacity: 0;
+        scale: 1.18;
+      }
+      44% {
+        opacity: 1;
+      }
+      60% {
+        opacity: 1;
+      }
+      74% {
+        opacity: 0;
+        scale: 1;
+      }
+      100% {
+        opacity: 0;
+        scale: 1;
+      }
+    }
+    /* Vue 03 : on débouche sur la terrasse, la caméra se pose */
+    @keyframes scrolly-c {
+      0%,
+      58% {
+        opacity: 0;
+        scale: 1.14;
+      }
+      74% {
+        opacity: 1;
+      }
+      100% {
+        opacity: 1;
+        scale: 1;
+      }
+    }
+    /* Le bloc titre s'efface dès que la visite commence */
+    @keyframes scrolly-copy {
+      0% {
+        opacity: 1;
+        translate: 0 0;
+        visibility: visible;
+      }
+      14% {
+        opacity: 1;
+      }
+      24% {
+        opacity: 0;
+        translate: 0 -30px;
+        visibility: hidden;
+      }
+      100% {
+        opacity: 0;
+        translate: 0 -30px;
+        visibility: hidden;
+      }
+    }
+    @keyframes scrolly-cap-b {
+      0%,
+      36% {
+        opacity: 0;
+        translate: 0 18px;
+      }
+      46% {
+        opacity: 1;
+        translate: 0 0;
+      }
+      60% {
+        opacity: 1;
+      }
+      72% {
+        opacity: 0;
+        translate: 0 -12px;
+      }
+      100% {
+        opacity: 0;
+      }
+    }
+    @keyframes scrolly-cap-c {
+      0%,
+      66% {
+        opacity: 0;
+        translate: 0 18px;
+      }
+      78% {
+        opacity: 1;
+        translate: 0 0;
+      }
+      100% {
+        opacity: 1;
+      }
+    }
+    @keyframes scrolly-rail {
       from {
-        scale: 1.1;
+        transform: scaleY(0);
       }
       to {
-        scale: 1;
+        transform: scaleY(1);
       }
     }
   }
