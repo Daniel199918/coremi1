@@ -7,6 +7,10 @@ et le projet adhère au [Semantic Versioning](https://semver.org/lang/fr/).
 
 ## [Unreleased]
 
+### Corrigé
+
+- Logo : le site affiche désormais le logo officiel COREMI exact (fichiers fournis, versions fond clair et fond sombre) au lieu d'une recréation vectorielle. Seules les marges vides des fichiers ont été recadrées ; le fond blanc/noir des fichiers est fondu dans la page via `mix-blend-mode`, sans aucune retouche du logo.
+
 ### Refonte v3 - "Materiaux & Elevations"
 
 - Nouvelle direction artistique : palette minerale (blanc chaud, pierre, terre, graphite, noir mineral) avec accent rouge oxyde facon corten ; annotations techniques en monospace (cotes, cartouches, reperes de plan).
