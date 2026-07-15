@@ -6,6 +6,7 @@ import { ConstructionScene } from "@/components/home/construction-scene";
 import { ProjectsSection } from "@/components/home/projects-section";
 import { MarqueeBand } from "@/components/home/marquee-band";
 import { EngagementsSection } from "@/components/home/engagements-section";
+import { PracticalSection } from "@/components/home/practical-section";
 import { ExpertiseSection } from "@/components/home/expertise-section";
 import { FaqSection } from "@/components/home/faq-section";
 import { CtaSection } from "@/components/home/cta-section";
@@ -45,6 +46,7 @@ export default function HomePage() {
       <ProjectsSection />
       <MarqueeBand />
       <EngagementsSection />
+      <PracticalSection />
       <ExpertiseSection />
       <FaqSection />
       <CtaSection />
