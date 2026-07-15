@@ -14,7 +14,7 @@ export const siteConfig = {
   description:
     "COREMI construit, rénove et pose des châssis à Bruxelles et en Brabant wallon. Gros œuvre, extensions, rénovations complètes, châssis PVC et aluminium : un seul interlocuteur, un devis détaillé.",
   /** URL canonique du site (surchargée par NEXT_PUBLIC_SITE_URL si définie). */
-  url: process.env.NEXT_PUBLIC_SITE_URL ?? "https://coremi1.vercel.app",
+  url: process.env.NEXT_PUBLIC_SITE_URL ?? "https://www.coremi.be",
 
   contact: {
     phone: "0470 12 34 56", // ⚠️ à confirmer

@@ -49,7 +49,7 @@ npx supabase db reset  # applique migrations + seed.sql
 ## 2. Vercel
 
 Le projet Vercel **`coremi1`** existe déjà (équipe `coremi`) et un premier
-déploiement de production est en ligne : https://coremi1.vercel.app
+déploiement de production est en ligne : https://www.coremi.be
 
 ### Connecter le dépôt GitHub (à faire une fois, ~1 minute)
 
