@@ -599,6 +599,202 @@ details summary::-webkit-details-marker {
 }
 
 /* ------------------------------------------------------------
+   « Une maison se construit » (ConstructionScene) — section
+   épinglée : la coupe axonométrique s'assemble phase par phase
+   au défilement. Repli : maison complète + phases listées.
+   ------------------------------------------------------------ */
+/* Repli par défaut : tout est visible, légendes empilées */
+.chantier-cap {
+  padding-top: 1.75rem;
+}
+.chantier-cap:first-child {
+  padding-top: 0;
+}
+.chantier-rail {
+  display: none;
+}
+
+/* Animation épinglée réservée au desktop (≥1024px), où la mise en
+   page deux colonnes tient dans un écran ; mobile et tablette gardent
+   le repli statique (maison complète + phases listées). */
+@supports (animation-timeline: view()) {
+  @media (prefers-reduced-motion: no-preference) and (min-width: 1024px) {
+    .chantier {
+      height: 430svh;
+      view-timeline-name: --chantier;
+      view-timeline-axis: block;
+    }
+    .chantier-stage {
+      position: sticky;
+      top: 69px;
+      height: calc(100svh - 69px);
+      overflow: clip;
+    }
+
+    .chantier .ph,
+    .chantier-cap,
+    .chantier-rail-fill {
+      animation-timing-function: linear;
+      animation-fill-mode: both;
+      animation-timeline: --chantier;
+    }
+
+    /* Phases du dessin */
+    .ph-terrain {
+      animation-name: ph-in;
+      animation-range: contain 2% contain 9%;
+    }
+    .ph-fond {
+      animation-name: ph-in;
+      animation-range: contain 8% contain 18%;
+    }
+    .ph-dalle {
+      animation-name: ph-in;
+      animation-range: contain 17% contain 25%;
+    }
+    .ph-rdc {
+      animation-name: ph-rise;
+      animation-range: contain 25% contain 38%;
+    }
+    .ph-etage {
+      animation-name: ph-rise;
+      animation-range: contain 38% contain 51%;
+    }
+    .ph-toit {
+      animation-name: ph-drop;
+      animation-range: contain 53% contain 64%;
+    }
+    .ph-chassis {
+      animation-name: ph-in;
+      animation-range: contain 66% contain 78%;
+    }
+    .ph-fin {
+      animation-name: ph-in;
+      animation-range: contain 80% contain 91%;
+    }
+    .ph-cotes {
+      animation-name: ph-in;
+      animation-range: contain 86% contain 96%;
+    }
+    .ph-rise {
+      transform-box: fill-box;
+      transform-origin: 50% 100%;
+    }
+
+    /* Légendes superposées, synchronisées sur les phases */
+    .chantier-caps {
+      min-height: 13rem;
+    }
+    .chantier-cap {
+      position: absolute;
+      inset: 0;
+      padding-top: 0;
+    }
+    .chantier-cap-1 {
+      animation-name: cap-inout;
+      animation-range: contain 2% contain 28%;
+    }
+    .chantier-cap-2 {
+      animation-name: cap-inout;
+      animation-range: contain 26% contain 54%;
+    }
+    .chantier-cap-3 {
+      animation-name: cap-inout;
+      animation-range: contain 52% contain 66%;
+    }
+    .chantier-cap-4 {
+      animation-name: cap-inout;
+      animation-range: contain 64% contain 80%;
+    }
+    .chantier-cap-5 {
+      animation-name: cap-in;
+      animation-range: contain 79% contain 92%;
+    }
+
+    /* Rail de progression */
+    .chantier-rail {
+      display: block;
+      position: absolute;
+      left: 1.4rem;
+      top: 24%;
+      bottom: 24%;
+      width: 2px;
+      background: rgb(15 14 12 / 0.12);
+    }
+    .chantier-rail-fill {
+      display: block;
+      width: 100%;
+      height: 100%;
+      background: var(--color-accent-600);
+      transform-origin: top;
+      animation-name: scrolly-rail;
+      animation-range: contain 0% contain 100%;
+    }
+
+    @keyframes ph-in {
+      from {
+        opacity: 0;
+        translate: 0 16px;
+      }
+      to {
+        opacity: 1;
+        translate: 0 0;
+      }
+    }
+    @keyframes ph-rise {
+      from {
+        opacity: 0;
+        transform: scaleY(0.06);
+      }
+      to {
+        opacity: 1;
+        transform: scaleY(1);
+      }
+    }
+    @keyframes ph-drop {
+      from {
+        opacity: 0;
+        translate: 0 -28px;
+      }
+      to {
+        opacity: 1;
+        translate: 0 0;
+      }
+    }
+    @keyframes cap-inout {
+      0% {
+        opacity: 0;
+        translate: 0 14px;
+      }
+      22% {
+        opacity: 1;
+        translate: 0 0;
+      }
+      80% {
+        opacity: 1;
+      }
+      100% {
+        opacity: 0;
+        translate: 0 -10px;
+      }
+    }
+    @keyframes cap-in {
+      0% {
+        opacity: 0;
+        translate: 0 14px;
+      }
+      60% {
+        opacity: 1;
+        translate: 0 0;
+      }
+      100% {
+        opacity: 1;
+      }
+    }
+  }
+}
+
+/* ------------------------------------------------------------
    Apparition au scroll (composant Reveal)
    Visible par défaut ; masqué uniquement côté client pour les
    éléments hors écran, puis révélé à l'entrée dans le viewport.
