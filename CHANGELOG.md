@@ -7,6 +7,13 @@ et le projet adhère au [Semantic Versioning](https://semver.org/lang/fr/).
 
 ## [Unreleased]
 
+### v6 — hero « visite du chantier » (scrollytelling)
+
+- L'écran d'accueil reste épinglé pendant environ 2,6 écrans de défilement : la caméra voyage dans la réalisation — vue du jardin, puis on s'avance dans l'allée d'accès, puis on débouche sur la terrasse — avec zoom continu entre les vues, légendes synchronisées (01/02/03) et rail de progression rouge.
+- Le bloc titre s'efface quand la visite commence ; la scène se cale sous le header sticky.
+- Implémentation en scroll-driven animations CSS pures (`view-timeline`, `animation-range`), sans JavaScript ni scroll-jacking : le défilement natif reste maître. Repli automatique sur le hero statique pour les navigateurs non compatibles et en `prefers-reduced-motion`.
+- Outillage : script `scripts/scrolly-test.mjs` de capture de la séquence à plusieurs positions de défilement.
+
 ### v5.2 — signatures éditoriales (inspiration Awwwards)
 
 - Curseur d'accent : point rouge COREMI à inertie qui suit le pointeur et s'ouvre en pastille étiquetée (« Voir », « Découvrir ») sur les cartes de réalisations et les lignes métiers ; le curseur natif reste visible.
