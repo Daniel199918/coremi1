@@ -7,12 +7,14 @@ import { Reveal } from "@/components/motion/reveal";
 import { projects } from "@/content/projects";
 
 /**
- * Sélection de réalisations en grille asymétrique éditoriale :
- * un grand format, deux formats moyens décalés.
+ * Sélection de réalisations réelles en grille asymétrique :
+ * un grand format, deux formats moyens décalés, légendes de plan.
  */
 export function ProjectsSection() {
-  const [featured, second, third] = projects;
-  if (!featured || !second || !third) return null;
+  const [villa, second, third] = projects;
+  if (!villa || !second || !third) return null;
+  // Le hero montre déjà le panorama : la sélection ouvre sur l'angle terrasse.
+  const featuredImage = villa.images[1] ?? villa.cover;
 
   return (
     <section className="py-24 sm:py-32" aria-labelledby="realisations">
@@ -39,11 +41,11 @@ export function ProjectsSection() {
         <div className="mt-16 grid gap-10 lg:grid-cols-12 lg:gap-8">
           {/* Grand format */}
           <Reveal className="lg:col-span-7">
-            <Link href="/realisations" className="group block">
+            <Link href={`/realisations#${villa.slug}`} className="group block">
               <div className="relative aspect-[4/3] overflow-hidden bg-stone-100">
                 <Image
-                  src={featured.image}
-                  alt={featured.imageAlt}
+                  src={featuredImage.src}
+                  alt={featuredImage.alt}
                   fill
                   sizes="(max-width: 1024px) 100vw, 58vw"
                   className="object-cover transition-transform duration-700 ease-out group-hover:scale-[1.03]"
@@ -51,9 +53,9 @@ export function ProjectsSection() {
               </div>
               <div className="flex items-baseline justify-between gap-4 py-5">
                 <div>
-                  <h3 className="font-display text-2xl text-ink-950">{featured.title}</h3>
+                  <h3 className="font-display text-2xl text-ink-950">{villa.title}</h3>
                   <p className="mt-1 text-xs font-semibold uppercase tracking-[0.18em] text-ink-500">
-                    {featured.workType} · {featured.location}
+                    Fiche {villa.index} · {villa.location}
                   </p>
                 </div>
               </div>
@@ -64,11 +66,11 @@ export function ProjectsSection() {
           <div className="flex flex-col gap-10 lg:col-span-5 lg:mt-24">
             {[second, third].map((project, i) => (
               <Reveal key={project.slug} delay={0.08 + i * 0.06}>
-                <Link href="/realisations" className="group block">
+                <Link href={`/realisations#${project.slug}`} className="group block">
                   <div className="relative aspect-[3/2] overflow-hidden bg-stone-100">
                     <Image
-                      src={project.image}
-                      alt={project.imageAlt}
+                      src={project.cover.src}
+                      alt={project.cover.alt}
                       fill
                       sizes="(max-width: 1024px) 100vw, 40vw"
                       className="object-cover transition-transform duration-700 ease-out group-hover:scale-[1.03]"
@@ -77,7 +79,7 @@ export function ProjectsSection() {
                   <div className="py-4">
                     <h3 className="font-display text-xl text-ink-950">{project.title}</h3>
                     <p className="mt-1 text-xs font-semibold uppercase tracking-[0.18em] text-ink-500">
-                      {project.workType} · {project.location}
+                      Fiche {project.index} · {project.location}
                     </p>
                   </div>
                 </Link>

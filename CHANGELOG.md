@@ -7,6 +7,14 @@ et le projet adhère au [Semantic Versioning](https://semver.org/lang/fr/).
 
 ## [Unreleased]
 
+### Refonte v4 — photos réelles des chantiers COREMI
+
+- Intégration des cinq premières photos réelles de réalisations COREMI (villa contemporaine vitrée sur trois vues, maison au bardage anthracite, entrée aux menuiseries aluminium noires), optimisées et nommées descriptivement dans `public/images/realisations/`.
+- Hero d'accueil recomposé : photo réelle plein écran avec cadrage dédié desktop (panorama) et mobile (recadrage 4:5), composition asymétrique ancrée en bas, voile de lisibilité renforcé sur mobile, légende de réalisation en cartouche.
+- Page Réalisations reconstruite en fiches éditoriales : fiche vedette multi-photos avec cartouche (lieu, année, éléments visibles), fiches secondaires asymétriques, note de documentation honnête. Retrait des six projets fictifs de démonstration et du curseur avant/après synthétique.
+- Photos réelles diffusées dans tout le site : manifeste d'accueil, vignettes métiers, sélection de réalisations, doubles focus expertise, pages Construction & rénovation, Châssis et À propos, arrière-plan de l'appel à l'action final.
+- Nouvelle image Open Graph issue d'une photo réelle. Les communes et années restent en placeholders `[COMMUNE]` / `[ANNÉE]` jusqu'à confirmation ; aucune information inventée.
+
 ### Corrigé
 
 - Logo : le site affiche désormais le logo officiel COREMI exact (fichiers fournis, versions fond clair et fond sombre) au lieu d'une recréation vectorielle. Seules les marges vides des fichiers ont été recadrées ; le fond blanc/noir des fichiers est fondu dans la page via `mix-blend-mode`, sans aucune retouche du logo.

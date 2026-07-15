@@ -15,10 +15,16 @@ export function CtaSection() {
   return (
     <section className="relative overflow-hidden bg-ink-950" aria-labelledby="cta-final">
       <GridLines tone="dark" />
-      {/* Bandeau image : élévation nocturne en fond de conclusion */}
-      <div aria-hidden="true" className="pointer-events-none absolute inset-0 opacity-25">
-        <Image src="/images/hero.jpg" alt="" fill sizes="100vw" className="object-cover" />
-        <span className="absolute inset-0 bg-gradient-to-r from-ink-950 via-ink-950/80 to-ink-950/40" />
+      {/* Bandeau image : réalisation réelle en fond de conclusion */}
+      <div aria-hidden="true" className="pointer-events-none absolute inset-0 opacity-30">
+        <Image
+          src="/images/realisations/villa-jardin-panorama.jpg"
+          alt=""
+          fill
+          sizes="100vw"
+          className="object-cover"
+        />
+        <span className="absolute inset-0 bg-gradient-to-r from-ink-950 via-ink-950/85 to-ink-950/50" />
       </div>
 
       <Container className="relative grid gap-14 py-28 sm:py-36 lg:grid-cols-12">

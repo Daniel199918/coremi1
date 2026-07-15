@@ -78,8 +78,8 @@ export default function AProposPage() {
           <Reveal delay={0.1} className="lg:col-span-6">
             <div className="relative aspect-[4/3] overflow-hidden bg-stone-100">
               <Image
-                src="/images/equipe.jpg"
-                alt="L'équipe COREMI sur chantier. Photo provisoire à remplacer."
+                src="/images/realisations/villa-allee-entree.jpg"
+                alt="Allée d'accès d'une villa réalisée par COREMI, dalles de béton entre deux haies menant à l'entrée vitrée."
                 fill
                 sizes="(max-width: 1024px) 100vw, 50vw"
                 className="object-cover"

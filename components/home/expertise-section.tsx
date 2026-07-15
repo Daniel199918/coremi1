@@ -17,8 +17,8 @@ export function ExpertiseSection() {
           <Reveal className="lg:col-span-7">
             <div className="relative aspect-[4/3] overflow-hidden bg-stone-100">
               <Image
-                src="/images/chantier.jpg"
-                alt="Gros œuvre en cours sur un chantier COREMI. Photo provisoire à remplacer."
+                src="/images/realisations/maison-bardage-anthracite.jpg"
+                alt="Maison réalisée par COREMI : volume supérieur bardé anthracite sur socle enduit blanc, châssis noirs."
                 fill
                 sizes="(max-width: 1024px) 100vw, 58vw"
                 className="object-cover"
@@ -77,8 +77,8 @@ export function ExpertiseSection() {
           <Reveal className="order-1 lg:order-2 lg:col-span-7">
             <div className="relative aspect-[4/3] overflow-hidden bg-stone-100">
               <Image
-                src="/images/chassis-detail.jpg"
-                alt="Détail de pose d'un châssis aluminium. Photo provisoire à remplacer."
+                src="/images/realisations/entree-chassis-noirs.jpg"
+                alt="Menuiseries en aluminium noir posées par COREMI : entrée vitrée toute hauteur et porte de garage sectionnelle."
                 fill
                 sizes="(max-width: 1024px) 100vw, 58vw"
                 className="object-cover"
