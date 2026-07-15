@@ -58,7 +58,7 @@ export default function ConstructionRenovationPage() {
       <section className="border-y border-ink-950/10 bg-bone-deep py-20 sm:py-28">
         <Container className="grid items-center gap-12 lg:grid-cols-12">
           <Reveal className="lg:col-span-6">
-            <div className="relative aspect-[4/3] overflow-hidden bg-stone-100">
+            <div className="img-drift relative aspect-[4/3] overflow-hidden bg-stone-100">
               <Image
                 src="/images/realisations/villa-terrasse-angle.jpg"
                 alt="Villa réalisée par COREMI : rez-de-chaussée vitré toute hauteur ouvert sur une terrasse en lames composites."

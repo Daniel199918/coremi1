@@ -76,7 +76,7 @@ export default function AProposPage() {
             </Reveal>
           </div>
           <Reveal delay={0.1} className="lg:col-span-6">
-            <div className="relative aspect-[4/3] overflow-hidden bg-stone-100">
+            <div className="img-drift relative aspect-[4/3] overflow-hidden bg-stone-100">
               <Image
                 src="/images/realisations/villa-allee-entree.jpg"
                 alt="Allée d'accès d'une villa réalisée par COREMI, dalles de béton entre deux haies menant à l'entrée vitrée."

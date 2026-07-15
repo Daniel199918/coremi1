@@ -7,6 +7,16 @@ et le projet adhère au [Semantic Versioning](https://semver.org/lang/fr/).
 
 ## [Unreleased]
 
+### Couche « craft » CSS v4.5 (audit ui-ux-pro-max)
+
+- Tokens de mouvement unifiés (`--ease-out-soft`, `--ease-out-expo`, durées tap/ui/scène) appliqués à toutes les micro-interactions.
+- Grain photographique en CSS pur (bruit SVG inline, aucun asset réseau) sur le hero et la conclusion sombre.
+- Dérive parallaxe des photos éditoriales au défilement via les scroll-driven animations CSS (`animation-timeline: view()`), servie uniquement aux navigateurs compatibles et jamais en mouvement réduit.
+- Cadre « passe-partout » hairline dans la photo panoramique des réalisations, façon planche d'architecte.
+- Micro-interactions des boutons principaux : soulèvement au survol, appui au clic (transform uniquement, aucun reflow).
+- Finitions typographiques : `text-wrap: balance` sur les titres, `pretty` sur les paragraphes, ombre portée douce du titre hero pour un contraste robuste sur photo, curseur et sélection à l'accent.
+- Ombre du header au défilement, barre de défilement fine assortie à la palette minérale.
+
 ### Refonte v4 — photos réelles des chantiers COREMI
 
 - Intégration des cinq premières photos réelles de réalisations COREMI (villa contemporaine vitrée sur trois vues, maison au bardage anthracite, entrée aux menuiseries aluminium noires), optimisées et nommées descriptivement dans `public/images/realisations/`.

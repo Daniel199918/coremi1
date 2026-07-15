@@ -63,7 +63,7 @@ export default function ChassisPage() {
               title="Châssis, portes, vitrages"
               description="Du remplacement d'un seul vitrage au renouvellement complet des menuiseries d'une habitation."
             />
-            <div className="relative mt-10 hidden aspect-[4/3] overflow-hidden bg-stone-100 lg:block">
+            <div className="img-drift relative mt-10 hidden aspect-[4/3] overflow-hidden bg-stone-100 lg:block">
               <Image
                 src="/images/realisations/entree-chassis-noirs.jpg"
                 alt="Menuiseries en aluminium noir posées par COREMI : entrée vitrée toute hauteur et porte de garage sectionnelle noire."

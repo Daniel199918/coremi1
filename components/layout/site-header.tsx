@@ -40,7 +40,7 @@ export function SiteHeader() {
       className={cn(
         "sticky top-0 z-50 w-full border-b transition-all duration-300",
         scrolled
-          ? "border-ink-950/10 bg-bone/95 backdrop-blur-sm"
+          ? "border-ink-950/10 bg-bone/95 shadow-[0_12px_32px_-24px_rgb(18_16_12/0.45)] backdrop-blur-sm"
           : "border-ink-950/10 bg-bone"
       )}
     >
@@ -85,7 +85,7 @@ export function SiteHeader() {
           </a>
           <Link
             href="/contact"
-            className="whitespace-nowrap bg-accent-600 px-6 py-3 text-[0.7rem] font-semibold uppercase tracking-[0.14em] text-white transition-colors hover:bg-accent-700"
+            className="btn-press whitespace-nowrap bg-accent-600 px-6 py-3 text-[0.7rem] font-semibold uppercase tracking-[0.14em] text-white hover:bg-accent-700"
           >
             Demander un devis
           </Link>
@@ -136,7 +136,7 @@ export function SiteHeader() {
           </a>
           <Link
             href="/contact"
-            className="bg-accent-600 px-5 py-4 text-center text-sm font-semibold uppercase tracking-[0.14em] text-white"
+            className="btn-press bg-accent-600 px-5 py-4 text-center text-sm font-semibold uppercase tracking-[0.14em] text-white"
           >
             Demander un devis gratuit
           </Link>

@@ -15,7 +15,7 @@ export function ExpertiseSection() {
         {/* Construction & rénovation */}
         <div className="grid items-center gap-10 lg:grid-cols-12">
           <Reveal className="lg:col-span-7">
-            <div className="relative aspect-[4/3] overflow-hidden bg-stone-100">
+            <div className="img-drift relative aspect-[4/3] overflow-hidden bg-stone-100">
               <Image
                 src="/images/realisations/maison-bardage-anthracite.jpg"
                 alt="Maison réalisée par COREMI : volume supérieur bardé anthracite sur socle enduit blanc, châssis noirs."
@@ -75,7 +75,7 @@ export function ExpertiseSection() {
             </Reveal>
           </div>
           <Reveal className="order-1 lg:order-2 lg:col-span-7">
-            <div className="relative aspect-[4/3] overflow-hidden bg-stone-100">
+            <div className="img-drift relative aspect-[4/3] overflow-hidden bg-stone-100">
               <Image
                 src="/images/realisations/entree-chassis-noirs.jpg"
                 alt="Menuiseries en aluminium noir posées par COREMI : entrée vitrée toute hauteur et porte de garage sectionnelle."

@@ -46,7 +46,7 @@ export function IntroSection() {
 
         <Reveal delay={0.12} className="lg:col-span-4 lg:mt-24">
           <figure className="relative">
-            <div className="relative aspect-[3/4] overflow-hidden">
+            <div className="img-drift relative aspect-[3/4] overflow-hidden">
               <Image
                 src="/images/realisations/villa-allee-entree.jpg"
                 alt="Allée d'accès d'une villa réalisée par COREMI : dalles de béton posées sur gravier noir entre deux haies, entrée vitrée en perspective."
