@@ -3,6 +3,7 @@ import { Hero } from "@/components/home/hero";
 import { IntroSection } from "@/components/home/intro-section";
 import { MetiersSection } from "@/components/home/metiers-section";
 import { ProjectsSection } from "@/components/home/projects-section";
+import { MarqueeBand } from "@/components/home/marquee-band";
 import { EngagementsSection } from "@/components/home/engagements-section";
 import { ProcessSection } from "@/components/home/process-section";
 import { ExpertiseSection } from "@/components/home/expertise-section";
@@ -41,6 +42,7 @@ export default function HomePage() {
       <IntroSection />
       <MetiersSection />
       <ProjectsSection />
+      <MarqueeBand />
       <EngagementsSection />
       <ProcessSection />
       <ExpertiseSection />

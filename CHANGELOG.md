@@ -7,6 +7,14 @@ et le projet adhère au [Semantic Versioning](https://semver.org/lang/fr/).
 
 ## [Unreleased]
 
+### v5.2 — signatures éditoriales (inspiration Awwwards)
+
+- Curseur d'accent : point rouge COREMI à inertie qui suit le pointeur et s'ouvre en pastille étiquetée (« Voir », « Découvrir ») sur les cartes de réalisations et les lignes métiers ; le curseur natif reste visible.
+- Métiers réinventés en liste typographique pure : au survol d'une ligne, la photo du métier flotte et suit le curseur (fenêtre volante avec ombre portée et rotation légère) ; liste intacte sans JavaScript, au tactile et en mouvement réduit.
+- Bande typographique défilante entre les sections de l'accueil : les métiers en très grand serif au trait, point rouge de marque en séparateur, pause au survol, statique en mouvement réduit.
+- Wordmark fantôme « COREMI » en très grand corps dans le pied de page.
+- Outillage : script de capture pleine page `scripts/shot.mjs` (puppeteer-core + Chromium préinstallé) avec défilement automatique pour déclencher les chargements différés.
+
 ### v5.1 — profondeur 3D
 
 - Hero à double plan : parallaxe de pointeur (la photo dérive à contre-sens du curseur, la typographie l'accompagne sur un plan rapproché) et « dolly » au défilement (la caméra se pose, zoom arrière en CSS scroll-driven pur).

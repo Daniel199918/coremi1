@@ -98,6 +98,13 @@ export function SiteFooter() {
         </div>
       </Container>
 
+      {/* Wordmark fantôme : la marque en très grand corps, en filigrane */}
+      <div aria-hidden="true" className="overflow-clip px-3">
+        <p className="select-none whitespace-nowrap text-center font-display text-[clamp(4rem,16vw,16rem)] font-medium leading-[0.75] tracking-tight text-bone/[0.05]">
+          COREMI
+        </p>
+      </div>
+
       <div className="border-t border-bone/10">
         <Container className="flex flex-col items-center justify-between gap-3 py-6 text-xs text-stone-400/70 sm:flex-row">
           <p>
