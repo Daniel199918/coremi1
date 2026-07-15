@@ -1,33 +1,33 @@
 @import "tailwindcss";
 
 /* ============================================================
-   Design system COREMI v3 — « Matériaux & Élévations »
-   Minimalisme architectural : blanc chaud, pierre, terre,
-   graphite, noir minéral. Accent rouge oxydé (corten), jamais
-   décoratif : actions et repères uniquement.
+   Design system COREMI v5 — couleurs de la marque.
+   Palette dérivée du logo officiel : rouge COREMI (#d02020,
+   mesuré sur le toit du logo), noir profond, blanc cassé et
+   gris neutres. Le rouge reste réservé aux actions et repères.
    ============================================================ */
 @theme {
-  --color-bone: #faf7f0;
-  --color-bone-deep: #f2ecdf;
+  --color-bone: #faf9f7;
+  --color-bone-deep: #f2f0ec;
 
-  --color-stone-100: #e9e1d2;
-  --color-stone-200: #d8cdb8;
-  --color-stone-300: #bfb095;
-  --color-stone-400: #9c8c72;
-  --color-stone-500: #7d6f58;
+  --color-stone-100: #e8e6e1;
+  --color-stone-200: #d6d3cc;
+  --color-stone-300: #b8b4ab;
+  --color-stone-400: #918d84;
+  --color-stone-500: #726f67;
 
-  --color-ink-500: #6f675a;
-  --color-ink-600: #544e43;
-  --color-ink-700: #3d382f;
-  --color-ink-800: #2a2721;
-  --color-ink-900: #1b1915;
-  --color-ink-950: #12100c;
+  --color-ink-500: #6b6862;
+  --color-ink-600: #514e49;
+  --color-ink-700: #3a3833;
+  --color-ink-800: #262521;
+  --color-ink-900: #171614;
+  --color-ink-950: #0f0e0c;
 
-  --color-accent-400: #d3705c;
-  --color-accent-500: #c65540;
-  --color-accent-600: #b23a25;
-  --color-accent-700: #8f2e1d;
-  --color-accent-800: #732518;
+  --color-accent-400: #e4574f;
+  --color-accent-500: #dc3b34;
+  --color-accent-600: #d02020;
+  --color-accent-700: #a81a1c;
+  --color-accent-800: #86161a;
 
   --font-sans: var(--font-inter), ui-sans-serif, system-ui, sans-serif;
   --font-display: var(--font-fraunces), Georgia, "Times New Roman", serif;

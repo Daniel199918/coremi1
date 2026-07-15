@@ -1,6 +1,6 @@
 import Image from "next/image";
 import Link from "next/link";
-import { ArrowDown } from "lucide-react";
+import { ArrowDown, ArrowRight } from "lucide-react";
 
 /**
  * Hero v4 : photo réelle de chantier COREMI en plein écran,
@@ -50,7 +50,7 @@ export function Hero() {
         <h1 className="rise rise-2 mt-7 max-w-4xl font-display text-[clamp(2.7rem,6.4vw,6.2rem)] font-medium leading-[1.02] tracking-tight text-bone [text-shadow:0_2px_28px_rgb(18_16_12/0.45)]">
           Bâtir juste, du gros œuvre
           <br className="hidden sm:block" /> au{" "}
-          <em className="italic text-stone-200">dernier châssis.</em>
+          <em className="italic text-accent-400">dernier châssis.</em>
         </h1>
 
         <p className="rise rise-3 mt-7 max-w-xl text-lg leading-relaxed text-stone-200/90">
@@ -61,9 +61,13 @@ export function Hero() {
         <div className="rise rise-4 mt-9 flex flex-col gap-3 sm:flex-row sm:items-center">
           <Link
             href="/contact"
-            className="btn-press bg-accent-600 px-8 py-4 text-center text-sm font-semibold uppercase tracking-[0.14em] text-white hover:bg-accent-500"
+            className="btn-press group flex items-center justify-center gap-3 bg-accent-600 px-8 py-4 text-center text-sm font-semibold uppercase tracking-[0.14em] text-white hover:bg-accent-500"
           >
             Demander un devis
+            <ArrowRight
+              className="h-4 w-4 transition-transform group-hover:translate-x-1"
+              aria-hidden="true"
+            />
           </Link>
           <Link
             href="/realisations"
