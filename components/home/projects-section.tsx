@@ -23,7 +23,7 @@ export function ProjectsSection() {
         <div className="flex flex-wrap items-end justify-between gap-6">
           <Reveal>
             <SectionHeading
-              index="03"
+              index="04"
               eyebrow="Réalisations"
               title="Le travail parle mieux que nous"
             />

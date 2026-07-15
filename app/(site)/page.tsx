@@ -2,10 +2,10 @@ import type { Metadata } from "next";
 import { Hero } from "@/components/home/hero";
 import { IntroSection } from "@/components/home/intro-section";
 import { MetiersSection } from "@/components/home/metiers-section";
+import { ConstructionScene } from "@/components/home/construction-scene";
 import { ProjectsSection } from "@/components/home/projects-section";
 import { MarqueeBand } from "@/components/home/marquee-band";
 import { EngagementsSection } from "@/components/home/engagements-section";
-import { ProcessSection } from "@/components/home/process-section";
 import { ExpertiseSection } from "@/components/home/expertise-section";
 import { FaqSection } from "@/components/home/faq-section";
 import { CtaSection } from "@/components/home/cta-section";
@@ -41,10 +41,10 @@ export default function HomePage() {
       <Hero />
       <IntroSection />
       <MetiersSection />
+      <ConstructionScene />
       <ProjectsSection />
       <MarqueeBand />
       <EngagementsSection />
-      <ProcessSection />
       <ExpertiseSection />
       <FaqSection />
       <CtaSection />

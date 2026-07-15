@@ -7,6 +7,14 @@ et le projet adhère au [Semantic Versioning](https://semver.org/lang/fr/).
 
 ## [Unreleased]
 
+### v7 — « La maison se construit » (scène 3D axonométrique au scroll)
+
+- Nouvelle pièce maîtresse de l'accueil : une coupe axonométrique de maison — stylisée d'après la villa réelle (toit à pergola, deux niveaux vitrés, châssis noirs) — qui s'assemble phase par phase quand on défile : terrain, fondations, dalle, gros œuvre (murs qui montent), toiture et pergola, châssis et vitrages (cadres soulignés en rouge de marque), puis finitions, terrasse et cotes. Section épinglée sur ~4 écrans, légendes de phase synchronisées, rail de progression.
+- Dessin 100 % SVG vectoriel animé par scroll-driven animations CSS (`view-timeline`, `animation-range`) : léger, net à toute échelle, sans dépendance 3D (ni Three.js ni GSAP nécessaires), sans JavaScript. Le défilement natif reste maître.
+- Honnêteté : cartouche « dessin illustratif COREMI · pas un chantier réel » directement sur le schéma ; ce n'est pas présenté comme une photo de chantier.
+- Version simplifiée automatique : sur mobile, tablette (&lt; 1024 px) et en `prefers-reduced-motion`, la maison s'affiche complète avec les cinq phases listées — accessible et sans mise en page épinglée.
+- La timeline « Votre projet en six couches » (redondante) est retirée de l'accueil au profit de cette narration visuelle ; sections renumérotées.
+
 ### v6 — hero « visite du chantier » (scrollytelling)
 
 - L'écran d'accueil reste épinglé pendant environ 2,6 écrans de défilement : la caméra voyage dans la réalisation — vue du jardin, puis on s'avance dans l'allée d'accès, puis on débouche sur la terrasse — avec zoom continu entre les vues, légendes synchronisées (01/02/03) et rail de progression rouge.
