@@ -7,6 +7,12 @@ et le projet adhère au [Semantic Versioning](https://semver.org/lang/fr/).
 
 ## [Unreleased]
 
+### v5 — couleurs officielles de la marque (audits ui-ux-pro-max + ui-styling)
+
+- Palette entièrement re-basée sur l'identité COREMI : rouge du logo mesuré sur le fichier officiel (`#d02020`, contraste 5,4:1 avec texte blanc — AA), noirs profonds neutres et blanc cassé/gris neutres en remplacement des beiges « corten » précédents.
+- Rebrand centralisé via les tokens `@theme` : boutons, soulignés, schémas techniques, hairlines et sections sombres basculent d'un seul point de vérité.
+- Accent de marque dans le titre du hero (« dernier châssis. » en rouge COREMI) et flèches directionnelles sur les CTA principaux, repris des maquettes fournies.
+
 ### Couche « craft » CSS v4.5 (audit ui-ux-pro-max)
 
 - Tokens de mouvement unifiés (`--ease-out-soft`, `--ease-out-expo`, durées tap/ui/scène) appliqués à toutes les micro-interactions.

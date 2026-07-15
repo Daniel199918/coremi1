@@ -1,5 +1,6 @@
 import Image from "next/image";
 import Link from "next/link";
+import { ArrowRight } from "lucide-react";
 import { Container } from "@/components/ui/container";
 import { GridLines } from "@/components/ui/grid-lines";
 import { Reveal } from "@/components/motion/reveal";
@@ -52,9 +53,13 @@ export function CtaSection() {
             </p>
             <Link
               href="/contact"
-              className="btn-press mt-10 inline-block bg-accent-600 px-9 py-5 text-sm font-semibold uppercase tracking-[0.14em] text-white hover:bg-accent-500"
+              className="btn-press group mt-10 inline-flex items-center gap-3 bg-accent-600 px-9 py-5 text-sm font-semibold uppercase tracking-[0.14em] text-white hover:bg-accent-500"
             >
               Demander un devis gratuit
+              <ArrowRight
+                className="h-4 w-4 transition-transform group-hover:translate-x-1"
+                aria-hidden="true"
+              />
             </Link>
           </Reveal>
         </div>
