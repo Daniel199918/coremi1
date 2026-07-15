@@ -7,6 +7,13 @@ et le projet adhère au [Semantic Versioning](https://semver.org/lang/fr/).
 
 ## [Unreleased]
 
+### v5.1 — profondeur 3D
+
+- Hero à double plan : parallaxe de pointeur (la photo dérive à contre-sens du curseur, la typographie l'accompagne sur un plan rapproché) et « dolly » au défilement (la caméra se pose, zoom arrière en CSS scroll-driven pur).
+- Cartes 3D inclinables : les photos de réalisations (accueil, galerie, doubles focus) pivotent en perspective réelle vers le curseur, avec un reflet radial qui suit le pointeur.
+- Apparitions au scroll en perspective : les sections se redressent légèrement (rotateX) en entrant dans le viewport, comme des panneaux qui se posent.
+- Discipline de performance intacte : transform/opacity uniquement, variables CSS sans re-render React, rAF-throttling, inactif au tactile (`hover: none`) et en `prefers-reduced-motion` ; aucune dépendance ajoutée.
+
 ### v5 — couleurs officielles de la marque (audits ui-ux-pro-max + ui-styling)
 
 - Palette entièrement re-basée sur l'identité COREMI : rouge du logo mesuré sur le fichier officiel (`#d02020`, contraste 5,4:1 avec texte blanc — AA), noirs profonds neutres et blanc cassé/gris neutres en remplacement des beiges « corten » précédents.

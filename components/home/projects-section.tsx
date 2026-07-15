@@ -4,6 +4,7 @@ import { ArrowRight } from "lucide-react";
 import { Container } from "@/components/ui/container";
 import { SectionHeading } from "@/components/ui/section-heading";
 import { Reveal } from "@/components/motion/reveal";
+import { Tilt } from "@/components/motion/tilt";
 import { projects } from "@/content/projects";
 
 /**
@@ -42,15 +43,17 @@ export function ProjectsSection() {
           {/* Grand format */}
           <Reveal className="lg:col-span-7">
             <Link href={`/realisations#${villa.slug}`} className="group block">
-              <div className="relative aspect-[4/3] overflow-hidden bg-stone-100">
-                <Image
-                  src={featuredImage.src}
-                  alt={featuredImage.alt}
-                  fill
-                  sizes="(max-width: 1024px) 100vw, 58vw"
-                  className="object-cover transition-transform duration-700 ease-out group-hover:scale-[1.03]"
-                />
-              </div>
+              <Tilt max={5}>
+                <div className="relative aspect-[4/3] overflow-hidden bg-stone-100">
+                  <Image
+                    src={featuredImage.src}
+                    alt={featuredImage.alt}
+                    fill
+                    sizes="(max-width: 1024px) 100vw, 58vw"
+                    className="object-cover transition-transform duration-700 ease-out group-hover:scale-[1.03]"
+                  />
+                </div>
+              </Tilt>
               <div className="flex items-baseline justify-between gap-4 py-5">
                 <div>
                   <h3 className="font-display text-2xl text-ink-950">{villa.title}</h3>
@@ -67,15 +70,17 @@ export function ProjectsSection() {
             {[second, third].map((project, i) => (
               <Reveal key={project.slug} delay={0.08 + i * 0.06}>
                 <Link href={`/realisations#${project.slug}`} className="group block">
-                  <div className="relative aspect-[3/2] overflow-hidden bg-stone-100">
-                    <Image
-                      src={project.cover.src}
-                      alt={project.cover.alt}
-                      fill
-                      sizes="(max-width: 1024px) 100vw, 40vw"
-                      className="object-cover transition-transform duration-700 ease-out group-hover:scale-[1.03]"
-                    />
-                  </div>
+                  <Tilt max={6}>
+                    <div className="relative aspect-[3/2] overflow-hidden bg-stone-100">
+                      <Image
+                        src={project.cover.src}
+                        alt={project.cover.alt}
+                        fill
+                        sizes="(max-width: 1024px) 100vw, 40vw"
+                        className="object-cover transition-transform duration-700 ease-out group-hover:scale-[1.03]"
+                      />
+                    </div>
+                  </Tilt>
                   <div className="py-4">
                     <h3 className="font-display text-xl text-ink-950">{project.title}</h3>
                     <p className="mt-1 text-xs font-semibold uppercase tracking-[0.18em] text-ink-500">

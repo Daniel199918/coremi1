@@ -1,17 +1,18 @@
 import Image from "next/image";
 import Link from "next/link";
 import { ArrowDown, ArrowRight } from "lucide-react";
+import { PointerScene } from "@/components/motion/pointer-scene";
 
 /**
- * Hero v4 : photo réelle de chantier COREMI en plein écran,
- * composition asymétrique ancrée en bas à gauche, légende de
- * réalisation en cartouche, entrée animée en CSS pur.
+ * Hero v5 : photo réelle plein écran avec profondeur — parallaxe de
+ * pointeur (la photo et le texte dérivent sur des plans opposés) et
+ * dolly au défilement (la caméra se pose), le tout en transform pur.
  */
 export function Hero() {
   return (
-    <section className="relative flex min-h-[92svh] flex-col overflow-hidden bg-ink-950">
-      {/* Photo plein écran — cadrage dédié par écran */}
-      <div className="absolute inset-0">
+    <PointerScene className="relative flex min-h-[92svh] flex-col overflow-hidden bg-ink-950">
+      {/* Photo plein écran — cadrage dédié par écran, plan lointain */}
+      <div className="parallax-far hero-settle absolute inset-0">
         <Image
           src="/images/realisations/villa-jardin-panorama.jpg"
           alt="Villa contemporaine réalisée par COREMI : deux niveaux vitrés toute hauteur sous une pergola de toiture, jardin au premier plan."
@@ -40,8 +41,8 @@ export function Hero() {
         <span aria-hidden="true" className="grain" />
       </div>
 
-      {/* Composition typographique ancrée en bas */}
-      <div className="relative z-10 mx-auto flex w-full max-w-7xl flex-1 flex-col justify-end px-5 pb-9 pt-24 sm:px-8 lg:pb-12">
+      {/* Composition typographique ancrée en bas — plan rapproché */}
+      <div className="parallax-near relative z-10 mx-auto flex w-full max-w-7xl flex-1 flex-col justify-end px-5 pb-9 pt-24 sm:px-8 lg:pb-12">
         <p className="rise rise-1 annotation flex items-center gap-4 text-stone-200">
           <span aria-hidden="true" className="h-px w-12 bg-accent-500" />
           Entreprise générale · Bruxelles &amp; Brabant wallon
@@ -96,6 +97,6 @@ export function Hero() {
           Réalisation COREMI — villa contemporaine · [COMMUNE]
         </p>
       </div>
-    </section>
+    </PointerScene>
   );
 }
