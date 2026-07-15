@@ -7,6 +7,14 @@ et le projet adhère au [Semantic Versioning](https://semver.org/lang/fr/).
 
 ## [Unreleased]
 
+### v9 — « La maison se construit » en version photo
+
+- La scène de construction de l'accueil passe du dessin vectoriel à une **séquence photographique** : six vues du même terrain au coucher du soleil se fondent l'une dans l'autre au défilement (fondations, structure, gros œuvre, toiture, châssis, maison finie), avec grand numéro d'étape, légende et rail de progression. Section épinglée, fondu enchaîné en scroll-driven animations CSS pures — technique la plus légère et fluide, sans dépendance 3D ni JavaScript.
+- Repli automatique (mobile, tablette, `prefers-reduced-motion`, navigateurs non compatibles) : les six vues empilées et légendées, en story-board.
+- Honnêteté : mention « Illustration des étapes d'une construction » affichée ; ces images illustrent le processus et ne sont pas présentées comme un chantier COREMI documenté. Les vraies photos restent dans Réalisations.
+- Images nettoyées (texte incrusté et coutures retirés) et optimisées en WebP (~25 Ko chacune).
+
+
 ### Domaine
 
 - Domaine de production défini sur `https://www.coremi.be` (URL canonique par défaut). Le sitemap, `robots.txt`, `metadataBase`, les balises Open Graph et les données Schema.org utilisent désormais le domaine officiel. Surchargeable via `NEXT_PUBLIC_SITE_URL`.
