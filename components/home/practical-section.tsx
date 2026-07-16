@@ -23,7 +23,7 @@ export function PracticalSection() {
           <div className="lg:col-span-4">
             <Reveal>
               <SectionHeading
-                index="06"
+                index="05"
                 eyebrow="Travailler avec nous"
                 title="Clair, du devis au paiement"
                 description="Pas de zone grise. Vous savez à l'avance ce que vous payez, quand, et à qui vous parlez. Le reste, ce sont les travaux."
