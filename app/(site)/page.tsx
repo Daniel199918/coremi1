@@ -2,7 +2,6 @@ import type { Metadata } from "next";
 import { Hero } from "@/components/home/hero";
 import { IntroSection } from "@/components/home/intro-section";
 import { MetiersSection } from "@/components/home/metiers-section";
-import { ConstructionScene } from "@/components/home/construction-scene";
 import { ProjectsSection } from "@/components/home/projects-section";
 import { MarqueeBand } from "@/components/home/marquee-band";
 import { EngagementsSection } from "@/components/home/engagements-section";
@@ -42,7 +41,6 @@ export default function HomePage() {
       <Hero />
       <IntroSection />
       <MetiersSection />
-      <ConstructionScene />
       <ProjectsSection />
       <MarqueeBand />
       <EngagementsSection />
