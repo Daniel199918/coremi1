@@ -32,3 +32,4 @@ npm-debug.log*
 
 # Config Claude Code locale (approbations MCP, préférences perso)
 .claude/settings.local.json
+.env*
