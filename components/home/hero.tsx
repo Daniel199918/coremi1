@@ -1,67 +1,159 @@
+"use client";
+
 import Image from "next/image";
 import Link from "next/link";
+import { useEffect, useRef, useState } from "react";
 import { ArrowDown, ArrowRight } from "lucide-react";
-import { PointerScene } from "@/components/motion/pointer-scene";
 
 /**
- * Hero v6 « visite du chantier » : l'écran reste épinglé pendant le
- * défilement et la caméra voyage dans la réalisation — élévation
- * jardin, puis allée d'accès, puis terrasse — avec zoom continu,
- * légendes synchronisées et rail de progression. Scroll-driven
- * animations CSS pures (@supports) ; repli : hero statique identique
- * à la v5 pour les navigateurs non compatibles, le tactile sans
- * scroll-timeline et prefers-reduced-motion.
+ * Hero « chantier au défilement » : une vidéo de construction (des
+ * fondations à la villa terminée) qui AVANCE au rythme du scroll.
+ *
+ * Trois modes, choisis au montage selon les capacités du navigateur :
+ *  - scrub  (souris + bureau) : la section est haute ; la vidéo est
+ *    épinglée et son `currentTime` est piloté par la progression du
+ *    scroll, lissé au requestAnimationFrame — façon Apple.
+ *  - loop   (tactile / mobile) : lecture automatique muette en boucle,
+ *    hero plein écran classique (le scrub image-par-image est trop
+ *    coûteux sur mobile).
+ *  - static (prefers-reduced-motion, sans JS) : image fixe de la villa
+ *    terminée, aucun mouvement.
+ *
+ * Rendu SSR / sans JS : mode `static` — le hero reste lisible et
+ * complet immédiatement, puis JS l'améliore.
+ *
+ * La vidéo est une ILLUSTRATION d'un chantier de construction — pas la
+ * documentation d'un chantier COREMI précis (mention affichée).
  */
+
+type Mode = "static" | "loop" | "scrub";
+
+const clamp = (v: number, min: number, max: number) =>
+  Math.max(min, Math.min(max, v));
+
 export function Hero() {
+  const [mode, setMode] = useState<Mode>("static");
+  const sectionRef = useRef<HTMLElement>(null);
+  const videoRef = useRef<HTMLVideoElement>(null);
+
+  // Choix du mode selon les préférences et le type d'entrée.
+  useEffect(() => {
+    const reduce = window.matchMedia("(prefers-reduced-motion: reduce)");
+    const touch = window.matchMedia("(hover: none)");
+
+    const decide = () => {
+      if (reduce.matches) setMode("static");
+      else if (touch.matches) setMode("loop");
+      else setMode("scrub");
+    };
+
+    decide();
+    reduce.addEventListener("change", decide);
+    touch.addEventListener("change", decide);
+    return () => {
+      reduce.removeEventListener("change", decide);
+      touch.removeEventListener("change", decide);
+    };
+  }, []);
+
+  // Mode scrub : la vidéo suit le scroll, lissé au rAF.
+  useEffect(() => {
+    if (mode !== "scrub") return;
+    const video = videoRef.current;
+    const section = sectionRef.current;
+    if (!video || !section) return;
+
+    let raf = 0;
+    let current = 0;
+
+    const tick = () => {
+      const total = section.offsetHeight - window.innerHeight;
+      const progress =
+        total > 0 ? clamp(-section.getBoundingClientRect().top / total, 0, 1) : 0;
+      const duration = Number.isFinite(video.duration) ? video.duration : 0;
+      const target = progress * duration;
+
+      current += (target - current) * 0.12;
+      if (Math.abs(target - current) < 0.01) current = target;
+
+      if (video.readyState >= 1 && Number.isFinite(current)) {
+        try {
+          video.currentTime = current;
+        } catch {
+          /* seek pas encore possible : on réessaie à la frame suivante */
+        }
+      }
+      raf = requestAnimationFrame(tick);
+    };
+
+    const start = () => {
+      raf = requestAnimationFrame(tick);
+    };
+
+    if (video.readyState >= 1) start();
+    else video.addEventListener("loadedmetadata", start, { once: true });
+
+    return () => {
+      cancelAnimationFrame(raf);
+      video.removeEventListener("loadedmetadata", start);
+    };
+  }, [mode]);
+
+  const scrub = mode === "scrub";
+
   return (
-    <section className="scrolly relative bg-ink-950" aria-label="COREMI — entreprise générale de construction et de châssis">
-      <PointerScene className="scrolly-stage relative flex min-h-[92svh] flex-col overflow-hidden bg-ink-950">
-        {/* Vue 01 — élévation jardin (plan lointain, parallaxe pointeur) */}
-        <div className="scrolly-a parallax-far absolute inset-0">
+    <section
+      ref={sectionRef}
+      aria-label="COREMI — entreprise générale de construction et de châssis"
+      className="relative bg-ink-950"
+      style={scrub ? { height: "280vh" } : undefined}
+    >
+      <div
+        className={
+          scrub
+            ? "sticky top-0 flex h-svh flex-col overflow-hidden"
+            : "relative flex min-h-[92svh] flex-col overflow-hidden"
+        }
+      >
+        {/* Média de fond selon le mode */}
+        {mode === "static" ? (
           <Image
-            src="/images/realisations/villa-jardin-panorama.jpg"
-            alt="Villa contemporaine réalisée par COREMI : deux niveaux vitrés toute hauteur sous une pergola de toiture, jardin au premier plan."
+            src="/images/hero-villa-finie.webp"
+            alt="Villa contemporaine achevée : illustration d'un chantier de construction, des fondations à la maison terminée."
             fill
             priority
             sizes="100vw"
-            className="hidden object-cover sm:block"
-          />
-          <Image
-            src="/images/realisations/villa-jardin-mobile.jpg"
-            alt="Villa contemporaine réalisée par COREMI, élévation vitrée côté jardin."
-            fill
-            priority
-            sizes="100vw"
-            className="object-cover object-[center_38%] sm:hidden"
-          />
-        </div>
-
-        {/* Vue 02 — l'allée d'accès (on s'avance vers l'entrée) */}
-        <div className="scrolly-b absolute inset-0">
-          <Image
-            src="/images/realisations/villa-allee-entree.jpg"
-            alt="Allée d'accès de la villa : dalles de béton sur gravier noir entre deux haies, entrée vitrée double hauteur."
-            fill
-            sizes="100vw"
             className="object-cover"
           />
-        </div>
+        ) : mode === "loop" ? (
+          <video
+            className="absolute inset-0 h-full w-full object-cover"
+            autoPlay
+            muted
+            loop
+            playsInline
+            preload="auto"
+            poster="/images/hero-villa-finie.webp"
+          >
+            <source src="/videos/hero-construction-mobile.mp4" type="video/mp4" />
+          </video>
+        ) : (
+          <video
+            ref={videoRef}
+            className="absolute inset-0 h-full w-full object-cover"
+            muted
+            playsInline
+            preload="auto"
+            poster="/images/hero-poster-debut.webp"
+          >
+            <source src="/videos/hero-construction.mp4" type="video/mp4" />
+          </video>
+        )}
 
-        {/* Vue 03 — la terrasse côté séjour */}
-        <div className="scrolly-c absolute inset-0">
-          <Image
-            src="/images/realisations/villa-terrasse-angle.jpg"
-            alt="Angle de la villa : rez-de-chaussée vitré toute hauteur ouvert sur la terrasse en lames composites."
-            fill
-            sizes="100vw"
-            className="object-cover"
-          />
-        </div>
-
-        {/* Scrims + grain, au-dessus des trois vues */}
+        {/* Scrims + grain, pour asseoir la typographie */}
         <div
           aria-hidden="true"
-          className="absolute inset-0 bg-gradient-to-t from-ink-950/95 via-ink-950/55 to-ink-950/25 sm:from-ink-950/90 sm:via-ink-950/30 sm:to-ink-950/20"
+          className="absolute inset-0 bg-gradient-to-t from-ink-950/95 via-ink-950/55 to-ink-950/30 sm:from-ink-950/90 sm:via-ink-950/35 sm:to-ink-950/25"
         />
         <div
           aria-hidden="true"
@@ -69,8 +161,8 @@ export function Hero() {
         />
         <span aria-hidden="true" className="grain" />
 
-        {/* Composition typographique — s'efface quand la visite commence */}
-        <div className="scrolly-copy parallax-near relative z-10 mx-auto flex w-full max-w-7xl flex-1 flex-col justify-end px-5 pb-9 pt-24 sm:px-8 lg:pb-12">
+        {/* Composition typographique */}
+        <div className="relative z-10 mx-auto flex w-full max-w-7xl flex-1 flex-col justify-end px-5 pb-9 pt-24 sm:px-8 lg:pb-12">
           <p className="rise rise-1 annotation flex items-center gap-4 text-stone-200">
             <span aria-hidden="true" className="h-px w-12 bg-accent-500" />
             Entreprise générale · Bruxelles &amp; Brabant wallon
@@ -106,7 +198,7 @@ export function Hero() {
             </Link>
           </div>
 
-          {/* Cartouche : repères factuels + légende de la première vue */}
+          {/* Cartouche : repères factuels + invite au défilement */}
           <div className="rise rise-4 mt-10 hidden items-end justify-between border-t border-bone/20 pt-5 lg:flex">
             <ul className="annotation flex gap-10 text-stone-300">
               <li>Devis détaillé gratuit</li>
@@ -114,55 +206,20 @@ export function Hero() {
               <li>Gros œuvre → finitions</li>
             </ul>
             <p className="annotation flex items-center gap-6 text-stone-300">
-              <span>01 — Réalisation COREMI, vue du jardin · [COMMUNE]</span>
-              <span className="scroll-cue flex items-center gap-2" aria-hidden="true">
-                <ArrowDown className="h-4 w-4" />
-                Visiter
-              </span>
+              <span>Illustration — des fondations à la maison finie</span>
+              {scrub && (
+                <span className="scroll-cue flex items-center gap-2" aria-hidden="true">
+                  <ArrowDown className="h-4 w-4" />
+                  Faire défiler
+                </span>
+              )}
             </p>
           </div>
           <p className="rise rise-4 annotation mt-8 text-stone-300 lg:hidden">
-            01 — Réalisation COREMI, vue du jardin · [COMMUNE]
+            Illustration — des fondations à la maison finie
           </p>
         </div>
-
-        {/* Légendes de la visite (vues 02 et 03) */}
-        <div
-          aria-hidden="true"
-          className="scrolly-cap scrolly-cap-b absolute inset-x-0 bottom-0 z-10"
-        >
-          <div className="mx-auto max-w-7xl px-5 pb-10 sm:px-8">
-            <p className="annotation flex items-center gap-4 text-stone-200">
-              <span className="h-px w-12 bg-accent-500" />
-              02 — L&apos;allée d&apos;accès
-            </p>
-            <p className="mt-4 max-w-md font-display text-2xl leading-snug text-bone sm:text-3xl">
-              Dalles de béton posées sur gravier, haies taillées :
-              l&apos;arrivée fait déjà partie du chantier.
-            </p>
-          </div>
-        </div>
-        <div
-          aria-hidden="true"
-          className="scrolly-cap scrolly-cap-c absolute inset-x-0 bottom-0 z-10"
-        >
-          <div className="mx-auto max-w-7xl px-5 pb-10 sm:px-8">
-            <p className="annotation flex items-center gap-4 text-stone-200">
-              <span className="h-px w-12 bg-accent-500" />
-              03 — La terrasse côté séjour
-            </p>
-            <p className="mt-4 max-w-md font-display text-2xl leading-snug text-bone sm:text-3xl">
-              Le rez vitré toute hauteur s&apos;ouvre de plain-pied
-              sur les lames composites.
-            </p>
-          </div>
-        </div>
-
-        {/* Rail de progression de la visite */}
-        <div aria-hidden="true" className="scrolly-rail">
-          <span className="scrolly-rail-fill" />
-        </div>
-      </PointerScene>
+      </div>
     </section>
   );
 }
