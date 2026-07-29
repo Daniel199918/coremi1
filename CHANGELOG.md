@@ -7,12 +7,6 @@ et le projet adhère au [Semantic Versioning](https://semver.org/lang/fr/).
 
 ## [Unreleased]
 
-### v10 — la construction devient le hero
-
-- La séquence « la maison se construit » passe **en tête de page** : l'accueil s'ouvre désormais dessus, à la place de la photo de la villa avec « Bâtir juste ». Le titre et les CTA restent en place pendant que, au défilement, les six vues se fondent des fondations à la maison finie ; repli story-board sur mobile et en mouvement réduit.
-- L'ancienne section de construction en milieu de page est retirée (elle est désormais le hero) ; sections de l'accueil renumérotées. La villa réelle reste mise en avant dans la sélection Réalisations.
-
-
 ### v9 — « La maison se construit » en version photo
 
 - La scène de construction de l'accueil passe du dessin vectoriel à une **séquence photographique** : six vues du même terrain au coucher du soleil se fondent l'une dans l'autre au défilement (fondations, structure, gros œuvre, toiture, châssis, maison finie), avec grand numéro d'étape, légende et rail de progression. Section épinglée, fondu enchaîné en scroll-driven animations CSS pures — technique la plus légère et fluide, sans dépendance 3D ni JavaScript.

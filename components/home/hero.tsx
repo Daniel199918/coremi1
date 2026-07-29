@@ -1,140 +1,168 @@
 import Image from "next/image";
 import Link from "next/link";
-import { ArrowRight } from "lucide-react";
+import { ArrowDown, ArrowRight } from "lucide-react";
+import { PointerScene } from "@/components/motion/pointer-scene";
 
 /**
- * Hero « La maison se construit » : l'accueil s'ouvre sur la séquence
- * photographique de construction. Le titre et les CTA restent en
- * place pendant que, au défilement, les six vues du même terrain se
- * fondent l'une dans l'autre — des fondations à la maison finie.
- * Scroll-driven animations CSS pures ; repli (mobile, tablette,
- * prefers-reduced-motion, navigateurs non compatibles) : les six vues
- * empilées en story-board sous le titre.
- *
- * Les images illustrent les étapes d'une construction (mention
- * affichée) — ce n'est pas un chantier COREMI précis. Les vraies
- * réalisations sont dans la page Réalisations.
+ * Hero v6 « visite du chantier » : l'écran reste épinglé pendant le
+ * défilement et la caméra voyage dans la réalisation — élévation
+ * jardin, puis allée d'accès, puis terrasse — avec zoom continu,
+ * légendes synchronisées et rail de progression. Scroll-driven
+ * animations CSS pures (@supports) ; repli : hero statique identique
+ * à la v5 pour les navigateurs non compatibles, le tactile sans
+ * scroll-timeline et prefers-reduced-motion.
  */
-
-const frames = [
-  { src: "/images/construction/chantier-01.webp", n: "01", title: "Les fondations", sub: "Tout commence par des bases solides." },
-  { src: "/images/construction/chantier-02.webp", n: "02", title: "La structure", sub: "Une construction pensée pour durer." },
-  { src: "/images/construction/chantier-03.webp", n: "03", title: "Le gros œuvre", sub: "Maîtrisé dans chaque détail." },
-  { src: "/images/construction/chantier-04.webp", n: "04", title: "La toiture", sub: "Une protection durable." },
-  { src: "/images/construction/chantier-05.webp", n: "05", title: "Les châssis", sub: "Performants, posés avec précision." },
-  { src: "/images/construction/chantier-06.webp", n: "06", title: "Votre projet devient réalité", sub: "Livré, propre, prêt à être vécu." },
-];
-
 export function Hero() {
   return (
-    <section className="chantier relative bg-ink-950 text-bone" aria-label="COREMI — entreprise générale de construction et de châssis">
-      <div className="chantier-stage flex flex-col justify-center overflow-clip py-10 sm:py-14">
-        <div className="mx-auto w-full max-w-7xl px-5 sm:px-8">
-          {/* Titre + CTA (restent en place pendant la construction) */}
-          <div className="flex flex-wrap items-end justify-between gap-x-10 gap-y-6">
-            <div className="max-w-3xl">
-              <p className="rise rise-1 annotation flex items-center gap-4 text-stone-300">
-                <span aria-hidden="true" className="h-px w-12 bg-accent-500" />
-                Entreprise générale · Bruxelles &amp; Brabant wallon
-              </p>
-              <h1 className="rise rise-2 mt-6 font-display text-[clamp(2.5rem,5.4vw,5.2rem)] font-medium leading-[1.02] tracking-tight text-bone [text-shadow:0_2px_28px_rgb(15_14_12/0.5)]">
-                Bâtir juste, du gros œuvre
-                <br className="hidden sm:block" /> au{" "}
-                <em className="italic text-accent-400">dernier châssis.</em>
-              </h1>
-            </div>
+    <section className="scrolly relative bg-ink-950" aria-label="COREMI — entreprise générale de construction et de châssis">
+      <PointerScene className="scrolly-stage relative flex min-h-[92svh] flex-col overflow-hidden bg-ink-950">
+        {/* Vue 01 — élévation jardin (plan lointain, parallaxe pointeur) */}
+        <div className="scrolly-a parallax-far absolute inset-0">
+          <Image
+            src="/images/realisations/villa-jardin-panorama.jpg"
+            alt="Villa contemporaine réalisée par COREMI : deux niveaux vitrés toute hauteur sous une pergola de toiture, jardin au premier plan."
+            fill
+            priority
+            sizes="100vw"
+            className="hidden object-cover sm:block"
+          />
+          <Image
+            src="/images/realisations/villa-jardin-mobile.jpg"
+            alt="Villa contemporaine réalisée par COREMI, élévation vitrée côté jardin."
+            fill
+            priority
+            sizes="100vw"
+            className="object-cover object-[center_38%] sm:hidden"
+          />
+        </div>
 
-            <div className="rise rise-4 flex flex-col gap-3 sm:flex-row sm:items-center">
-              <Link
-                href="/contact"
-                className="btn-press group flex items-center justify-center gap-3 bg-accent-600 px-8 py-4 text-center text-sm font-semibold uppercase tracking-[0.14em] text-white hover:bg-accent-500"
-              >
-                Demander un devis
-                <ArrowRight className="h-4 w-4 transition-transform group-hover:translate-x-1" aria-hidden="true" />
-              </Link>
-              <Link
-                href="/realisations"
-                className="btn-press border border-bone/40 px-8 py-4 text-center text-sm font-semibold uppercase tracking-[0.14em] text-bone hover:border-bone hover:bg-bone hover:text-ink-950"
-              >
-                Nos réalisations
-              </Link>
-            </div>
-          </div>
+        {/* Vue 02 — l'allée d'accès (on s'avance vers l'entrée) */}
+        <div className="scrolly-b absolute inset-0">
+          <Image
+            src="/images/realisations/villa-allee-entree.jpg"
+            alt="Allée d'accès de la villa : dalles de béton sur gravier noir entre deux haies, entrée vitrée double hauteur."
+            fill
+            sizes="100vw"
+            className="object-cover"
+          />
+        </div>
 
-          {/* Cadre photographique en fondu (mode animé) */}
-          <div className="chantier-anim relative mt-8 w-full overflow-clip lg:mt-10">
-            <div className="relative aspect-[1306/230] w-full sm:aspect-[1306/188]">
-              {frames.map((f, i) => (
-                <Image
-                  key={f.src}
-                  src={f.src}
-                  alt={`Étape ${f.n} — ${f.title}. Illustration.`}
-                  fill
-                  sizes="(max-width: 1280px) 100vw, 1280px"
-                  className={`chantier-f chantier-f${i + 1} object-cover`}
-                  priority={i === 0}
-                />
-              ))}
-              <span
-                aria-hidden="true"
-                className="pointer-events-none absolute inset-0 bg-gradient-to-t from-ink-950/85 via-ink-950/10 to-transparent"
-              />
-            </div>
+        {/* Vue 03 — la terrasse côté séjour */}
+        <div className="scrolly-c absolute inset-0">
+          <Image
+            src="/images/realisations/villa-terrasse-angle.jpg"
+            alt="Angle de la villa : rez-de-chaussée vitré toute hauteur ouvert sur la terrasse en lames composites."
+            fill
+            sizes="100vw"
+            className="object-cover"
+          />
+        </div>
 
-            {/* Légendes d'étape superposées */}
-            <div className="chantier-caps pointer-events-none absolute inset-x-0 bottom-0">
-              {frames.map((f, i) => (
-                <div key={f.n} className={`chantier-cap chantier-cap${i + 1} px-5 pb-5 sm:px-8 sm:pb-6`}>
-                  <div className="flex items-end gap-5">
-                    <span className="font-display text-5xl font-medium leading-none text-accent-500 sm:text-7xl">
-                      {f.n}
-                    </span>
-                    <div className="pb-1">
-                      <p className="annotation text-stone-300">Étape {f.n}</p>
-                      <h2 className="font-display text-2xl font-medium text-bone sm:text-3xl">{f.title}</h2>
-                      <p className="mt-1 hidden text-sm text-stone-300 sm:block">{f.sub}</p>
-                    </div>
-                  </div>
-                </div>
-              ))}
-            </div>
+        {/* Scrims + grain, au-dessus des trois vues */}
+        <div
+          aria-hidden="true"
+          className="absolute inset-0 bg-gradient-to-t from-ink-950/95 via-ink-950/55 to-ink-950/25 sm:from-ink-950/90 sm:via-ink-950/30 sm:to-ink-950/20"
+        />
+        <div
+          aria-hidden="true"
+          className="absolute inset-y-0 left-0 hidden w-1/2 bg-gradient-to-r from-ink-950/55 to-transparent lg:block"
+        />
+        <span aria-hidden="true" className="grain" />
 
-            {/* Rail de progression */}
-            <div aria-hidden="true" className="chantier-rail">
-              <span className="chantier-rail-fill" />
-            </div>
-          </div>
-
-          <p className="annotation mt-4 text-stone-400">
-            Illustration des étapes d&apos;une construction · COREMI construit, rénove et pose vos châssis
+        {/* Composition typographique — s'efface quand la visite commence */}
+        <div className="scrolly-copy parallax-near relative z-10 mx-auto flex w-full max-w-7xl flex-1 flex-col justify-end px-5 pb-9 pt-24 sm:px-8 lg:pb-12">
+          <p className="rise rise-1 annotation flex items-center gap-4 text-stone-200">
+            <span aria-hidden="true" className="h-px w-12 bg-accent-500" />
+            Entreprise générale · Bruxelles &amp; Brabant wallon
           </p>
 
-          {/* Repli : story-board empilé (mobile, tablette, reduced-motion) */}
-          <ol className="chantier-fallback mt-6 space-y-6">
-            {frames.map((f) => (
-              <li key={f.n}>
-                <div className="relative aspect-[1306/230] w-full overflow-clip sm:aspect-[1306/188]">
-                  <Image
-                    src={f.src}
-                    alt={`Étape ${f.n} — ${f.title}. Illustration des étapes d'une construction.`}
-                    fill
-                    sizes="(max-width: 768px) 100vw, 700px"
-                    className="object-cover"
-                  />
-                  <span aria-hidden="true" className="pointer-events-none absolute inset-0 bg-gradient-to-t from-ink-950/80 to-transparent" />
-                  <div className="absolute inset-x-0 bottom-0 flex items-end gap-4 px-5 pb-4">
-                    <span className="font-display text-4xl font-medium leading-none text-accent-500">{f.n}</span>
-                    <div className="pb-0.5">
-                      <h2 className="font-display text-xl font-medium text-bone">{f.title}</h2>
-                      <p className="mt-0.5 text-sm text-stone-300">{f.sub}</p>
-                    </div>
-                  </div>
-                </div>
-              </li>
-            ))}
-          </ol>
+          <h1 className="rise rise-2 mt-7 max-w-4xl font-display text-[clamp(2.7rem,6.4vw,6.2rem)] font-medium leading-[1.02] tracking-tight text-bone [text-shadow:0_2px_28px_rgb(18_16_12/0.45)]">
+            Bâtir juste, du gros œuvre
+            <br className="hidden sm:block" /> au{" "}
+            <em className="italic text-accent-400">dernier châssis.</em>
+          </h1>
+
+          <p className="rise rise-3 mt-7 max-w-xl text-lg leading-relaxed text-stone-200/90">
+            COREMI construit, rénove et pose vos châssis avec un devis détaillé,
+            un interlocuteur unique et des finitions qui tiennent dans le temps.
+          </p>
+
+          <div className="rise rise-4 mt-9 flex flex-col gap-3 sm:flex-row sm:items-center">
+            <Link
+              href="/contact"
+              className="btn-press group flex items-center justify-center gap-3 bg-accent-600 px-8 py-4 text-center text-sm font-semibold uppercase tracking-[0.14em] text-white hover:bg-accent-500"
+            >
+              Demander un devis
+              <ArrowRight
+                className="h-4 w-4 transition-transform group-hover:translate-x-1"
+                aria-hidden="true"
+              />
+            </Link>
+            <Link
+              href="/realisations"
+              className="btn-press border border-bone/40 px-8 py-4 text-center text-sm font-semibold uppercase tracking-[0.14em] text-bone hover:border-bone hover:bg-bone hover:text-ink-950"
+            >
+              Nos réalisations
+            </Link>
+          </div>
+
+          {/* Cartouche : repères factuels + légende de la première vue */}
+          <div className="rise rise-4 mt-10 hidden items-end justify-between border-t border-bone/20 pt-5 lg:flex">
+            <ul className="annotation flex gap-10 text-stone-300">
+              <li>Devis détaillé gratuit</li>
+              <li>Interlocuteur unique</li>
+              <li>Gros œuvre → finitions</li>
+            </ul>
+            <p className="annotation flex items-center gap-6 text-stone-300">
+              <span>01 — Réalisation COREMI, vue du jardin · [COMMUNE]</span>
+              <span className="scroll-cue flex items-center gap-2" aria-hidden="true">
+                <ArrowDown className="h-4 w-4" />
+                Visiter
+              </span>
+            </p>
+          </div>
+          <p className="rise rise-4 annotation mt-8 text-stone-300 lg:hidden">
+            01 — Réalisation COREMI, vue du jardin · [COMMUNE]
+          </p>
         </div>
-      </div>
+
+        {/* Légendes de la visite (vues 02 et 03) */}
+        <div
+          aria-hidden="true"
+          className="scrolly-cap scrolly-cap-b absolute inset-x-0 bottom-0 z-10"
+        >
+          <div className="mx-auto max-w-7xl px-5 pb-10 sm:px-8">
+            <p className="annotation flex items-center gap-4 text-stone-200">
+              <span className="h-px w-12 bg-accent-500" />
+              02 — L&apos;allée d&apos;accès
+            </p>
+            <p className="mt-4 max-w-md font-display text-2xl leading-snug text-bone sm:text-3xl">
+              Dalles de béton posées sur gravier, haies taillées :
+              l&apos;arrivée fait déjà partie du chantier.
+            </p>
+          </div>
+        </div>
+        <div
+          aria-hidden="true"
+          className="scrolly-cap scrolly-cap-c absolute inset-x-0 bottom-0 z-10"
+        >
+          <div className="mx-auto max-w-7xl px-5 pb-10 sm:px-8">
+            <p className="annotation flex items-center gap-4 text-stone-200">
+              <span className="h-px w-12 bg-accent-500" />
+              03 — La terrasse côté séjour
+            </p>
+            <p className="mt-4 max-w-md font-display text-2xl leading-snug text-bone sm:text-3xl">
+              Le rez vitré toute hauteur s&apos;ouvre de plain-pied
+              sur les lames composites.
+            </p>
+          </div>
+        </div>
+
+        {/* Rail de progression de la visite */}
+        <div aria-hidden="true" className="scrolly-rail">
+          <span className="scrolly-rail-fill" />
+        </div>
+      </PointerScene>
     </section>
   );
 }

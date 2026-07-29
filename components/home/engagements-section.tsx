@@ -12,7 +12,7 @@ export function EngagementsSection() {
       <Container className="relative">
         <Reveal>
           <SectionHeading
-            index="04"
+            index="05"
             eyebrow="Nos engagements"
             title="Ce que nous vous devons, noir sur blanc"
             tone="dark"
