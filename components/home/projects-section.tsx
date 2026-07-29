@@ -14,7 +14,8 @@ import { projects } from "@/content/projects";
 export function ProjectsSection() {
   const [villa, second, third] = projects;
   if (!villa || !second || !third) return null;
-  const featuredImage = villa.cover;
+  // Le hero montre déjà le panorama : la sélection ouvre sur l'angle terrasse.
+  const featuredImage = villa.images[1] ?? villa.cover;
 
   return (
     <section className="py-24 sm:py-32" aria-labelledby="realisations">
@@ -22,7 +23,7 @@ export function ProjectsSection() {
         <div className="flex flex-wrap items-end justify-between gap-6">
           <Reveal>
             <SectionHeading
-              index="03"
+              index="04"
               eyebrow="Réalisations"
               title="Le travail parle mieux que nous"
             />

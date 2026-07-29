@@ -612,7 +612,7 @@ details summary::-webkit-details-marker {
 @supports (animation-timeline: view()) {
   @media (prefers-reduced-motion: no-preference) and (min-width: 1024px) {
     .chantier {
-      height: 480svh;
+      height: 560svh;
       view-timeline-name: --chantier;
       view-timeline-axis: block;
     }

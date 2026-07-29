@@ -10,7 +10,7 @@ export function FaqSection() {
       <Container className="grid gap-12 lg:grid-cols-[1fr_2fr]">
         <Reveal>
           <SectionHeading
-            index="08"
+            index="09"
             eyebrow="Questions fréquentes"
             title="Vous vous demandez sûrement…"
             description="Les questions qu'on nous pose à chaque premier rendez-vous. La vôtre n'y est pas ? Appelez-nous."

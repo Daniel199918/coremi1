@@ -1,0 +1,5 @@
+.agents
+.claude
+scripts/shot.mjs
+scripts/scrolly-test.mjs
+skills-lock.json
