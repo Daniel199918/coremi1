@@ -153,11 +153,11 @@ export function Hero() {
         {/* Scrims + grain, pour asseoir la typographie */}
         <div
           aria-hidden="true"
-          className="absolute inset-0 bg-gradient-to-t from-ink-950/95 via-ink-950/55 to-ink-950/30 sm:from-ink-950/90 sm:via-ink-950/35 sm:to-ink-950/25"
+          className="absolute inset-0 bg-gradient-to-t from-ink-950/80 via-ink-950/25 to-transparent sm:from-ink-950/75 sm:via-ink-950/15 sm:to-transparent"
         />
         <div
           aria-hidden="true"
-          className="absolute inset-y-0 left-0 hidden w-1/2 bg-gradient-to-r from-ink-950/55 to-transparent lg:block"
+          className="absolute inset-y-0 left-0 hidden w-1/2 bg-gradient-to-r from-ink-950/35 to-transparent lg:block"
         />
         <span aria-hidden="true" className="grain" />
 
