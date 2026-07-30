@@ -15,7 +15,8 @@ export function LocalBusinessJsonLd() {
     legalName: siteConfig.legalName,
     description: siteConfig.description,
     url: siteConfig.url,
-    telephone: contact.phoneHref.replace("tel:", ""),
+    // Le téléphone n'est publié dans les données structurées que s'il est confirmé.
+    ...(contact.phoneHref ? { telephone: contact.phoneHref.replace("tel:", "") } : {}),
     email: contact.email,
     image: `${siteConfig.url}/images/og-image.jpg`,
     address: {

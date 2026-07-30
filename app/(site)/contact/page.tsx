@@ -32,19 +32,21 @@ export default function ContactPage() {
             <div>
               {/* ⚠️ Coordonnées temporaires — à confirmer dans content/site.ts */}
               <ul className="divide-y divide-ink-950/10 border-y border-ink-950/10">
-                <li>
-                  <a href={contact.phoneHref} className="group flex items-center gap-5 py-5">
-                    <Phone className="h-5 w-5 text-accent-600" aria-hidden="true" />
-                    <span>
-                      <span className="block text-[0.65rem] font-semibold uppercase tracking-[0.2em] text-ink-500">
-                        Téléphone
+                {contact.phone && (
+                  <li>
+                    <a href={contact.phoneHref} className="group flex items-center gap-5 py-5">
+                      <Phone className="h-5 w-5 text-accent-600" aria-hidden="true" />
+                      <span>
+                        <span className="block text-[0.65rem] font-semibold uppercase tracking-[0.2em] text-ink-500">
+                          Téléphone
+                        </span>
+                        <span className="font-display text-xl text-ink-950 group-hover:text-accent-600">
+                          {contact.phone}
+                        </span>
                       </span>
-                      <span className="font-display text-xl text-ink-950 group-hover:text-accent-600">
-                        {contact.phone}
-                      </span>
-                    </span>
-                  </a>
-                </li>
+                    </a>
+                  </li>
+                )}
                 <li>
                   <a href={`mailto:${contact.email}`} className="group flex items-center gap-5 py-5">
                     <Mail className="h-5 w-5 text-accent-600" aria-hidden="true" />

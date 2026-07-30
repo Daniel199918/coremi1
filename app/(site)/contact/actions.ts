@@ -1,6 +1,7 @@
 "use server";
 
 import { quoteSchema, type QuoteFormState } from "@/lib/validations/quote";
+import { siteConfig } from "@/content/site";
 
 /**
  * Traite la demande de devis.
@@ -61,7 +62,7 @@ export async function submitQuoteRequest(
     const resend = new Resend(process.env.RESEND_API_KEY);
     await resend.emails.send({
       from: "Site COREMI <devis@coremi.be>", // ⚠️ domaine à vérifier dans Resend
-      to: ["info@coremi.be"], // ⚠️ à confirmer
+      to: [siteConfig.contact.email],
       replyTo: quote.email,
       subject: `Demande de devis — ${quote.projectType} à ${quote.city}`,
       text: [
@@ -93,8 +94,7 @@ export async function submitQuoteRequest(
   } catch {
     return {
       status: "error",
-      message:
-        "Une erreur est survenue lors de l'envoi. Réessayez ou contactez-nous par téléphone.",
+      message: `Une erreur est survenue lors de l'envoi. Réessayez, ou écrivez-nous directement à ${siteConfig.contact.email}.`,
       fieldErrors: {},
     };
   }

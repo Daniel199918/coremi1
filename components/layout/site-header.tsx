@@ -3,7 +3,7 @@
 import { useEffect, useState } from "react";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
-import { Menu, Phone, X } from "lucide-react";
+import { Mail, Menu, Phone, X } from "lucide-react";
 import { Logo } from "@/components/brand/logo";
 import { navigation, siteConfig } from "@/content/site";
 import { cn } from "@/utils";
@@ -116,18 +116,33 @@ export function SiteHeader() {
         </nav>
 
         <div className="hidden items-center gap-4 xl:flex">
-          <a
-            href={siteConfig.contact.phoneHref}
-            className={cn(
-              "flex items-center gap-2 whitespace-nowrap text-sm font-semibold transition-colors",
-              overlay
-                ? "text-white hover:text-accent-400 [text-shadow:0_1px_10px_rgb(0_0_0/0.5)]"
-                : "text-ink-950 hover:text-accent-600"
-            )}
-          >
-            <Phone className="h-3.5 w-3.5" aria-hidden="true" />
-            {siteConfig.contact.phone}
-          </a>
+          {siteConfig.contact.phone ? (
+            <a
+              href={siteConfig.contact.phoneHref}
+              className={cn(
+                "flex items-center gap-2 whitespace-nowrap text-sm font-semibold transition-colors",
+                overlay
+                  ? "text-white hover:text-accent-400 [text-shadow:0_1px_10px_rgb(0_0_0/0.5)]"
+                  : "text-ink-950 hover:text-accent-600"
+              )}
+            >
+              <Phone className="h-3.5 w-3.5" aria-hidden="true" />
+              {siteConfig.contact.phone}
+            </a>
+          ) : (
+            <a
+              href={`mailto:${siteConfig.contact.email}`}
+              className={cn(
+                "flex items-center gap-2 whitespace-nowrap text-sm font-semibold transition-colors",
+                overlay
+                  ? "text-white hover:text-accent-400 [text-shadow:0_1px_10px_rgb(0_0_0/0.5)]"
+                  : "text-ink-950 hover:text-accent-600"
+              )}
+            >
+              <Mail className="h-3.5 w-3.5" aria-hidden="true" />
+              Nous écrire
+            </a>
+          )}
           <Link
             href="/contact"
             className="btn-press whitespace-nowrap bg-accent-600 px-6 py-3 text-[0.7rem] font-semibold uppercase tracking-[0.14em] text-white hover:bg-accent-700"
@@ -176,11 +191,24 @@ export function SiteHeader() {
         </nav>
         <div className="mt-auto flex flex-col gap-3 pt-10">
           <a
-            href={siteConfig.contact.phoneHref}
+            href={
+              siteConfig.contact.phone
+                ? siteConfig.contact.phoneHref
+                : `mailto:${siteConfig.contact.email}`
+            }
             className="flex items-center justify-center gap-2 border border-bone/25 px-5 py-4 text-sm font-semibold uppercase tracking-[0.14em] text-bone"
           >
-            <Phone className="h-4 w-4" aria-hidden="true" />
-            {siteConfig.contact.phone}
+            {siteConfig.contact.phone ? (
+              <>
+                <Phone className="h-4 w-4" aria-hidden="true" />
+                {siteConfig.contact.phone}
+              </>
+            ) : (
+              <>
+                <Mail className="h-4 w-4" aria-hidden="true" />
+                Nous écrire
+              </>
+            )}
           </a>
           <Link
             href="/contact"

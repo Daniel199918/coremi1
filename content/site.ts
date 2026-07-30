@@ -1,15 +1,28 @@
 /**
  * ============================================================
  * Informations de l'entreprise — SOURCE UNIQUE DE VÉRITÉ.
- * ⚠️ DONNÉES TEMPORAIRES À CONFIRMER PAR COREMI avant mise en ligne :
- *    téléphone, e-mail, adresse, horaires, numéro d'entreprise,
- *    liens réseaux sociaux et lien des avis Google.
+ *
+ * ✅ CONFIRMÉ : e-mail.
+ * ⚠️ À CONFIRMER PAR COREMI : le TÉLÉPHONE (aucun numéro affiché pour
+ *    l'instant — voir plus bas), le NUMÉRO D'ENTREPRISE, les horaires,
+ *    les réseaux sociaux et le lien des avis Google.
  * ============================================================
  */
 
 export const siteConfig = {
   name: "COREMI",
-  legalName: "COREMI SPRL", // ⚠️ à confirmer (forme juridique exacte)
+  legalName: "COREMI SPRL", // ⚠️ à confirmer (SPRL ou SRL depuis la réforme 2019)
+
+  /**
+   * ⚠️ Numéro d'entreprise / TVA — À TRANCHER AVANT PUBLICATION.
+   * La BCE renvoie 0839.628.733 pour « COREMI SPRL » à Rixensart
+   * (Avenue Winston Churchill 8, 1330 — constituée le 26/09/2011),
+   * ce qui ne correspond PAS au 0584806948 communiqué. Tant que le bon
+   * numéro n'est pas confirmé, rien n'est affiché : mentionner un
+   * numéro d'entreprise erroné sur un site commercial n'est pas neutre.
+   */
+  enterpriseNumber: null as string | null,
+  vatNumber: null as string | null,
   tagline: "Construction & Châssis",
   description:
     "COREMI construit, rénove et pose des châssis à Bruxelles et en Brabant wallon. Gros œuvre, extensions, rénovations complètes, châssis PVC et aluminium : un seul interlocuteur, un devis détaillé.",
@@ -17,14 +30,23 @@ export const siteConfig = {
   url: process.env.NEXT_PUBLIC_SITE_URL ?? "https://www.coremi.be",
 
   contact: {
-    phone: "0470 12 34 56", // ⚠️ à confirmer
-    phoneHref: "tel:+32470123456", // ⚠️ à confirmer
-    whatsappHref: "https://wa.me/32470123456", // ⚠️ à confirmer
-    email: "info@coremi.be", // ⚠️ à confirmer
+    /**
+     * ⚠️ TÉLÉPHONE MANQUANT — volontairement vide.
+     * L'ancien « 0470 12 34 56 » était un placeholder qui ressemblait à
+     * un vrai numéro belge : un visiteur pouvait appeler un inconnu.
+     * Le 0584806948 communiqué n'est pas un format de téléphone belge
+     * valide (aucun indicatif ne commence par 05 sur 10 chiffres).
+     * Tant qu'il n'est pas confirmé, aucun numéro n'est affiché et les
+     * appels à l'action basculent sur l'e-mail.
+     */
+    phone: "" as string,
+    phoneHref: "" as string,
+    whatsappHref: "" as string, // ⚠️ à confirmer (dépend du numéro mobile)
+    email: "coremi.mietek@gmail.com", // ✅ confirmé
     address: {
-      street: "Rue de l'Exemple 1", // ⚠️ à confirmer
-      postalCode: "1300", // ⚠️ à confirmer
-      city: "Wavre", // ⚠️ à confirmer
+      street: "Avenue Winston Churchill 8", // ⚠️ siège BCE — à confirmer si affichable
+      postalCode: "1330", // ⚠️ à confirmer
+      city: "Rixensart", // ⚠️ à confirmer
       country: "Belgique",
     },
     hours: [

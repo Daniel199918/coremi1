@@ -67,14 +67,16 @@ export function CtaSection() {
         {/* Bloc coordonnées, style cartouche de plan */}
         <Reveal delay={0.15} className="lg:col-span-4 lg:col-start-9">
           <dl className="divide-y divide-bone/15 border border-bone/20">
-            <div className="px-6 py-5">
-              <dt className="annotation text-stone-400">Téléphone</dt>
-              <dd className="mt-1.5">
-                <a href={contact.phoneHref} className="font-display text-2xl text-bone transition-colors hover:text-accent-400">
-                  {contact.phone}
-                </a>
-              </dd>
-            </div>
+            {contact.phone && (
+              <div className="px-6 py-5">
+                <dt className="annotation text-stone-400">Téléphone</dt>
+                <dd className="mt-1.5">
+                  <a href={contact.phoneHref} className="font-display text-2xl text-bone transition-colors hover:text-accent-400">
+                    {contact.phone}
+                  </a>
+                </dd>
+              </div>
+            )}
             <div className="px-6 py-5">
               <dt className="annotation text-stone-400">E-mail</dt>
               <dd className="mt-1.5">
