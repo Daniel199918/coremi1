@@ -35,22 +35,37 @@ export function SiteHeader() {
     };
   }, [open]);
 
+  // En haut de l'accueil (hero vidéo sombre), le header se pose en
+  // surimpression, transparent et en blanc ; dès qu'on descend, il
+  // devient blanc opaque. Les pages intérieures restent toujours opaques.
+  const isHome = pathname === "/";
+  const overlay = isHome && !scrolled && !open;
+
   return (
     <header
       className={cn(
         "sticky top-0 z-50 w-full border-b transition-all duration-300",
-        scrolled
-          ? "border-ink-950/10 bg-bone/95 shadow-[0_12px_32px_-24px_rgb(18_16_12/0.45)] backdrop-blur-sm"
-          : "border-ink-950/10 bg-bone"
+        overlay
+          ? "border-transparent bg-transparent"
+          : scrolled
+            ? "border-ink-950/10 bg-bone/95 shadow-[0_12px_32px_-24px_rgb(18_16_12/0.45)] backdrop-blur-sm"
+            : "border-ink-950/10 bg-bone"
       )}
     >
-      <div className="mx-auto flex w-full max-w-7xl items-center justify-between gap-4 px-5 sm:px-8">
+      {/* Voile discret pour la lisibilité du blanc sur la vidéo */}
+      {overlay && (
+        <div
+          aria-hidden="true"
+          className="pointer-events-none absolute inset-0 bg-gradient-to-b from-ink-950/45 to-transparent"
+        />
+      )}
+      <div className="relative mx-auto flex w-full max-w-7xl items-center justify-between gap-4 px-5 sm:px-8">
         <Link
           href="/"
           aria-label="COREMI — retour à l'accueil"
           className={cn("py-3.5 transition-transform duration-300", scrolled && "scale-[0.92]")}
         >
-          <Logo variant="dark" />
+          <Logo variant={overlay ? "light" : "dark"} />
         </Link>
 
         {/* Navigation desktop */}
@@ -64,7 +79,13 @@ export function SiteHeader() {
                 aria-current={active ? "page" : undefined}
                 className={cn(
                   "relative whitespace-nowrap py-2 text-[0.7rem] font-semibold uppercase tracking-[0.14em] transition-colors",
-                  active ? "text-ink-950" : "text-ink-600 hover:text-ink-950",
+                  overlay
+                    ? active
+                      ? "text-white"
+                      : "text-stone-200 hover:text-white"
+                    : active
+                      ? "text-ink-950"
+                      : "text-ink-600 hover:text-ink-950",
                   active &&
                     "after:absolute after:inset-x-0 after:bottom-0 after:h-0.5 after:bg-accent-600"
                 )}
@@ -78,7 +99,10 @@ export function SiteHeader() {
         <div className="hidden items-center gap-5 xl:flex">
           <a
             href={siteConfig.contact.phoneHref}
-            className="flex items-center gap-2 whitespace-nowrap text-sm font-semibold text-ink-950 transition-colors hover:text-accent-600"
+            className={cn(
+              "flex items-center gap-2 whitespace-nowrap text-sm font-semibold transition-colors",
+              overlay ? "text-bone hover:text-accent-400" : "text-ink-950 hover:text-accent-600"
+            )}
           >
             <Phone className="h-3.5 w-3.5" aria-hidden="true" />
             {siteConfig.contact.phone}
@@ -98,7 +122,10 @@ export function SiteHeader() {
           aria-expanded={open}
           aria-controls="menu-mobile"
           aria-label={open ? "Fermer le menu" : "Ouvrir le menu"}
-          className="cursor-pointer p-2.5 text-ink-950 xl:hidden"
+          className={cn(
+            "cursor-pointer p-2.5 transition-colors xl:hidden",
+            overlay ? "text-bone" : "text-ink-950"
+          )}
         >
           {open ? <X className="h-6 w-6" aria-hidden="true" /> : <Menu className="h-6 w-6" aria-hidden="true" />}
         </button>
