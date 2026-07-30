@@ -30,8 +30,11 @@ export const engagements = [
 
 /**
  * Modalités pratiques — réassurance commerciale honnête, sans chiffre
- * inventé. La TVA à 6 % et les primes régionales sont des dispositifs
- * belges réels ; l'éligibilité dépend du projet, d'où le conditionnel.
+ * inventé. ⚠️ Volontairement AUCUN montant ni nom de dispositif d'aide
+ * n'est cité : les régimes régionaux (Bruxelles, Wallonie) ont été
+ * revus, suspendus ou remplacés par des formules de prêt à plusieurs
+ * reprises et se périment vite. On vend l'accompagnement, pas le
+ * dispositif. Voir /prix-et-aides pour le détail de cette position.
  */
 export const modalites = [
   {
@@ -54,9 +57,9 @@ export const modalites = [
   },
   {
     kicker: "Aides",
-    title: "TVA réduite et primes, on vous oriente",
+    title: "TVA réduite et aides : on monte le dossier",
     description:
-      "Pour une habitation de plus de dix ans, la rénovation peut relever de la TVA à 6 % sous conditions. Nous vous orientons vers les primes régionales (Renolution à Bruxelles, Prime Habitation en Wallonie) selon votre projet.",
+      "Une habitation privée suffisamment ancienne peut relever d'un taux de TVA réduit, sous conditions. Les aides régionales, elles, changent souvent : au moment du devis, nous regardons ensemble ce qui existe réellement pour votre commune et vos travaux, et nous fournissons les documents dont votre dossier a besoin.",
   },
 ] as const;
 

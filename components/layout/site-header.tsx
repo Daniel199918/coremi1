@@ -88,7 +88,7 @@ export function SiteHeader() {
         </Link>
 
         {/* Navigation desktop */}
-        <nav aria-label="Navigation principale" className="hidden items-center gap-5 xl:flex">
+        <nav aria-label="Navigation principale" className="hidden items-center gap-4 xl:flex">
           {navigation.slice(1).map((item) => {
             const active = pathname.startsWith(item.href);
             return (
@@ -109,13 +109,13 @@ export function SiteHeader() {
                     "after:absolute after:inset-x-0 after:bottom-0 after:h-0.5 after:bg-accent-600"
                 )}
               >
-                {item.label}
+                {"short" in item ? item.short : item.label}
               </Link>
             );
           })}
         </nav>
 
-        <div className="hidden items-center gap-5 xl:flex">
+        <div className="hidden items-center gap-4 xl:flex">
           <a
             href={siteConfig.contact.phoneHref}
             className={cn(

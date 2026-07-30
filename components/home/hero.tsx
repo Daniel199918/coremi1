@@ -124,14 +124,15 @@ export function Hero() {
       </p>
 
       <h1 className="rise rise-2 mt-7 max-w-4xl font-display text-[clamp(2.5rem,6.4vw,6.2rem)] font-medium leading-[1.02] tracking-tight text-bone [text-shadow:0_2px_28px_rgb(18_16_12/0.45)]">
-        Bâtir juste, du gros œuvre
-        <br className="hidden sm:block" /> au{" "}
-        <em className="italic text-accent-400">dernier châssis.</em>
+        Du gros œuvre au dernier châssis,
+        <br className="hidden sm:block" />{" "}
+        <em className="italic text-accent-400">une seule main.</em>
       </h1>
 
       <p className="rise rise-3 mt-6 max-w-xl text-base leading-relaxed text-stone-200/90 sm:mt-7 sm:text-lg">
-        COREMI construit, rénove et pose vos châssis avec un devis détaillé,
-        un interlocuteur unique et des finitions qui tiennent dans le temps.
+        Là où le mur rencontre la fenêtre, les chantiers fuient et les
+        entreprises se renvoient la balle. Chez COREMI, les deux sont à
+        nous — le joint aussi.
       </p>
 
       <div className="rise rise-4 mt-8 flex flex-col gap-3 sm:mt-9 sm:flex-row sm:items-center">
@@ -191,9 +192,9 @@ export function Hero() {
             {copy}
             <div className="rise rise-4 mt-10 hidden items-end justify-between border-t border-bone/20 pt-5 lg:flex">
               <ul className="annotation flex gap-10 text-stone-300">
-                <li>Devis détaillé gratuit</li>
-                <li>Interlocuteur unique</li>
-                <li>Gros œuvre → finitions</li>
+                <li>Gros œuvre + châssis</li>
+                <li>Une seule responsabilité</li>
+                <li>Aucun acompte</li>
               </ul>
               <p className="annotation flex items-center gap-6 text-stone-300">
                 <span>Illustration — des fondations à la maison finie</span>

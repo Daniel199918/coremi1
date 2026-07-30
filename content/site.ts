@@ -45,11 +45,18 @@ export const siteConfig = {
   },
 } as const;
 
+/**
+ * Navigation principale. `short` est le libellé utilisé dans la barre du
+ * haut, où la place est comptée ; `label` sert au menu mobile, au footer
+ * et partout où la ligne peut respirer.
+ */
 export const navigation = [
   { label: "Accueil", href: "/" },
-  { label: "Construction & Rénovation", href: "/construction-renovation" },
+  { label: "Construction & Rénovation", short: "Construction", href: "/construction-renovation" },
   { label: "Châssis", href: "/chassis" },
-  { label: "Réalisations", href: "/realisations" },
+  { label: "Nos chantiers", href: "/realisations" },
+  { label: "Comment on travaille", short: "Notre méthode", href: "/comment-on-travaille" },
+  { label: "Prix & aides", href: "/prix-et-aides" },
   { label: "À propos", href: "/a-propos" },
   { label: "Contact", href: "/contact" },
 ] as const;
@@ -59,4 +66,6 @@ export const footerServiceLinks = [
   { label: "Rénovation & transformation", href: "/construction-renovation#renovation" },
   { label: "Châssis PVC & aluminium", href: "/chassis" },
   { label: "Portes & vitrages", href: "/chassis#portes" },
+  { label: "Comment on travaille", href: "/comment-on-travaille" },
+  { label: "Prix & aides", href: "/prix-et-aides" },
 ] as const;

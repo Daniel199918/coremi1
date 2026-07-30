@@ -20,18 +20,25 @@ export function IntroSection() {
           </Reveal>
           <Reveal delay={0.08}>
             <p className="mt-9 font-display text-3xl font-medium leading-[1.15] text-ink-950 sm:text-[2.6rem]">
-              Un chantier réussi ne se voit pas au premier coup d&apos;œil.
-              Il se vit chaque jour : des murs droits, des châssis qui ferment
-              sans forcer, un planning tenu, une maison rendue propre.
-              <em className="italic text-accent-700"> C&apos;est notre définition du travail bien fait.</em>
+              Un chantier ne casse presque jamais au milieu d&apos;un mur.
+              Il casse à la jonction : là où le gros œuvre s&apos;arrête et
+              où le châssis commence.
+              <em className="italic text-accent-700"> C&apos;est précisément là que nous ne sous-traitons pas.</em>
             </p>
           </Reveal>
           <Reveal delay={0.15}>
             <div className="mt-10 max-w-xl space-y-5 leading-relaxed text-ink-600">
               <p>
-                COREMI est une entreprise générale belge, à taille humaine et présente
-                sur chaque chantier. Vous parlez à la personne qui suit vos travaux,
-                du premier café au dernier coup de balai.
+                La plupart des entreprises générales confient les châssis à un tiers.
+                Les poseurs de châssis, eux, arrivent après le maçon. Entre les deux,
+                une zone grise : l&apos;étanchéité, l&apos;isolation du dormant, les
+                finitions du raccord — et un responsable difficile à désigner quand
+                ça fuit.
+              </p>
+              <p>
+                COREMI fait les deux. Le mur et la fenêtre sortent de la même
+                entreprise, donc le joint entre les deux aussi. Vous n&apos;avez
+                qu&apos;un seul numéro à appeler, et personne à qui renvoyer la faute.
               </p>
             </div>
             <Link
