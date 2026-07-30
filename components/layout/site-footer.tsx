@@ -79,11 +79,13 @@ export function SiteFooter() {
             Contact
           </h2>
           <ul className="mt-6 space-y-3 text-sm text-stone-200/85">
-            <li>
-              <a href={contact.phoneHref} className="transition-colors hover:text-bone">
-                {contact.phone}
-              </a>
-            </li>
+            {contact.phone && (
+              <li>
+                <a href={contact.phoneHref} className="transition-colors hover:text-bone">
+                  {contact.phone}
+                </a>
+              </li>
+            )}
             <li>
               <a href={`mailto:${contact.email}`} className="transition-colors hover:text-bone">
                 {contact.email}

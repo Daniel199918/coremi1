@@ -29,7 +29,7 @@ export default function MentionsLegalesPage() {
               {contact.address.street}, {contact.address.postalCode} {contact.address.city},{" "}
               {contact.address.country}
               <br />
-              Téléphone : {contact.phone} — E-mail : {contact.email}
+              {contact.phone ? `Téléphone : ${contact.phone} — ` : ""}E-mail : {contact.email}
               <br />
               Numéro d&apos;entreprise (BCE) : <strong>[à compléter]</strong>
               <br />
