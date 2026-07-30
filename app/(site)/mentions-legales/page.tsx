@@ -31,9 +31,9 @@ export default function MentionsLegalesPage() {
               <br />
               {contact.phone ? `Téléphone : ${contact.phone} — ` : ""}E-mail : {contact.email}
               <br />
-              Numéro d&apos;entreprise (BCE) : <strong>[à compléter]</strong>
+              Numéro d&apos;entreprise (BCE) : <strong>{siteConfig.enterpriseNumber}</strong>
               <br />
-              TVA : <strong>[à compléter]</strong>
+              TVA : <strong>{siteConfig.vatNumber}</strong>
             </p>
           </div>
           <div>
