@@ -80,8 +80,16 @@ export function PracticalSection() {
             </div>
             <Reveal delay={0.1}>
               <p className="mt-5 text-sm text-ink-500">
-                TVA réduite et primes indiquées à titre informatif : l&apos;éligibilité dépend de
-                votre situation et de la réglementation en vigueur.
+                TVA réduite et aides mentionnées à titre informatif : l&apos;éligibilité
+                dépend de votre situation et de la réglementation en vigueur au moment
+                des travaux.{" "}
+                <Link
+                  href="/prix-et-aides"
+                  className="font-semibold text-ink-950 underline decoration-accent-600 underline-offset-4 hover:text-accent-700"
+                >
+                  Comment se construit un prix
+                </Link>
+                .
               </p>
             </Reveal>
           </div>

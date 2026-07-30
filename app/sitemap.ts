@@ -15,6 +15,8 @@ export default function sitemap(): MetadataRoute.Sitemap {
     { path: "/construction-renovation", priority: 0.9 },
     { path: "/chassis", priority: 0.9 },
     { path: "/realisations", priority: 0.8 },
+    { path: "/comment-on-travaille", priority: 0.9 },
+    { path: "/prix-et-aides", priority: 0.8 },
     { path: "/a-propos", priority: 0.7 },
     { path: "/avis", priority: 0.6 },
     { path: "/contact", priority: 0.9 },
