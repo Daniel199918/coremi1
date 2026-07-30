@@ -15,15 +15,20 @@ export function LocalBusinessJsonLd() {
     legalName: siteConfig.legalName,
     description: siteConfig.description,
     url: siteConfig.url,
-    // Le téléphone n'est publié dans les données structurées que s'il est confirmé.
-    ...(contact.phoneHref ? { telephone: contact.phoneHref.replace("tel:", "") } : {}),
+    telephone: contact.phoneHref.replace("tel:", ""),
     email: contact.email,
     image: `${siteConfig.url}/images/og-image.jpg`,
+    vatID: siteConfig.vatNumber,
+    /**
+     * Entreprise « à zone de service » : COREMI se déplace chez ses
+     * clients et ne reçoit pas au siège. On ne publie donc pas la rue
+     * (schéma recommandé par Google pour ce cas), seulement la commune
+     * et le pays, complétés par areaServed ci-dessous.
+     */
     address: {
       "@type": "PostalAddress",
-      streetAddress: contact.address.street,
-      postalCode: contact.address.postalCode,
       addressLocality: contact.address.city,
+      addressRegion: "Brabant wallon",
       addressCountry: "BE",
     },
     areaServed: [
