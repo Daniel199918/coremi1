@@ -118,8 +118,9 @@ export function Hero() {
   return (
     <section
       ref={sectionRef}
+      data-hero
       aria-label="COREMI — entreprise générale de construction et de châssis"
-      className="relative bg-ink-950"
+      className="relative -mt-[68px] bg-ink-950"
       style={scrub ? { height: "280vh" } : undefined}
     >
       <div

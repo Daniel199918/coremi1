@@ -14,8 +14,10 @@ import { cn } from "@/utils";
  */
 export function SiteHeader() {
   const [scrolled, setScrolled] = useState(false);
+  const [overHero, setOverHero] = useState(false);
   const [open, setOpen] = useState(false);
   const pathname = usePathname();
+  const isHome = pathname === "/";
 
   useEffect(() => {
     const onScroll = () => setScrolled(window.scrollY > 8);
@@ -23,6 +25,28 @@ export function SiteHeader() {
     window.addEventListener("scroll", onScroll, { passive: true });
     return () => window.removeEventListener("scroll", onScroll);
   }, []);
+
+  // Le header reste transparent tant que le hero (vidéo) occupe le haut de
+  // l'écran ; il devient blanc dès que la section suivante passe dessous.
+  useEffect(() => {
+    if (!isHome) {
+      setOverHero(false);
+      return;
+    }
+    const hero = document.querySelector<HTMLElement>("[data-hero]");
+    if (!hero) {
+      setOverHero(false);
+      return;
+    }
+    const compute = () => setOverHero(hero.getBoundingClientRect().bottom > 72);
+    compute();
+    window.addEventListener("scroll", compute, { passive: true });
+    window.addEventListener("resize", compute);
+    return () => {
+      window.removeEventListener("scroll", compute);
+      window.removeEventListener("resize", compute);
+    };
+  }, [isHome, pathname]);
 
   useEffect(() => {
     setOpen(false);
@@ -35,11 +59,9 @@ export function SiteHeader() {
     };
   }, [open]);
 
-  // En haut de l'accueil (hero vidéo sombre), le header se pose en
-  // surimpression, transparent et en blanc ; dès qu'on descend, il
-  // devient blanc opaque. Les pages intérieures restent toujours opaques.
-  const isHome = pathname === "/";
-  const overlay = isHome && !scrolled && !open;
+  // En surimpression (transparent, blanc) tant que la vidéo occupe l'écran ;
+  // blanc opaque dès la section suivante. Menu ouvert = toujours opaque.
+  const overlay = overHero && !open;
 
   return (
     <header
@@ -58,7 +80,7 @@ export function SiteHeader() {
           aria-label="COREMI — retour à l'accueil"
           className={cn(
             "py-3.5 transition-transform duration-300",
-            scrolled && "scale-[0.92]",
+            !overlay && scrolled && "scale-[0.92]",
             overlay && "drop-shadow-[0_1px_10px_rgb(0_0_0/0.45)]"
           )}
         >
