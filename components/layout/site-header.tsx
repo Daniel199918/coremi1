@@ -52,18 +52,15 @@ export function SiteHeader() {
             : "border-ink-950/10 bg-bone"
       )}
     >
-      {/* Voile discret pour la lisibilité du blanc sur la vidéo */}
-      {overlay && (
-        <div
-          aria-hidden="true"
-          className="pointer-events-none absolute inset-0 bg-gradient-to-b from-ink-950/45 to-transparent"
-        />
-      )}
       <div className="relative mx-auto flex w-full max-w-7xl items-center justify-between gap-4 px-5 sm:px-8">
         <Link
           href="/"
           aria-label="COREMI — retour à l'accueil"
-          className={cn("py-3.5 transition-transform duration-300", scrolled && "scale-[0.92]")}
+          className={cn(
+            "py-3.5 transition-transform duration-300",
+            scrolled && "scale-[0.92]",
+            overlay && "drop-shadow-[0_1px_10px_rgb(0_0_0/0.45)]"
+          )}
         >
           <Logo variant={overlay ? "light" : "dark"} />
         </Link>
@@ -81,8 +78,8 @@ export function SiteHeader() {
                   "relative whitespace-nowrap py-2 text-[0.7rem] font-semibold uppercase tracking-[0.14em] transition-colors",
                   overlay
                     ? active
-                      ? "text-white"
-                      : "text-stone-200 hover:text-white"
+                      ? "text-white [text-shadow:0_1px_10px_rgb(0_0_0/0.5)]"
+                      : "text-white/85 hover:text-white [text-shadow:0_1px_10px_rgb(0_0_0/0.5)]"
                     : active
                       ? "text-ink-950"
                       : "text-ink-600 hover:text-ink-950",
@@ -101,7 +98,9 @@ export function SiteHeader() {
             href={siteConfig.contact.phoneHref}
             className={cn(
               "flex items-center gap-2 whitespace-nowrap text-sm font-semibold transition-colors",
-              overlay ? "text-bone hover:text-accent-400" : "text-ink-950 hover:text-accent-600"
+              overlay
+                ? "text-white hover:text-accent-400 [text-shadow:0_1px_10px_rgb(0_0_0/0.5)]"
+                : "text-ink-950 hover:text-accent-600"
             )}
           >
             <Phone className="h-3.5 w-3.5" aria-hidden="true" />
@@ -124,7 +123,7 @@ export function SiteHeader() {
           aria-label={open ? "Fermer le menu" : "Ouvrir le menu"}
           className={cn(
             "cursor-pointer p-2.5 transition-colors xl:hidden",
-            overlay ? "text-bone" : "text-ink-950"
+            overlay ? "text-white drop-shadow-[0_1px_10px_rgb(0_0_0/0.5)]" : "text-ink-950"
           )}
         >
           {open ? <X className="h-6 w-6" aria-hidden="true" /> : <Menu className="h-6 w-6" aria-hidden="true" />}
