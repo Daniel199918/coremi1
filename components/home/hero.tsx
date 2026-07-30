@@ -56,7 +56,9 @@ export function Hero() {
     };
   }, []);
 
-  // Mode scrub : la vidéo suit le scroll, lissé au rAF.
+  // Mode scrub : la vidéo suit le scroll. Pour éviter les saccades, on
+  // n'empile jamais les recherches (seek) : on demande une nouvelle image
+  // uniquement quand la précédente est arrivée (événement « seeked »).
   useEffect(() => {
     if (mode !== "scrub") return;
     const video = videoRef.current;
@@ -64,29 +66,40 @@ export function Hero() {
     if (!video || !section) return;
 
     let raf = 0;
-    let current = 0;
+    let targetTime = 0;
+    let seeking = false;
+
+    const requestSeek = () => {
+      if (seeking) return;
+      const duration = Number.isFinite(video.duration) ? video.duration : 0;
+      if (duration <= 0) return;
+      // rien à faire si on est déjà quasi sur la bonne image (~1/2 image)
+      if (Math.abs(video.currentTime - targetTime) < 1 / 48) return;
+      seeking = true;
+      try {
+        video.currentTime = targetTime;
+      } catch {
+        seeking = false;
+      }
+    };
+
+    const onSeeked = () => {
+      seeking = false;
+      requestSeek(); // rattrape la dernière position visée pendant le seek
+    };
 
     const tick = () => {
       const total = section.offsetHeight - window.innerHeight;
       const progress =
         total > 0 ? clamp(-section.getBoundingClientRect().top / total, 0, 1) : 0;
       const duration = Number.isFinite(video.duration) ? video.duration : 0;
-      const target = progress * duration;
-
-      current += (target - current) * 0.12;
-      if (Math.abs(target - current) < 0.01) current = target;
-
-      if (video.readyState >= 1 && Number.isFinite(current)) {
-        try {
-          video.currentTime = current;
-        } catch {
-          /* seek pas encore possible : on réessaie à la frame suivante */
-        }
-      }
+      targetTime = progress * duration;
+      requestSeek();
       raf = requestAnimationFrame(tick);
     };
 
     const start = () => {
+      video.addEventListener("seeked", onSeeked);
       raf = requestAnimationFrame(tick);
     };
 
@@ -96,6 +109,7 @@ export function Hero() {
     return () => {
       cancelAnimationFrame(raf);
       video.removeEventListener("loadedmetadata", start);
+      video.removeEventListener("seeked", onSeeked);
     };
   }, [mode]);
 
