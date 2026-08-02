@@ -18,6 +18,22 @@ export function LocalBusinessJsonLd() {
     legalName: siteConfig.legalName,
     description: siteConfig.description,
     url: siteConfig.url,
+    // Nom tel qu'enregistré et tel qu'affiché sur la fiche Google : la
+    // cohérence entre les deux aide Google à rattacher site et fiche.
+    alternateName: siteConfig.legalName,
+    /**
+     * sameAs relie le site à ses profils officiels — en premier lieu la
+     * fiche Google Business Profile. Sans ce lien, Google traite le site
+     * et la fiche comme deux entités séparées.
+     */
+    ...(() => {
+      const profiles = [
+        siteConfig.social.googleBusiness,
+        siteConfig.social.facebook,
+        siteConfig.social.instagram,
+      ].filter((u): u is string => Boolean(u));
+      return profiles.length > 0 ? { sameAs: profiles } : {};
+    })(),
     telephone: contact.phoneHref.replace("tel:", ""),
     email: contact.email,
     image: `${siteConfig.url}/images/og-image.jpg`,

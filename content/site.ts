@@ -53,11 +53,23 @@ export const siteConfig = {
   serviceAreaDetail:
     "Nous intervenons à Bruxelles et dans tout le Brabant wallon : Wavre, Ottignies-Louvain-la-Neuve, Waterloo, Braine-l'Alleud, Nivelles, Jodoigne et leurs environs.",
 
-  /** ⚠️ Liens à confirmer / créer par COREMI. */
+  /**
+   * Profils officiels. `null` = pas encore fourni : rien n'est affiché
+   * et rien n'est déclaré aux moteurs. Ne jamais remettre une URL
+   * générique (« https://g.page/ ») en attendant — cela produit un lien
+   * mort sur le site et un mauvais signal pour le référencement.
+   *
+   * googleBusiness : lien court de la fiche Google Business Profile
+   * (« Coremi SPRL »). Il relie officiellement le site à la fiche via
+   * sameAs — c'est ce qui aide Google à considérer les deux comme une
+   * seule et même entreprise.
+   * googleReviewLink : lien « Rédiger un avis » de cette même fiche.
+   */
   social: {
-    facebook: "https://www.facebook.com/", // ⚠️ à confirmer
-    instagram: "https://www.instagram.com/", // ⚠️ à confirmer
-    googleReviews: "https://g.page/", // ⚠️ lien des avis Google à confirmer
+    facebook: null as string | null,
+    instagram: null as string | null,
+    googleBusiness: null as string | null, // ⚠️ à fournir
+    googleReviews: null as string | null, // ⚠️ à fournir
   },
 } as const;
 
