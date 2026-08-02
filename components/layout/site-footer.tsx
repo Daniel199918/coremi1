@@ -2,6 +2,7 @@ import Link from "next/link";
 import { Logo } from "@/components/brand/logo";
 import { Container } from "@/components/ui/container";
 import { footerServiceLinks, navigation, siteConfig } from "@/content/site";
+import { zones } from "@/content/zones";
 
 export function SiteFooter() {
   const year = new Date().getFullYear();
@@ -98,6 +99,33 @@ export function SiteFooter() {
             </li>
           </ul>
         </div>
+      </Container>
+
+      {/* Maillage local : toutes les communes couvertes */}
+      <Container className="border-t border-bone/10 py-12">
+        <h2 className="text-xs font-semibold uppercase tracking-[0.25em] text-stone-400">
+          Nos zones d&apos;intervention
+        </h2>
+        <nav aria-label="Communes desservies" className="mt-6">
+          <ul className="flex flex-wrap gap-x-5 gap-y-2.5 text-sm text-stone-200/70">
+            {zones.map((zone) => (
+              <li key={zone.slug}>
+                <Link
+                  href={`/zones/${zone.slug}`}
+                  className="transition-colors hover:text-bone"
+                >
+                  {zone.name}
+                </Link>
+              </li>
+            ))}
+          </ul>
+        </nav>
+        <Link
+          href="/zones"
+          className="mt-6 inline-block text-xs font-semibold uppercase tracking-[0.16em] text-accent-500 transition-colors hover:text-accent-400"
+        >
+          Voir toutes les zones
+        </Link>
       </Container>
 
       {/* Wordmark fantôme : la marque en très grand corps, en filigrane */}

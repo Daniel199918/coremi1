@@ -1,8 +1,11 @@
 import { siteConfig } from "@/content/site";
+import { zones } from "@/content/zones";
 
 /**
- * Données structurées Schema.org (GeneralContractor) pour le SEO local.
- * ⚠️ Adresse et téléphone à confirmer dans content/site.ts.
+ * Données structurées Schema.org (GeneralContractor) pour le SEO local :
+ * identité, contact, TVA, métiers et liste complète des communes
+ * desservies. Profil « entreprise à zone de service » — la rue du siège
+ * n'est volontairement pas publiée (voir content/site.ts).
  */
 export function LocalBusinessJsonLd() {
   const { contact } = siteConfig;
@@ -31,9 +34,20 @@ export function LocalBusinessJsonLd() {
       addressRegion: "Brabant wallon",
       addressCountry: "BE",
     },
+    // Toutes les communes réellement couvertes, pour le référencement local.
     areaServed: [
-      { "@type": "City", name: "Bruxelles" },
       { "@type": "AdministrativeArea", name: "Brabant wallon" },
+      { "@type": "AdministrativeArea", name: "Région de Bruxelles-Capitale" },
+      ...zones.map((z) => ({
+        "@type": "City" as const,
+        name: z.name,
+        address: {
+          "@type": "PostalAddress" as const,
+          addressLocality: z.name,
+          postalCode: z.postalCodes[0],
+          addressCountry: "BE",
+        },
+      })),
     ],
     knowsAbout: [
       "Construction et gros œuvre",
