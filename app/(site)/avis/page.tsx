@@ -38,15 +38,22 @@ export default function AvisPage() {
                 trier ni les retoucher. C&apos;est la photo la plus fidèle de notre
                 travail, chantier après chantier.
               </p>
-              <a
-                href={siteConfig.social.googleReviews}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="mt-8 inline-flex w-fit items-center gap-3 bg-ink-950 px-7 py-4 text-sm font-semibold uppercase tracking-[0.14em] text-bone transition-colors hover:bg-ink-800"
-              >
-                Voir nos avis Google
-                <ExternalLink className="h-4 w-4" aria-hidden="true" />
-              </a>
+              {siteConfig.social.googleBusiness ? (
+                <a
+                  href={siteConfig.social.googleBusiness}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="mt-8 inline-flex w-fit items-center gap-3 bg-ink-950 px-7 py-4 text-sm font-semibold uppercase tracking-[0.14em] text-bone transition-colors hover:bg-ink-800"
+                >
+                  Voir nos avis Google
+                  <ExternalLink className="h-4 w-4" aria-hidden="true" />
+                </a>
+              ) : (
+                <p className="mt-8 border-l-2 border-accent-600 pl-5 text-sm text-ink-500">
+                  Recherchez « COREMI » sur Google Maps pour consulter la fiche.
+                  Le lien direct sera ajouté ici prochainement.
+                </p>
+              )}
             </article>
           </Reveal>
           <Reveal delay={0.08}>
@@ -57,15 +64,22 @@ export default function AvisPage() {
                 entrepreneur en confiance. Racontez votre chantier tel qu&apos;il
                 s&apos;est passé, c&apos;est tout ce que nous demandons.
               </p>
-              <a
-                href={siteConfig.social.googleReviews}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="mt-8 inline-flex w-fit items-center gap-3 bg-accent-600 px-7 py-4 text-sm font-semibold uppercase tracking-[0.14em] text-white transition-colors hover:bg-accent-700"
-              >
-                Laisser un avis
-                <ExternalLink className="h-4 w-4" aria-hidden="true" />
-              </a>
+              {siteConfig.social.googleReviews ? (
+                <a
+                  href={siteConfig.social.googleReviews}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="mt-8 inline-flex w-fit items-center gap-3 bg-accent-600 px-7 py-4 text-sm font-semibold uppercase tracking-[0.14em] text-white transition-colors hover:bg-accent-700"
+                >
+                  Laisser un avis
+                  <ExternalLink className="h-4 w-4" aria-hidden="true" />
+                </a>
+              ) : (
+                <p className="mt-8 border-l-2 border-accent-600 pl-5 text-sm text-ink-500">
+                  Le lien direct « Rédiger un avis » sera ajouté ici dès que la
+                  fiche Google sera pleinement active.
+                </p>
+              )}
             </article>
           </Reveal>
         </Container>
