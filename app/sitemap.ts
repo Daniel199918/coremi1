@@ -1,5 +1,6 @@
 import type { MetadataRoute } from "next";
 import { siteConfig } from "@/content/site";
+import { zones } from "@/content/zones";
 
 /**
  * Sitemap du site vitrine.
@@ -20,6 +21,9 @@ export default function sitemap(): MetadataRoute.Sitemap {
     { path: "/a-propos", priority: 0.7 },
     { path: "/avis", priority: 0.6 },
     { path: "/contact", priority: 0.9 },
+    { path: "/zones", priority: 0.8 },
+    // Une entrée par commune couverte (référencement local).
+    ...zones.map((z) => ({ path: `/zones/${z.slug}`, priority: 0.7 })),
   ];
 
   return routes.map(({ path, priority }) => ({

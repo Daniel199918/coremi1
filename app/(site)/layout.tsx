@@ -1,6 +1,7 @@
 import { SiteHeader } from "@/components/layout/site-header";
 import { SiteFooter } from "@/components/layout/site-footer";
 import { LocalBusinessJsonLd } from "@/components/seo/local-business-jsonld";
+import { WebSiteJsonLd } from "@/components/seo/website-jsonld";
 import { CursorDot } from "@/components/motion/cursor-dot";
 
 /** Layout du site vitrine : header sticky + footer. */
@@ -8,6 +9,7 @@ export default function SiteLayout({ children }: { children: React.ReactNode }) 
   return (
     <>
       <LocalBusinessJsonLd />
+      <WebSiteJsonLd />
       <CursorDot />
       <a
         href="#contenu"
