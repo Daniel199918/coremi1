@@ -89,9 +89,9 @@ export async function submitQuoteRequest(
     quote.description || "(aucune précision ajoutée)",
   ].join("\n");
 
-  const canSend = Boolean(process.env.RESEND_API_KEY);
+  const apiKey = process.env.RESEND_API_KEY;
 
-  if (!canSend) {
+  if (!apiKey) {
     // Trace serveur : la demande apparaît au moins dans les logs Vercel.
     console.warn("[devis] Demande reçue mais AUCUN envoi configuré :\n" + body);
     return {
@@ -104,17 +104,33 @@ export async function submitQuoteRequest(
   }
 
   try {
-    /* ---- Envoi Resend (à décommenter après installation du paquet) ----
     const { Resend } = await import("resend");
-    const resend = new Resend(process.env.RESEND_API_KEY);
-    await resend.emails.send({
-      from: "Site COREMI <devis@coremi.be>", // domaine à vérifier dans Resend
+    const resend = new Resend(apiKey);
+
+    const { error } = await resend.emails.send({
+      /**
+       * Tant que coremi.be n'est pas vérifié dans Resend, seul le domaine
+       * de test `resend.dev` est autorisé — et uniquement vers l'adresse
+       * du titulaire du compte. Une fois le domaine vérifié, définir
+       * RESEND_FROM sur « COREMI <devis@coremi.be> ».
+       */
+      from: process.env.RESEND_FROM ?? "COREMI <onboarding@resend.dev>",
       to: [siteConfig.contact.email],
+      // Répondre à l'e-mail suffit à recontacter le client.
       replyTo: quote.email,
       subject: `Demande de devis — ${quote.projectType} à ${quote.city}`,
       text: body,
     });
-    -------------------------------------------------------------------- */
+
+    if (error) {
+      // On ne laisse jamais croire à un envoi réussi qui n'a pas eu lieu.
+      console.error("[devis] Échec de l'envoi Resend :", error, "\n" + body);
+      return {
+        status: "error",
+        message: `L'envoi a échoué. Réessayez, ou écrivez-nous directement à ${siteConfig.contact.email}.`,
+        fieldErrors: {},
+      };
+    }
 
     return {
       status: "success",
@@ -122,7 +138,8 @@ export async function submitQuoteRequest(
         "Merci ! Votre demande est bien arrivée. Nous revenons vers vous rapidement, en général sous deux jours ouvrables.",
       fieldErrors: {},
     };
-  } catch {
+  } catch (e) {
+    console.error("[devis] Exception à l'envoi :", e, "\n" + body);
     return {
       status: "error",
       message: `L'envoi a échoué. Réessayez, ou écrivez-nous directement à ${siteConfig.contact.email}.`,
