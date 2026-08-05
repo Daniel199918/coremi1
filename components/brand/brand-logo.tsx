@@ -5,39 +5,44 @@ import { cn } from "@/utils";
  * Logo de marque tierce (fabricant) — composant unique et réutilisable.
  *
  * Garanties de rendu :
- * - le ratio d'origine est toujours conservé (`object-contain`, jamais
- *   `cover`, jamais de largeur et de hauteur imposées ensemble) ;
- * - une hauteur maximale commune donne une échelle visuelle cohérente
- *   entre des logos de proportions très différentes ;
- * - un espace de protection interne évite que le logo ne touche un bord
- *   ou un logo voisin ;
- * - le fond est neutre et clair, pour la lisibilité des logos sombres
- *   comme colorés ;
+ * - le ratio d'origine est toujours conservé : hauteur maximale + largeur
+ *   automatique + `object-contain`, jamais de dimensions imposées ;
+ * - une hauteur de tuile commune donne une échelle cohérente entre des
+ *   logos de proportions très différentes ;
+ * - un espace de protection interne évite que le logo touche un bord ;
+ * - le fond s'adapte au fichier : `tone="dark"` pour un logo fourni en
+ *   version blanche, qui serait invisible sur fond clair ;
  * - un texte alternatif descriptif est obligatoire.
  *
- * ⚠️ TANT QU'AUCUN FICHIER OFFICIEL N'EST FOURNI, le composant affiche
- * un emplacement réservé portant le nom de la marque. C'est volontaire :
- * récupérer un logo depuis un moteur de recherche poserait un problème
- * de qualité et de droits d'usage. Voir `brands.ts` pour la liste
- * précise des fichiers attendus.
+ * Les fichiers ne sont ni recolorés, ni recadrés, ni redessinés : ce sont
+ * les fichiers publiés par les fabricants sur leurs sites officiels.
  */
 
 type BrandLogoProps = {
   name: string;
-  /** Chemin du fichier officiel, `null` tant qu'il n'a pas été fourni. */
+  /** Chemin du fichier officiel, `null` s'il n'est pas encore disponible. */
   src: string | null;
-  /** Dimensions intrinsèques du fichier, nécessaires au calcul du ratio. */
+  /** Dimensions intrinsèques, nécessaires au calcul du ratio. */
   width?: number;
   height?: number;
+  /** Fond de la tuile : `dark` pour les logos fournis en blanc. */
+  tone?: "light" | "dark";
   className?: string;
 };
 
-export function BrandLogo({ name, src, width, height, className }: BrandLogoProps) {
+export function BrandLogo({
+  name,
+  src,
+  width,
+  height,
+  tone = "light",
+  className,
+}: BrandLogoProps) {
   if (!src || !width || !height) {
     return (
       <div
         className={cn(
-          "flex h-16 w-full items-center justify-center border border-dashed border-ink-950/25 bg-bone px-5",
+          "flex h-20 w-full items-center justify-center border border-dashed border-ink-950/25 bg-bone px-5",
           className
         )}
       >
@@ -54,7 +59,8 @@ export function BrandLogo({ name, src, width, height, className }: BrandLogoProp
   return (
     <div
       className={cn(
-        "flex h-16 w-full items-center justify-center border border-ink-950/10 bg-bone px-5",
+        "flex h-20 w-full items-center justify-center border px-6",
+        tone === "dark" ? "border-ink-950/15 bg-ink-950" : "border-ink-950/10 bg-bone",
         className
       )}
     >
@@ -63,8 +69,8 @@ export function BrandLogo({ name, src, width, height, className }: BrandLogoProp
         alt={`Logo ${name}`}
         width={width}
         height={height}
-        className="max-h-10 w-auto object-contain"
-        sizes="200px"
+        className="max-h-9 w-auto max-w-full object-contain"
+        sizes="220px"
       />
     </div>
   );

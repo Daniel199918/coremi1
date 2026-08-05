@@ -389,7 +389,7 @@ export function ChassisQuiz() {
                       .filter((b) => reco.brandIds.includes(b.id))
                       .map((b) => (
                         <div key={b.id}>
-                          <BrandLogo name={b.name} src={b.logo} width={b.logoWidth} height={b.logoHeight} />
+                          <BrandLogo name={b.name} src={b.logo} width={b.logoWidth} height={b.logoHeight} tone={b.logoTone} />
                           <p className="mt-2 text-xs leading-relaxed text-ink-500">
                             {b.origin} · {b.materials.join(" & ")}
                           </p>

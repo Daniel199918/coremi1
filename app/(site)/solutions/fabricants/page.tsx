@@ -72,6 +72,7 @@ export default function FabricantsPage() {
                     src={b.logo}
                     width={b.logoWidth}
                     height={b.logoHeight}
+                    tone={b.logoTone}
                   />
                   <p className="mt-5 text-xs font-semibold uppercase tracking-[0.14em] text-ink-500">
                     {b.origin} · {b.materials.join(" & ")}
