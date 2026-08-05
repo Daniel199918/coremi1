@@ -120,6 +120,7 @@ export const navigation: NavItem[] = [
   },
   { label: "Réalisations", href: "/realisations" },
   { label: "Primes", href: "/primes" },
+  { label: "Conseils", href: "/conseils" },
   {
     label: "À propos",
     href: "/a-propos",

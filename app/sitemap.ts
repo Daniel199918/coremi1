@@ -1,6 +1,7 @@
 import type { MetadataRoute } from "next";
 import { siteConfig } from "@/content/site";
 import { zones } from "@/content/zones";
+import { guides } from "@/content/guides";
 
 /**
  * Sitemap du site vitrine.
@@ -23,6 +24,10 @@ export default function sitemap(): MetadataRoute.Sitemap {
     { path: "/primes/flandre", priority: 0.9 },
     { path: "/primes/federal", priority: 0.7 },
     { path: "/primes/methode", priority: 0.6 },
+    { path: "/chassis/quiz", priority: 0.8 },
+    { path: "/conseils", priority: 0.8 },
+    // Un guide = une page utile, pas une page générée pour les moteurs.
+    ...guides.map((g) => ({ path: `/conseils/${g.slug}`, priority: 0.7 })),
     { path: "/devis", priority: 0.9 },
     { path: "/realisations", priority: 0.8 },
     { path: "/comment-on-travaille", priority: 0.9 },

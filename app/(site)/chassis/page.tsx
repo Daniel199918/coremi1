@@ -1,137 +1,390 @@
 import type { Metadata } from "next";
-import Image from "next/image";
+import Link from "next/link";
+import { ArrowRight, HelpCircle } from "lucide-react";
 import { PageHero } from "@/components/layout/page-hero";
 import { Container } from "@/components/ui/container";
 import { SectionHeading } from "@/components/ui/section-heading";
 import { Reveal } from "@/components/motion/reveal";
-import { MaterialsTable } from "@/components/chassis/materials-table";
+import { GridLines } from "@/components/ui/grid-lines";
 import { OpeningSchemas } from "@/components/chassis/opening-schemas";
 import { CtaSection } from "@/components/home/cta-section";
-import { chassisPrestations } from "@/content/chassis";
+import {
+  chassisPrestations,
+  components,
+  criteria,
+  materials,
+  mistakes,
+  priceFactors,
+  questionsToAsk,
+} from "@/content/chassis";
+import { siteConfig } from "@/content/site";
 
 export const metadata: Metadata = {
-  title: "Pose et remplacement de châssis PVC et aluminium à Bruxelles",
+  title: "Châssis PVC, aluminium ou bois — comment choisir sans se tromper",
   description:
-    "Châssis PVC, aluminium et bois, portes d'entrée et vitrages à Bruxelles et en Brabant wallon. Prise de mesures, conseil sur les matériaux, pose soignée avec finitions intérieures.",
+    "Guide de choix : différences réelles entre PVC, aluminium et bois, rôle du profilé, du vitrage, des joints et de la pose, ce qui fait varier le prix, erreurs fréquentes et questions à poser avant de signer un devis.",
   alternates: { canonical: "/chassis" },
 };
 
+const sommaire = [
+  { href: "#materiaux", label: "PVC, aluminium ou bois ?" },
+  { href: "#composants", label: "Ce qui fait la performance" },
+  { href: "#criteres", label: "Thermique, acoustique, sécurité" },
+  { href: "#ouvertures", label: "Types d'ouverture" },
+  { href: "#prix", label: "Ce qui fait varier le prix" },
+  { href: "#erreurs", label: "Erreurs fréquentes" },
+  { href: "#questions", label: "Questions avant de signer" },
+  { href: "#primes", label: "Primes liées aux châssis" },
+];
+
 export default function ChassisPage() {
+  const jsonLd = {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    itemListElement: [
+      { "@type": "ListItem", position: 1, name: "Accueil", item: siteConfig.url },
+      { "@type": "ListItem", position: 2, name: "Solutions", item: `${siteConfig.url}/solutions` },
+      { "@type": "ListItem", position: 3, name: "Châssis & portes", item: `${siteConfig.url}/chassis` },
+    ],
+  };
+
   return (
     <>
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }} />
+
       <PageHero
         index="02"
-        eyebrow="Châssis & portes"
-        title="Le bon châssis, bien posé, change toute la maison"
-        description="Isolation, silence, luminosité, sécurité : vos châssis travaillent tous les jours. Nous vous aidons à choisir le bon matériau, puis nous le posons dans les règles de l'art."
+        eyebrow="Châssis, portes & vitrages"
+        title="Choisir ses châssis sans se tromper"
+        description="Cette page n'est pas un argumentaire : c'est ce que nous expliquons avant qu'un client signe, chez nous ou ailleurs. Les compromis réels, ce qui compte vraiment, et les questions qui séparent deux devis en apparence identiques."
       />
 
-      {/* Comparaison des matériaux */}
-      <section className="py-20 sm:py-28" aria-labelledby="materiaux">
+      {/* Sommaire + accès au quiz */}
+      <section className="border-b border-ink-950/10 bg-bone-deep py-10">
+        <Container>
+          <div className="grid gap-8 lg:grid-cols-12">
+            <nav aria-label="Sommaire" className="lg:col-span-7">
+              <h2 className="text-xs font-semibold uppercase tracking-[0.16em] text-ink-500">
+                Sur cette page
+              </h2>
+              <ul className="mt-4 flex flex-wrap gap-x-6 gap-y-2">
+                {sommaire.map((s) => (
+                  <li key={s.href}>
+                    <a
+                      href={s.href}
+                      className="text-sm text-ink-700 underline decoration-ink-950/25 underline-offset-4 hover:text-accent-700 hover:decoration-accent-600"
+                    >
+                      {s.label}
+                    </a>
+                  </li>
+                ))}
+              </ul>
+            </nav>
+            <div className="lg:col-span-5">
+              <Link
+                href="/chassis/quiz"
+                className="group flex items-center justify-between gap-4 border border-ink-950/20 bg-bone p-5 transition-colors hover:border-ink-950"
+              >
+                <span>
+                  <span className="block font-display text-lg text-ink-950">
+                    Pas envie de tout lire ?
+                  </span>
+                  <span className="mt-1 block text-sm text-ink-600">
+                    Onze questions pour cerner la solution qui vous convient.
+                  </span>
+                </span>
+                <ArrowRight
+                  className="h-5 w-5 shrink-0 text-accent-600 transition-transform group-hover:translate-x-1"
+                  aria-hidden="true"
+                />
+              </Link>
+            </div>
+          </div>
+        </Container>
+      </section>
+
+      {/* Matériaux */}
+      <section id="materiaux" className="scroll-mt-24 py-16 sm:py-24">
         <Container>
           <Reveal>
             <SectionHeading
-              eyebrow="Choisir son matériau"
+              index="01"
+              eyebrow="Le matériau"
               title="PVC, aluminium ou bois ?"
-              description="Il n'y a pas de meilleur matériau dans l'absolu. Il y a celui qui convient à votre maison, à vos habitudes et à votre budget. Voici comment nous les comparons avec vous."
+              description="Aucun n'est meilleur dans l'absolu. Chacun règle un problème et en crée un ailleurs. Le bon choix dépend de ce que vous placez en premier : le budget, la lumière, l'entretien ou l'aspect."
             />
           </Reveal>
+
+          <div className="mt-14 grid gap-8 lg:grid-cols-3">
+            {materials.map((m, i) => (
+              <Reveal key={m.id} delay={0.06 * i}>
+                <article className="flex h-full flex-col border border-ink-950/15 bg-bone p-7">
+                  <h3 className="font-display text-3xl text-ink-950">{m.name}</h3>
+                  <p className="mt-3 leading-relaxed text-ink-600">{m.short}</p>
+
+                  <h4 className="mt-7 text-xs font-semibold uppercase tracking-[0.16em] text-ink-500">
+                    Ce que ça vous apporte
+                  </h4>
+                  <ul className="mt-3 space-y-2">
+                    {m.strengths.map((s) => (
+                      <li key={s} className="flex gap-3 text-sm leading-relaxed text-ink-600">
+                        <span aria-hidden="true" className="mt-2 h-1 w-1 shrink-0 bg-accent-600" />
+                        {s}
+                      </li>
+                    ))}
+                  </ul>
+
+                  <h4 className="mt-6 text-xs font-semibold uppercase tracking-[0.16em] text-ink-500">
+                    Ce que ça vous coûte
+                  </h4>
+                  <ul className="mt-3 space-y-2">
+                    {m.limits.map((s) => (
+                      <li key={s} className="flex gap-3 text-sm leading-relaxed text-ink-600">
+                        <span aria-hidden="true" className="mt-2 h-1 w-1 shrink-0 bg-ink-950/40" />
+                        {s}
+                      </li>
+                    ))}
+                  </ul>
+
+                  <dl className="mt-6 space-y-3 border-t border-ink-950/10 pt-5 text-sm">
+                    <div>
+                      <dt className="font-semibold text-ink-950">Entretien</dt>
+                      <dd className="mt-1 leading-relaxed text-ink-600">{m.maintenance}</dd>
+                    </div>
+                    <div>
+                      <dt className="font-semibold text-ink-950">Durée de vie</dt>
+                      <dd className="mt-1 leading-relaxed text-ink-600">{m.lifespan}</dd>
+                    </div>
+                    <div>
+                      <dt className="font-semibold text-ink-950">Où ça se justifie</dt>
+                      <dd className="mt-1 leading-relaxed text-ink-600">{m.bestFor.join(" · ")}</dd>
+                    </div>
+                  </dl>
+                </article>
+              </Reveal>
+            ))}
+          </div>
+
           <Reveal delay={0.1}>
-            <div className="mt-14">
-              <MaterialsTable />
-            </div>
-          </Reveal>
-          <Reveal delay={0.15}>
-            <p className="mt-6 text-sm text-ink-500">
-              Le choix se confirme toujours sur place, châssis existants sous les yeux.
-              La visite et le conseil font partie du devis gratuit.
+            <p className="mt-10 max-w-3xl border-l-2 border-accent-600 bg-bone-deep p-5 text-sm leading-relaxed text-ink-600">
+              Le matériau est ce dont on parle le plus, et rarement le plus déterminant.
+              Un aluminium d&apos;entrée de gamme peut isoler moins bien qu&apos;un bon
+              PVC, et les deux perdront une partie de leur performance si la pose est
+              mauvaise.{" "}
+              <Link
+                href="/solutions/fabricants"
+                className="font-semibold text-ink-950 underline decoration-accent-600 underline-offset-4"
+              >
+                Comparer Schüco, Aliplast et Aluprof
+              </Link>
             </p>
           </Reveal>
         </Container>
       </section>
 
-      {/* Prestations châssis */}
+      {/* Composants */}
       <section
-        id="portes"
-        className="scroll-mt-28 border-y border-ink-950/10 bg-bone-deep py-20 sm:py-28"
-        aria-labelledby="prestations-chassis"
+        id="composants"
+        className="relative scroll-mt-24 overflow-hidden bg-ink-950 py-16 text-bone sm:py-24"
       >
-        <Container className="grid gap-12 lg:grid-cols-12">
-          <Reveal className="lg:col-span-5">
+        <GridLines tone="dark" />
+        <Container className="relative">
+          <Reveal>
             <SectionHeading
-              eyebrow="Nos prestations"
-              title="Châssis, portes, vitrages"
-              description="Du remplacement d'un seul vitrage au renouvellement complet des menuiseries d'une habitation."
+              index="02"
+              eyebrow="Ce qui fait la performance"
+              title="Quatre éléments, pas seulement le cadre"
+              description="Un châssis n'est pas un produit unique, c'est un assemblage. Chacune de ces quatre pièces peut ruiner le travail des trois autres."
+              tone="dark"
             />
-            <div className="img-drift relative mt-10 hidden aspect-[4/3] overflow-hidden bg-stone-100 lg:block">
-              <Image
-                src="/images/realisations/entree-chassis-noirs.jpg"
-                alt="Menuiseries en aluminium noir posées par COREMI : entrée vitrée toute hauteur et porte de garage sectionnelle noire."
-                fill
-                sizes="40vw"
-                className="object-cover"
-              />
-            </div>
           </Reveal>
-          <div className="lg:col-span-7">
-            {chassisPrestations.map((prestation, i) => (
-              <Reveal key={prestation.title} delay={0.05 * i}>
-                <article className="border-b border-ink-950/10 py-7 first:border-t">
-                  <h3 className="flex items-baseline gap-4 font-display text-2xl text-ink-950">
-                    <span className="text-sm font-sans font-semibold tracking-widest text-accent-600">
-                      {String(i + 1).padStart(2, "0")}
-                    </span>
-                    {prestation.title}
-                  </h3>
-                  <p className="mt-3 leading-relaxed text-ink-600 lg:pl-10">
-                    {prestation.description}
-                  </p>
-                </article>
+
+          <div className="mt-14 border-t border-bone/15">
+            {components.map((c, i) => (
+              <Reveal key={c.n} delay={0.05 * i}>
+                <div className="grid gap-x-10 gap-y-3 border-b border-bone/15 py-8 sm:grid-cols-[5rem_1fr]">
+                  <span className="font-display text-3xl font-medium leading-none text-accent-500">
+                    {c.n}
+                  </span>
+                  <div>
+                    <h3 className="font-display text-2xl font-medium text-bone">{c.title}</h3>
+                    <p className="mt-3 max-w-2xl leading-relaxed text-stone-200/75">{c.text}</p>
+                    <p className="mt-3 flex items-start gap-2 text-sm text-accent-400">
+                      <HelpCircle className="mt-0.5 h-4 w-4 shrink-0" aria-hidden="true" />
+                      {c.check}
+                    </p>
+                  </div>
+                </div>
               </Reveal>
             ))}
           </div>
         </Container>
       </section>
 
-      {/* Types d'ouverture — schémas techniques */}
-      <section className="py-20 sm:py-28" aria-labelledby="ouvertures">
+      {/* Critères */}
+      <section id="criteres" className="scroll-mt-24 py-16 sm:py-24">
         <Container>
           <Reveal>
             <SectionHeading
-              eyebrow="Types d'ouverture"
-              title="Fixe, battant ou oscillo-battant ?"
-              description="Chaque baie a son usage. Nous dessinons le bon type d'ouverture pièce par pièce, comme sur un plan de menuiserie."
+              index="03"
+              eyebrow="Les critères"
+              title="Thermique, acoustique, sécurité, lumière"
+              description="Ces exigences ne se règlent pas au même endroit. Savoir laquelle compte le plus pour vous évite de payer ce qui ne changera rien à votre confort."
             />
           </Reveal>
+          <dl className="mt-14 grid gap-px bg-ink-950/10 sm:grid-cols-2">
+            {criteria.map((c) => (
+              <div key={c.title} className="bg-bone p-7 sm:p-8">
+                <dt className="font-display text-xl font-medium text-ink-950">{c.title}</dt>
+                <dd className="mt-3 leading-relaxed text-ink-600">{c.text}</dd>
+              </div>
+            ))}
+          </dl>
+        </Container>
+      </section>
+
+      {/* Types d'ouverture */}
+      <section id="ouvertures" className="scroll-mt-24 bg-bone-deep py-16 sm:py-24">
+        <Container>
+          <Reveal>
+            <SectionHeading
+              index="04"
+              eyebrow="Types d'ouverture"
+              title="Fixe, battant, oscillo-battant ou coulissant"
+              description="Le type d'ouverture influence le prix, la ventilation possible et l'entretien. Les pointillés convergent vers le côté des charnières, comme sur un plan de menuisier."
+            />
+          </Reveal>
+          <div className="mt-12">
+            <OpeningSchemas />
+          </div>
+        </Container>
+      </section>
+
+      {/* Prix */}
+      <section id="prix" className="scroll-mt-24 py-16 sm:py-24">
+        <Container>
+          <Reveal>
+            <SectionHeading
+              index="05"
+              eyebrow="Le budget"
+              title="Ce qui fait varier le prix"
+              description="Nous n'affichons pas de prix au châssis : le même mot recouvre des produits qui vont du simple au triple. Voici en revanche ce qui déplace réellement le curseur."
+            />
+          </Reveal>
+          <dl className="mt-12 grid gap-x-10 gap-y-8 sm:grid-cols-2 lg:grid-cols-3">
+            {priceFactors.map((p) => (
+              <div key={p.title}>
+                <dt className="font-semibold text-ink-950">{p.title}</dt>
+                <dd className="mt-2 leading-relaxed text-ink-600">{p.text}</dd>
+              </div>
+            ))}
+          </dl>
           <Reveal delay={0.1}>
-            <div className="mt-14">
-              <OpeningSchemas />
-            </div>
+            <Link
+              href="/prix-et-aides"
+              className="mt-10 inline-flex items-center gap-3 text-xs font-semibold uppercase tracking-[0.14em] text-ink-950 hover:text-accent-600"
+            >
+              Comment se construit un devis, poste par poste
+              <ArrowRight className="h-4 w-4" aria-hidden="true" />
+            </Link>
           </Reveal>
         </Container>
       </section>
 
-      {/* Isolation, en clair */}
-      <section className="py-20 sm:py-28">
-        <Container className="grid gap-10 lg:grid-cols-[1fr_2fr]">
+      {/* Erreurs */}
+      <section id="erreurs" className="scroll-mt-24 bg-bone-deep py-16 sm:py-24">
+        <Container>
           <Reveal>
-            <p className="flex items-baseline gap-4 text-xs font-semibold uppercase tracking-[0.25em] text-ink-500">
-              <span className="text-accent-600">03</span> Isolation
-            </p>
+            <SectionHeading index="06" eyebrow="À éviter" title="Les erreurs que nous voyons le plus" />
           </Reveal>
-          <Reveal delay={0.08}>
-            <p className="font-display text-3xl font-medium leading-snug text-ink-950 sm:text-4xl">
-              Des châssis récents avec un vitrage performant réduisent les pertes de
-              chaleur et le bruit de la rue. L&apos;écart se sent dès le premier hiver,
-              et sur la facture.
-            </p>
-            <p className="mt-6 max-w-2xl leading-relaxed text-ink-600">
-              Nous dimensionnons le vitrage selon l&apos;orientation et l&apos;usage de
-              chaque pièce : double ou triple vitrage, verre acoustique côté rue,
-              vitrage sécurisé au rez-de-chaussée. Sans survendre ce dont vous
-              n&apos;avez pas besoin.
-            </p>
+          <ul className="mt-12 max-w-3xl border-t border-ink-950/15">
+            {mistakes.map((m, i) => (
+              <Reveal key={m} delay={0.04 * i}>
+                <li className="flex gap-5 border-b border-ink-950/15 py-5">
+                  <span className="font-display text-lg font-medium text-accent-600">
+                    {String(i + 1).padStart(2, "0")}
+                  </span>
+                  <span className="leading-relaxed text-ink-600">{m}</span>
+                </li>
+              </Reveal>
+            ))}
+          </ul>
+        </Container>
+      </section>
+
+      {/* Questions */}
+      <section id="questions" className="scroll-mt-24 py-16 sm:py-24">
+        <Container>
+          <Reveal>
+            <SectionHeading
+              index="07"
+              eyebrow="Avant de signer"
+              title="Dix questions à poser à votre installateur"
+              description="Posez-les à tous vos devis, y compris au nôtre. Un installateur sérieux répond sans hésiter ; un devis qui reste vague sur ces points mérite d'être creusé."
+            />
           </Reveal>
+          <ol className="mt-12 grid max-w-4xl gap-x-10 gap-y-4 sm:grid-cols-2">
+            {questionsToAsk.map((q, i) => (
+              <li key={q} className="flex gap-4 border-b border-ink-950/10 pb-4">
+                <span className="font-display text-base font-medium leading-6 text-accent-600">
+                  {String(i + 1).padStart(2, "0")}
+                </span>
+                <span className="leading-relaxed text-ink-700">{q}</span>
+              </li>
+            ))}
+          </ol>
+        </Container>
+      </section>
+
+      {/* Nos prestations */}
+      <section className="bg-bone-deep py-16 sm:py-24">
+        <Container>
+          <Reveal>
+            <SectionHeading index="08" eyebrow="Concrètement" title="Ce que nous réalisons" />
+          </Reveal>
+          <dl className="mt-12 grid gap-px bg-ink-950/10 sm:grid-cols-2">
+            {chassisPrestations.map((p) => (
+              <div key={p.title} className="bg-bone p-7">
+                <dt className="font-display text-xl text-ink-950">{p.title}</dt>
+                <dd className="mt-3 leading-relaxed text-ink-600">{p.description}</dd>
+              </div>
+            ))}
+          </dl>
+        </Container>
+      </section>
+
+      {/* Primes */}
+      <section id="primes" className="scroll-mt-24 py-16 sm:py-20">
+        <Container>
+          <div className="grid gap-10 lg:grid-cols-12 lg:gap-16">
+            <div className="lg:col-span-5">
+              <SectionHeading index="09" eyebrow="Aides" title="Les primes liées aux châssis" />
+            </div>
+            <div className="lg:col-span-7">
+              <p className="max-w-2xl leading-relaxed text-ink-600">
+                Les trois Régions soutiennent le remplacement des menuiseries et des
+                vitrages, avec des exigences de performance thermique minimales et des
+                calendriers stricts : plusieurs démarches doivent précéder le chantier.
+                Nous mentionnons systématiquement les performances sur nos devis, ce qui
+                évite un refus pour pièce incomplète.
+              </p>
+              <div className="mt-8 flex flex-col gap-3 sm:flex-row">
+                <Link
+                  href="/primes"
+                  className="btn-press group inline-flex items-center justify-center gap-3 bg-accent-600 px-7 py-4 text-xs font-semibold uppercase tracking-[0.14em] text-white hover:bg-accent-700"
+                >
+                  Voir les primes par région
+                  <ArrowRight className="h-4 w-4 transition-transform group-hover:translate-x-1" aria-hidden="true" />
+                </Link>
+                <Link
+                  href="/chassis/quiz"
+                  className="btn-press inline-flex items-center justify-center border border-ink-950/25 px-7 py-4 text-xs font-semibold uppercase tracking-[0.14em] text-ink-950 hover:border-ink-950 hover:bg-ink-950 hover:text-bone"
+                >
+                  Faire le quiz châssis
+                </Link>
+              </div>
+            </div>
+          </div>
         </Container>
       </section>
 
