@@ -8,12 +8,15 @@ import { SectionHeading } from "@/components/ui/section-heading";
 import { Reveal } from "@/components/motion/reveal";
 import { ProcessSection } from "@/components/home/process-section";
 import { CtaSection } from "@/components/home/cta-section";
-import { constructionPrestations } from "@/content/construction";
+import { GridLines } from "@/components/ui/grid-lines";
+import { ProjectPathExplorer } from "@/components/construction/project-path";
+import { budgetDrivers, constructionPrestations, preDecisions } from "@/content/construction";
+import { siteConfig } from "@/content/site";
 
 export const metadata: Metadata = {
-  title: "Construction et rénovation à Bruxelles et en Brabant wallon",
+  title: "Construction et rénovation — ordre des travaux, budget et autorisations",
   description:
-    "Entrepreneur général pour votre gros œuvre, extension, transformation ou rénovation complète à Bruxelles et en Brabant wallon. Coordination de chantier, devis détaillé gratuit.",
+    "Comment se déroule une rénovation : l'ordre logique des travaux, les décisions à prendre avant le chantier, les interactions entre châssis, isolation, ventilation et chauffage, et ce qui fait varier le budget.",
   alternates: { canonical: "/construction-renovation" },
 };
 
@@ -23,8 +26,8 @@ export default function ConstructionRenovationPage() {
       <PageHero
         index="01"
         eyebrow="Construction & rénovation"
-        title="Du terrassement aux finitions, un chantier maîtrisé"
-        description="Constructions, extensions, transformations et rénovations complètes. COREMI exécute le gros œuvre selon les plans de votre architecte et coordonne le chantier jusqu'à la réception."
+        title="Rénover dans le bon ordre"
+        description="La plupart des surcoûts d'une rénovation ne viennent pas du prix des matériaux, mais de l'ordre dans lequel les travaux ont été faits. Voici comment un chantier s'enchaîne, ce qui se décide avant le premier coup de pelle, et ce qui fait vraiment bouger le budget."
       />
 
       {/* Prestations */}
@@ -96,6 +99,120 @@ export default function ConstructionRenovationPage() {
               </Link>
             </Reveal>
           </div>
+        </Container>
+      </section>
+
+
+      {/* Parcours interactif */}
+      <section className="scroll-mt-24 bg-bone-deep py-16 sm:py-24" id="parcours">
+        <Container>
+          <Reveal>
+            <SectionHeading
+              index="02"
+              eyebrow="Votre projet"
+              title="Quel chantier envisagez-vous ?"
+              description="Choisissez votre situation : vous verrez les travaux généralement associés dans l'ordre recommandé, les points d'attention, les aides à vérifier et ce qu'il faut réunir pour obtenir un devis utile."
+            />
+          </Reveal>
+          <div className="mt-12">
+            <ProjectPathExplorer />
+          </div>
+        </Container>
+      </section>
+
+      {/* Les systèmes se parlent */}
+      <section className="relative overflow-hidden bg-ink-950 py-16 text-bone sm:py-24">
+        <GridLines tone="dark" />
+        <Container className="relative">
+          <div className="grid gap-12 lg:grid-cols-12 lg:gap-16">
+            <div className="lg:col-span-5">
+              <Reveal>
+                <SectionHeading
+                  index="03"
+                  eyebrow="Le point que tout le monde sous-estime"
+                  title="Châssis, isolation, ventilation et chauffage forment un système"
+                  tone="dark"
+                />
+              </Reveal>
+            </div>
+            <div className="lg:col-span-7">
+              <Reveal delay={0.08}>
+                <div className="max-w-2xl space-y-5 text-lg leading-relaxed text-stone-200/85">
+                  <p>
+                    Chaque fois que vous rendez le bâtiment plus étanche — de nouveaux
+                    châssis, une façade isolée — vous supprimez les fuites d&apos;air qui
+                    évacuaient l&apos;humidité du quotidien. Sans apport d&apos;air neuf,
+                    elle se dépose sur les surfaces froides : condensation, puis
+                    moisissures.
+                  </p>
+                  <p>
+                    Dans l&apos;autre sens, isoler réduit fortement les besoins de
+                    chauffage. Remplacer la chaudière <em className="italic">avant</em>{" "}
+                    d&apos;isoler conduit à surdimensionner l&apos;installation, et à payer
+                    deux fois.
+                  </p>
+                  <p className="text-bone">
+                    C&apos;est pour cela que nous regardons l&apos;ensemble du projet avant
+                    de chiffrer un seul poste, même quand vous ne nous demandez que des
+                    châssis.
+                  </p>
+                </div>
+              </Reveal>
+            </div>
+          </div>
+        </Container>
+      </section>
+
+      {/* Décisions préalables */}
+      <section className="py-16 sm:py-24">
+        <Container>
+          <Reveal>
+            <SectionHeading
+              index="04"
+              eyebrow="Avant le chantier"
+              title="Cinq décisions à prendre en amont"
+              description="Elles ne coûtent rien à ce stade, et très cher si on les tranche en cours de chantier."
+            />
+          </Reveal>
+          <dl className="mt-12 grid gap-px bg-ink-950/10 sm:grid-cols-2">
+            {preDecisions.map((d) => (
+              <div key={d.title} className="bg-bone p-7">
+                <dt className="font-display text-xl font-medium text-ink-950">{d.title}</dt>
+                <dd className="mt-3 leading-relaxed text-ink-600">{d.text}</dd>
+              </div>
+            ))}
+          </dl>
+        </Container>
+      </section>
+
+      {/* Budget et délai */}
+      <section className="bg-bone-deep py-16 sm:py-24">
+        <Container>
+          <Reveal>
+            <SectionHeading
+              index="05"
+              eyebrow="Budget & délai"
+              title="Ce qui fait vraiment varier un chantier"
+              description="Nous ne publions ni prix ni durée type : sur deux maisons voisines, l'écart peut aller du simple au double. Voici les cinq facteurs qui l'expliquent."
+            />
+          </Reveal>
+          <dl className="mt-12 grid gap-x-10 gap-y-8 sm:grid-cols-2 lg:grid-cols-3">
+            {budgetDrivers.map((b) => (
+              <div key={b.title}>
+                <dt className="font-semibold text-ink-950">{b.title}</dt>
+                <dd className="mt-2 leading-relaxed text-ink-600">{b.text}</dd>
+              </div>
+            ))}
+          </dl>
+          <Reveal delay={0.1}>
+            <Link
+              href="/prix-et-aides"
+              className="mt-10 inline-flex items-center gap-3 text-xs font-semibold uppercase tracking-[0.14em] text-ink-950 hover:text-accent-600"
+            >
+              Comment se construit un devis, poste par poste
+              <ArrowRight className="h-4 w-4" aria-hidden="true" />
+            </Link>
+          </Reveal>
         </Container>
       </section>
 
