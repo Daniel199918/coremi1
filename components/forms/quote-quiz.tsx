@@ -38,6 +38,8 @@ import { cn } from "@/utils";
  */
 
 const STORAGE_KEY = "coremi-devis-v1";
+/** Réponses transmises par le simulateur de primes, sur action explicite. */
+const PRIMES_SHARE_KEY = "coremi-primes-v1";
 
 type Answers = Record<string, string>;
 
@@ -135,19 +137,50 @@ export function QuoteQuiz() {
   const current = visible[Math.min(index, visible.length - 1)]!;
   const total = visible.length;
 
-  /* Reprise d'une saisie interrompue (hors coordonnées). */
+  /* Reprise d'une saisie interrompue (hors coordonnées), puis reprise
+     éventuelle des réponses laissées par le simulateur de primes. */
   useEffect(() => {
+    let next: Answers = {};
+    let didRestore = false;
+
     try {
       const raw = window.localStorage.getItem(STORAGE_KEY);
       if (raw) {
         const saved = JSON.parse(raw) as Answers;
         if (saved && typeof saved === "object" && Object.keys(saved).length > 0) {
-          setAnswers(saved);
-          setRestored(true);
+          next = { ...saved };
+          didRestore = true;
         }
       }
     } catch {
       /* stockage indisponible (navigation privée) : on continue sans */
+    }
+
+    /* Le simulateur de primes n'écrit ces valeurs que si le visiteur a
+       cliqué explicitement sur « Faire chiffrer mon projet ». */
+    try {
+      const shared = window.sessionStorage.getItem(PRIMES_SHARE_KEY);
+      if (shared) {
+        const s = JSON.parse(shared) as {
+          region?: string;
+          postalCode?: string;
+          works?: string;
+        };
+        if (s.region?.includes("Bruxelles")) next.region ??= "Bruxelles-Capitale";
+        else if (s.region?.includes("Wallonie")) next.region ??= "Brabant wallon";
+        if (s.postalCode) next.postalCode ??= s.postalCode;
+        if (s.works?.includes("chassis")) next.projectType ??= "Châssis";
+        else if (s.works?.includes("vitrage")) next.projectType ??= "Vitrages";
+        window.sessionStorage.removeItem(PRIMES_SHARE_KEY);
+        didRestore = true;
+      }
+    } catch {
+      /* idem */
+    }
+
+    if (Object.keys(next).length > 0) {
+      setAnswers(next);
+      setRestored(didRestore);
     }
   }, []);
 

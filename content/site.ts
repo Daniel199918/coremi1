@@ -107,14 +107,14 @@ export const navigation: NavItem[] = [
         description: "PVC, aluminium et bois, portes d'entrée, pose et finitions.",
       },
       {
-        label: "Vitrages",
-        href: "/chassis#vitrages",
-        description: "Double et triple vitrage, remplacement, vitrage acoustique.",
-      },
-      {
         label: "Construction & rénovation",
         href: "/construction-renovation",
         description: "Gros œuvre, extensions, transformations, rénovation complète.",
+      },
+      {
+        label: "Schüco, Aliplast, Aluprof",
+        href: "/solutions/fabricants",
+        description: "Les systèmes que nous mettons en œuvre, comparés sans classement.",
       },
     ],
   },
