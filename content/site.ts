@@ -74,26 +74,93 @@ export const siteConfig = {
 } as const;
 
 /**
- * Navigation principale. `short` est le libellé utilisé dans la barre du
- * haut, où la place est comptée ; `label` sert au menu mobile, au footer
- * et partout où la ligne peut respirer.
+ * Navigation principale — 5 entrées + le bouton « Demander un devis ».
+ *
+ * Les pages secondaires ne disparaissent pas : elles sont regroupées
+ * sous « Solutions » (les métiers) et « À propos » (l'entreprise, la
+ * méthode, les prix, les avis, les zones). Une barre courte se lit ;
+ * une barre à huit onglets ne se lit pas et écrase le logo.
+ *
+ * `description` alimente les sous-menus, sur desktop comme sur mobile.
  */
-export const navigation = [
+export type NavChild = {
+  label: string;
+  href: string;
+  description: string;
+};
+
+export type NavItem = {
+  label: string;
+  href: string;
+  children?: NavChild[];
+};
+
+export const navigation: NavItem[] = [
   { label: "Accueil", href: "/" },
-  { label: "Construction & Rénovation", short: "Construction", href: "/construction-renovation" },
-  { label: "Châssis", href: "/chassis" },
-  { label: "Nos chantiers", href: "/realisations" },
-  { label: "Comment on travaille", short: "Notre méthode", href: "/comment-on-travaille" },
-  { label: "Prix & aides", href: "/prix-et-aides" },
-  { label: "À propos", href: "/a-propos" },
-  { label: "Contact", href: "/contact" },
+  {
+    label: "Solutions",
+    href: "/solutions",
+    children: [
+      {
+        label: "Châssis & portes",
+        href: "/chassis",
+        description: "PVC, aluminium et bois, portes d'entrée, pose et finitions.",
+      },
+      {
+        label: "Vitrages",
+        href: "/chassis#vitrages",
+        description: "Double et triple vitrage, remplacement, vitrage acoustique.",
+      },
+      {
+        label: "Construction & rénovation",
+        href: "/construction-renovation",
+        description: "Gros œuvre, extensions, transformations, rénovation complète.",
+      },
+    ],
+  },
+  { label: "Réalisations", href: "/realisations" },
+  { label: "Primes", href: "/primes" },
+  {
+    label: "À propos",
+    href: "/a-propos",
+    children: [
+      {
+        label: "L'entreprise",
+        href: "/a-propos",
+        description: "Qui nous sommes et comment nous travaillons au quotidien.",
+      },
+      {
+        label: "Comment on travaille",
+        href: "/comment-on-travaille",
+        description: "Responsabilité unique, aucun acompte, échéancier clair.",
+      },
+      {
+        label: "Comment se construit un prix",
+        href: "/prix-et-aides",
+        description: "La composition d'un devis, poste par poste.",
+      },
+      {
+        label: "Avis clients",
+        href: "/avis",
+        description: "Les retours publiés sur notre fiche Google.",
+      },
+      {
+        label: "Zones d'intervention",
+        href: "/zones",
+        description: "Brabant wallon et sud-est bruxellois, commune par commune.",
+      },
+    ],
+  },
 ] as const;
 
+/** Appel à l'action principal, isolé du reste de la navigation. */
+export const primaryCta = { label: "Demander un devis", href: "/devis" } as const;
+
 export const footerServiceLinks = [
-  { label: "Construction & gros œuvre", href: "/construction-renovation" },
-  { label: "Rénovation & transformation", href: "/construction-renovation#renovation" },
   { label: "Châssis PVC & aluminium", href: "/chassis" },
   { label: "Portes & vitrages", href: "/chassis#portes" },
+  { label: "Construction & gros œuvre", href: "/construction-renovation" },
+  { label: "Rénovation & transformation", href: "/construction-renovation#renovation" },
+  { label: "Primes & aides", href: "/primes" },
   { label: "Comment on travaille", href: "/comment-on-travaille" },
-  { label: "Prix & aides", href: "/prix-et-aides" },
 ] as const;

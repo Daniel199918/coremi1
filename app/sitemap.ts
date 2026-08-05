@@ -13,8 +13,11 @@ export default function sitemap(): MetadataRoute.Sitemap {
 
   const routes: { path: string; priority: number }[] = [
     { path: "", priority: 1 },
+    { path: "/solutions", priority: 0.9 },
     { path: "/construction-renovation", priority: 0.9 },
     { path: "/chassis", priority: 0.9 },
+    { path: "/primes", priority: 0.9 },
+    { path: "/devis", priority: 0.9 },
     { path: "/realisations", priority: 0.8 },
     { path: "/comment-on-travaille", priority: 0.9 },
     { path: "/prix-et-aides", priority: 0.8 },

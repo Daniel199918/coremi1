@@ -137,7 +137,7 @@ export function Hero() {
 
       <div className="rise rise-4 mt-8 flex flex-col gap-3 sm:mt-9 sm:flex-row sm:items-center">
         <Link
-          href="/contact"
+          href="/devis"
           className="btn-press group flex items-center justify-center gap-3 bg-accent-600 px-8 py-4 text-center text-sm font-semibold uppercase tracking-[0.14em] text-white hover:bg-accent-500"
         >
           Demander un devis

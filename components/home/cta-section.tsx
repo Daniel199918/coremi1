@@ -52,7 +52,7 @@ export function CtaSection() {
               Sans engagement.
             </p>
             <Link
-              href="/contact"
+              href="/devis"
               className="btn-press group mt-10 inline-flex items-center gap-3 bg-accent-600 px-9 py-5 text-sm font-semibold uppercase tracking-[0.14em] text-white hover:bg-accent-500"
             >
               Demander un devis gratuit
