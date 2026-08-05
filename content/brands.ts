@@ -20,10 +20,11 @@
  * Positionnements vérifiés le 5 août 2026 sur les sites officiels des
  * fabricants (voir `source` de chaque marque).
  *
- * ⚠️ LOGOS : aucun fichier officiel n'a été fourni à ce jour. `logo`
- * reste donc à `null` et le composant BrandLogo affiche un emplacement
- * réservé. Fichiers attendus : SVG de préférence, sinon PNG à fond
- * transparent, largeur ≥ 600 px, version couleur sur fond clair.
+ * LOGOS : fichiers récupérés le 5 août 2026 directement sur les sites
+ * officiels des fabricants (et non via un moteur de recherche), puis
+ * utilisés sans modification — ni recolorisation, ni recadrage, ni
+ * redessin. Aliplast ne publie que la version blanche de son logo : elle
+ * est donc affichée sur une tuile sombre, comme sur son propre site.
  */
 
 export const BRANDS_LAST_CHECKED = "5 août 2026";
@@ -32,10 +33,12 @@ export type Brand = {
   id: string;
   name: string;
   origin: string;
-  /** Chemin du logo officiel, `null` tant qu'il n'a pas été fourni. */
+  /** Chemin du logo officiel, `null` s'il n'est pas disponible. */
   logo: string | null;
   logoWidth?: number;
   logoHeight?: number;
+  /** Fond de tuile : `dark` pour un logo publié en version blanche. */
+  logoTone?: "light" | "dark";
   source: { label: string; href: string };
   positioning: string;
   materials: string[];
@@ -51,7 +54,10 @@ export const brands: Brand[] = [
     id: "schuco",
     name: "Schüco",
     origin: "Allemagne",
-    logo: null,
+    logo: "/images/marques/schueco.svg",
+    logoWidth: 176,
+    logoHeight: 30,
+    logoTone: "light",
     source: { label: "schueco.com", href: "https://www.schueco.com/be-fr" },
     positioning:
       "Fabricant allemand de systèmes pour fenêtres, portes et façades, présent aussi bien sur l'habitation que sur des projets de bâtiment complexes. Son site met en avant l'accompagnement sur tout le cycle de vie de la façade, la sécurité incendie et la réduction des émissions liées aux façades.",
@@ -75,7 +81,10 @@ export const brands: Brand[] = [
     id: "aliplast",
     name: "Aliplast",
     origin: "Belgique",
-    logo: null,
+    logo: "/images/marques/aliplast-blanc.png",
+    logoWidth: 383,
+    logoHeight: 81,
+    logoTone: "dark",
     source: { label: "aliplast.com", href: "https://www.aliplast.com/fr" },
     positioning:
       "Fabricant belge de systèmes en aluminium, très orienté habitation. Sa communication insiste sur l'esthétique et le choix des couleurs, les systèmes coulissants et à portes accordéon, les valeurs d'isolation, la protection contre l'effraction et la recyclabilité de l'aluminium.",
@@ -100,7 +109,10 @@ export const brands: Brand[] = [
     id: "aluprof",
     name: "Aluprof",
     origin: "Pologne",
-    logo: null,
+    logo: "/images/marques/aluprof.svg",
+    logoWidth: 1303,
+    logoHeight: 335,
+    logoTone: "light",
     source: { label: "aluprof.eu", href: "https://aluprof.eu/fr" },
     positioning:
       "Fabricant polonais de systèmes en aluminium, avec une gamme couvrant fenêtres, portes, systèmes à profilés fins et systèmes résistants au feu. Son site documente précisément les caractéristiques par système : isolation thermique, perméabilité à l'air, étanchéité à l'eau, résistance à la charge du vent.",
