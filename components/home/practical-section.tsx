@@ -45,7 +45,7 @@ export function PracticalSection() {
                     Écrire sur WhatsApp
                   </a>
                   <Link
-                    href="/contact"
+                    href="/devis"
                     className="btn-press group inline-flex items-center justify-center gap-3 bg-accent-600 px-6 py-3.5 text-xs font-semibold uppercase tracking-[0.14em] text-white hover:bg-accent-700"
                   >
                     Demander une analyse gratuite

@@ -216,7 +216,7 @@ export default function PrixEtAidesPage() {
 
               <Reveal delay={0.18}>
                 <Link
-                  href="/contact"
+                  href="/devis"
                   className="btn-press group mt-9 inline-flex items-center gap-3 bg-accent-600 px-7 py-4 text-xs font-semibold uppercase tracking-[0.14em] text-white hover:bg-accent-700"
                 >
                   Demander un devis détaillé

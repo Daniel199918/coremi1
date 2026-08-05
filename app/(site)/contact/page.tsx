@@ -3,7 +3,7 @@ import { Clock, Mail, MapPin, MessageCircle, Phone } from "lucide-react";
 import { PageHero } from "@/components/layout/page-hero";
 import { Container } from "@/components/ui/container";
 import { Reveal } from "@/components/motion/reveal";
-import { QuoteForm } from "@/components/forms/quote-form";
+import { QuoteQuiz } from "@/components/forms/quote-quiz";
 import { siteConfig } from "@/content/site";
 
 export const metadata: Metadata = {
@@ -112,17 +112,17 @@ export default function ContactPage() {
             </div>
           </Reveal>
 
-          {/* Formulaire */}
+          {/* Demande de devis — même parcours que /devis */}
           <Reveal delay={0.1}>
-            <div className="border border-ink-950/10 bg-bone p-6 sm:p-10">
+            <div>
               <h2 className="font-display text-3xl text-ink-950">Demande de devis gratuit</h2>
-              <p className="mt-3 text-sm text-ink-500">
-                Les champs marqués d&apos;un{" "}
-                <span className="text-accent-600" aria-hidden="true">*</span> sont
-                obligatoires. Vos données servent uniquement à traiter votre demande.
+              <p className="mt-3 max-w-xl text-sm leading-relaxed text-ink-500">
+                Quelques questions plutôt qu&apos;un long formulaire. Vos coordonnées ne
+                sont demandées qu&apos;à la dernière étape, et ne servent qu&apos;à traiter
+                votre demande.
               </p>
-              <div className="mt-10">
-                <QuoteForm />
+              <div className="mt-8">
+                <QuoteQuiz />
               </div>
             </div>
           </Reveal>

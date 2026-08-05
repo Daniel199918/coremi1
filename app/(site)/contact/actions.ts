@@ -6,37 +6,54 @@ import { siteConfig } from "@/content/site";
 /**
  * Traite la demande de devis.
  *
- * 🔌 CONNEXION DE L'ENVOI D'E-MAIL (à faire quand COREMI aura choisi
- *    son prestataire — Resend recommandé) :
- *    1. `npm install resend`
- *    2. Ajouter RESEND_API_KEY dans .env.local et sur Vercel
- *       (jamais dans le code — voir .env.example)
- *    3. Décommenter le bloc "Envoi Resend" ci-dessous.
+ * ⚠️ ÉTAT ACTUEL : AUCUN ENVOI RÉEL N'EST BRANCHÉ.
  *
- * 📎 Les photos jointes côté client ne sont pas encore transférées :
- *    à brancher en même temps que l'envoi d'e-mail (pièces jointes
- *    Resend ou upload Supabase Storage).
+ * Tant que `RESEND_API_KEY` n'est pas configurée, la demande n'est
+ * transmise à personne. L'action le dit explicitement au visiteur et
+ * l'invite à écrire ou à appeler : afficher « Merci, c'est envoyé »
+ * alors que rien ne part reviendrait à faire perdre des clients sans
+ * que personne ne s'en rende compte.
+ *
+ * 🔌 POUR ACTIVER L'ENVOI :
+ *    1. `npm install resend`
+ *    2. Vérifier le domaine d'envoi dans Resend (SPF/DKIM sur coremi.be)
+ *    3. Ajouter RESEND_API_KEY dans les variables d'environnement Vercel
+ *       (jamais dans le code — voir .env.example)
+ *    4. Décommenter le bloc « Envoi Resend » ci-dessous.
+ *    À partir de là, le chemin nominal renvoie un vrai succès.
+ *
+ * 📎 Pièces jointes : le quiz ne transmet pas encore de photos. À
+ *    brancher en même temps que l'e-mail (pièces jointes Resend ou
+ *    upload Supabase Storage), avec limite de taille et de type.
  */
 export async function submitQuoteRequest(
   _prev: QuoteFormState,
   formData: FormData
 ): Promise<QuoteFormState> {
-  // Anti-spam 1 : honeypot — un humain ne remplit jamais ce champ caché.
+  // Anti-spam : honeypot — un humain ne remplit jamais ce champ caché.
+  // On renvoie un succès neutre pour ne pas renseigner le robot.
   if (formData.get("website")) {
-    // On simule un succès pour ne pas donner d'indice au robot.
-    return { status: "success", message: "Merci, votre demande a bien été envoyée.", fieldErrors: {} };
+    return {
+      status: "success",
+      message: "Merci, votre demande a bien été enregistrée.",
+      fieldErrors: {},
+    };
   }
 
   const parsed = quoteSchema.safeParse({
+    projectType: formData.get("projectType"),
+    needType: formData.get("needType"),
+    material: formData.get("material") ?? "",
+    projectSize: formData.get("projectSize"),
+    region: formData.get("region"),
+    postalCode: formData.get("postalCode") ?? "",
+    city: formData.get("city"),
+    timeline: formData.get("timeline"),
+    description: formData.get("description") ?? "",
     firstName: formData.get("firstName"),
-    lastName: formData.get("lastName"),
+    lastName: formData.get("lastName") ?? "",
     phone: formData.get("phone"),
     email: formData.get("email"),
-    city: formData.get("city"),
-    projectType: formData.get("projectType"),
-    budget: formData.get("budget"),
-    timeline: formData.get("timeline"),
-    description: formData.get("description"),
     consent: formData.get("consent") ?? undefined,
     website: (formData.get("website") as string) || "",
   });
@@ -49,52 +66,66 @@ export async function submitQuoteRequest(
     }
     return {
       status: "error",
-      message: "Certains champs doivent être corrigés avant l'envoi.",
+      message: "Quelques réponses doivent être complétées avant l'envoi.",
       fieldErrors,
     };
   }
 
   const quote = parsed.data;
 
+  const body = [
+    `Type de projet : ${quote.projectType}`,
+    `Nature du besoin : ${quote.needType}`,
+    `Matériau : ${quote.material || "Non précisé"}`,
+    `Ampleur : ${quote.projectSize}`,
+    `Région : ${quote.region}`,
+    `Commune : ${quote.city}${quote.postalCode ? ` (${quote.postalCode})` : ""}`,
+    `Délai souhaité : ${quote.timeline}`,
+    "",
+    `Nom : ${quote.firstName} ${quote.lastName || ""}`.trim(),
+    `Téléphone : ${quote.phone}`,
+    `E-mail : ${quote.email}`,
+    "",
+    quote.description || "(aucune précision ajoutée)",
+  ].join("\n");
+
+  const canSend = Boolean(process.env.RESEND_API_KEY);
+
+  if (!canSend) {
+    // Trace serveur : la demande apparaît au moins dans les logs Vercel.
+    console.warn("[devis] Demande reçue mais AUCUN envoi configuré :\n" + body);
+    return {
+      status: "error",
+      message:
+        `L'envoi automatique n'est pas encore activé sur ce site : votre demande n'a donc pas été transmise. ` +
+        `Écrivez-nous à ${siteConfig.contact.email} ou appelez le ${siteConfig.contact.phone} — nous répondons directement.`,
+      fieldErrors: {},
+    };
+  }
+
   try {
-    /* ---- Envoi Resend (à décommenter une fois la clé configurée) ----
+    /* ---- Envoi Resend (à décommenter après installation du paquet) ----
     const { Resend } = await import("resend");
     const resend = new Resend(process.env.RESEND_API_KEY);
     await resend.emails.send({
-      from: "Site COREMI <devis@coremi.be>", // ⚠️ domaine à vérifier dans Resend
+      from: "Site COREMI <devis@coremi.be>", // domaine à vérifier dans Resend
       to: [siteConfig.contact.email],
       replyTo: quote.email,
       subject: `Demande de devis — ${quote.projectType} à ${quote.city}`,
-      text: [
-        `Nom : ${quote.firstName} ${quote.lastName}`,
-        `Téléphone : ${quote.phone}`,
-        `E-mail : ${quote.email}`,
-        `Commune : ${quote.city}`,
-        `Type de projet : ${quote.projectType}`,
-        `Budget estimé : ${quote.budget || "Non précisé"}`,
-        `Délai souhaité : ${quote.timeline}`,
-        "",
-        quote.description,
-      ].join("\n"),
+      text: body,
     });
-    ------------------------------------------------------------------ */
-
-    // Trace serveur temporaire (visible dans les logs Vercel) tant que
-    // l'envoi d'e-mail n'est pas branché — aucune donnée sensible loggée.
-    console.info(
-      `[devis] Nouvelle demande : ${quote.projectType} à ${quote.city} (${quote.email})`
-    );
+    -------------------------------------------------------------------- */
 
     return {
       status: "success",
       message:
-        "Merci ! Votre demande a bien été envoyée. Nous vous recontactons dans les plus brefs délais.",
+        "Merci ! Votre demande est bien arrivée. Nous revenons vers vous rapidement, en général sous deux jours ouvrables.",
       fieldErrors: {},
     };
   } catch {
     return {
       status: "error",
-      message: `Une erreur est survenue lors de l'envoi. Réessayez, ou écrivez-nous directement à ${siteConfig.contact.email}.`,
+      message: `L'envoi a échoué. Réessayez, ou écrivez-nous directement à ${siteConfig.contact.email}.`,
       fieldErrors: {},
     };
   }
