@@ -191,10 +191,14 @@ export function Hero() {
           <div className="relative z-10 mx-auto flex w-full max-w-7xl flex-1 flex-col justify-end px-5 pb-9 pt-24 sm:px-8 lg:pb-12">
             {copy}
             <div className="rise rise-4 mt-10 hidden items-end justify-between border-t border-bone/20 pt-5 lg:flex">
+              {/* Trois repères de métier — délibérément aucun argument
+                  commercial ici : l'acompte et la gratuité du devis se
+                  traitent près du formulaire et dans la FAQ, pas en
+                  ouverture de site. */}
               <ul className="annotation flex gap-10 text-stone-300">
                 <li>Gros œuvre + châssis</li>
                 <li>Une seule responsabilité</li>
-                <li>Aucun acompte</li>
+                <li>Brabant wallon &amp; Bruxelles</li>
               </ul>
               <p className="annotation flex items-center gap-6 text-stone-300">
                 <span>Illustration — des fondations à la maison finie</span>

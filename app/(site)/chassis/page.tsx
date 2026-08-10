@@ -257,6 +257,36 @@ export default function ChassisPage() {
           <div className="mt-12">
             <OpeningSchemas />
           </div>
+
+          {/* Passerelle vers la couleur : c'est la question la plus posée
+              avant de signer, elle mérite mieux qu'un lien de pied de page. */}
+          <Reveal delay={0.1}>
+            <Link
+              href="/chassis/couleurs"
+              className="group mt-14 flex flex-col gap-4 border border-ink-950/15 bg-bone p-7 transition-colors hover:border-ink-950/40 sm:flex-row sm:items-center sm:justify-between sm:gap-8"
+            >
+              <div>
+                <p className="text-xs font-semibold uppercase tracking-[0.16em] text-ink-500">
+                  L&apos;autre décision
+                </p>
+                <h3 className="mt-2 font-display text-2xl font-medium text-ink-950">
+                  Et la couleur ?
+                </h3>
+                <p className="mt-3 max-w-2xl leading-relaxed text-ink-600">
+                  Quelle teinte selon votre façade, une couleur différente à
+                  l&apos;intérieur, et pourquoi une teinte foncée n&apos;est pas
+                  anodine sur du PVC.
+                </p>
+              </div>
+              <span className="inline-flex shrink-0 items-center gap-2 text-sm font-semibold text-ink-950 underline decoration-accent-600 underline-offset-4">
+                Couleurs &amp; finitions
+                <ArrowRight
+                  className="h-4 w-4 transition-transform group-hover:translate-x-1"
+                  aria-hidden="true"
+                />
+              </span>
+            </Link>
+          </Reveal>
         </Container>
       </section>
 

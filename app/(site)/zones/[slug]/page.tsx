@@ -26,11 +26,11 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const cps = zone.postalCodes.join(", ");
   return {
     title: `Entreprise de construction, rénovation et châssis à ${zone.name} (${zone.postalCodes[0]})`,
-    description: `COREMI intervient à ${zone.name} (${cps}) : gros œuvre, extensions, rénovation complète et pose de châssis PVC ou aluminium. Le mur et la fenêtre par la même entreprise, aucun acompte avant le début des travaux, devis détaillé gratuit.`,
+    description: `COREMI intervient à ${zone.name} (${cps}) : gros œuvre, extensions, rénovation complète et pose de châssis PVC ou aluminium. Le mur et la fenêtre par la même entreprise, un seul interlocuteur du devis à la réception.`,
     alternates: { canonical: `/zones/${zone.slug}` },
     openGraph: {
       title: `Construction, rénovation et châssis à ${zone.name} — COREMI`,
-      description: `Entreprise générale active à ${zone.name} et dans tout le ${zone.region}. Devis détaillé gratuit.`,
+      description: `Entreprise générale active à ${zone.name} et dans tout le ${zone.region}.`,
       url: `${siteConfig.url}/zones/${zone.slug}`,
     },
   };
@@ -124,7 +124,7 @@ export default async function ZonePage({ params }: Props) {
                 {zone.postalCodes.join(" · ")}
               </li>
               <li>Gros œuvre + châssis</li>
-              <li>Aucun acompte</li>
+              <li>{zone.region}</li>
             </ul>
 
             <div className="mt-10 flex flex-col gap-3 sm:flex-row">
@@ -132,7 +132,7 @@ export default async function ZonePage({ params }: Props) {
                 href="/devis"
                 className="btn-press group inline-flex items-center justify-center gap-3 bg-accent-600 px-7 py-4 text-xs font-semibold uppercase tracking-[0.14em] text-white hover:bg-accent-700"
               >
-                Devis gratuit à {zone.name}
+                Décrire mon projet
                 <ArrowRight className="h-4 w-4 transition-transform group-hover:translate-x-1" aria-hidden="true" />
               </Link>
               <a

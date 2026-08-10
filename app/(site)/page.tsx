@@ -6,7 +6,7 @@ import { ConstructionScene } from "@/components/home/construction-scene";
 import { ProjectsSection } from "@/components/home/projects-section";
 import { MarqueeBand } from "@/components/home/marquee-band";
 import { EngagementsSection } from "@/components/home/engagements-section";
-import { PracticalSection } from "@/components/home/practical-section";
+import { ToolsSection } from "@/components/home/tools-section";
 import { ExpertiseSection } from "@/components/home/expertise-section";
 import { FaqSection } from "@/components/home/faq-section";
 import { CtaSection } from "@/components/home/cta-section";
@@ -15,7 +15,7 @@ import { faq } from "@/content/faq";
 export const metadata: Metadata = {
   title: "COREMI — Entreprise de construction, rénovation et châssis en Belgique",
   description:
-    "Entreprise générale à Bruxelles et en Brabant wallon : gros œuvre, extensions, rénovation complète, pose de châssis PVC et aluminium. Devis détaillé gratuit, interlocuteur unique.",
+    "Entreprise générale à Bruxelles et en Brabant wallon : gros œuvre, extensions, rénovation complète, pose de châssis PVC et aluminium. Le mur et la fenêtre par la même entreprise, un seul interlocuteur.",
   alternates: { canonical: "/" },
 };
 
@@ -46,7 +46,7 @@ export default function HomePage() {
       <ProjectsSection />
       <MarqueeBand />
       <EngagementsSection />
-      <PracticalSection />
+      <ToolsSection />
       <ExpertiseSection />
       <FaqSection />
       <CtaSection />

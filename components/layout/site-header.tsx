@@ -122,7 +122,7 @@ export function SiteHeader() {
         </Link>
 
         {/* Navigation desktop */}
-        <div ref={navRef} className="ml-auto hidden items-center gap-1 lg:flex">
+        <div ref={navRef} className="ml-auto hidden items-center gap-1 xl:flex">
           <nav aria-label="Navigation principale" className="flex items-center gap-1">
             {navigation.map((item) => {
               const active = isActive(item);
@@ -209,8 +209,12 @@ export function SiteHeader() {
             })}
           </nav>
 
+          {/* Sous 1536 px, le numéro écrit repoussait le bouton de devis
+              hors écran : on garde l'icône seule, avec un nom accessible
+              explicite pour les lecteurs d'écran. */}
           <a
             href={siteConfig.contact.phoneHref}
+            aria-label={`Appeler le ${siteConfig.contact.phone}`}
             className={cn(
               "ml-3 flex items-center gap-2 whitespace-nowrap px-2 text-sm font-semibold transition-colors",
               overlay
@@ -219,7 +223,7 @@ export function SiteHeader() {
             )}
           >
             <Phone className="h-3.5 w-3.5" aria-hidden="true" />
-            {siteConfig.contact.phone}
+            <span className="hidden 2xl:inline">{siteConfig.contact.phone}</span>
           </a>
 
           <Link
@@ -231,7 +235,7 @@ export function SiteHeader() {
         </div>
 
         {/* Actions mobile */}
-        <div className="ml-auto flex items-center gap-1 lg:hidden">
+        <div className="ml-auto flex items-center gap-1 xl:hidden">
           <a
             href={siteConfig.contact.phoneHref}
             aria-label={`Appeler le ${siteConfig.contact.phone}`}
@@ -262,7 +266,7 @@ export function SiteHeader() {
       <div
         id="menu-mobile"
         className={cn(
-          "fixed inset-x-0 bottom-0 top-[72px] z-40 flex flex-col bg-ink-950 transition-[opacity,visibility] duration-200 lg:hidden",
+          "fixed inset-x-0 bottom-0 top-[72px] z-40 flex flex-col bg-ink-950 transition-[opacity,visibility] duration-200 xl:hidden",
           // `invisible` (visibility:hidden) et pas seulement opacity-0 :
           // sans cela, les liens du menu fermé restent dans l'ordre de
           // tabulation et sont annoncés par les lecteurs d'écran.

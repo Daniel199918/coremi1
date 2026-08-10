@@ -66,4 +66,42 @@ export const faq: FaqItem[] = [
     answer:
       "Votre interlocuteur unique fait le point avec vous régulièrement, par téléphone ou WhatsApp selon ce qui vous arrange. Vous avez un contact direct, sans passer par un standard.",
   },
+  /* ------------------------------------------------------------------
+   * Questions ajoutées après l'analyse de la FAQ publique du principal
+   * réseau belge de châssis (août 2026, 65 questions). Ce sont des
+   * questions réellement posées par des particuliers, et qui restaient
+   * sans réponse sur ce site. Les réponses restent volontairement sans
+   * délai chiffré ni durée de garantie : ces valeurs dépendent du
+   * fournisseur et du chantier, et figurent au devis.
+   * ------------------------------------------------------------------ */
+  {
+    question: "Le démontage et l'évacuation des anciens châssis sont-ils compris ?",
+    answer:
+      "Oui, et c'est écrit noir sur blanc dans le devis plutôt que sous-entendu. La dépose des anciens châssis, l'évacuation des menuiseries déposées et le nettoyage de fin de chantier font partie de la prestation. C'est précisément le genre de poste qu'il faut vérifier ligne par ligne quand vous comparez plusieurs offres : un total plus bas cache parfois une évacuation restée à votre charge.",
+  },
+  {
+    question: "Qui pose exactement : vos équipes ou des sous-traitants ?",
+    answer:
+      "Posez systématiquement cette question, à nous comme aux autres, et demandez la réponse par écrit. Le recours à un sous-traitant n'a rien d'anormal en soi sur certains lots ; ce qui compte, c'est de savoir qui répond en cas de problème et que la réponse ne change pas une fois le chantier commencé. Chez nous, le gros œuvre et la pose des châssis sont réalisés par la même entreprise, ce qui est justement l'objet de notre organisation.",
+  },
+  {
+    question: "Combien de temps mon devis reste-t-il valable ?",
+    answer:
+      "La durée de validité est indiquée sur le devis lui-même. Elle existe pour une raison concrète : les prix des profilés, du vitrage et des matériaux de gros œuvre bougent. Un devis sans date de validité doit vous alerter, quel que soit l'entrepreneur — c'est la porte ouverte à une révision de prix au moment de la commande.",
+  },
+  {
+    question: "Que se passe-t-il si un problème apparaît après la pose ?",
+    answer:
+      "Vous appelez la même personne que pendant le chantier, pas un service après-vente. Selon la nature du problème, il relève soit de notre intervention directe, soit de la garantie du fabricant sur le produit — nous faisons le lien avec lui, c'est notre rôle et pas le vôtre. Les garanties applicables à votre chantier, celle de la pose comme celle des produits, figurent dans le devis.",
+  },
+  {
+    question: "Faut-il tout remplacer en une fois ?",
+    answer:
+      "Non, et parfois il vaut mieux ne pas le faire. Remplacer les châssis par étapes se défend si le budget l'impose, à condition de commencer par les façades les plus exposées et de garder la même référence de système pour que l'ensemble reste cohérent. En revanche, remplacer des châssis dans une maison dont la toiture n'est pas isolée revient souvent à investir au mauvais endroit en premier : nous vous le dirons.",
+  },
+  {
+    question: "Faut-il prévoir une ventilation avec de nouveaux châssis ?",
+    answer:
+      "C'est le point le plus négligé d'un remplacement de châssis, et il mérite d'être posé avant la commande. Des menuiseries neuves sont beaucoup plus étanches que celles qu'elles remplacent : l'humidité produite dans le logement doit pouvoir sortir. Selon votre situation, cela passe par des grilles de ventilation intégrées aux châssis ou par un système existant à conserver. Nous en parlons lors de la visite, parce que la décision se prend au moment de commander, pas après.",
+  },
 ];
