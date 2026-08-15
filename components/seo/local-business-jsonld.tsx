@@ -66,9 +66,9 @@ export function LocalBusinessJsonLd() {
       })),
     ],
     knowsAbout: [
-      "Construction et gros œuvre",
-      "Rénovation et transformation",
-      "Extensions",
+      "Rénovation de maisons et appartements",
+      "Transformation de bâtiments existants",
+      "Annexes et extensions",
       "Châssis PVC et aluminium",
       "Portes et vitrages",
       "Aménagements extérieurs",

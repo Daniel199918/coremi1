@@ -6,7 +6,7 @@ import { Container } from "@/components/ui/container";
 import { GridLines } from "@/components/ui/grid-lines";
 import { CtaSection } from "@/components/home/cta-section";
 import { getGuide, guides } from "@/content/guides";
-import { siteConfig } from "@/content/site";
+import { ogImages, siteConfig } from "@/content/site";
 
 type Props = { params: Promise<{ slug: string }> };
 
@@ -27,6 +27,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
       title: g.title,
       description: g.excerpt,
       url: `${siteConfig.url}/conseils/${g.slug}`,
+      images: ogImages,
     },
   };
 }

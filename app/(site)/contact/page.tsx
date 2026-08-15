@@ -7,9 +7,9 @@ import { QuoteQuiz } from "@/components/forms/quote-quiz";
 import { siteConfig } from "@/content/site";
 
 export const metadata: Metadata = {
-  title: "Contact et demande de devis gratuit",
+  title: "Contact — parler de votre projet",
   description:
-    "Décrivez votre projet de construction, rénovation ou châssis à Bruxelles ou en Brabant wallon. Devis détaillé gratuit, réponse rapide, sans engagement.",
+    "Décrivez votre projet de construction, rénovation ou châssis à Bruxelles ou en Brabant wallon. Visite sur place puis devis détaillé, poste par poste.",
   alternates: { canonical: "/contact" },
 };
 
@@ -115,7 +115,7 @@ export default function ContactPage() {
           {/* Demande de devis — même parcours que /devis */}
           <Reveal delay={0.1}>
             <div>
-              <h2 className="font-display text-3xl text-ink-950">Demande de devis gratuit</h2>
+              <h2 className="font-display text-3xl text-ink-950">Décrire votre projet</h2>
               <p className="mt-3 max-w-xl text-sm leading-relaxed text-ink-500">
                 Quelques questions plutôt qu&apos;un long formulaire. Vos coordonnées ne
                 sont demandées qu&apos;à la dernière étape, et ne servent qu&apos;à traiter

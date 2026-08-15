@@ -24,6 +24,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     { path: "/primes/flandre", priority: 0.9 },
     { path: "/primes/federal", priority: 0.7 },
     { path: "/primes/methode", priority: 0.6 },
+    { path: "/chassis/couleurs", priority: 0.85 },
     { path: "/chassis/quiz", priority: 0.8 },
     { path: "/conseils", priority: 0.8 },
     // Un guide = une page utile, pas une page générée pour les moteurs.

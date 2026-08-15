@@ -5,7 +5,7 @@ import { ProjectsGallery } from "@/components/projects/projects-gallery";
 import { CtaSection } from "@/components/home/cta-section";
 
 export const metadata: Metadata = {
-  title: "Nos réalisations — chantiers de construction, rénovation et châssis",
+  title: "Nos réalisations — rénovation et châssis",
   description:
     "Chantiers réels menés par COREMI à Bruxelles et en Brabant wallon : villa contemporaine vitrée, maison au bardage anthracite, menuiseries aluminium noires.",
   alternates: { canonical: "/realisations" },

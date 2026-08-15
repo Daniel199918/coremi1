@@ -20,7 +20,7 @@ export function SiteFooter() {
             href="/devis"
             className="btn-press bg-accent-600 px-8 py-4 text-sm font-semibold uppercase tracking-[0.14em] text-white hover:bg-accent-700"
           >
-            Demander un devis gratuit
+            Décrire mon projet
           </Link>
         </Container>
       </div>
@@ -32,8 +32,8 @@ export function SiteFooter() {
             <Logo variant="light" />
           </Link>
           <p className="mt-6 text-sm leading-relaxed text-stone-300/80">
-            Entreprise générale de construction et de châssis. Gros œuvre, rénovation,
-            extensions et menuiseries extérieures à Bruxelles et en Brabant wallon.
+            Rénovation, transformation et annexes, avec une spécialité châssis et
+            menuiseries extérieures. À Bruxelles et en Brabant wallon.
           </p>
         </div>
 

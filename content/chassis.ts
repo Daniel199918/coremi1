@@ -129,7 +129,7 @@ export const components = [
     n: "04",
     title: "La pose",
     text: "L'élément le plus déterminant, et le seul qui n'apparaît sur aucune fiche technique. Un raccord mal traité entre le dormant et la maçonnerie annule une partie de la performance annoncée et crée les infiltrations et condensations que l'on retrouve des années plus tard.",
-    check: "Demandez comment le raccord au gros œuvre sera traité, et qui en est responsable.",
+    check: "Demandez comment le raccord à la maçonnerie sera traité, et qui en est responsable.",
   },
 ];
 

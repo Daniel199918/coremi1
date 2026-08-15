@@ -1,9 +1,14 @@
 /**
  * ============================================================
  * Réalisations — photos réelles de chantiers COREMI.
- * ⚠️ Les informations entre crochets ([COMMUNE], [ANNÉE]) sont
- *    des placeholders à confirmer par COREMI. Les descriptions
- *    ne mentionnent que ce qui est visible sur les photos.
+ *
+ * `location` et `year` valent `null` tant que COREMI ne les a pas
+ * confirmés. Les composants MASQUENT alors la ligne correspondante :
+ * un site qui affiche « [COMMUNE] » à ses visiteurs fait plus de dégâts
+ * qu'un cartouche à deux lignes au lieu de trois. Ne jamais y remettre
+ * un texte entre crochets — renseigner la vraie valeur, ou laisser null.
+ *
+ * Les descriptions ne mentionnent que ce qui est visible sur les photos.
  * ============================================================
  */
 
@@ -16,10 +21,10 @@ export type Project = {
   slug: string;
   index: string;
   title: string;
-  /** ⚠️ Placeholder tant que la commune n'est pas confirmée. */
-  location: string;
-  /** ⚠️ Placeholder tant que l'année n'est pas confirmée. */
-  year: string;
+  /** `null` tant que la commune n'est pas confirmée par COREMI. */
+  location: string | null;
+  /** `null` tant que l'année n'est pas confirmée par COREMI. */
+  year: string | null;
   /** Matériaux et éléments observables sur les photos. */
   observed: string;
   description: string;
@@ -33,8 +38,8 @@ export const projects: Project[] = [
     slug: "villa-contemporaine",
     index: "01",
     title: "Villa contemporaine, verre et volumes blancs",
-    location: "[COMMUNE]",
-    year: "[ANNÉE]",
+    location: null,
+    year: null,
     observed:
       "Enduit blanc · menuiseries aluminium · garde-corps en verre · dalles béton · lames composites",
     description:
@@ -58,8 +63,8 @@ export const projects: Project[] = [
     slug: "maison-bardage-anthracite",
     index: "02",
     title: "Maison au bardage anthracite",
-    location: "[COMMUNE]",
-    year: "[ANNÉE]",
+    location: null,
+    year: null,
     observed: "Bardage anthracite à joints horizontaux · enduit blanc · châssis noirs · gabions",
     description:
       "Un volume supérieur bardé de panneaux anthracite à joints horizontaux posé sur un socle enduit blanc. Châssis noirs affleurants, murs de soutènement en gabions et haie de lierre côté rue.",
@@ -73,8 +78,8 @@ export const projects: Project[] = [
     slug: "entree-menuiseries-noires",
     index: "03",
     title: "Entrée et menuiseries noires",
-    location: "[COMMUNE]",
-    year: "[ANNÉE]",
+    location: null,
+    year: null,
     observed: "Menuiseries aluminium noires · pierre bleue · gabions · enduit blanc",
     description:
       "Entrée vitrée toute hauteur et porte de garage sectionnelle noire alignées sous un même bandeau. Numérotation sur totem béton, emmarchement en pierre bleue et mur de gabions en retour.",

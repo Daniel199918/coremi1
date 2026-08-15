@@ -1,35 +1,44 @@
-/** Contenu de la page Construction & Rénovation. */
+/**
+ * Contenu de la page Rénovation & Transformation.
+ *
+ * ⚠️ POSITIONNEMENT — voir content/metiers.ts.
+ * COREMI intervient sur l'habitation EXISTANTE : rénovation,
+ * transformation, annexe, châssis. Pas de maison neuve, pas de gros
+ * œuvre vendu comme prestation autonome. Les travaux de construction
+ * décrits ici le sont toujours dans le cadre d'une annexe ou d'une
+ * transformation — c'est le seul contexte où ils existent.
+ */
 
 export const constructionPrestations = [
-  {
-    title: "Gros œuvre",
-    description:
-      "Terrassement, fondations, maçonnerie porteuse, dalles et mise sous toit. La structure de votre projet, exécutée selon les plans de votre architecte.",
-  },
-  {
-    title: "Extensions & annexes",
-    description:
-      "Agrandir sans dénaturer. Nous raccordons l'extension à l'existant proprement : niveaux, isolation, étanchéité, jonctions de toiture.",
-  },
   {
     title: "Rénovation complète",
     description:
       "Réagencement des espaces, remplacement des sols et cloisons, remise à neuf des pièces d'eau. Un seul chantier, un seul planning.",
   },
   {
-    title: "Transformations structurelles",
+    title: "Rénovation partielle",
     description:
-      "Ouverture de murs porteurs, pose de poutres, création de baies. Les interventions lourdes, préparées avec l'ingénieur en stabilité.",
+      "Une pièce, un étage, une façade. Tout ne se rénove pas en une fois, et une rénovation par étapes se prépare pour que chacune serve la suivante.",
+  },
+  {
+    title: "Transformations",
+    description:
+      "Ouverture de murs porteurs, pose de poutres, création de baies, redistribution des volumes. Les interventions lourdes, préparées avec l'ingénieur en stabilité.",
+  },
+  {
+    title: "Annexes & extensions",
+    description:
+      "Agrandir sans dénaturer. Nous construisons l'annexe et la raccordons à l'existant proprement : niveaux, isolation, étanchéité, jonctions de toiture.",
+  },
+  {
+    title: "Châssis & menuiseries extérieures",
+    description:
+      "Notre spécialité, et le poste qui décide de la lumière, du confort et de la facture. Châssis, portes, vitrages, du choix du profilé à la finition intérieure.",
   },
   {
     title: "Façades",
     description:
       "Rénovation de façades, isolation par l'extérieur, nouvel enduit ou parement. L'aspect de votre maison change, sa performance aussi.",
-  },
-  {
-    title: "Coordination de chantier",
-    description:
-      "Nous planifions et coordonnons les corps de métier pour que le chantier avance sans temps morts, et vous tenons informé chaque semaine.",
   },
 ] as const;
 
@@ -121,7 +130,7 @@ export const projectPaths: ProjectPath[] = [
     works: [
       "Vérification des autorisations nécessaires auprès de la commune",
       "Étude de stabilité si l'existant est touché",
-      "Terrassement et fondations de l'extension",
+      "Fondations de l'annexe, dimensionnées d'après le sol rencontré",
       "Élévation, mise sous toit et raccord à la toiture existante",
       "Menuiseries extérieures",
       "Second œuvre et raccords de finition avec l'existant",
@@ -178,7 +187,7 @@ export const preDecisions = [
   },
   {
     title: "Le niveau de finition visé",
-    text: "Le gros œuvre varie peu d'un devis à l'autre ; les finitions, énormément. Définir le niveau visé dès le départ évite les arbitrages en urgence en fin de chantier.",
+    text: "Le poste travaux varie peu d'un devis à l'autre ; les finitions, énormément. Définir le niveau visé dès le départ évite les arbitrages en urgence en fin de chantier.",
   },
   {
     title: "Les autorisations",

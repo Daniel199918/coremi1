@@ -12,9 +12,9 @@ export const siteConfig = {
   legalName: "COREMI SPRL", // ⚠️ SPRL ou SRL depuis la réforme 2019 — à confirmer
   enterpriseNumber: "0839.628.733", // ✅ confirmé (BCE)
   vatNumber: "BE 0839.628.733", // ✅ confirmé (BCE)
-  tagline: "Construction & Châssis",
+  tagline: "Rénovation & Châssis", // ⚠️ le fichier du logo porte encore « Construction & Châssis » : image à refaire
   description:
-    "COREMI construit, rénove et pose des châssis à Bruxelles et en Brabant wallon. Gros œuvre, extensions, rénovations complètes, châssis PVC et aluminium : un seul interlocuteur, un devis détaillé.",
+    "COREMI rénove, transforme et agrandit les habitations à Bruxelles et en Brabant wallon, avec une spécialité : les châssis, portes et menuiseries extérieures. Un seul interlocuteur, un devis détaillé.",
   /** URL canonique du site (surchargée par NEXT_PUBLIC_SITE_URL si définie). */
   url: process.env.NEXT_PUBLIC_SITE_URL ?? "https://www.coremi.be",
 
@@ -74,13 +74,6 @@ export const siteConfig = {
 } as const;
 
 /**
- * Navigation principale — 5 entrées + le bouton « Demander un devis ».
- *
- * Les pages secondaires ne disparaissent pas : elles sont regroupées
- * sous « Solutions » (les métiers) et « À propos » (l'entreprise, la
- * méthode, les prix, les avis, les zones). Une barre courte se lit ;
- * une barre à huit onglets ne se lit pas et écrase le logo.
- *
  * `description` alimente les sous-menus, sur desktop comme sur mobile.
  */
 export type NavChild = {
@@ -95,50 +88,95 @@ export type NavItem = {
   children?: NavChild[];
 };
 
+/**
+ * Navigation principale — six entrées, trois menus déroulants.
+ *
+ * Deux corrections issues du benchmark belge d'août 2026 :
+ *
+ * 1. « Châssis & portes » remonte au premier niveau. C'est la page qui
+ *    porte la demande ; elle était enfouie sous un libellé « Solutions »
+ *    qui n'évoque rien pour un particulier. Les deux principaux acteurs
+ *    belges donnent au contraire un accès direct à chaque famille de
+ *    produit depuis l'en-tête.
+ * 2. « Comment se construit un prix » sort de « À propos ». Le prix est
+ *    l'une des premières questions d'un visiteur : elle n'a rien à faire
+ *    sous un onglet qui parle de l'entreprise. Elle rejoint les primes,
+ *    avec lesquelles elle forme un seul vrai sujet — le budget.
+ *
+ * « Accueil » est retiré : le logo remplit déjà ce rôle, et la place
+ * libérée sert à une entrée utile.
+ *
+ * ⚠️ LONGUEUR DES LIBELLÉS — contrainte mesurée, pas théorique.
+ * Avec « Châssis & portes », « Construction & rénovation » et
+ * « L'entreprise », la barre dépassait la largeur de la fenêtre à 1024,
+ * 1280 et 1440 px : le bouton « Demander un devis » se retrouvait hors
+ * écran. Ces libellés sont donc volontairement courts. Avant d'en
+ * rallonger un, vérifier le rendu à 1280 px.
+ */
 export const navigation: NavItem[] = [
-  { label: "Accueil", href: "/" },
   {
-    label: "Solutions",
-    href: "/solutions",
+    label: "Châssis",
+    href: "/chassis",
     children: [
       {
-        label: "Châssis & portes",
+        label: "Matériaux et pose",
         href: "/chassis",
-        description: "PVC, aluminium et bois, portes d'entrée, pose et finitions.",
+        description: "PVC, aluminium et bois : ce que chacun règle, et ce qu'il coûte ailleurs.",
       },
       {
-        label: "Construction & rénovation",
-        href: "/construction-renovation",
-        description: "Gros œuvre, extensions, transformations, rénovation complète.",
+        label: "Couleurs & finitions",
+        href: "/chassis/couleurs",
+        description: "Quelle teinte selon votre façade, bicoloration, tenue dans le temps.",
       },
       {
         label: "Schüco, Aliplast, Aluprof",
         href: "/solutions/fabricants",
         description: "Les systèmes que nous mettons en œuvre, comparés sans classement.",
       },
+      {
+        label: "Quiz : quel châssis ?",
+        href: "/chassis/quiz",
+        description: "Onze questions pour dégager le matériau qui tient dans votre cas.",
+      },
     ],
   },
+  { label: "Rénovation", href: "/construction-renovation" },
   { label: "Réalisations", href: "/realisations" },
-  { label: "Primes", href: "/primes" },
-  { label: "Conseils", href: "/conseils" },
   {
-    label: "À propos",
-    href: "/a-propos",
+    label: "Primes & prix",
+    href: "/primes",
     children: [
       {
-        label: "L'entreprise",
-        href: "/a-propos",
-        description: "Qui nous sommes et comment nous travaillons au quotidien.",
-      },
-      {
-        label: "Comment on travaille",
-        href: "/comment-on-travaille",
-        description: "Responsabilité unique, aucun acompte, échéancier clair.",
+        label: "Primes par région",
+        href: "/primes",
+        description: "Wallonie, Bruxelles et Flandre, avec sources officielles et dates.",
       },
       {
         label: "Comment se construit un prix",
         href: "/prix-et-aides",
         description: "La composition d'un devis, poste par poste.",
+      },
+      {
+        label: "Comment nous vérifions",
+        href: "/primes/methode",
+        description: "D'où viennent ces informations et quand elles ont été contrôlées.",
+      },
+    ],
+  },
+  { label: "Conseils", href: "/conseils" },
+  {
+    label: "Entreprise",
+    href: "/a-propos",
+    children: [
+      {
+        label: "Qui nous sommes",
+        href: "/a-propos",
+        description: "L'entreprise et sa façon de travailler au quotidien.",
+      },
+      {
+        label: "Comment on travaille",
+        href: "/comment-on-travaille",
+        description: "Le déroulé d'un chantier, de la visite à la réception.",
       },
       {
         label: "Avis clients",
@@ -154,14 +192,38 @@ export const navigation: NavItem[] = [
   },
 ] as const;
 
+/**
+ * Image sociale par défaut (Open Graph / Twitter).
+ *
+ * ⚠️ Next.js ne fusionne PAS l'objet `openGraph` : dès qu'une page en
+ * déclare un, celui du layout racine est intégralement remplacé — image
+ * comprise. Toute page qui définit `openGraph` doit donc réinjecter
+ * `images: ogImages` explicitement, sinon son partage sur les réseaux
+ * sociaux et dans les messageries s'affiche sans visuel.
+ */
+export const ogImages = [
+  {
+    url: "/images/og-image.jpg",
+    width: 1200,
+    height: 630,
+    alt: "COREMI — rénovation, transformation et châssis",
+  },
+];
+
 /** Appel à l'action principal, isolé du reste de la navigation. */
 export const primaryCta = { label: "Demander un devis", href: "/devis" } as const;
 
+/**
+ * Le pied de page rattrape ce que la navigation ne porte plus :
+ * « Toutes nos solutions » et les couleurs restent atteignables sans
+ * passer par un menu déroulant, ce qui compte surtout sur mobile.
+ */
 export const footerServiceLinks = [
   { label: "Châssis PVC & aluminium", href: "/chassis" },
+  { label: "Couleurs & finitions", href: "/chassis/couleurs" },
   { label: "Portes & vitrages", href: "/chassis#portes" },
-  { label: "Construction & gros œuvre", href: "/construction-renovation" },
-  { label: "Rénovation & transformation", href: "/construction-renovation#renovation" },
+  { label: "Annexes & extensions", href: "/construction-renovation#extensions" },
+  { label: "Toutes nos solutions", href: "/solutions" },
   { label: "Primes & aides", href: "/primes" },
-  { label: "Comment on travaille", href: "/comment-on-travaille" },
+  { label: "Comment se construit un prix", href: "/prix-et-aides" },
 ] as const;

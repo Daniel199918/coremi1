@@ -7,14 +7,19 @@ import { projects, type Project } from "@/content/projects";
 function ProjectCartouche({ project }: { project: Project }) {
   return (
     <dl className="divide-y divide-ink-950/10 border-y border-ink-950/10 text-sm">
-      <div className="grid grid-cols-[7rem_1fr] gap-3 py-3">
-        <dt className="annotation leading-5 text-ink-500">Lieu</dt>
-        <dd className="text-ink-800">{project.location}</dd>
-      </div>
-      <div className="grid grid-cols-[7rem_1fr] gap-3 py-3">
-        <dt className="annotation leading-5 text-ink-500">Année</dt>
-        <dd className="text-ink-800">{project.year}</dd>
-      </div>
+      {/* Lieu et année ne s'affichent que s'ils sont confirmés. */}
+      {project.location && (
+        <div className="grid grid-cols-[7rem_1fr] gap-3 py-3">
+          <dt className="annotation leading-5 text-ink-500">Lieu</dt>
+          <dd className="text-ink-800">{project.location}</dd>
+        </div>
+      )}
+      {project.year && (
+        <div className="grid grid-cols-[7rem_1fr] gap-3 py-3">
+          <dt className="annotation leading-5 text-ink-500">Année</dt>
+          <dd className="text-ink-800">{project.year}</dd>
+        </div>
+      )}
       <div className="grid grid-cols-[7rem_1fr] gap-3 py-3">
         <dt className="annotation leading-5 text-ink-500">Sur la photo</dt>
         <dd className="text-ink-800">{project.observed}</dd>

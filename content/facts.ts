@@ -3,13 +3,26 @@
  * aucun chiffre inventé. Quand COREMI fournira ses données réelles
  * (années d'expérience, nombre de chantiers), les ajouter ici.
  * Placeholders disponibles : [ANNÉES D'EXPÉRIENCE], [CERTIFICATIONS].
+ *
+ * ⚠️ RÈGLE DE RÉPÉTITION (benchmark belge, août 2026)
+ * Les deux principaux acteurs châssis du marché répètent « devis gratuit
+ * sans engagement » et « pourquoi nous choisir » sur chacune de leurs
+ * pages. À force, l'argument ne se lit plus. On ne reproduit pas ça.
+ *
+ * Un argument commercial (gratuité, absence d'acompte, délai de réponse)
+ * n'apparaît QU'À L'ENDROIT OÙ IL RÉPOND À UNE INQUIÉTUDE RÉELLE :
+ *   - l'acompte      → /comment-on-travaille + la FAQ, nulle part ailleurs ;
+ *   - la gratuité    → à proximité immédiate du formulaire de devis ;
+ *   - les aides      → /primes et /prix-et-aides.
+ * Ces engagements-ci décrivent la manière de travailler, pas les
+ * conditions commerciales : c'est ce qui les rend lisibles.
  */
 
 export const engagements = [
   {
-    title: "Un devis détaillé, gratuit",
+    title: "Les raccords appartiennent à quelqu'un",
     description:
-      "Chaque poste est chiffré noir sur blanc avant le premier coup de pelle. Vous savez ce que vous payez, et pourquoi.",
+      "Une rénovation fait intervenir plusieurs métiers, et ce sont les points de jonction qui lâchent : le châssis et son isolation, l'annexe et la maison, la façade et la toiture. Quand chaque lot vient d'une entreprise différente, ces raccords n'appartiennent à personne. Ici, ils sont à nous.",
   },
   {
     title: "Un interlocuteur unique",
@@ -25,41 +38,6 @@ export const engagements = [
     title: "Le chantier rendu propre",
     description:
       "Protection des lieux, évacuation des gravats, nettoyage de fin de chantier. Vous récupérez votre maison, pas un terrain vague.",
-  },
-] as const;
-
-/**
- * Modalités pratiques — réassurance commerciale honnête, sans chiffre
- * inventé. ⚠️ Volontairement AUCUN montant ni nom de dispositif d'aide
- * n'est cité : les régimes régionaux (Bruxelles, Wallonie) ont été
- * revus, suspendus ou remplacés par des formules de prêt à plusieurs
- * reprises et se périment vite. On vend l'accompagnement, pas le
- * dispositif. Voir /prix-et-aides pour le détail de cette position.
- */
-export const modalites = [
-  {
-    kicker: "Devis",
-    title: "Détaillé, gratuit, sans engagement",
-    description:
-      "Visite sur place, puis un devis chiffré poste par poste. Il ne vous coûte rien et ne vous engage à rien : vous signez seulement s'il vous convient.",
-  },
-  {
-    kicker: "Paiement",
-    title: "Échelonné, jamais d'avance à découvert",
-    description:
-      "Aucun acompte avant le début des travaux, sauf pour la commande des châssis. Vous payez par tranches, selon l'avancement, et le solde à la réception.",
-  },
-  {
-    kicker: "Suivi",
-    title: "Un interlocuteur unique, joignable",
-    description:
-      "La même personne suit votre chantier du premier appel à la réception. Un point régulier par téléphone ou WhatsApp, sans standard ni dossier qui se perd.",
-  },
-  {
-    kicker: "Aides",
-    title: "TVA réduite et aides : on monte le dossier",
-    description:
-      "Une habitation privée suffisamment ancienne peut relever d'un taux de TVA réduit, sous conditions. Les aides régionales, elles, changent souvent : au moment du devis, nous regardons ensemble ce qui existe réellement pour votre commune et vos travaux, et nous fournissons les documents dont votre dossier a besoin.",
   },
 ] as const;
 

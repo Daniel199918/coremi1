@@ -20,25 +20,26 @@ export function IntroSection() {
           </Reveal>
           <Reveal delay={0.08}>
             <p className="mt-9 font-display text-3xl font-medium leading-[1.15] text-ink-950 sm:text-[2.6rem]">
-              Un chantier ne casse presque jamais au milieu d&apos;un mur.
-              Il casse à la jonction : là où le gros œuvre s&apos;arrête et
-              où le châssis commence.
+              Une rénovation rate rarement sur un poste. Elle rate entre deux
+              postes : là où l&apos;isolation rencontre le châssis, là où
+              l&apos;annexe rejoint la maison.
               <em className="italic text-accent-700"> C&apos;est précisément là que nous ne sous-traitons pas.</em>
             </p>
           </Reveal>
           <Reveal delay={0.15}>
             <div className="mt-10 max-w-xl space-y-5 leading-relaxed text-ink-600">
               <p>
-                La plupart des entreprises générales confient les châssis à un tiers.
-                Les poseurs de châssis, eux, arrivent après le maçon. Entre les deux,
-                une zone grise : l&apos;étanchéité, l&apos;isolation du dormant, les
-                finitions du raccord — et un responsable difficile à désigner quand
-                ça fuit.
+                Un remplacement de châssis se décide avec l&apos;isolation et la
+                ventilation, pas après elles. Une annexe se juge à sa jonction
+                avec l&apos;existant, pas à son volume. Ces raccords sont ce qui
+                sépare une rénovation cohérente d&apos;une simple addition de
+                travaux — et personne ne s&apos;en occupe quand chaque lot part
+                chez un corps de métier différent.
               </p>
               <p>
-                COREMI fait les deux. Le mur et la fenêtre sortent de la même
-                entreprise, donc le joint entre les deux aussi. Vous n&apos;avez
-                qu&apos;un seul numéro à appeler, et personne à qui renvoyer la faute.
+                COREMI prend le projet entier : la rénovation, la transformation,
+                l&apos;annexe et les ouvertures. Un seul interlocuteur du premier
+                relevé à la réception, et personne à qui renvoyer la faute.
               </p>
             </div>
             <Link

@@ -11,9 +11,9 @@ import { CtaSection } from "@/components/home/cta-section";
 import { siteConfig } from "@/content/site";
 
 export const metadata: Metadata = {
-  title: "Comment on travaille — responsabilité unique, aucun acompte",
+  title: "Comment on travaille — de la visite à la réception",
   description:
-    "Gros œuvre et châssis par la même entreprise : une seule responsabilité sur le joint. Aucun acompte avant le début des travaux, paiement à l'avancement, devis détaillé poste par poste.",
+    "Rénovation et châssis par la même entreprise : une seule responsabilité sur les raccords, aucun acompte avant le début des travaux, devis détaillé poste par poste.",
   alternates: { canonical: "/comment-on-travaille" },
 };
 
@@ -23,7 +23,7 @@ const piliers = [
     icon: Link2,
     kicker: "Responsabilité",
     title: "Le mur et la fenêtre sortent de la même entreprise",
-    text: "Une entreprise générale sous-traite presque toujours les châssis ; un poseur de châssis, lui, arrive après le maçon. Entre les deux, une zone grise : étanchéité, isolation du dormant, finition du raccord. Chez nous, il n'y a pas de zone grise, parce qu'il n'y a pas deux entreprises.",
+    text: "Une entreprise de rénovation sous-traite presque toujours les châssis ; un poseur de châssis, lui, arrive une fois la baie ouverte par quelqu'un d'autre. Entre les deux, une zone grise : étanchéité, isolation du dormant, finition du raccord. Chez nous, il n'y a pas de zone grise, parce qu'il n'y a pas deux entreprises.",
   },
   {
     icon: Wallet,

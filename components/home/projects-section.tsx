@@ -58,7 +58,7 @@ export function ProjectsSection() {
                 <div>
                   <h3 className="font-display text-2xl text-ink-950">{villa.title}</h3>
                   <p className="mt-1 text-xs font-semibold uppercase tracking-[0.18em] text-ink-500">
-                    Fiche {villa.index} · {villa.location}
+                    Fiche {villa.index}{villa.location ? ` · ${villa.location}` : ""}
                   </p>
                 </div>
               </div>
@@ -84,7 +84,7 @@ export function ProjectsSection() {
                   <div className="py-4">
                     <h3 className="font-display text-xl text-ink-950">{project.title}</h3>
                     <p className="mt-1 text-xs font-semibold uppercase tracking-[0.18em] text-ink-500">
-                      Fiche {project.index} · {project.location}
+                      Fiche {project.index}{project.location ? ` · ${project.location}` : ""}
                     </p>
                   </div>
                 </Link>

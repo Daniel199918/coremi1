@@ -10,7 +10,7 @@ import { GridLines } from "@/components/ui/grid-lines";
 import { CtaSection } from "@/components/home/cta-section";
 import { metiers } from "@/content/metiers";
 import { getZone, getZoneNeighbours, zones } from "@/content/zones";
-import { siteConfig } from "@/content/site";
+import { ogImages, siteConfig } from "@/content/site";
 
 type Props = { params: Promise<{ slug: string }> };
 
@@ -23,15 +23,30 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const zone = getZone(slug);
   if (!zone) return {};
 
-  const cps = zone.postalCodes.join(", ");
+  /**
+   * Le nom de commune fait varier la longueur : « Ottignies-Louvain-la-Neuve »
+   * compte 26 caractères contre 5 pour « Ittre ». Les libellés sont donc
+   * calibrés pour que le plus long tienne sous 60 caractères de titre et
+   * 155 de description — au-delà, Google tronque et la promesse est coupée
+   * en plein milieu.
+   */
+  /**
+   * Le code postal aide au référencement local, mais il ne doit pas
+   * pousser le titre au-delà de la coupure de Google. Sur les noms longs
+   * (« Ottignies-Louvain-la-Neuve »), on le sacrifie : le nom de commune
+   * porte davantage que le code. Le gabarit ajoute « · COREMI ».
+   */
+  const titreBase = `Rénovation et châssis à ${zone.name}`;
   return {
-    title: `Entreprise de construction, rénovation et châssis à ${zone.name} (${zone.postalCodes[0]})`,
-    description: `COREMI intervient à ${zone.name} (${cps}) : gros œuvre, extensions, rénovation complète et pose de châssis PVC ou aluminium. Le mur et la fenêtre par la même entreprise, aucun acompte avant le début des travaux, devis détaillé gratuit.`,
+    title:
+      titreBase.length > 44 ? titreBase : `${titreBase} (${zone.postalCodes[0]})`,
+    description: `COREMI rénove, transforme et agrandit les habitations à ${zone.name} : châssis, portes et menuiseries extérieures comprises. Un seul interlocuteur.`,
     alternates: { canonical: `/zones/${zone.slug}` },
     openGraph: {
-      title: `Construction, rénovation et châssis à ${zone.name} — COREMI`,
-      description: `Entreprise générale active à ${zone.name} et dans tout le ${zone.region}. Devis détaillé gratuit.`,
+      title: `Rénovation et châssis à ${zone.name} — COREMI`,
+      description: `Rénovation, transformation, annexes et châssis à ${zone.name} et dans tout le ${zone.region}.`,
       url: `${siteConfig.url}/zones/${zone.slug}`,
+      images: ogImages,
     },
   };
 }
@@ -58,7 +73,7 @@ export default async function ZonePage({ params }: Props) {
       },
       {
         "@type": "Service",
-        serviceType: "Construction, rénovation et pose de châssis",
+        serviceType: "Rénovation, transformation, annexes et pose de châssis",
         provider: { "@id": `${siteConfig.url}/#organization` },
         areaServed: {
           "@type": "City",
@@ -96,7 +111,7 @@ export default async function ZonePage({ params }: Props) {
             </nav>
 
             <h1 className="max-w-4xl font-display text-4xl font-medium leading-[1.03] tracking-tight text-ink-950 sm:text-6xl">
-              Construction, rénovation et châssis
+              Rénovation, transformation et châssis
               <br className="hidden sm:block" /> à {zone.name}
             </h1>
 
@@ -123,8 +138,8 @@ export default async function ZonePage({ params }: Props) {
                 <MapPin className="h-4 w-4 text-accent-600" aria-hidden="true" />
                 {zone.postalCodes.join(" · ")}
               </li>
-              <li>Gros œuvre + châssis</li>
-              <li>Aucun acompte</li>
+              <li>Rénovation + châssis</li>
+              <li>{zone.region}</li>
             </ul>
 
             <div className="mt-10 flex flex-col gap-3 sm:flex-row">
@@ -132,7 +147,7 @@ export default async function ZonePage({ params }: Props) {
                 href="/devis"
                 className="btn-press group inline-flex items-center justify-center gap-3 bg-accent-600 px-7 py-4 text-xs font-semibold uppercase tracking-[0.14em] text-white hover:bg-accent-700"
               >
-                Devis gratuit à {zone.name}
+                Décrire mon projet
                 <ArrowRight className="h-4 w-4 transition-transform group-hover:translate-x-1" aria-hidden="true" />
               </Link>
               <a
@@ -152,9 +167,9 @@ export default async function ZonePage({ params }: Props) {
           <Reveal>
             <SectionHeading
               index="01"
-              eyebrow={`Nos métiers à ${zone.name}`}
-              title="Quatre métiers, une seule entreprise"
-              description="C'est le point qui nous distingue localement : le gros œuvre et les châssis ne sont pas confiés à deux sociétés différentes. Le raccord entre les deux — là où les chantiers fuient — est notre responsabilité."
+              eyebrow={`Ce que nous faisons à ${zone.name}`}
+              title="Quatre piliers, une seule entreprise"
+              description="C'est le point qui nous distingue localement : les travaux de rénovation et les châssis ne sont pas confiés à deux sociétés différentes. Le raccord entre les deux — là où les chantiers fuient — est notre responsabilité."
             />
           </Reveal>
 

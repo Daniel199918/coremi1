@@ -6,9 +6,9 @@ import { ChassisQuiz } from "@/components/chassis/chassis-quiz";
 import { siteConfig } from "@/content/site";
 
 export const metadata: Metadata = {
-  title: "Quelle solution de châssis choisir ? — quiz d'orientation",
+  title: "Quel châssis choisir ? — quiz d'orientation",
   description:
-    "Onze questions pour cerner le matériau et le type de châssis adaptés à votre projet : priorités, dimensions, exposition au bruit, sécurité, budget. Orientation motivée, sans classement de marques.",
+    "Onze questions pour cerner le matériau et le type de châssis adaptés à votre projet : priorités, dimensions, bruit, sécurité, budget.",
   alternates: { canonical: "/chassis/quiz" },
 };
 

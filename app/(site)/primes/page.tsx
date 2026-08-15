@@ -18,9 +18,9 @@ import {
 import { siteConfig } from "@/content/site";
 
 export const metadata: Metadata = {
-  title: "Primes & aides 2026 — châssis, vitrage, isolation et rénovation en Belgique",
+  title: "Primes & aides — châssis, vitrage et rénovation",
   description:
-    "Centre de référence sur les aides publiques belges pour le remplacement de châssis, le vitrage, l'isolation et la rénovation énergétique : Wallonie, Bruxelles et Flandre, conditions, étapes et sources officielles.",
+    "Les aides publiques belges pour les châssis, le vitrage et la rénovation : Wallonie, Bruxelles et Flandre, avec conditions et sources officielles.",
   alternates: { canonical: "/primes" },
 };
 

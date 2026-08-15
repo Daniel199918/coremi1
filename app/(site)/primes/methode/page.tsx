@@ -18,7 +18,7 @@ import { siteConfig } from "@/content/site";
 export const metadata: Metadata = {
   title: "Comment nous vérifions les informations sur les primes",
   description:
-    "Notre méthode de vérification des aides publiques belges : sources officielles utilisées, règles de rédaction, signification des statuts, date de dernière vérification et historique des changements.",
+    "Notre méthode de vérification des aides belges : sources officielles, règles de rédaction, signification des statuts et date du dernier contrôle.",
   alternates: { canonical: "/primes/methode" },
 };
 

@@ -49,13 +49,12 @@ export function CtaSection() {
             <p className="mt-8 max-w-lg text-lg leading-relaxed text-stone-200/85">
               Décrivez votre projet en trois minutes. Nous revenons vers vous avec une
               première réponse claire, puis un devis détaillé si vous souhaitez avancer.
-              Sans engagement.
             </p>
             <Link
               href="/devis"
               className="btn-press group mt-10 inline-flex items-center gap-3 bg-accent-600 px-9 py-5 text-sm font-semibold uppercase tracking-[0.14em] text-white hover:bg-accent-500"
             >
-              Demander un devis gratuit
+              Décrire mon projet
               <ArrowRight
                 className="h-4 w-4 transition-transform group-hover:translate-x-1"
                 aria-hidden="true"

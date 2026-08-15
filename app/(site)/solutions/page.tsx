@@ -9,9 +9,9 @@ import { CtaSection } from "@/components/home/cta-section";
 import { metiers } from "@/content/metiers";
 
 export const metadata: Metadata = {
-  title: "Nos solutions — châssis, portes, vitrages, construction et rénovation",
+  title: "Nos solutions — châssis, rénovation et annexes",
   description:
-    "Châssis PVC, aluminium et bois, portes d'entrée, vitrages, gros œuvre, extensions et rénovation complète. Le mur et la fenêtre par la même entreprise, à Bruxelles et en Brabant wallon.",
+    "Châssis PVC et aluminium, portes, vitrages, rénovation complète, transformation et annexes. La même entreprise pour les travaux et les ouvertures.",
   alternates: { canonical: "/solutions" },
 };
 
@@ -22,7 +22,7 @@ export default function SolutionsPage() {
         index="02"
         eyebrow="Solutions"
         title="Ce que nous réalisons"
-        description="Quatre métiers menés par la même entreprise. C'est ce qui nous distingue : là où le gros œuvre s'arrête et où le châssis commence, il n'y a pas deux sociétés qui se renvoient la responsabilité."
+        description="Quatre piliers menés par la même entreprise. C'est ce qui nous distingue : là où la rénovation s'arrête et où le châssis commence, il n'y a pas deux sociétés qui se renvoient la responsabilité."
       />
 
       <section className="py-20 sm:py-28">
