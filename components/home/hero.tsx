@@ -131,10 +131,14 @@ export function Hero() {
         <em className="italic text-accent-400">Mieux pensée.</em>
       </h1>
 
+      {/* Le sous-titre doit mériter « Mieux pensée » : il nomme l'activité,
+          puis referme sur la méthode. Verbe d'action à l'ouverture — une
+          formulation hésitante (« nous cherchons ») affaiblissait la
+          promesse du titre au lieu de la soutenir. */}
       <p className="rise rise-3 mt-6 max-w-xl text-base leading-relaxed text-white/95 [text-shadow:0_1px_14px_rgb(18_16_12/0.8)] sm:mt-7 sm:text-lg">
-        Rénover, ce n&apos;est pas tout refaire. Nous cherchons d&apos;abord ce
-        qui changera votre quotidien — la lumière, le confort, les ouvertures —
-        puis nous le réalisons nous-mêmes.
+        Nous améliorons des maisons qui existent déjà : rénovation,
+        transformation, annexes et châssis.{" "}
+        <span className="text-white">L&apos;ensemble d&apos;abord, le détail ensuite.</span>
       </p>
 
       <div className="rise rise-4 mt-8 flex flex-col gap-3 sm:mt-9 sm:flex-row sm:items-center">
