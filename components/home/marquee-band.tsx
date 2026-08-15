@@ -4,11 +4,11 @@
  * (aria-hidden), CSS seul, en pause au survol et en mouvement réduit.
  */
 const items = [
-  "Construction",
   "Rénovation",
+  "Transformation",
+  "Annexes",
   "Châssis",
-  "Extensions",
-  "Gros œuvre",
+  "Menuiseries extérieures",
   "Finitions",
 ];
 

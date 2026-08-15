@@ -14,9 +14,9 @@ import { budgetDrivers, constructionPrestations, preDecisions } from "@/content/
 import { siteConfig } from "@/content/site";
 
 export const metadata: Metadata = {
-  title: "Construction et rénovation — ordre des travaux, budget et autorisations",
+  title: "Rénovation et transformation — dans quel ordre ?",
   description:
-    "Comment se déroule une rénovation : l'ordre logique des travaux, les décisions à prendre avant le chantier, les interactions entre châssis, isolation, ventilation et chauffage, et ce qui fait varier le budget.",
+    "L'ordre logique des travaux d'une rénovation, les décisions à prendre avant le chantier, et ce qui fait vraiment varier le budget.",
   alternates: { canonical: "/construction-renovation" },
 };
 
@@ -25,7 +25,7 @@ export default function ConstructionRenovationPage() {
     <>
       <PageHero
         index="01"
-        eyebrow="Construction & rénovation"
+        eyebrow="Rénovation, transformation, annexes"
         title="Rénover dans le bon ordre"
         description="La plupart des surcoûts d'une rénovation ne viennent pas du prix des matériaux, mais de l'ordre dans lequel les travaux ont été faits. Voici comment un chantier s'enchaîne, ce qui se décide avant le premier coup de pelle, et ce qui fait vraiment bouger le budget."
       />
@@ -35,7 +35,14 @@ export default function ConstructionRenovationPage() {
         <Container>
           <div className="grid gap-x-8 gap-y-14 sm:grid-cols-2 lg:grid-cols-3">
             {constructionPrestations.map((prestation, i) => {
-              const anchors: Record<number, string> = { 1: "extensions", 2: "renovation" };
+              // Ancres ciblées depuis la navigation et les cartes de l'accueil.
+              // L'ordre suit content/construction.ts : rénovation complète,
+              // rénovation partielle, transformations, annexes, châssis, façades.
+              const anchors: Record<number, string> = {
+                0: "renovation",
+                2: "transformation",
+                3: "extensions",
+              };
               return (
                 <Reveal key={prestation.title} delay={0.05 * (i % 3)}>
                   <article

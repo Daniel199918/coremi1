@@ -20,9 +20,9 @@ import {
 import { siteConfig } from "@/content/site";
 
 export const metadata: Metadata = {
-  title: "Châssis PVC, aluminium ou bois — comment choisir sans se tromper",
+  title: "Châssis PVC, aluminium ou bois — comment choisir",
   description:
-    "Guide de choix : différences réelles entre PVC, aluminium et bois, rôle du profilé, du vitrage, des joints et de la pose, ce qui fait varier le prix, erreurs fréquentes et questions à poser avant de signer un devis.",
+    "Différences réelles entre PVC, aluminium et bois, rôle du vitrage et de la pose, ce qui fait varier le prix, et les questions à poser avant de signer.",
   alternates: { canonical: "/chassis" },
 };
 

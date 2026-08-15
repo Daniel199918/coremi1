@@ -32,8 +32,8 @@ export function SiteFooter() {
             <Logo variant="light" />
           </Link>
           <p className="mt-6 text-sm leading-relaxed text-stone-300/80">
-            Entreprise générale de construction et de châssis. Gros œuvre, rénovation,
-            extensions et menuiseries extérieures à Bruxelles et en Brabant wallon.
+            Rénovation, transformation et annexes, avec une spécialité châssis et
+            menuiseries extérieures. À Bruxelles et en Brabant wallon.
           </p>
         </div>
 

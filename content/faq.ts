@@ -14,7 +14,7 @@ export const faq: FaqItem[] = [
   {
     question: "Qui est responsable si le raccord entre le mur et le châssis fuit ?",
     answer:
-      "Nous, sans discussion possible. C'est tout l'intérêt de faire le gros œuvre et les châssis dans la même entreprise : quand ces deux lots sont confiés à deux sociétés différentes, une infiltration au niveau du dormant devient un débat entre le maçon et le poseur. Ici, il n'y a personne d'autre à appeler.",
+      "Nous, sans discussion possible. C'est tout l'intérêt de confier la rénovation et les châssis à la même entreprise : quand ces deux lots sont séparés, une infiltration au niveau du dormant devient un débat entre celui qui a ouvert la baie et celui qui a posé la fenêtre. Ici, il n'y a personne d'autre à appeler.",
   },
   {
     question: "Êtes-vous assurés, et puis-je le vérifier ?",
@@ -39,7 +39,7 @@ export const faq: FaqItem[] = [
   {
     question: "Travaillez-vous avec mon architecte ?",
     answer:
-      "Oui, c'est même notre façon habituelle de travailler pour le gros œuvre et les extensions. Nous exécutons les plans de votre architecte et nous coordonnons le chantier avec lui.",
+      "Oui, c'est même notre façon habituelle de travailler sur les transformations et les annexes. Nous exécutons les plans de votre architecte et nous coordonnons le chantier avec lui.",
   },
   {
     question: "Combien de temps faut-il pour remplacer des châssis ?",
@@ -82,12 +82,12 @@ export const faq: FaqItem[] = [
   {
     question: "Qui pose exactement : vos équipes ou des sous-traitants ?",
     answer:
-      "Posez systématiquement cette question, à nous comme aux autres, et demandez la réponse par écrit. Le recours à un sous-traitant n'a rien d'anormal en soi sur certains lots ; ce qui compte, c'est de savoir qui répond en cas de problème et que la réponse ne change pas une fois le chantier commencé. Chez nous, le gros œuvre et la pose des châssis sont réalisés par la même entreprise, ce qui est justement l'objet de notre organisation.",
+      "Posez systématiquement cette question, à nous comme aux autres, et demandez la réponse par écrit. Le recours à un sous-traitant n'a rien d'anormal en soi sur certains lots ; ce qui compte, c'est de savoir qui répond en cas de problème et que la réponse ne change pas une fois le chantier commencé. Chez nous, les travaux de rénovation et la pose des châssis relèvent de la même entreprise, ce qui est justement l'objet de notre organisation.",
   },
   {
     question: "Combien de temps mon devis reste-t-il valable ?",
     answer:
-      "La durée de validité est indiquée sur le devis lui-même. Elle existe pour une raison concrète : les prix des profilés, du vitrage et des matériaux de gros œuvre bougent. Un devis sans date de validité doit vous alerter, quel que soit l'entrepreneur — c'est la porte ouverte à une révision de prix au moment de la commande.",
+      "La durée de validité est indiquée sur le devis lui-même. Elle existe pour une raison concrète : les prix des profilés, du vitrage et des matériaux de construction bougent. Un devis sans date de validité doit vous alerter, quel que soit l'entrepreneur — c'est la porte ouverte à une révision de prix au moment de la commande.",
   },
   {
     question: "Que se passe-t-il si un problème apparaît après la pose ?",

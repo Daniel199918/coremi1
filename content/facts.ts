@@ -20,9 +20,9 @@
 
 export const engagements = [
   {
-    title: "Le mur et la fenêtre, un seul responsable",
+    title: "Les raccords appartiennent à quelqu'un",
     description:
-      "Le point qui fuit le plus souvent est le raccord entre le gros œuvre et le châssis. Quand deux entreprises s'en partagent la charge, chacune renvoie vers l'autre. Ici, la question ne se pose pas.",
+      "Une rénovation fait intervenir plusieurs métiers, et ce sont les points de jonction qui lâchent : le châssis et son isolation, l'annexe et la maison, la façade et la toiture. Quand chaque lot vient d'une entreprise différente, ces raccords n'appartiennent à personne. Ici, ils sont à nous.",
   },
   {
     title: "Un interlocuteur unique",

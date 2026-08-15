@@ -12,9 +12,9 @@ export const siteConfig = {
   legalName: "COREMI SPRL", // ⚠️ SPRL ou SRL depuis la réforme 2019 — à confirmer
   enterpriseNumber: "0839.628.733", // ✅ confirmé (BCE)
   vatNumber: "BE 0839.628.733", // ✅ confirmé (BCE)
-  tagline: "Construction & Châssis",
+  tagline: "Rénovation & Châssis", // ⚠️ le fichier du logo porte encore « Construction & Châssis » : image à refaire
   description:
-    "COREMI construit, rénove et pose des châssis à Bruxelles et en Brabant wallon. Gros œuvre, extensions, rénovations complètes, châssis PVC et aluminium : un seul interlocuteur, un devis détaillé.",
+    "COREMI rénove, transforme et agrandit les habitations à Bruxelles et en Brabant wallon, avec une spécialité : les châssis, portes et menuiseries extérieures. Un seul interlocuteur, un devis détaillé.",
   /** URL canonique du site (surchargée par NEXT_PUBLIC_SITE_URL si définie). */
   url: process.env.NEXT_PUBLIC_SITE_URL ?? "https://www.coremi.be",
 
@@ -192,6 +192,24 @@ export const navigation: NavItem[] = [
   },
 ] as const;
 
+/**
+ * Image sociale par défaut (Open Graph / Twitter).
+ *
+ * ⚠️ Next.js ne fusionne PAS l'objet `openGraph` : dès qu'une page en
+ * déclare un, celui du layout racine est intégralement remplacé — image
+ * comprise. Toute page qui définit `openGraph` doit donc réinjecter
+ * `images: ogImages` explicitement, sinon son partage sur les réseaux
+ * sociaux et dans les messageries s'affiche sans visuel.
+ */
+export const ogImages = [
+  {
+    url: "/images/og-image.jpg",
+    width: 1200,
+    height: 630,
+    alt: "COREMI — rénovation, transformation et châssis",
+  },
+];
+
 /** Appel à l'action principal, isolé du reste de la navigation. */
 export const primaryCta = { label: "Demander un devis", href: "/devis" } as const;
 
@@ -204,7 +222,7 @@ export const footerServiceLinks = [
   { label: "Châssis PVC & aluminium", href: "/chassis" },
   { label: "Couleurs & finitions", href: "/chassis/couleurs" },
   { label: "Portes & vitrages", href: "/chassis#portes" },
-  { label: "Construction & gros œuvre", href: "/construction-renovation" },
+  { label: "Annexes & extensions", href: "/construction-renovation#extensions" },
   { label: "Toutes nos solutions", href: "/solutions" },
   { label: "Primes & aides", href: "/primes" },
   { label: "Comment se construit un prix", href: "/prix-et-aides" },

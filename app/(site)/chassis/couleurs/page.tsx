@@ -19,7 +19,7 @@ import { siteConfig } from "@/content/site";
 export const metadata: Metadata = {
   title: "Couleur de châssis : comment choisir selon votre façade",
   description:
-    "Quelle couleur de châssis pour une façade en brique rouge, un enduit clair ou une fermette ? Bicoloration intérieur/extérieur, tenue des teintes foncées, finitions PVC, aluminium et bois.",
+    "Quelle couleur de châssis selon votre façade : brique rouge, enduit clair, fermette. Bicoloration, tenue des teintes foncées, finitions par matériau.",
   alternates: { canonical: "/chassis/couleurs" },
 };
 

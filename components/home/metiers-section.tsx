@@ -59,9 +59,9 @@ export function MetiersSection() {
         <Reveal>
           <SectionHeading
             index="02"
-            eyebrow="Nos métiers"
-            title="Quatre métiers, une seule exigence"
-            description="Un seul partenaire pour tout le chantier : moins d'intermédiaires, moins de frictions, un résultat cohérent."
+            eyebrow="Ce que nous faisons"
+            title="Rénovation, transformation, annexes, châssis"
+            description="Quatre piliers, une seule entreprise. Nous travaillons sur des habitations qui existent déjà : les améliorer demande de les comprendre avant de les modifier."
           />
         </Reveal>
 

@@ -14,7 +14,7 @@ import { siteConfig } from "@/content/site";
 export const metadata: Metadata = {
   title: "À propos — l'entreprise COREMI",
   description:
-    "COREMI est une entreprise générale de construction et de châssis active à Bruxelles et en Brabant wallon. Une structure à taille humaine, un interlocuteur unique, des devis transparents.",
+    "COREMI rénove, transforme et agrandit les habitations à Bruxelles et en Brabant wallon, avec une spécialité châssis. Un interlocuteur unique.",
   alternates: { canonical: "/a-propos" },
 };
 
@@ -68,10 +68,11 @@ export default function AProposPage() {
                   connaître chaque client par son prénom et de garantir le niveau de
                   finition qui fait qu&apos;on nous recommande.
                 </p>
-                <p className="text-sm text-ink-500">
-                  Années d&apos;activité, équipe et agréments : [ANNÉES D&apos;EXPÉRIENCE] et
-                  [CERTIFICATIONS], informations à compléter par COREMI avant publication.
-                </p>
+                {/* Années d'activité, taille d'équipe et agréments : à
+                    rétablir ici dès que COREMI aura fourni ces valeurs.
+                    Tant qu'elles manquent, on n'affiche rien — un
+                    marqueur entre crochets visible par les visiteurs
+                    coûte plus cher que l'absence d'information. */}
               </div>
             </Reveal>
           </div>

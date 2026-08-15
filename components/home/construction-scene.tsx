@@ -2,25 +2,31 @@ import Image from "next/image";
 import { Container } from "@/components/ui/container";
 
 /**
- * « La maison se construit » — séquence photographique au défilement.
- * Six vues du même terrain au coucher du soleil, du terrassement à la
- * maison finie ; elles se fondent l'une dans l'autre pendant que la
- * section reste épinglée, avec grand numéro, légende et rail.
- * Scroll-driven animations CSS pures. Repli (mobile, tablette,
- * prefers-reduced-motion, navigateurs non compatibles) : les six vues
- * empilées et légendées, comme un story-board.
+ * « Une annexe prend forme » — séquence photographique au défilement.
+ * Six vues du même chantier au coucher du soleil ; elles se fondent
+ * l'une dans l'autre pendant que la section reste épinglée, avec grand
+ * numéro, légende et rail. Scroll-driven animations CSS pures. Repli
+ * (mobile, tablette, prefers-reduced-motion, navigateurs non
+ * compatibles) : les six vues empilées et légendées, en story-board.
  *
- * Ces images sont une ILLUSTRATION des étapes d'une construction —
- * pas la documentation d'un chantier COREMI précis (mention affichée).
+ * ⚠️ POSITIONNEMENT — la séquence décrit la construction d'une ANNEXE,
+ * pas d'une maison neuve : c'est le seul cadre dans lequel COREMI
+ * réalise des travaux de construction. Les légendes doivent le refléter
+ * explicitement, sinon la section laisse croire à une activité de
+ * constructeur. Le mot « fondations » n'est employé qu'ici, parce qu'il
+ * décrit réellement le premier poste d'une annexe.
+ *
+ * Ces images sont une ILLUSTRATION des étapes d'un chantier — pas la
+ * documentation d'un chantier COREMI précis (mention affichée).
  */
 
 const frames = [
-  { src: "/images/construction/chantier-01.webp", n: "01", title: "Les fondations", sub: "Tout commence par des bases solides." },
-  { src: "/images/construction/chantier-02.webp", n: "02", title: "La structure", sub: "Une construction pensée pour durer." },
-  { src: "/images/construction/chantier-03.webp", n: "03", title: "Le gros œuvre", sub: "Maîtrisé dans chaque détail." },
-  { src: "/images/construction/chantier-04.webp", n: "04", title: "La toiture", sub: "Une protection durable." },
-  { src: "/images/construction/chantier-05.webp", n: "05", title: "Les châssis", sub: "Performants, posés avec précision." },
-  { src: "/images/construction/chantier-06.webp", n: "06", title: "Votre projet devient réalité", sub: "Livré, propre, prêt à être vécu." },
+  { src: "/images/construction/chantier-01.webp", n: "01", title: "Les fondations de l'annexe", sub: "Dimensionnées d'après le sol réellement rencontré." },
+  { src: "/images/construction/chantier-02.webp", n: "02", title: "Le volume sort de terre", sub: "Aligné sur la maison existante, pas à côté d'elle." },
+  { src: "/images/construction/chantier-03.webp", n: "03", title: "La jonction avec l'existant", sub: "Le point qui décide de tout le reste." },
+  { src: "/images/construction/chantier-04.webp", n: "04", title: "La toiture et l'étanchéité", sub: "Raccordée à la couverture d'origine." },
+  { src: "/images/construction/chantier-05.webp", n: "05", title: "Les châssis", sub: "Posés et raccordés par nos équipes." },
+  { src: "/images/construction/chantier-06.webp", n: "06", title: "La pièce en plus", sub: "Livrée, propre, prête à être vécue." },
 ];
 
 export function ConstructionScene() {
@@ -36,18 +42,18 @@ export function ConstructionScene() {
             <div>
               <p className="annotation flex items-center gap-4 text-stone-300">
                 <span className="h-px w-12 bg-accent-500" />
-                03 · Comment nous bâtissons
+                03 · Agrandir plutôt que déménager
               </p>
               <h2
                 id="chantier-titre"
                 className="mt-5 max-w-2xl font-display text-4xl font-medium leading-[1.05] tracking-tight text-bone sm:text-5xl"
               >
-                Une maison se construit,
+                Une annexe se construit,
                 <br className="hidden sm:block" /> étape par étape.
               </h2>
             </div>
             <p className="annotation max-w-[16rem] text-right text-stone-400">
-              Illustration des étapes d&apos;une construction
+              Illustration des étapes d&apos;une annexe
             </p>
           </div>
 

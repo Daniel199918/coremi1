@@ -46,7 +46,7 @@ export const guides: Guide[] = [
     title: "Faut-il demander la prime avant ou après les travaux ?",
     question: "Peut-on commencer les travaux avant d'introduire le dossier ?",
     excerpt:
-      "C'est la question qui fait perdre le plus d'argent aux propriétaires belges. La réponse dépend de la Région et du dispositif — et se tromper est souvent définitif.",
+      "La question qui fait perdre le plus d'argent aux propriétaires belges. La réponse dépend de la Région et du dispositif, et se tromper est souvent définitif.",
     category: "Primes",
     readingTime: "4 min",
     updated: GUIDES_LAST_UPDATED,
@@ -256,7 +256,7 @@ export const guides: Guide[] = [
     title: "Comment coordonner châssis, isolation et ventilation ?",
     question: "Dans quel ordre faire les travaux ?",
     excerpt:
-      "Ces trois postes forment un système. Les traiter séparément, dans le désordre, coûte plus cher et donne un moins bon résultat — parfois avec de la condensation à la clé.",
+      "Ces trois postes forment un système. Les traiter séparément coûte plus cher et donne un moins bon résultat, parfois avec de la condensation à la clé.",
     category: "Rénovation",
     readingTime: "5 min",
     updated: GUIDES_LAST_UPDATED,

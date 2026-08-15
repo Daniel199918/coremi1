@@ -11,7 +11,7 @@ import { CtaSection } from "@/components/home/cta-section";
 export const metadata: Metadata = {
   title: "Prix & aides — comment se construit un devis de chantier",
   description:
-    "Comment un devis de construction ou de châssis se construit poste par poste, ce qui fait varier un prix, la TVA réduite pour les logements de plus de dix ans, et le montage de votre dossier d'aides.",
+    "Comment un devis de rénovation ou de châssis se construit poste par poste, ce qui fait varier un prix, et la TVA réduite pour les logements anciens.",
   alternates: { canonical: "/prix-et-aides" },
 };
 
@@ -51,7 +51,7 @@ const variables = [
   },
   {
     t: "Le niveau de finition",
-    d: "Le gros œuvre varie peu ; les finitions, énormément. C'est là que se joue l'essentiel de l'écart entre deux devis.",
+    d: "Le poste travaux varie peu d'une offre à l'autre ; les finitions, énormément. C'est là que se joue l'essentiel de l'écart entre deux devis.",
   },
   {
     t: "Le calendrier",

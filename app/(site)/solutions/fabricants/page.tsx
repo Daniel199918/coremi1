@@ -11,9 +11,9 @@ import { brandComparison, brands, BRANDS_LAST_CHECKED } from "@/content/brands";
 import { siteConfig } from "@/content/site";
 
 export const metadata: Metadata = {
-  title: "Schüco, Aliplast et Aluprof — comparatif des systèmes de menuiserie",
+  title: "Schüco, Aliplast et Aluprof — le comparatif",
   description:
-    "Comparatif honnête des trois fabricants de menuiseries que nous mettons en œuvre : positionnement, matériaux, esthétique, performances et budget relatif. Sans classement ni chiffres inventés.",
+    "Comparatif des trois fabricants dont nous mettons les systèmes en œuvre : positionnement, matériaux, esthétique et budget relatif. Sans classement.",
   alternates: { canonical: "/solutions/fabricants" },
 };
 
@@ -74,6 +74,11 @@ export default function FabricantsPage() {
                     height={b.logoHeight}
                     tone={b.logoTone}
                   />
+                  {/* Le nom de la marque n'existe visuellement que dans le
+                      logo. Sans ce titre, la page saute du H1 aux H3 : la
+                      navigation par titres d'un lecteur d'écran perd le
+                      niveau qui regroupe chaque fabricant. */}
+                  <h2 className="sr-only">{b.name}</h2>
                   <p className="mt-5 text-xs font-semibold uppercase tracking-[0.14em] text-ink-500">
                     {b.origin} · {b.materials.join(" & ")}
                   </p>
@@ -189,7 +194,7 @@ export default function FabricantsPage() {
             <p className="mt-8 max-w-3xl border-l-2 border-accent-600 bg-bone p-5 text-sm leading-relaxed text-ink-600">
               Le facteur le plus déterminant n&apos;apparaît dans aucune colonne : c&apos;est
               la <strong className="font-semibold text-ink-950">pose</strong>. Un système
-              haut de gamme mal raccordé au gros œuvre isole moins bien qu&apos;un système
+              haut de gamme mal raccordé à la maçonnerie isole moins bien qu&apos;un système
               courant posé correctement. C&apos;est précisément pour cela que nous réalisons
               le mur et la fenêtre.
             </p>

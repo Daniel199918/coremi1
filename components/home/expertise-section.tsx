@@ -31,22 +31,23 @@ export function ExpertiseSection() {
           <div className="lg:col-span-5">
             <Reveal delay={0.1}>
               <p className="mb-5 flex items-baseline gap-4 text-xs font-semibold uppercase tracking-[0.25em] text-ink-500">
-                <span className="text-accent-600">07</span> Construction &amp; rénovation
+                <span className="text-accent-600">07</span> Rénovation &amp; transformation
               </p>
               <h2 className="font-display text-4xl font-medium leading-tight text-ink-950">
-                La structure d&apos;abord. Elle porte tout le reste.
+                Transformer sans abîmer ce qui tient.
               </h2>
               <p className="mt-6 leading-relaxed text-ink-600">
-                Fondations, maçonnerie, extensions, transformations lourdes : le gros
-                œuvre décide de la qualité finale d&apos;un projet. Nous l&apos;exécutons
-                selon les plans de votre architecte et nous coordonnons la suite du
-                chantier jusqu&apos;aux finitions.
+                Rénovation complète, réagencement des volumes, ouverture d&apos;un mur
+                porteur, annexe raccordée à l&apos;existant. Nous travaillons sur des
+                bâtiments qui ont déjà une histoire : cela demande de comprendre
+                l&apos;ouvrage avant de le modifier, et de coordonner les corps de
+                métier jusqu&apos;aux finitions.
               </p>
               <Link
                 href="/construction-renovation"
                 className="group mt-8 inline-flex items-center gap-3 text-sm font-semibold uppercase tracking-[0.14em] text-ink-950 transition-colors hover:text-accent-600"
               >
-                Construction &amp; rénovation
+                Rénovation &amp; transformation
                 <ArrowRight className="h-4 w-4 transition-transform group-hover:translate-x-1" aria-hidden="true" />
               </Link>
             </Reveal>

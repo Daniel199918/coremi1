@@ -10,9 +10,9 @@ import { guideCategories, guides, GUIDES_LAST_UPDATED } from "@/content/guides";
 import { siteConfig } from "@/content/site";
 
 export const metadata: Metadata = {
-  title: "Conseils — guides pratiques châssis, primes et rénovation",
+  title: "Conseils — châssis, primes et rénovation",
   description:
-    "Des réponses concrètes aux questions qu'on se pose avant de commander des travaux : prime avant ou après le chantier, PVC ou aluminium, quel vitrage, quels documents conserver, dans quel ordre rénover.",
+    "Des réponses concrètes avant de commander des travaux : prime avant ou après le chantier, PVC ou aluminium, quel vitrage, dans quel ordre rénover.",
   alternates: { canonical: "/conseils" },
 };
 

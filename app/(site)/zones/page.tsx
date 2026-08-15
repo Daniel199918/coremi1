@@ -10,9 +10,9 @@ import { zones, zonesByRegion } from "@/content/zones";
 import { siteConfig } from "@/content/site";
 
 export const metadata: Metadata = {
-  title: "Zones d'intervention — Brabant wallon et sud-est de Bruxelles",
+  title: "Zones d'intervention — Brabant wallon et Bruxelles",
   description:
-    "COREMI intervient dans les 27 communes du Brabant wallon et dans le sud-est bruxellois : construction, rénovation, extensions et pose de châssis. Trouvez votre commune.",
+    "COREMI intervient dans les 27 communes du Brabant wallon et le sud-est bruxellois : rénovation, transformation, annexes et châssis. Trouvez votre commune.",
   alternates: { canonical: "/zones" },
 };
 

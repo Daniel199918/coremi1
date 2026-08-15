@@ -29,8 +29,8 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const r = getRegion(region);
   if (!r) return {};
   return {
-    title: `Primes et aides ${r.name} — châssis, vitrage, isolation et rénovation`,
-    description: `Les aides publiques en ${r.shortName} pour le remplacement de châssis, le vitrage, l'isolation et la rénovation énergétique : dispositifs, conditions, documents, étapes et sources officielles. Vérifié le ${PRIMES_LAST_CHECKED}.`,
+    title: `Primes et aides ${r.shortName} — châssis et rénovation`,
+    description: `Les aides publiques en ${r.shortName} pour les châssis, le vitrage et la rénovation : dispositifs, conditions et sources officielles. Vérifié le ${PRIMES_LAST_CHECKED}.`,
     alternates: { canonical: `/primes/${r.id}` },
   };
 }

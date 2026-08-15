@@ -13,9 +13,9 @@ import { CtaSection } from "@/components/home/cta-section";
 import { faq } from "@/content/faq";
 
 export const metadata: Metadata = {
-  title: "COREMI — Entreprise de construction, rénovation et châssis en Belgique",
+  title: "COREMI — Rénovation, transformation et châssis en Brabant wallon",
   description:
-    "Entreprise générale à Bruxelles et en Brabant wallon : gros œuvre, extensions, rénovation complète, pose de châssis PVC et aluminium. Le mur et la fenêtre par la même entreprise, un seul interlocuteur.",
+    "Rénovation, transformation et annexes à Bruxelles et en Brabant wallon, avec une spécialité châssis : PVC, aluminium, portes et vitrages. Un seul interlocuteur, du premier relevé à la réception.",
   alternates: { canonical: "/" },
 };
 
