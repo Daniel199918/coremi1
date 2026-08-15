@@ -118,21 +118,23 @@ export function Hero() {
   // Bloc typographique commun (titre, texte, CTA).
   const copy = (
     <>
-      <p className="rise rise-1 annotation flex items-center gap-4 text-stone-200">
+      <p className="rise rise-1 annotation flex items-center gap-4 text-white [text-shadow:0_1px_14px_rgb(18_16_12/0.8)]">
         <span aria-hidden="true" className="h-px w-12 bg-accent-500" />
-        Entreprise générale · Bruxelles &amp; Brabant wallon
+        Rénovation &amp; châssis · Bruxelles et Brabant wallon
       </p>
 
-      <h1 className="rise rise-2 mt-7 max-w-4xl font-display text-[clamp(2.5rem,6.4vw,6.2rem)] font-medium leading-[1.02] tracking-tight text-bone [text-shadow:0_2px_28px_rgb(18_16_12/0.45)]">
-        Du gros œuvre au dernier châssis,
-        <br className="hidden sm:block" />{" "}
-        <em className="italic text-accent-400">une seule main.</em>
+      {/* Titre volontairement court : la taille peut donc monter plus haut
+          que sur l'ancienne accroche, qui tenait sur trois lignes. */}
+      <h1 className="rise rise-2 mt-7 max-w-4xl font-display text-[clamp(3rem,7.6vw,7.5rem)] font-medium leading-[0.98] tracking-tight text-bone [text-shadow:0_2px_28px_rgb(18_16_12/0.45)]">
+        Votre maison.
+        <br />
+        <em className="italic text-accent-400">Mieux pensée.</em>
       </h1>
 
-      <p className="rise rise-3 mt-6 max-w-xl text-base leading-relaxed text-stone-200/90 sm:mt-7 sm:text-lg">
-        Là où le mur rencontre la fenêtre, les chantiers fuient et les
-        entreprises se renvoient la balle. Chez COREMI, les deux sont à
-        nous — le joint aussi.
+      <p className="rise rise-3 mt-6 max-w-xl text-base leading-relaxed text-white/95 [text-shadow:0_1px_14px_rgb(18_16_12/0.8)] sm:mt-7 sm:text-lg">
+        Rénover, ce n&apos;est pas tout refaire. Nous cherchons d&apos;abord ce
+        qui changera votre quotidien — la lumière, le confort, les ouvertures —
+        puis nous le réalisons nous-mêmes.
       </p>
 
       <div className="rise rise-4 mt-8 flex flex-col gap-3 sm:mt-9 sm:flex-row sm:items-center">
@@ -160,7 +162,7 @@ export function Hero() {
     <section
       ref={sectionRef}
       data-hero
-      aria-label="COREMI — entreprise générale de construction et de châssis"
+      aria-label="COREMI — rénovation et châssis à Bruxelles et en Brabant wallon"
       className="relative -mt-[68px] bg-ink-950"
       style={scrub ? { height: "280vh" } : undefined}
     >
@@ -178,30 +180,34 @@ export function Hero() {
             <source src="/videos/hero-construction.mp4" type="video/mp4" />
           </video>
 
+          {/* Voile allégé d'environ un tiers par rapport à la version
+              précédente : l'image respire davantage. Il reste assez dense
+              en bas de cadre, là où se trouve le texte blanc, pour que le
+              contraste de lecture soit conservé. */}
           <div
             aria-hidden="true"
-            className="absolute inset-0 bg-gradient-to-t from-ink-950/80 via-ink-950/25 to-transparent sm:from-ink-950/75 sm:via-ink-950/15 sm:to-transparent"
+            className="absolute inset-0 bg-gradient-to-t from-ink-950/62 via-ink-950/14 to-transparent sm:from-ink-950/58 sm:via-ink-950/8 sm:to-transparent"
           />
           <div
             aria-hidden="true"
-            className="absolute inset-y-0 left-0 hidden w-1/2 bg-gradient-to-r from-ink-950/35 to-transparent lg:block"
+            className="absolute inset-y-0 left-0 hidden w-1/2 bg-gradient-to-r from-ink-950/24 to-transparent lg:block"
           />
           <span aria-hidden="true" className="grain" />
 
           <div className="relative z-10 mx-auto flex w-full max-w-7xl flex-1 flex-col justify-end px-5 pb-9 pt-24 sm:px-8 lg:pb-12">
             {copy}
-            <div className="rise rise-4 mt-10 hidden items-end justify-between border-t border-bone/20 pt-5 lg:flex">
-              {/* Trois repères de métier — délibérément aucun argument
-                  commercial ici : l'acompte et la gratuité du devis se
-                  traitent près du formulaire et dans la FAQ, pas en
-                  ouverture de site. */}
-              <ul className="annotation flex gap-10 text-stone-300">
-                <li>Gros œuvre + châssis</li>
-                <li>Une seule responsabilité</li>
-                <li>Brabant wallon &amp; Bruxelles</li>
+            <div className="rise rise-4 mt-10 hidden items-end justify-between border-t border-bone/35 pt-5 lg:flex">
+              {/* Trois repères de méthode. Aucun argument commercial ici :
+                  l'acompte et la gratuité du devis se traitent près du
+                  formulaire et dans la FAQ, pas en ouverture de site.
+                  Aucune mention de gros œuvre non plus — COREMI n'en
+                  réalise pas. */}
+              <ul className="annotation flex gap-10 text-white/90 [text-shadow:0_1px_14px_rgb(18_16_12/0.8)]">
+                <li>Un seul interlocuteur</li>
+                <li>Pose et raccords par nos équipes</li>
+                <li>Devis poste par poste</li>
               </ul>
-              <p className="annotation flex items-center gap-6 text-stone-300">
-                <span>Illustration — des fondations à la maison finie</span>
+              <p className="annotation flex items-center gap-6 text-white/90 [text-shadow:0_1px_14px_rgb(18_16_12/0.8)]">
                 <span className="scroll-cue flex items-center gap-2" aria-hidden="true">
                   <ArrowDown className="h-4 w-4" />
                   Faire défiler
@@ -231,7 +237,7 @@ export function Hero() {
               ) : (
                 <Image
                   src="/images/hero-villa-finie.webp"
-                  alt="Villa contemporaine achevée réalisée par COREMI : illustration d'un chantier, des fondations à la maison terminée."
+                  alt="Villa contemporaine rénovée par COREMI, façade et menuiseries extérieures achevées."
                   fill
                   priority
                   sizes="100vw"
@@ -250,9 +256,11 @@ export function Hero() {
           {/* Bloc texte sur fond sombre */}
           <div className="relative z-10 mx-auto flex w-full max-w-2xl flex-1 flex-col justify-center px-5 py-9 sm:px-8 sm:py-12">
             {copy}
-            <p className="rise rise-4 annotation mt-8 text-stone-400">
-              Illustration — des fondations à la maison finie
-            </p>
+            <ul className="rise rise-4 annotation mt-8 flex flex-wrap gap-x-6 gap-y-2 text-stone-400">
+              <li>Un seul interlocuteur</li>
+              <li>Pose et raccords par nos équipes</li>
+              <li>Devis poste par poste</li>
+            </ul>
           </div>
         </div>
       )}
